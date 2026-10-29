@@ -2,3 +2,5 @@ onml_f28cal_q_k20	Sh=3.93	LGB rank target, FEATS18+EXTRA10+calendar(dow,dme,qend
 onml_f28cal_q3_k20	Sh=3.75	same features, 3-seed averaged predictions (rank-avg), L/S top20 eq-weight
 onml_f28cal_q3_k30p	Sh=3.84	same 3-seed predictions, L/S top30 prediction-weighted
 onml_f28cal_q_k20	Sh=3.76	LGB rank target, FEATS18+EXTRA10+calendar(dow,dme,qend,dsgap), quarterly expanding retrain, universe(1500), L/S top20 eq-weight
+onml_f28cal_q3_k20	Sh=3.58	same features, 3-seed averaged predictions (rank-avg), L/S top20 eq-weight
+onml_f28cal_q3_k30p	Sh=3.65	same 3-seed predictions, L/S top30 prediction-weighted
