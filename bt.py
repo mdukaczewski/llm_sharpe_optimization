@@ -4,6 +4,7 @@ periodic-rebalance long-only (or long/cash) portfolios with costs."""
 import numpy as np, pandas as pd, sys, os
 
 PANEL = os.environ.get("PANEL", os.path.expanduser("~/strat20/data/panel.npz"))
+if not os.path.exists(PANEL): PANEL = os.path.expanduser("~/strat20/data/panel_liquid.npz")   # local box: the slim panel is a superset of every universe screen
 
 class Panel:
     def __init__(self, path=PANEL, start="2014-06-01"):
