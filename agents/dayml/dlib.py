@@ -19,7 +19,9 @@ LAG = ["z30", "z60", "z30l", "z120", "z15l", "z5l", "zmoc", "zoc", "zo15", "zgap
 def extra_frame(tk):
     """Min-based extras, cached per ticker (keyed on npz mtime and DEV_END)."""
     cp = f"{CD}/{tk}_{DEV_END}.parquet"; src = f"{rlib.DATA}/minute_npz/{tk}.npz"
-    if os.path.exists(cp) and os.path.getmtime(cp) > os.path.getmtime(src): return pd.read_parquet(cp)
+    if os.path.exists(cp) and os.path.getmtime(cp) > os.path.getmtime(src):
+        try: return pd.read_parquet(cp)
+        except Exception: os.remove(cp)
     M = Min(tk, end=DEV_END); r = M.r; c = M.c; v = M.v
     d = pd.DataFrame(index=M.dates)
     d["gap"] = M.gap                                   # raw gap open(t)/close(t-1)-1 (split adj)
@@ -50,8 +52,11 @@ def extra_frame(tk):
         x = d[k].values.astype(float); x[np.abs(x) > 0.5] = np.nan; d[k] = x
     d = d.astype(np.float32); d.index.name = "date"; d.to_parquet(cp); return d
 
-def ticker_rows(tk):
-    f = rlib.ticker_frame(tk).copy()
+def ticker_rows(tk, _retry=True):
+    try: f = rlib.ticker_frame(tk).copy()
+    except Exception as ex:                       # another agent may be writing the shared cache file: retry once
+        if not _retry: raise
+        time.sleep(3); return ticker_rows(tk, _retry=False)
     for c in LAG: f[c] = f[c].shift(1)                 # yesterday's close-time features
     f["y_on_prev"] = f["y_on"].shift(1)                 # realised overnight into day t (raw)
     e = extra_frame(tk)

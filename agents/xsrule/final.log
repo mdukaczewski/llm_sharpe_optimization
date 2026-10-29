@@ -12,3 +12,12 @@ universe(1500): 1500 names, DEV_END 2026-04-27
   minute_frame 1100/1500 8s
   minute_frame 1200/1500 9s
   minute_frame 1300/1500 23s
+  minute_frame 1400/1500 52s
+LANC skip Could not open Parquet input source '<Buffer>': Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+  minute_frame 1500/1500 84s
+  extra 100/1496 12s
+  extra 200/1496 27s
+  extra 300/1496 40s
+  extra 400/1496 53s
+  extra 500/1496 65s
+  extra 600/1496 80s

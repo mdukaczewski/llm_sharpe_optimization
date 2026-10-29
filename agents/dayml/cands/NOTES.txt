@@ -1,2 +1,0 @@
-u269_x120q_k20p	Sh=2.25	INTERIM 269 names: 09:31 LGB EXT quarterly, exit 11:30, L/S k20 pred-weighted
-u269_x60y_k10p	Sh=2.07	INTERIM 269 names: 09:31 LGB EXT yearly, exit 10:30, L/S k10 pred-weighted
