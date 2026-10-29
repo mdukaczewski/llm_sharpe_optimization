@@ -238,3 +238,58 @@ Caveats that still apply to the holdout number:
 * Universe ranks 601-1200 by today's median dollar volume: survivorship, and
   1 bp/side is optimistic there (1.5 bps costs the dev number about 0.35).
 * Fills at the official close and at the 09:31/09:32 bar are assumed exact.
+
+# Phase 3 (2026-10-29, local Polygon data, agent search): dev fold-OOS 4.07
+
+Everything in this phase ran on a fresh download into `data/` (gitignored):
+`fetch_ref.py` + `build_panel2.py` (grouped daily 2014-06..2026-10-28, splits,
+dividends, tickers -> `panel_liquid.npz`), `universe.py` (1500 CS/ADRC names ranked
+by median dollar volume 2016-10..2026-10, survivorship as before) and
+`fetch_minute3.py` (minute bars 2016-06..2026-10-28 for those 1500 names + 29 ETFs,
+one compact npz per ticker).  `rlib.py` is the shared research library (per-ticker
+feature cache, walk-forward LightGBM, book construction with costs, fold-OOS);
+`agents/BRIEF.md` the protocol.  Four agents ran in parallel, each restricted by
+the loaders to dates <= 2026-04-27 (the holdout below was never readable):
+
+| lane (agents/<lane>/REPORT.md)  | kept                                                             | fold-OOS |
+|---------------------------------|------------------------------------------------------------------|----------|
+| onml  (overnight LightGBM)      | +14 close-time/calendar features, 1500 names, quarterly, 3 seeds | 3.76-3.83 (existing 3.2) |
+| dayml (intraday LightGBM)       | decide 09:31, exit 10:31 / 11:31 instead of the close            | 2.2-2.3 (existing close-exit 1.7) |
+| xsrule (rule overnight books)   | composite 0.5 z30 - z60 - 0.5 z5l + 0.3 zon_prev - rank(vlast)   | 2.04 long-only (existing 1.83), 1.65 L/S |
+| etfmacro (ETF / vol / macro)    | short VIXY or UVXY overnight only, when VIX/VIX3M (t-1) < 0.95   | 1.0-1.2, uncorrelated |
+
+Findings that changed the numbers:
+
+* **Breadth + features** is still the lever for the overnight book: the same recipe
+  on 1500 names gives 3.22; the 14 extra features (last 15/5 min, closing print vs
+  15:59, close vs VWAP, first-minute/closing-auction volume shares, calendar) 3.8-4.0.
+* **Exit timing** for the intraday book: the 09:31 signal is realised in the first
+  1-2 hours; exiting at 10:31 or 11:31 instead of the close roughly doubles its
+  Sharpe and halves the drawdown.
+* **A leak found and removed**: filling the intraday book at the 09:32 bar (the
+  original convention) harvests bid-ask bounce on the thinner names — the 10:30 book
+  read 4.4 on 1500 names but 2.4 with a one-minute-delayed fill, 1.4 on the 300 most
+  liquid names (`agents/dayml/diag_liq.py`).  The kept intraday books decide at the
+  09:31 bar and fill at the 09:33 bar; the old 09:32-fill family (`intraday` in
+  folds.py) is dropped from the portfolio.  Overnight books enter at the closing
+  auction and are not exposed to this.
+* **Split-adjusted targets** in `rlib.ticker_frame` (a 3:2 split used to leave a
+  bogus -33% overnight label; the |y|>0.5 cap only caught larger splits).
+* **Fixed commissions** matter more than spreads: at $3 per filled order a 20-name
+  L/S book trades 80 orders a day, so the cost per side is 3 bps on $10k clips
+  ($400k per book) and 0.6 bps on $50k clips ($2M per book).  `folds.py
+  --commission_bps` re-costs every fully-turned-over minute-bar book; rule
+  overnight books do not survive 3 bps, the learned books do.
+
+Dead lanes this phase (see the reports): sector-ETF reversal, GLD/TLT overnight
+splits, cross-asset trend/carry, continuously sized VIX spreads, next-day c->c
+books with minute features (rule or learned, 0.6-0.7), multi-day holds, calendar
+books, 10:00- and 15:00-decided intraday books, the 10:31 exit for the overnight
+learned book, vol-scaled targets.
+
+## Final validation (`bash final_eval.sh --show_holdout`)
+
+Dev folds 2018-07-01..2026-04-27 (16 half-years; variant per family and the
+inverse-vol weights chosen only from dates before each window); families =
+original coarse grid minus the old intraday family, plus the four lanes.
+HOLDOUT_PLACEHOLDER
