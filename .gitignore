@@ -17,4 +17,8 @@ agents/*/out/*.parquet
 agents/*/out/
 agents/*/log_*.txt
 agents/*/final.log
-agents/*/*.log
+agents/*/final_dry.log
+agents/*/log?.txt
+agents/*/*_400.log
+agents/*/expq.log
+agents/*/warm.log
