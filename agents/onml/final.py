@@ -13,7 +13,7 @@ SETS = {"f18": FEATS18, "f28": F28, "f28xr": F28 + XR, "f28xrmr": F28 + XR + MR,
 KEEP = {}
 exec(open(f"{HERE}/agents/onml/keep.py").read())      # defines KEEP (kept separate so exploration can update it)
 t0 = time.time()
-D = load(1500); log(f"final: {D.tk.nunique()} names, DEV_END={rlib.DEV_END}")
+D = load(int(os.environ.get("ONML_N", "1500"))); log(f"final: {D.tk.nunique()} names, DEV_END={rlib.DEV_END}, n_jobs={NJ}")
 cache = {}
 def pred_of(fsn, tg, rt, s):
     key = (fsn, tg, rt, s)

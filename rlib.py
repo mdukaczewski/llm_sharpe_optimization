@@ -183,12 +183,22 @@ def walk_forward(D, feats, target, retrain="Q", model="lgb", first="2017-01-01",
         if verbose: print(f"  wf {c0.date()} train {int(tr.sum())}", flush=True)
     return pred
 
-def book(D, pred, k=20, y="y_on", mode="ls", cost=None, smin=None, weight="eq", borrow=0.01, name="", p=True):
+COMMISSION_USD = float(os.environ.get("STRAT_COMMISSION_USD", "0"))   # fixed commission per filled order (user: $3)
+CLIP_USD = float(os.environ.get("STRAT_CLIP_USD", "10000"))           # dollars per position -> commission in bps = USD/CLIP*1e4
+
+def commission_bps(commission=None, clip=None):
+    """per-side cost in bps of a fixed per-order commission on a position of `clip` dollars"""
+    c = COMMISSION_USD if commission is None else commission; k = CLIP_USD if clip is None else clip
+    return c / k * 1e4
+
+def book(D, pred, k=20, y="y_on", mode="ls", cost=None, smin=None, weight="eq", borrow=0.01, name="", p=True, commission=None, clip=None):
     """Daily net return of a top-k book from per-(date,tk) predictions.
     mode: 'ls' long top-k / short bottom-k, 'lo' long top-k.  weight: 'eq' or 'pred' (|pred| scaled, sum|w| per side = 1).
-    cost: bps per side; default per-name cost_bps(tk).  Costs: 2 sides x |w| x cost + borrow on shorts."""
+    cost: bps per side (spread/impact); default per-name cost_bps(tk).  On top of it a fixed per-order commission
+    (commission USD per filled order, clip USD per position; defaults from env STRAT_COMMISSION_USD / STRAT_CLIP_USD,
+    i.e. $3 on a $10k clip = 3 bps per side).  Costs: 2 sides x |w| x (cost + commission_bps) + borrow on shorts."""
     g = D.loc[pred.notna(), ["date", "tk", y]].copy(); g["p"] = pred[g.index].values; g = g[g[y].notna()]
-    g["c"] = g.tk.map(cost_bps) if cost is None else cost
+    g["c"] = (g.tk.map(cost_bps) if cost is None else cost) + commission_bps(commission, clip)
     g["rk"] = g.groupby("date")["p"].rank(method="first"); g["n"] = g.groupby("date")["p"].transform("size")
     g = g[g.n >= k + 5]
     top = g[g.rk > g.n - k]; bot = g[g.rk <= k] if mode == "ls" else g.iloc[0:0]
@@ -203,6 +213,11 @@ def book(D, pred, k=20, y="y_on", mode="ls", cost=None, smin=None, weight="eq", 
     out = L.groupby("date").agg(g=("g", "sum"), cost=("cost", "sum")); n = (out.g - out.cost).loc[START:DEV_END]
     if p: stats(n, name or f"{mode} top{k} {y}")
     return n
+
+def recost(r, extra_bps_per_side, gross=2.0, sides=2):
+    """Re-cost a daily net series of a book that is fully turned over every day: subtract
+    sides x gross x extra_bps per day (L/S top-k books: gross 2, two sides; LO books: gross 1)."""
+    return r - sides * gross * extra_bps_per_side / 1e4
 
 def ic(D, pred, y="y_on"):
     g = D.loc[pred.notna() & D[y].notna(), ["date", y]].copy(); g["p"] = pred[g.index].values
