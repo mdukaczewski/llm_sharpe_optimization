@@ -4,7 +4,8 @@ and FILLED AT THE NEXT DAY'S CLOSE (t+1); they earn close-to-close returns from 
 Daily rebalance to target with drift-adjusted turnover. Costs: cost_bps per unit of
 one-way turnover + borrow (annual rate / 252 on |short weight|). Cash earns 0."""
 import numpy as np, pandas as pd
-CSV = "/home/trumpet/strat20/agents/vol/etf.csv"
+import os as _os
+CSV = _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "etf.csv")
 START, END = "2016-10-28", "2026-10-27"
 BORROW = {"VIXY": 0.02, "VXX": 0.02, "UVXY": 0.05, "TQQQ": 0.05, "SQQQ": 0.05, "SVXY": 0.05,
           "SPXL": 0.05, "SPXS": 0.05, "UPRO": 0.05, "SPXU": 0.05, "SSO": 0.05, "SDS": 0.05,
