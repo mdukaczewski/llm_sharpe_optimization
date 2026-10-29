@@ -1,0 +1,6 @@
+xsr_cAx_lo20_s15_u150	Sh=2.25	overnight LO top20 cAx>1.5 on 150 names, exit 09:31, 1bp/side
+xsr_cAx_ls20_u150	Sh=1.77	overnight L/S top/bottom 20 by cAx on 150 names, exit 09:31, 1bp/side
+xsr_cAx_ls20_u1500	Sh=1.75	overnight L/S top/bottom 20 by cAx on universe(1500) (684 names), exit 09:31, per-name cost
+xsr_cBx_lo20_s15_u150	Sh=2.30	overnight LO top20 cBx>1.5 on 150 names, exit 09:31, 1bp/side
+xsr_cBx_ls20_u150	Sh=1.84	overnight L/S top/bottom 20 by cBx on 150 names, exit 09:31, 1bp/side
+xsr_cBx_ls20_u1500	Sh=1.94	overnight L/S top/bottom 20 by cBx on universe(1500) (684 names), exit 09:31, per-name cost
