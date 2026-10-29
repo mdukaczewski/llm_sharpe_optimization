@@ -4,7 +4,8 @@ import sys; sys.path.insert(0, "/home/user/llm_sharpe_optimization/agents/onml")
 from olib import *
 NJ = int(os.environ.get("ONML_NJOBS", "2")); CAP = 400000.0
 FS = FEATS18 + EXTRA10 + CAL
-SETS = {"f28cal": FS, "f28cal-zmoc": [f for f in FS if f != "zmoc"], "f28cal-zmoc-z5l": [f for f in FS if f not in ("zmoc", "z5l")], "f28cal-zmoc-z5l-z15l": [f for f in FS if f not in ("zmoc", "z5l", "z15l")]}
+# zmoc (closing print vs 15:59) and vmoc_share (closing-auction volume share) are only known AT the close -> not usable for a MOC fill
+SETS = {"f28cal": FS, "f28cal-moc": [f for f in FS if f not in ("zmoc", "vmoc_share")], "f28cal-moc-z5l": [f for f in FS if f not in ("zmoc", "vmoc_share", "z5l")], "f28cal-moc-z5l-z15l": [f for f in FS if f not in ("zmoc", "vmoc_share", "z5l", "z15l")]}
 D = load(2000); log(f"breadth2b: {D.tk.nunique()} names")
 for name, fs in SETS.items():
     t0 = time.time(); p = xrank(D, wf(D, fs, "yr", "Y", seed=0, n_jobs=NJ))

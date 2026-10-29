@@ -47,7 +47,9 @@ def wf2(D, feats, target="yr", retrain="Y", seed=0, n_jobs=2, params=None, windo
 
 # ---------------------------------------------------------------- commission-aware book
 def book3(D, pred, k=20, y="y_on", mode="ls", weight="eq", qmin=None, raw=None, disp=None, disp_win=120, cost=None,
-          borrow=0.01, name="", p=False, kmin=0):
+          borrow=0.01, name="", p=False, ks=None, sgross=1.0):
+    """ks: number of shorts (default k); sgross: gross of the short side (1.0 = dollar neutral)."""
+    ks = k if ks is None else ks
     """Top-k book from per-(date,tk) predictions.  Returns (net spread-only series, positions per day series).
     mode 'ls' (top-k long / bottom-k short) or 'lo' (top-k long).  weight 'eq' or 'pred' (|rank| weights).
     qmin: keep only names whose |raw| (raw model output, default pred) is >= the per-day qmin-quantile of |raw|
@@ -59,7 +61,7 @@ def book3(D, pred, k=20, y="y_on", mode="ls", weight="eq", qmin=None, raw=None, 
     g["c"] = g.tk.map(rlib.cost_bps) if cost is None else cost
     g["rk"] = g.groupby("date")["p"].rank(method="first"); g["n"] = g.groupby("date")["p"].transform("size")
     g = g[g.n >= k + 5]
-    top = g[g.rk > g.n - k].copy(); bot = g[g.rk <= k].copy() if mode == "ls" else g.iloc[0:0].copy()
+    top = g[g.rk > g.n - k].copy(); bot = g[g.rk <= ks].copy() if mode == "ls" else g.iloc[0:0].copy()
     if qmin is not None:
         ra = g.raw.abs(); thr = ra.groupby(g.date).transform(lambda s: s.quantile(qmin))
         top = top[top.raw.abs() >= thr[top.index]]; bot = bot[bot.raw.abs() >= thr[bot.index]]
@@ -67,16 +69,16 @@ def book3(D, pred, k=20, y="y_on", mode="ls", weight="eq", qmin=None, raw=None, 
         sd = g.groupby("date").raw.std(); thr = sd.rolling(disp_win, min_periods=40).quantile(disp).shift(1)
         good = sd.index[(sd > thr) | thr.isna()]
         top = top[top.date.isin(good)]; bot = bot[bot.date.isin(good)]
-    def side(x, sgn):
+    def side(x, sgn, kk=k, gross=1.0):
         if len(x) == 0: return pd.DataFrame(columns=["date", "w", "r", "c"])
         if weight == "pred": w = x.p.abs()
         elif weight == "raw": w = x.raw.abs()                                   # |raw model output|
         elif weight == "lin": w = x.groupby("date").p.rank(ascending=(sgn > 0))  # 1..n, best name gets n
         else: w = pd.Series(1.0, index=x.index)
         nn = x.groupby("date").p.transform("size")
-        w = w / w.groupby(x.date).transform("sum") * (nn / k).clip(upper=1.0)
+        w = w / w.groupby(x.date).transform("sum") * (nn / kk).clip(upper=1.0) * gross
         return pd.DataFrame({"date": x.date, "w": sgn * w, "r": x[y], "c": x.c, "raw": x.raw})
-    L = pd.concat([side(top, 1), side(bot, -1)])
+    L = pd.concat([side(top, 1), side(bot, -1, ks, sgross)])
     L["g"] = L.w * L.r; L["cost"] = L.w.abs() * 2 * L.c / 1e4 + L.w.clip(upper=0).abs() * borrow / 252
     out = L.groupby("date").agg(g=("g", "sum"), cost=("cost", "sum"), P=("w", "size"))
     alld = pd.Index(sorted(g.date.unique()))
