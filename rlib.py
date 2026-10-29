@@ -32,6 +32,9 @@ START = "2016-10-28"
 import ilib
 from ilib import Min
 RANK = {t: i + 1 for i, t in enumerate(l.strip() for l in open(f"{DATA}/univ1500.txt") if l.strip())}
+if os.path.exists(f"{DATA}/univ2000x.txt"):        # phase 4: 500 more names (ranks 1501-2000) appended, original ranks unchanged
+    for t in (l.strip() for l in open(f"{DATA}/univ2000x.txt") if l.strip()):
+        if t not in RANK: RANK[t] = len(RANK) + 1
 
 def sh(r):
     r = np.asarray(r, float); r = r[np.isfinite(r)]
@@ -46,14 +49,15 @@ def stats(r, name="", p=True):
     if p: print(line, flush=True)
     return dict(sharpe=sh(r), ret=r.mean() * 252, vol=r.std() * np.sqrt(252), mdd=dd, h1=sh(h1), h2=sh(h2))
 
-def universe(n=1500, available=True):
+def universe(n=1500, available=True):   # n up to 2000 once data/minute_npz holds the extension
     """top-n tickers by dollar volume; if available, only those whose minute npz exists"""
     tks = [t for t in RANK if RANK[t] <= n]
     if available: tks = [t for t in tks if os.path.exists(f"{DATA}/minute_npz/{t}.npz")]
     return tks
 
 def cost_bps(tk):
-    return 1.0 if RANK.get(tk, 9999) <= 600 else 1.5
+    r = RANK.get(tk, 9999)
+    return 1.0 if r <= 600 else (1.5 if r <= 1500 else 2.5)     # ranks 1501-2000: median $vol 3-11M/day
 
 def save_cand(lane, name, r, note=""):
     """r: daily net return Series. Written to agents/<lane>/cands/<name>.csv (dates <= DEV_END)."""

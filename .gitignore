@@ -28,3 +28,4 @@ agents/*/cands_dev/
 agents/*/cands_old/
 agents/*/preds.log
 agents/*/k10.log
+logs/fetch_minute2_local.log
