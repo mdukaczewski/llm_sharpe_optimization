@@ -7,7 +7,7 @@ import sys; sys.path.insert(0, "/home/user/llm_sharpe_optimization/agents/onml")
 from olib import *
 NJ = int(os.environ.get("ONML_NJOBS", "4"))
 F28 = FEATS18 + EXTRA10
-SETS = {"f18": FEATS18, "f28": F28, "f28xr": F28 + XR, "f28xrmr": F28 + XR + MR, "fall": F28 + XR + MR + CAL + ["nnames"]}
+SETS = {"f18": FEATS18, "f28": F28, "f28cal": F28 + CAL, "fall": F28 + XR + MR + CAL + ["nnames"]}
 # name -> dict(fs, target(s), retrain(s), seeds, k, construction kwargs).  Predictions of all (target, retrain, seed)
 # members are per-day rank-normalised and averaged before the book is formed.
 KEEP = {}
