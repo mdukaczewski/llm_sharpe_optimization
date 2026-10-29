@@ -74,8 +74,17 @@ def main():
     ap.add_argument("--omit", default="", help="regex: drop candidate names matching it")
     ap.add_argument("--voltarget", type=float, default=0.0, help="if >0: scale the portfolio to this annual vol using trailing-20d realized vol of its own past returns (capped at 2x)")
     ap.add_argument("--minhist", type=int, default=200, help="min non-zero days a variant needs in the selection window")
+    ap.add_argument("--commission_bps", type=float, default=0.0, help="extra per-side cost (bps) charged on every fully-turned-over minute-bar book: L/S books pay 4x per day, long-only 2x (fixed per-order commission / clip)")
     a = ap.parse_args()
     fam = families()
+    if a.commission_bps > 0:
+        def gross_of(f, n):
+            if f in ("mom", "vol", "ml"): return 0.0                       # monthly / multi-day books: commission negligible
+            if f == "etfmacro": return 0.5                                 # 0.5 VIXY/UVXY short, in and out
+            if "_LO_" in n or "_lo" in n or "XSLO" in n or "_LO" in n: return 1.0
+            return 2.0                                                     # L/S top-k books
+        fam = {f: {n: s - 2 * gross_of(f, n) * a.commission_bps / 1e4 for n, s in d.items()} for f, d in fam.items()}
+        print(f"commission: {a.commission_bps} bps per side on minute-bar books")
     for f_ in [x for x in a.drop.split(",") if x]: fam.pop(f_, None)
     import re
     if a.keep: fam = {f: {n: s for n, s in d.items() if re.search(a.keep, n)} for f, d in fam.items()}
