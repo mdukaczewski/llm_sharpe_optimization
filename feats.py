@@ -2,7 +2,8 @@
 import numpy as np, pandas as pd, re, time
 from bt import *
 
-START, END = "2016-10-28", "2026-10-27"
+import os as _os
+START, END = "2016-10-28", _os.environ.get("STRAT_END", "2026-10-27")
 
 def build(P):
     F = {}

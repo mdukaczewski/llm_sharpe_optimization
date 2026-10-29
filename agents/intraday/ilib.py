@@ -6,8 +6,9 @@ bar = closing auction print). Conventions:
  * Sharpe = mean/std*sqrt(252) of daily returns, rf=0 (same as ls.sh)
 """
 import numpy as np, pandas as pd, json, os
-NPZ = "/home/trumpet/strat20/data/minute_npz"
-START, END = "2016-10-28", "2026-10-27"
+import os as _os
+NPZ = _os.environ.get("STRAT_MINUTE", "/home/trumpet/strat20/data/minute_npz")
+START, END = "2016-10-28", _os.environ.get("STRAT_END", "2026-10-27")
 COST = {"SPY": 0.5, "QQQ": 0.5, "AAPL": 1.0, "MSFT": 1.0, "NVDA": 1.0, "AMZN": 1.0, "TSLA": 1.0}
 def cost_of(tk): return COST.get(tk, 1.5)
 ETF4 = ["SPY", "QQQ", "IWM", "DIA"]
@@ -19,7 +20,7 @@ def split_factor(tk, dates):
     returns array f[d] = price ratio new/old applied on day d (1 except split days)."""
     global _splits
     if _splits is None:
-        _splits = json.load(open("/home/trumpet/strat20/data/splits.json"))
+        _splits = json.load(open(_os.environ.get("STRAT_SPLITS", "/home/trumpet/strat20/data/splits.json")))
     f = np.ones(len(dates))
     for s in _splits:
         if s["ticker"] != tk: continue
@@ -33,7 +34,9 @@ _panel = None
 def official_close(tk, dates):
     global _panel
     if _panel is None:
-        z = np.load("/home/trumpet/strat20/data/panel_liquid.npz", allow_pickle=True)
+        _pp = _os.environ.get("STRAT_PANEL_LIQ", "/home/trumpet/strat20/data/panel_liquid.npz")
+        if not _os.path.exists(_pp): return np.full(len(dates), np.nan)   # no panel yet: Min falls back to the 15:59 bar
+        z = np.load(_pp, allow_pickle=True)
         _panel = (pd.to_datetime(z["dates"]), list(z["tickers"]), z["close"].astype(np.float64))
     pd_, tks, cl = _panel
     if tk not in tks: return np.full(len(dates), np.nan)
@@ -52,7 +55,7 @@ class Min:
             a = z[k][m].astype(np.float64)
             setattr(self, k + "_raw", a.copy())
             if ffill:
-                a = pd.DataFrame(a.T).ffill().values.T      # ffill forward within day
+                a = pd.DataFrame(a.T).ffill().to_numpy().T.copy()      # ffill forward within day (copy: pandas 3 returns read-only views)
             setattr(self, k, a)
         self.v = z["vol"][m].astype(np.float64)
         self.n = z["n"][m].astype(np.float64)

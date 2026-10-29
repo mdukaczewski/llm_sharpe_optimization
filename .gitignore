@@ -7,3 +7,6 @@ __pycache__/
 *.pyc
 agents/vol/etf.csv
 nohup.out
+logs/fetch_local.log
+logs/fetch_minute_local.log
+agents/*/log.txt
