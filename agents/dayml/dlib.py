@@ -11,7 +11,7 @@ sys.path.insert(0, "/home/user/llm_sharpe_optimization")
 import rlib
 from rlib import DEV_END, zsd, Min
 HERE = os.path.dirname(os.path.abspath(__file__))
-CD = f"{rlib.DATA}/cache_dayml"; os.makedirs(CD, exist_ok=True)
+CD = f"{rlib.DATA}/cache_dayml2"; os.makedirs(CD, exist_ok=True)      # v2: delayed-fill targets (decide 09:31, fill at the 09:33 bar = bin 3)
 
 LAG = ["z30", "z60", "z30l", "z120", "z15l", "z5l", "zmoc", "zoc", "zo15", "zgap", "rngpos", "rng", "vlast_share", "vfirst_share",
        "vmoc_share", "vday_rel", "zvwap", "zcc", "cc5", "cc21", "rv20", "rv5_20", "zon_prev", "ldv"]
@@ -48,7 +48,11 @@ def extra_frame(tk):
     d["y_1000"] = M.close / c[:, 31] - 1               # 10:00 decision -> close
     d["y_1500"] = M.close / c[:, 331] - 1              # 15:00 decision -> close
     d["y_day2"] = M.close / c[:, 2] - 1                # same as rlib y_day (check)
-    for k in ["y_60", "y_120", "y_1000", "y_1500", "y_day2"]:
+    # DELAYED-FILL targets: the 09:32 bar is a single print that still carries the 09:31 bounce the model
+    # keys on (diag_liq.py: 4.4 -> 2.4 Sharpe on the thin names); fill at the 09:33 bar (bin 3) instead,
+    # exit one bar later as well.  These are the targets the kept candidates use.
+    d["y_60d"] = c[:, 61] / c[:, 3] - 1; d["y_120d"] = c[:, 121] / c[:, 3] - 1; d["y_dayd"] = M.close / c[:, 3] - 1
+    for k in ["y_60", "y_120", "y_1000", "y_1500", "y_day2", "y_60d", "y_120d", "y_dayd"]:
         x = d[k].values.astype(float); x[np.abs(x) > 0.5] = np.nan; d[k] = x
     d = d.astype(np.float32); d.index.name = "date"; d.to_parquet(cp); return d
 

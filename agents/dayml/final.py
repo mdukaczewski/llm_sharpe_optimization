@@ -14,10 +14,12 @@ import sys, time, os; sys.path.insert(0, "/home/user/llm_sharpe_optimization/age
 import dlib, rlib, numpy as np, pandas as pd
 NJ = int(os.environ.get("DAYML_NJOBS", "4")); LANE = "dayml"; N = 1500
 # name, target, retrain, k, weight, note
+# 2026-10-29 20:40 coordinator: the 09:32-bar fill harvested bid-ask bounce (diag_liq.py); kept books now
+# train on and are evaluated with the DELAYED fill (09:33 bar = bin 3, exits at bins 61 / 121).
 KEPT = [
-    ("dayml_x120q_k20p", "y_120", "Q", 20, "pred", "09:31 LightGBM (EXT feats, quarterly) L/S top/bottom 20 |pred|-weighted, fill 09:32 bar, exit 11:30 bar (bin 120)"),
-    ("dayml_x120q_k10p", "y_120", "Q", 10, "pred", "same model, k=10"),
-    ("dayml_x60q_k20p",  "y_60",  "Q", 20, "pred", "09:31 LightGBM (EXT feats, quarterly) L/S 20 |pred|-weighted, exit 10:30 bar (bin 60)"),
+    ("dayml_x60dq_k20p",  "y_60d",  "Q", 20, "pred", "09:31 LightGBM (EXT feats, quarterly) L/S top/bottom 20 |pred|-weighted, fill 09:33 bar (bin 3), exit 10:31 bar (bin 61)"),
+    ("dayml_x60dq_k10p",  "y_60d",  "Q", 10, "pred", "same model, k=10"),
+    ("dayml_x120dq_k20p", "y_120d", "Q", 20, "pred", "09:31 LightGBM (EXT feats, quarterly) L/S 20 |pred|-weighted, fill 09:33 bar, exit 11:31 bar (bin 121)"),
 ]
 t0 = time.time(); print("DEV_END", rlib.DEV_END, "n_jobs", NJ, flush=True)
 tks = rlib.universe(N); print("universe", N, "available", len(tks), flush=True)
