@@ -1,5 +1,0 @@
-3238 files 2014-06-02..2026-10-28
-3122 days x 24081 tickers
-splits applied: 5794
-dividends applied: 332406
-types: {np.str_(''): 1040, np.str_('ADRC'): 663, np.str_('CS'): 10352, np.str_('ETF'): 7250, np.str_('ETN'): 250, np.str_('ETS'): 132, np.str_('ETV'): 97, np.str_('FUND'): 572, np.str_('INDEX'): 183, np.str_('PFD'): 206, np.str_('RIGHT'): 279, np.str_('SP'): 449, np.str_('UNIT'): 1039, np.str_('WARRANT'): 1569}
