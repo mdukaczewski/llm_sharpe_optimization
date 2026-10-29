@@ -10,3 +10,4 @@ nohup.out
 logs/fetch_local.log
 logs/fetch_minute_local.log
 agents/*/log.txt
+logs/build_panel_local.log
