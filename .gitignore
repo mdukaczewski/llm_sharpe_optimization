@@ -23,3 +23,6 @@ agents/*/*_400.log
 agents/*/expq.log
 agents/*/warm.log
 agents/dayml/diag_liq.log
+agents/*/final_holdout.log
+agents/*/cands_dev/
+agents/*/cands_old/

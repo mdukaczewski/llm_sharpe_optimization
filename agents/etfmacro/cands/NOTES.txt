@@ -1,5 +1,5 @@
-vixon_r95	Sh=0.96	short 0.5 VIXY close->09:31 if VIX/VIX3M(t-1)<0.95, no Friday decisions, 1.5bps/side, borrow 2%
-uvxon_r95	Sh=1.05	short 0.25 UVXY close->09:31, same regime, borrow 5%
-vixon_r95_1545	Sh=0.97	as vixon_r95 but entered at the 15:45 bar (decision bin 374)
-uvxon_r95_1545	Sh=1.02	as uvxon_r95 but entered at the 15:45 bar
-vixon_r95_ls	Sh=1.22	vixon_r95 + long 0.5 VIXY overnight when ratio(t-1)>=0.95 and SPY s=0.5*z30-z60<-1
+vixon_r95	Sh=0.90	short 0.5 VIXY close->09:31 if VIX/VIX3M(t-1)<0.95, no Friday decisions, 1.5bps/side, borrow 2%
+uvxon_r95	Sh=1.00	short 0.25 UVXY close->09:31, same regime, borrow 5%
+vixon_r95_1545	Sh=0.94	as vixon_r95 but entered at the 15:45 bar (decision bin 374)
+uvxon_r95_1545	Sh=0.99	as uvxon_r95 but entered at the 15:45 bar
+vixon_r95_ls	Sh=1.17	vixon_r95 + long 0.5 VIXY overnight when ratio(t-1)>=0.95 and SPY s=0.5*z30-z60<-1
