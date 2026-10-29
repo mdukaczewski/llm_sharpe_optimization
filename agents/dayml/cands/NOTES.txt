@@ -6,3 +6,4 @@ dayml_x60dq_k10p	Sh=2.46	same model, k=10
 dayml_x120dq_k20p	Sh=2.62	09:31 LightGBM (EXT feats, quarterly) L/S 20 |pred|-weighted, fill 09:33 bar, exit 11:31 bar (bin 121)
 dayml_x60dq_k20p	Sh=2.59	09:31 LightGBM (EXT feats, quarterly) L/S top/bottom 20 |pred|-weighted, fill 09:33 bar (bin 3), exit 10:31 bar (bin 61)
 dayml_x60dq_k10p	Sh=2.42	same model, k=10
+dayml_x120dq_k20p	Sh=2.55	09:31 LightGBM (EXT feats, quarterly) L/S 20 |pred|-weighted, fill 09:33 bar, exit 11:31 bar (bin 121)

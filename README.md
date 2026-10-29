@@ -292,4 +292,34 @@ learned book, vol-scaled targets.
 Dev folds 2018-07-01..2026-04-27 (16 half-years; variant per family and the
 inverse-vol weights chosen only from dates before each window); families =
 original coarse grid minus the old intraday family, plus the four lanes.
-HOLDOUT_PLACEHOLDER
+| portfolio (10 families, plain inverse-vol weights, picks from prior dates)     | dev folds Sharpe | holdout Sharpe | dev ret | dev vol | dev maxDD | holdout maxDD |
+|--------------------------------------------------------------------------------|------------------|----------------|---------|---------|-----------|---------------|
+| spread only, 1-1.5 bps/side (the project's original cost assumption)           | **4.07**         | **4.13**       | 31.6%   | 7.8%    | -6.9%     | -1.6%         |
+| **$3 per order, $0.4M equity per book (the user's figure)**                    | **3.14**         | **3.45**       | 26.3%   | 8.4%    | -9.4%     | -2.6%         |
+| $3 per order, $2M equity per book                                              | 3.93             | 4.00           | 30.4%   | 7.7%    | -7.8%     | -1.6%         |
+| reference: previous phase, same dev span, spread only (README above)           | 3.33             | 4.61           |         |         |           |               |
+
+Dev fold Sharpes at $0.4M: mean 3.31, median 3.08, min 0.01 (2026 Q1), no negative
+fold.  Holdout = 126 trading days (standard error of a half-year Sharpe ~1.4),
+looked at once, after every choice above was frozen.  Full output in
+`out/final_eval.txt`; stitched series in `out/folds_all_oos.csv`.
+
+Per-family stitched fold-OOS at $0.4M per book: overnight LightGBM (onml) 2.76,
+previous overnight LightGBM 1.95, intraday LightGBM 10:31/11:31 exit 1.51, rule
+overnight composite 1.42, late-exit rule 1.35, rule 09:31 1.25, VIX ETP overnight
+1.15, momentum 1.06, vol spread 1.03, daily ML 0.98.  Weights in the last fold:
+rule composite 0.16, rule 09:31 0.15, vol 0.12, late rule 0.10, VIX overnight 0.10,
+both overnight LightGBM books 0.09 each, momentum 0.07, intraday 0.07, daily ML 0.05.
+
+What is still in-sample: the four lanes' feature sets, exits and thresholds were
+chosen on the dev span (never on the holdout); the 1500-name universe is ranked by
+today's liquidity (survivorship); fills at the closing auction, the 09:31 bar and
+the 09:33 bar are assumed exact at 1-1.5 bps of spread/impact; borrow 1%/yr on
+every short (5% on UVXY); overnight books trade the last-minute signal at the
+official close, which needs a market-on-close order placed before the signal is
+complete.  The overnight book's second half (3.1-3.4) is below its first half
+(4.1-4.4) and the intraday books decay after 2021.
+
+Regenerate: `STRAT_END=2026-10-28 python3 agents/<lane>/final.py` for onml (~50 min),
+dayml (~50 min), xsrule (~1 min warm / 45 min cold), etfmacro (1 min); then
+`bash final_eval.sh --show_holdout`.
