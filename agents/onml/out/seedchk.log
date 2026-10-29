@@ -1,2 +1,3 @@
 17:51:41 exact baseline order/default seed  full 2.00 foldOOS 2.09 halves 2.31/1.72 mdd -11.7% corr_sleeve 0.44 corr_spy +0.02
 17:53:36 sorted seed0                       full 1.74 foldOOS 1.78 halves 2.14/1.38 mdd -14.5% corr_sleeve 0.47 corr_spy +0.02
+17:56:09 sorted seed1                       full 1.79 foldOOS 1.89 halves 1.91/1.68 mdd -11.0% corr_sleeve 0.49 corr_spy +0.03

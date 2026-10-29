@@ -99,7 +99,7 @@ def ticker_frame(tk):
       y_day   : 09:32 fill of t+1 -> official close of t+1     [intraday book, decided at 09:31 of t+1]
       y_cc    : close t -> close t+1 (total, no dividends)
     Cached in data/cache/{tk}.parquet (keyed on npz mtime)."""
-    cd = f"{DATA}/cache"; os.makedirs(cd, exist_ok=True); cp = f"{cd}/{tk}.parquet"
+    cd = f"{DATA}/cache"; os.makedirs(cd, exist_ok=True); cp = f"{cd}/{tk}.v2.parquet"      # v2: split-adjusted forward targets
     src = f"{DATA}/minute_npz/{tk}.npz"
     if os.path.exists(cp) and os.path.getmtime(cp) > os.path.getmtime(src):
         return pd.read_parquet(cp)
@@ -128,8 +128,11 @@ def ticker_frame(tk):
     d["o_zgap"] = zsd(M.gap); d["o_zm1"] = zsd(r(-1, 1)); d["o_vm1_rel"] = M.v[:, :2].sum(1) / (pd.Series(M.v[:, :2].sum(1)).rolling(20).mean().shift(1).values + 1)
     # targets
     def fwd(x): return np.r_[x[1:], np.nan]
-    y_on = fwd(M.c[:, 1]) / M.close - 1; y_on60 = fwd(M.c[:, 61]) / M.close - 1
-    y_cc = fwd(M.close) / M.close - 1
+    # forward targets cross a day boundary: prev close must be multiplied by the split factor of day d+1
+    # (M.sf[d+1] = split_from/split_to on an execution date, else 1), as ilib.Min does for gap/cc.
+    base = M.close * fwd(M.sf)
+    y_on = fwd(M.c[:, 1]) / base - 1; y_on60 = fwd(M.c[:, 61]) / base - 1
+    y_cc = fwd(M.close) / base - 1
     y_day = M.close / M.c[:, 2] - 1                   # same-day: 09:32 fill -> close (decided at 09:31 of that day)
     for k, v in [("y_on", y_on), ("y_on60", y_on60), ("y_cc", y_cc), ("y_day", y_day)]:
         v = np.asarray(v, float); v[np.abs(v) > 0.5] = np.nan; d[k] = v

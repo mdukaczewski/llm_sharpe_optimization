@@ -89,3 +89,26 @@ def summary(r, name):
     c = corr_table(r)
     print(f"{name:34s} Sh {s['sharpe']:.2f} OOS {sh(oos):.2f} halves {s['h1']:.2f}/{s['h2']:.2f} mdd {s['mdd']*100:.1f}% folds min {tab.fold_sh.min():.2f} neg {(tab.fold_sh<0).sum()} | corr {c}", flush=True)
     return s, oos
+
+# ---- extra per-ticker features built in this lane (own cache; everything known by the 15:59 bar, i.e. before the closing print)
+def ticker_extra(tk):
+    cd = f"{SCR}/xcache"; os.makedirs(cd, exist_ok=True); cp = f"{cd}/{tk}.parquet"; src = f"{rlib.DATA}/minute_npz/{tk}.npz"
+    if os.path.exists(cp) and os.path.getmtime(cp) > os.path.getmtime(src): return pd.read_parquet(cp)
+    M = rlib.Min(tk, end="2026-10-28")
+    d = pd.DataFrame(index=M.dates); d["tk"] = tk
+    vday_x = M.v[:, :390].sum(1)                               # continuous-session volume, auction excluded
+    d["vlast_x"] = (M.v[:, 330:390].sum(1) / (vday_x + 1)).astype(np.float32)   # last-hour share ex auction
+    d["v15_x"] = (M.v[:, 375:390].sum(1) / (vday_x + 1)).astype(np.float32)     # last-15-min share ex auction
+    d["z5l_x"] = rlib.zsd(M.r(384, 389)).astype(np.float32)                      # same as z5l (15:54 -> 15:59), kept for clarity
+    d.index.name = "date"; d.to_parquet(cp); return d
+
+def add_extra2(D, verbose=True):
+    rows = []; t0 = time.time(); tks = list(D.tk.unique())
+    for i, tk in enumerate(tks):
+        try: rows.append(ticker_extra(tk))
+        except Exception as e: print(tk, "extra skip", e, flush=True)
+        if verbose and (i + 1) % 100 == 0: print(f"  extra {i+1}/{len(tks)} {time.time()-t0:.0f}s", flush=True)
+    E = pd.concat(rows).reset_index()
+    D = D.merge(E, on=["date", "tk"], how="left")
+    for c in ["vlast_x", "v15_x"]: D[f"r_{c}"] = (D.groupby("date")[c].rank(pct=True) - 0.5).astype(np.float32)
+    return D

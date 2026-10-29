@@ -42,3 +42,79 @@ u400_c5_z5l_zmoc_zon_vl_ls30       Sh  1.61 OOS  1.53 h 2.76/0.44 mdd -14.5% min
 u400_c6_z5l_vl_lo20_s1.0           Sh  1.85 OOS  1.74 h 2.38/1.11 mdd -15.2% minfold -0.77 | c {'xslo20s1_150': 0.802, 'onlgb1200q': 0.317, 'spy_cc': 0.5, 'spy_on': 0.745}
 u400_c6_z5l_vl_lo20_s1.5           Sh  1.93 OOS  1.79 h 2.37/1.32 mdd -11.6% minfold -0.76 | c {'xslo20s1_150': 0.84, 'onlgb1200q': 0.29, 'spy_cc': 0.477, 'spy_on': 0.695}
 u400_c6_z5l_vl_lo30_s1.0           Sh  1.79 OOS  1.69 h 2.24/1.15 mdd -12.9% minfold -1.12 | c {'xslo20s1_150': 0.829, 'onlgb1200q': 0.309, 'spy_cc': 0.499, 'spy_on': 0.752}
+u400_c6_z5l_vl_lo10_s1.0           Sh  1.73 OOS  1.59 h 2.51/0.66 mdd -16.7% minfold -1.94 | c {'xslo20s1_150': 0.734, 'onlgb1200q': 0.311, 'spy_cc': 0.476, 'spy_on': 0.697}
+u400_c6_z5l_vl_ls20                Sh  1.42 OOS  1.43 h 2.42/0.35 mdd -17.7% minfold -2.40 | c {'xslo20s1_150': 0.316, 'onlgb1200q': 0.337, 'spy_cc': 0.072, 'spy_on': 0.076}
+u400_c6_z5l_vl_ls30                Sh  1.36 OOS  1.39 h 2.42/0.25 mdd -14.6% minfold -1.68 | c {'xslo20s1_150': 0.345, 'onlgb1200q': 0.349, 'spy_cc': 0.069, 'spy_on': 0.088}
+u400_c7_z5l_zon_w_lo20_s1.0        Sh  1.49 OOS  1.30 h 2.01/0.77 mdd -13.8% minfold -1.55 | c {'xslo20s1_150': 0.774, 'onlgb1200q': 0.281, 'spy_cc': 0.504, 'spy_on': 0.743}
+u400_c7_z5l_zon_w_lo20_s1.5        Sh  1.72 OOS  1.54 h 2.36/0.85 mdd -13.5% minfold -1.54 | c {'xslo20s1_150': 0.795, 'onlgb1200q': 0.288, 'spy_cc': 0.465, 'spy_on': 0.701}
+u400_c7_z5l_zon_w_lo30_s1.0        Sh  1.58 OOS  1.39 h 2.05/0.92 mdd -13.9% minfold -0.80 | c {'xslo20s1_150': 0.799, 'onlgb1200q': 0.284, 'spy_cc': 0.501, 'spy_on': 0.752}
+u400_c7_z5l_zon_w_lo10_s1.0        Sh  1.60 OOS  1.46 h 2.18/0.80 mdd -15.2% minfold -1.73 | c {'xslo20s1_150': 0.708, 'onlgb1200q': 0.261, 'spy_cc': 0.478, 'spy_on': 0.691}
+u400_c7_z5l_zon_w_ls20             Sh  1.06 OOS  0.99 h 1.96/0.18 mdd -21.6% minfold -1.88 | c {'xslo20s1_150': 0.194, 'onlgb1200q': 0.268, 'spy_cc': -0.024, 'spy_on': -0.047}
+u400_c7_z5l_zon_w_ls30             Sh  1.16 OOS  1.12 h 2.13/0.23 mdd -18.2% minfold -2.22 | c {'xslo20s1_150': 0.188, 'onlgb1200q': 0.273, 'spy_cc': -0.047, 'spy_on': -0.067}
+u400_c8_nozmoc_all_lo20_s1.0       Sh  1.76 OOS  1.63 h 2.31/0.97 mdd -15.2% minfold -1.36 | c {'xslo20s1_150': 0.784, 'onlgb1200q': 0.31, 'spy_cc': 0.501, 'spy_on': 0.74}
+u400_c8_nozmoc_all_lo20_s1.5       Sh  1.94 OOS  1.81 h 2.54/1.10 mdd -13.4% minfold -1.29 | c {'xslo20s1_150': 0.812, 'onlgb1200q': 0.311, 'spy_cc': 0.471, 'spy_on': 0.701}
+u400_c8_nozmoc_all_lo30_s1.0       Sh  1.74 OOS  1.60 h 2.19/1.10 mdd -14.7% minfold -0.85 | c {'xslo20s1_150': 0.81, 'onlgb1200q': 0.306, 'spy_cc': 0.499, 'spy_on': 0.748}
+u400_c8_nozmoc_all_lo10_s1.0       Sh  1.66 OOS  1.49 h 2.43/0.59 mdd -17.9% minfold -2.06 | c {'xslo20s1_150': 0.714, 'onlgb1200q': 0.303, 'spy_cc': 0.476, 'spy_on': 0.69}
+u400_c8_nozmoc_all_ls20            Sh  1.47 OOS  1.48 h 2.49/0.44 mdd -19.3% minfold -2.54 | c {'xslo20s1_150': 0.283, 'onlgb1200q': 0.324, 'spy_cc': 0.043, 'spy_on': 0.045}
+u400_c8_nozmoc_all_ls30            Sh  1.45 OOS  1.47 h 2.41/0.46 mdd -12.8% minfold -1.09 | c {'xslo20s1_150': 0.302, 'onlgb1200q': 0.326, 'spy_cc': 0.037, 'spy_on': 0.046}
+=== universe 150: 150 names
+u150_base_lo20_s1.0                Sh  2.04 OOS  1.83 h 2.53/1.40 mdd  -9.3% minfold  0.05 | c {'xslo20s1_150': 0.941, 'onlgb1200q': 0.275, 'spy_cc': 0.469, 'spy_on': 0.717}
+u150_base_lo20_s1.5                Sh  1.96 OOS  1.74 h 2.37/1.41 mdd  -7.2% minfold -0.34 | c {'xslo20s1_150': 0.877, 'onlgb1200q': 0.259, 'spy_cc': 0.421, 'spy_on': 0.645}
+u150_base_lo30_s1.0                Sh  1.95 OOS  1.76 h 2.44/1.31 mdd  -9.7% minfold -0.24 | c {'xslo20s1_150': 0.935, 'onlgb1200q': 0.269, 'spy_cc': 0.454, 'spy_on': 0.708}
+u150_base_lo10_s1.0                Sh  1.89 OOS  1.63 h 2.49/1.09 mdd -12.0% minfold -0.84 | c {'xslo20s1_150': 0.863, 'onlgb1200q': 0.266, 'spy_cc': 0.467, 'spy_on': 0.689}
+u150_base_ls20                     Sh  1.23 OOS  1.18 h 2.12/0.42 mdd -12.8% minfold -1.19 | c {'xslo20s1_150': 0.293, 'onlgb1200q': 0.25, 'spy_cc': -0.026, 'spy_on': -0.058}
+u150_base_ls30                     Sh  0.95 OOS  0.92 h 1.94/0.06 mdd -13.3% minfold -1.54 | c {'xslo20s1_150': 0.271, 'onlgb1200q': 0.262, 'spy_cc': -0.048, 'spy_on': -0.066}
+u150_c1_z5l_zon_lo20_s1.0          Sh  2.16 OOS  1.92 h 2.85/1.24 mdd -13.2% minfold  0.02 | c {'xslo20s1_150': 0.868, 'onlgb1200q': 0.276, 'spy_cc': 0.485, 'spy_on': 0.741}
+u150_c1_z5l_zon_lo20_s1.5          Sh  2.12 OOS  1.86 h 2.76/1.28 mdd -12.2% minfold -0.20 | c {'xslo20s1_150': 0.871, 'onlgb1200q': 0.266, 'spy_cc': 0.45, 'spy_on': 0.679}
+u150_c1_z5l_zon_lo30_s1.0          Sh  2.06 OOS  1.86 h 2.68/1.22 mdd -13.1% minfold -0.29 | c {'xslo20s1_150': 0.883, 'onlgb1200q': 0.275, 'spy_cc': 0.483, 'spy_on': 0.74}
+u150_c1_z5l_zon_lo10_s1.0          Sh  2.04 OOS  1.80 h 2.72/1.14 mdd -13.0% minfold -0.36 | c {'xslo20s1_150': 0.811, 'onlgb1200q': 0.267, 'spy_cc': 0.485, 'spy_on': 0.717}
+u150_c1_z5l_zon_ls20               Sh  1.52 OOS  1.42 h 2.64/0.56 mdd -11.7% minfold -0.52 | c {'xslo20s1_150': 0.223, 'onlgb1200q': 0.231, 'spy_cc': -0.056, 'spy_on': -0.096}
+u150_c1_z5l_zon_ls30               Sh  1.25 OOS  1.21 h 2.35/0.27 mdd -11.4% minfold -1.45 | c {'xslo20s1_150': 0.225, 'onlgb1200q': 0.239, 'spy_cc': -0.067, 'spy_on': -0.104}
+u150_c2_zmoc_zon_lo20_s1.0         Sh  2.07 OOS  1.79 h 2.82/1.11 mdd -15.2% minfold -0.19 | c {'xslo20s1_150': 0.86, 'onlgb1200q': 0.286, 'spy_cc': 0.488, 'spy_on': 0.752}
+u150_c2_zmoc_zon_lo20_s1.5         Sh  2.08 OOS  1.77 h 2.76/1.23 mdd -10.5% minfold -0.16 | c {'xslo20s1_150': 0.863, 'onlgb1200q': 0.264, 'spy_cc': 0.443, 'spy_on': 0.683}
+u150_c2_zmoc_zon_lo30_s1.0         Sh  2.08 OOS  1.81 h 2.79/1.18 mdd -12.0% minfold -0.02 | c {'xslo20s1_150': 0.885, 'onlgb1200q': 0.284, 'spy_cc': 0.485, 'spy_on': 0.749}
+u150_c2_zmoc_zon_lo10_s1.0         Sh  1.94 OOS  1.63 h 2.78/0.83 mdd -19.0% minfold -0.36 | c {'xslo20s1_150': 0.789, 'onlgb1200q': 0.274, 'spy_cc': 0.478, 'spy_on': 0.72}
+u150_c2_zmoc_zon_ls20              Sh  1.59 OOS  1.49 h 2.72/0.60 mdd -14.1% minfold -0.41 | c {'xslo20s1_150': 0.223, 'onlgb1200q': 0.223, 'spy_cc': -0.045, 'spy_on': -0.081}
+u150_c2_zmoc_zon_ls30              Sh  1.39 OOS  1.30 h 2.51/0.38 mdd -14.1% minfold -0.42 | c {'xslo20s1_150': 0.22, 'onlgb1200q': 0.228, 'spy_cc': -0.055, 'spy_on': -0.087}
+u150_c3_z5l_zon_vl_lo20_s1.0       Sh  2.08 OOS  1.86 h 2.76/1.16 mdd -15.6% minfold -0.45 | c {'xslo20s1_150': 0.859, 'onlgb1200q': 0.298, 'spy_cc': 0.499, 'spy_on': 0.763}
+u150_c3_z5l_zon_vl_lo20_s1.5       Sh  2.20 OOS  1.94 h 2.86/1.31 mdd -14.1% minfold -0.25 | c {'xslo20s1_150': 0.865, 'onlgb1200q': 0.285, 'spy_cc': 0.457, 'spy_on': 0.692}
+u150_c3_z5l_zon_vl_lo30_s1.0       Sh  2.07 OOS  1.89 h 2.71/1.21 mdd -15.3% minfold -0.34 | c {'xslo20s1_150': 0.875, 'onlgb1200q': 0.287, 'spy_cc': 0.497, 'spy_on': 0.767}
+u150_c3_z5l_zon_vl_lo10_s1.0       Sh  2.16 OOS  1.91 h 2.86/1.23 mdd -18.2% minfold -0.15 | c {'xslo20s1_150': 0.801, 'onlgb1200q': 0.297, 'spy_cc': 0.488, 'spy_on': 0.728}
+u150_c3_z5l_zon_vl_ls20            Sh  1.71 OOS  1.57 h 2.93/0.56 mdd -11.6% minfold -1.45 | c {'xslo20s1_150': 0.321, 'onlgb1200q': 0.309, 'spy_cc': 0.032, 'spy_on': 0.029}
+u150_c3_z5l_zon_vl_ls30            Sh  1.55 OOS  1.49 h 2.77/0.43 mdd -12.6% minfold -1.10 | c {'xslo20s1_150': 0.315, 'onlgb1200q': 0.302, 'spy_cc': 0.014, 'spy_on': 0.023}
+u150_c4_z5l_zmoc_zon_lo20_s1.0     Sh  2.13 OOS  1.85 h 2.83/1.22 mdd -14.0% minfold  0.08 | c {'xslo20s1_150': 0.875, 'onlgb1200q': 0.277, 'spy_cc': 0.487, 'spy_on': 0.734}
+u150_c4_z5l_zmoc_zon_lo20_s1.5     Sh  2.15 OOS  1.86 h 2.81/1.30 mdd -12.4% minfold -0.09 | c {'xslo20s1_150': 0.865, 'onlgb1200q': 0.27, 'spy_cc': 0.443, 'spy_on': 0.66}
+u150_c4_z5l_zmoc_zon_lo30_s1.0     Sh  2.14 OOS  1.92 h 2.77/1.31 mdd -13.3% minfold -0.16 | c {'xslo20s1_150': 0.894, 'onlgb1200q': 0.273, 'spy_cc': 0.485, 'spy_on': 0.734}
+u150_c4_z5l_zmoc_zon_lo10_s1.0     Sh  2.07 OOS  1.81 h 2.68/1.27 mdd -16.5% minfold -0.36 | c {'xslo20s1_150': 0.813, 'onlgb1200q': 0.263, 'spy_cc': 0.477, 'spy_on': 0.708}
+u150_c4_z5l_zmoc_zon_ls20          Sh  1.66 OOS  1.57 h 2.84/0.60 mdd -13.4% minfold -0.26 | c {'xslo20s1_150': 0.239, 'onlgb1200q': 0.239, 'spy_cc': -0.044, 'spy_on': -0.071}
+u150_c4_z5l_zmoc_zon_ls30          Sh  1.39 OOS  1.33 h 2.50/0.37 mdd -14.4% minfold -0.89 | c {'xslo20s1_150': 0.232, 'onlgb1200q': 0.261, 'spy_cc': -0.053, 'spy_on': -0.08}
+u150_c5_z5l_zmoc_zon_vl_lo20_s1.0  Sh  2.19 OOS  1.95 h 2.93/1.22 mdd -18.0% minfold -0.12 | c {'xslo20s1_150': 0.858, 'onlgb1200q': 0.297, 'spy_cc': 0.5, 'spy_on': 0.759}
+u150_c5_z5l_zmoc_zon_vl_lo20_s1.5  Sh  2.29 OOS  2.00 h 2.93/1.47 mdd -14.8% minfold  0.13 | c {'xslo20s1_150': 0.871, 'onlgb1200q': 0.286, 'spy_cc': 0.459, 'spy_on': 0.685}
+u150_c5_z5l_zmoc_zon_vl_lo30_s1.0  Sh  2.16 OOS  1.94 h 2.86/1.24 mdd -16.1% minfold -0.21 | c {'xslo20s1_150': 0.884, 'onlgb1200q': 0.292, 'spy_cc': 0.502, 'spy_on': 0.76}
+u150_c5_z5l_zmoc_zon_vl_lo10_s1.0  Sh  2.10 OOS  1.84 h 2.82/1.14 mdd -20.8% minfold -0.64 | c {'xslo20s1_150': 0.794, 'onlgb1200q': 0.291, 'spy_cc': 0.481, 'spy_on': 0.73}
+u150_c5_z5l_zmoc_zon_vl_ls20       Sh  1.82 OOS  1.72 h 3.00/0.75 mdd -13.0% minfold -0.47 | c {'xslo20s1_150': 0.321, 'onlgb1200q': 0.31, 'spy_cc': 0.039, 'spy_on': 0.045}
+u150_c5_z5l_zmoc_zon_vl_ls30       Sh  1.69 OOS  1.62 h 2.78/0.67 mdd -10.9% minfold -0.86 | c {'xslo20s1_150': 0.318, 'onlgb1200q': 0.312, 'spy_cc': 0.039, 'spy_on': 0.034}
+u150_c6_z5l_vl_lo20_s1.0           Sh  2.04 OOS  1.83 h 2.65/1.20 mdd -14.6% minfold -0.53 | c {'xslo20s1_150': 0.875, 'onlgb1200q': 0.294, 'spy_cc': 0.512, 'spy_on': 0.774}
+u150_c6_z5l_vl_lo20_s1.5           Sh  2.19 OOS  1.93 h 2.69/1.52 mdd -12.0% minfold  0.30 | c {'xslo20s1_150': 0.89, 'onlgb1200q': 0.275, 'spy_cc': 0.472, 'spy_on': 0.702}
+u150_c6_z5l_vl_lo30_s1.0           Sh  2.11 OOS  1.91 h 2.70/1.31 mdd -14.6% minfold -0.07 | c {'xslo20s1_150': 0.898, 'onlgb1200q': 0.284, 'spy_cc': 0.514, 'spy_on': 0.775}
+u150_c6_z5l_vl_lo10_s1.0           Sh  2.15 OOS  1.93 h 2.83/1.26 mdd -18.3% minfold -0.08 | c {'xslo20s1_150': 0.817, 'onlgb1200q': 0.296, 'spy_cc': 0.498, 'spy_on': 0.742}
+u150_c6_z5l_vl_ls20                Sh  1.62 OOS  1.52 h 2.98/0.38 mdd -12.8% minfold -1.79 | c {'xslo20s1_150': 0.346, 'onlgb1200q': 0.307, 'spy_cc': 0.044, 'spy_on': 0.042}
+u150_c6_z5l_vl_ls30                Sh  1.37 OOS  1.30 h 2.44/0.36 mdd -10.7% minfold -2.15 | c {'xslo20s1_150': 0.338, 'onlgb1200q': 0.32, 'spy_cc': 0.037, 'spy_on': 0.045}
+u150_c7_z5l_zon_w_lo20_s1.0        Sh  2.11 OOS  1.86 h 2.71/1.30 mdd -14.5% minfold -0.31 | c {'xslo20s1_150': 0.826, 'onlgb1200q': 0.28, 'spy_cc': 0.489, 'spy_on': 0.753}
+u150_c7_z5l_zon_w_lo20_s1.5        Sh  2.19 OOS  1.95 h 2.83/1.34 mdd -13.4% minfold -0.34 | c {'xslo20s1_150': 0.834, 'onlgb1200q': 0.27, 'spy_cc': 0.458, 'spy_on': 0.704}
+u150_c7_z5l_zon_w_lo30_s1.0        Sh  2.04 OOS  1.82 h 2.66/1.19 mdd -14.8% minfold -0.25 | c {'xslo20s1_150': 0.841, 'onlgb1200q': 0.273, 'spy_cc': 0.485, 'spy_on': 0.758}
+u150_c7_z5l_zon_w_lo10_s1.0        Sh  1.91 OOS  1.64 h 2.59/1.01 mdd -16.7% minfold -0.58 | c {'xslo20s1_150': 0.777, 'onlgb1200q': 0.253, 'spy_cc': 0.491, 'spy_on': 0.727}
+u150_c7_z5l_zon_w_ls20             Sh  1.63 OOS  1.54 h 2.64/0.74 mdd -11.6% minfold -0.92 | c {'xslo20s1_150': 0.198, 'onlgb1200q': 0.228, 'spy_cc': -0.061, 'spy_on': -0.096}
+u150_c7_z5l_zon_w_ls30             Sh  1.22 OOS  1.16 h 2.36/0.18 mdd -12.3% minfold -1.22 | c {'xslo20s1_150': 0.19, 'onlgb1200q': 0.232, 'spy_cc': -0.07, 'spy_on': -0.105}
+u150_c8_nozmoc_all_lo20_s1.0       Sh  2.04 OOS  1.82 h 2.70/1.16 mdd -16.4% minfold -0.24 | c {'xslo20s1_150': 0.855, 'onlgb1200q': 0.286, 'spy_cc': 0.507, 'spy_on': 0.769}
+u150_c8_nozmoc_all_lo20_s1.5       Sh  2.26 OOS  2.03 h 2.87/1.46 mdd -12.8% minfold -0.13 | c {'xslo20s1_150': 0.865, 'onlgb1200q': 0.276, 'spy_cc': 0.471, 'spy_on': 0.712}
+u150_c8_nozmoc_all_lo30_s1.0       Sh  2.04 OOS  1.86 h 2.69/1.18 mdd -16.2% minfold -0.50 | c {'xslo20s1_150': 0.878, 'onlgb1200q': 0.285, 'spy_cc': 0.506, 'spy_on': 0.772}
+u150_c8_nozmoc_all_lo10_s1.0       Sh  2.04 OOS  1.78 h 2.75/1.08 mdd -15.3% minfold -0.71 | c {'xslo20s1_150': 0.797, 'onlgb1200q': 0.291, 'spy_cc': 0.495, 'spy_on': 0.737}
+u150_c8_nozmoc_all_ls20            Sh  1.68 OOS  1.59 h 2.87/0.57 mdd -11.8% minfold -1.08 | c {'xslo20s1_150': 0.312, 'onlgb1200q': 0.289, 'spy_cc': 0.028, 'spy_on': 0.02}
+u150_c8_nozmoc_all_ls30            Sh  1.57 OOS  1.55 h 2.80/0.43 mdd -11.4% minfold -1.06 | c {'xslo20s1_150': 0.304, 'onlgb1200q': 0.295, 'spy_cc': 0.01, 'spy_on': 0.009}
+FOLD-OOS u400 LO20 s1 family            Sh  1.64 | folds mean 1.74 min -0.77 neg 1/16 | picks: u400_c6_z5l_vl_lo20_s1.0, u400_c8_nozmoc_all_lo20_s1.0, u400_c5_z5l_zmoc_zon_vl_lo20_s1.0
+FOLD-OOS u400 LS20 family               Sh  1.49 | folds mean 1.27 min -1.64 neg 6/16 | picks: u400_c5_z5l_zmoc_zon_vl_ls20, u400_c4_z5l_zmoc_zon_ls20
+FOLD-OOS u400 all LO family             Sh  1.55 | folds mean 1.62 min -1.29 neg 1/16 | picks: u400_c8_nozmoc_all_lo20_s1.5, u400_c6_z5l_vl_lo20_s1.5, u400_c5_z5l_zmoc_zon_vl_lo10_s1.0
+FOLD-OOS u150 LO20 s1 family            Sh  1.78 | folds mean 1.81 min -0.12 neg 1/16 | picks: u150_c1_z5l_zon_lo20_s1.0, u150_c5_z5l_zmoc_zon_vl_lo20_s1.0, u150_c2_zmoc_zon_lo20_s1.0
+FOLD-OOS u150 LS20 family               Sh  1.48 | folds mean 1.33 min -0.59 neg 4/16 | picks: u150_c5_z5l_zmoc_zon_vl_ls20, u150_c6_z5l_vl_ls20, u150_c3_z5l_zon_vl_ls20
+FOLD-OOS u150 all LO family             Sh  1.65 | folds mean 1.81 min -0.13 neg 1/16 | picks: u150_c8_nozmoc_all_lo20_s1.5, u150_c5_z5l_zmoc_zon_vl_lo20_s1.5, u150_c3_z5l_zon_vl_lo20_s1.5
