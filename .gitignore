@@ -26,3 +26,5 @@ agents/dayml/diag_liq.log
 agents/*/final_holdout.log
 agents/*/cands_dev/
 agents/*/cands_old/
+agents/*/preds.log
+agents/*/k10.log
