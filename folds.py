@@ -75,9 +75,20 @@ def main():
     ap.add_argument("--voltarget", type=float, default=0.0, help="if >0: scale the portfolio to this annual vol using trailing-20d realized vol of its own past returns (capped at 2x)")
     ap.add_argument("--minhist", type=int, default=200, help="min non-zero days a variant needs in the selection window")
     ap.add_argument("--commission_bps", type=float, default=0.0, help="extra per-side cost (bps) charged on every fully-turned-over minute-bar book: L/S books pay 4x per day, long-only 2x (fixed per-order commission / clip)")
+    ap.add_argument("--capital_usd", type=float, default=0.0, help="equity per book; with --order_usd charges each fully-turned-over minute-bar book n_positions x 2 orders x order_usd / capital per day (L/S top-k: 2k positions at 100%% long / 100%% short)")
+    ap.add_argument("--order_usd", type=float, default=3.0, help="fixed commission per filled order (used with --capital_usd)")
     a = ap.parse_args()
     fam = families()
-    if a.commission_bps > 0:
+    if a.capital_usd > 0:
+        import re as _re
+        def npos(f, n):
+            if f in ("mom", "vol", "ml", "etfmacro"): return 0                 # monthly / multi-day / 1-2 ETF orders: negligible
+            m = _re.search(r"(?:top|_k|lo|ls|XSLO|LO|LS)(\d+)", n); k = int(m.group(1)) if m else 20
+            sides = 1 if ("_LO_" in n or "_lo" in n or "XSLO" in n or n.endswith("_LO") or "LO_top" in n) else 2
+            return k * sides
+        fam = {f: {n: s - npos(f, n) * 2 * a.order_usd / a.capital_usd for n, s in d.items()} for f, d in fam.items()}
+        print(f"commission: ${a.order_usd:.0f} per order on ${a.capital_usd/1e6:.2f}M equity per book (L/S top-20: {40*2*a.order_usd/a.capital_usd*1e4:.1f} bps/day)")
+    elif a.commission_bps > 0:
         def gross_of(f, n):
             if f in ("mom", "vol", "ml"): return 0.0                       # monthly / multi-day books: commission negligible
             if f == "etfmacro": return 0.0                                 # one ETF order per side on half the book: $3 is < 0.2 bp
