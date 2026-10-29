@@ -43,3 +43,23 @@ cc_rev_vwap_ls20_h1 to1.82     Sh  0.10 OOS  0.12 h 0.22/-0.04 mdd -49.2% minfol
 cc_rev_vwap_ls20_h2 to0.92     Sh  0.12 OOS  0.11 h 0.18/0.05 mdd -35.0% minfold -1.46
 cc_rev_vwap_ls20_h5 to0.37     Sh  0.02 OOS  0.09 h 0.05/-0.03 mdd -31.6% minfold -1.99
 cc_rev_vwap_lo20_h1            Sh  0.51 OOS  0.45 h 0.58/0.42 mdd -56.7% minfold -1.80
+  lgb f18 cc1 IC (np.float64(0.007826972313185293), np.float64(2.7039630800382506)) 517s
+cclgb_f18_ls20_h1 to1.72       Sh  0.46 OOS  0.62 h 0.29/0.64 mdd -44.9% minfold -2.89
+cclgb_f18_ls20_h2 to0.87       Sh  0.34 OOS  0.58 h 0.03/0.66 mdd -39.4% minfold -3.15
+cclgb_f18_ls20_h5 to0.35       Sh  0.42 OOS  0.64 h 0.17/0.68 mdd -31.2% minfold -2.56
+cclgb_f18_ls30_h1 to1.65       Sh  0.35 OOS  0.51 h 0.32/0.37 mdd -43.2% minfold -2.58
+cclgb_f18_ls30_h2 to0.83       Sh  0.29 OOS  0.54 h 0.16/0.42 mdd -35.5% minfold -2.93
+cclgb_f18_ls30_h5 to0.34       Sh  0.18 OOS  0.43 h 0.01/0.35 mdd -32.7% minfold -2.42
+cclgb_f18_lo20_h1              Sh  0.74 OOS  0.74 h 0.63/0.89 mdd -55.6% minfold -2.32
+cclgb_f18_ls20_onleg           Sh -0.65 OOS -0.52 h -1.10/-0.16 mdd -59.6% minfold -2.25
+cclgb_f18_ls20_idleg           Sh  0.36 OOS  0.50 h 0.49/0.25 mdd -34.8% minfold -3.37
+  lgb f35 cc1 IC (np.float64(0.01126103084944287), np.float64(4.242657341748426)) 599s
+cclgb_f35_ls20_h1 to1.70       Sh  0.63 OOS  0.69 h 0.81/0.47 mdd -27.2% minfold -1.70
+cclgb_f35_ls20_h2 to0.86       Sh  0.47 OOS  0.65 h 0.56/0.39 mdd -21.3% minfold -2.69
+cclgb_f35_ls20_h5 to0.35       Sh  0.23 OOS  0.37 h 0.31/0.16 mdd -20.3% minfold -2.28
+cclgb_f35_ls30_h1 to1.63       Sh  0.56 OOS  0.60 h 0.78/0.34 mdd -23.7% minfold -1.54
+cclgb_f35_ls30_h2 to0.83       Sh  0.36 OOS  0.49 h 0.48/0.26 mdd -20.0% minfold -2.88
+cclgb_f35_ls30_h5 to0.34       Sh  0.10 OOS  0.20 h 0.41/-0.19 mdd -15.9% minfold -2.70
+cclgb_f35_lo20_h1              Sh  0.85 OOS  0.80 h 0.89/0.80 mdd -41.3% minfold -2.59
+cclgb_f35_ls20_onleg           Sh  0.11 OOS  0.29 h -0.59/0.80 mdd -33.8% minfold -1.56
+cclgb_f35_ls20_idleg           Sh -0.09 OOS -0.12 h 0.64/-0.81 mdd -57.0% minfold -2.94

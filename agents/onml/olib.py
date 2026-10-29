@@ -27,7 +27,7 @@ def load(n=400, tickers=None, extra=True):
     tks = tickers if tickers is not None else rlib.universe(n)
     D = rlib.minute_frame(tks, verbose=False); D = rlib.add_market(D)
     log(f"load: {len(tks)} names rows {len(D)} {time.time()-t0:.0f}s")
-    D = D.sort_values(["tk", "date"]).reset_index(drop=True)
+    D = D.reset_index(drop=True)   # keep universe order (per-ticker blocks, date-sorted) = baseline row order
     if extra:
         g = D.groupby("date")
         for f in XR_BASE: D[f + "_xr"] = (g[f].rank(pct=True) - 0.5).astype(np.float32)
