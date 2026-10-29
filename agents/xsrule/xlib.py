@@ -4,7 +4,7 @@ sys.path.insert(0, "/home/user/llm_sharpe_optimization")
 import numpy as np, pandas as pd, rlib
 from rlib import sh, stats, fold_oos, cost_bps, DEV_END, START
 HERE = os.path.dirname(os.path.abspath(__file__))
-SCR = os.environ.get("XS_SCRATCH", "/tmp/claude-0/-home-user-llm-sharpe-optimization/418755a4-2f35-58dd-83cb-2d5774e89f89/scratchpad")
+SCR = os.environ.get("XS_SCRATCH", f"{HERE}/xcache_root")   # exploration frames (session scratchpad during research); per-ticker extras under SCR/xcache
 
 def load(n=400, cache=True, verbose=True):
     """Stacked frame for rlib.universe(n) + market features + extras (all known at the close of t)."""

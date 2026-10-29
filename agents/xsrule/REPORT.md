@@ -130,7 +130,6 @@ FOMC dates were hard-coded (2016..2026-04, scheduled meetings only).
 `nohup python3 agents/xsrule/final.py > agents/xsrule/final.log 2>&1 &` regenerates exactly the three kept candidates via
 rlib.save_cand("xsrule", ...) from rlib.universe(1500) (1500 names), honouring STRAT_END through rlib.DEV_END, and prints
 the 1.5 bps repricing, the fold-OOS of the dict and of each candidate. Runtime: ~3 min when rlib's v2 caches and the
-lane's own per-ticker extra cache (`$XS_SCRATCH/xcache`, default the session scratchpad; set XS_SCRATCH to any writable
-directory) are warm; ~35-45 min from cold (rlib.ticker_frame ~2 min per 400 names, ticker_extra similar). Peak memory
+lane's own per-ticker extra cache (`agents/xsrule/xcache_root/xcache`, ~45 MB, gitignored; override with XS_SCRATCH) are warm; ~35-45 min from cold (rlib.ticker_frame ~2 min per 400 names, ticker_extra similar). Peak memory
 ~4 GB (2.5M-row frame); no intermediate frames are written. A per-ticker cache file that is being written by another
 process at the same moment is skipped with a "skip" line (one name of 1500 in one run; harmless).
