@@ -48,3 +48,29 @@ positive, both halves of the sample positive); 1.5 bps/side: k20 2.04/2.21 (-0.3
 plus (+0.1 at 400 names, +0.1..0.15 at 1500); the quantile filter and vol scaling do not help.
 
 ## 2. Final breadth: universe(1500) = 1497 names, quarterly expanding retrain, seed 0 (exp5)
+Same breadth, same construction, same seed; fold-OOS = rlib.fold_oos of the single series (16 half-year folds from 2018-07-01).
+
+| 1497 names, quarterly retrain, seed 0          | full | fold-OOS | halves    | maxDD  | corr sleeve | at 1.5 bps/side |
+|------------------------------------------------|------|----------|-----------|--------|-------------|-----------------|
+| f18 (= existing sleeve recipe), k20 eq         | 3.20 | 3.22     | 3.71/2.62 | -18.2% | 0.68        | 3.08 / 3.12     |
+| f18, k20 pred-weighted                         | 3.31 | 3.35     | 3.91/2.69 | -19.1% | 0.65        |                 |
+| **f28cal, k20 eq**                             | 3.93 | 3.99     | 4.37/3.44 | -13.4% | 0.59        | 3.81 / 3.87     |
+| f28cal, k20 pred-weighted                      | 3.97 | 4.04     | 4.42/3.49 | -14.0% | 0.58        |                 |
+| f28cal, k30 eq                                 | 4.01 | 4.04     | 4.63/3.31 | -12.5% | 0.62        |                 |
+| **f28cal, k30 pred-weighted**                  | 4.10 | 4.15     | 4.68/3.46 | -11.6% | 0.61        |                 |
+| f28cal, even / odd rank halves (k20)           | 3.18 / 3.57 | 3.11 / 3.75 |      | -7.2% / -11.1% |      |                 |
+| fall (50 feats), k20 eq                        | 3.91 | 3.84     | 4.18/3.62 | -21.9% | 0.53        | 3.80 / 3.74     |
+| fall, k20 pred-weighted                        | 4.18 | 4.13     | 4.38/3.95 | -22.7% | 0.52        |                 |
+| fall, even / odd halves (k20)                  | 3.52 / 3.22 | 3.47 / 3.21 |      |        |             |                 |
+| f28cal, yearly retrain, k20 eq                 | 3.65 | 3.74     | 3.89/3.38 | -13.4% | 0.53        | 3.52 / 3.62     |
+| rank-average of the four models above, k20     | 3.91 | 3.90     | 4.27/3.49 | -15.4% | 0.62        | 3.79 / 3.78     |
+| existing sleeve onlgb1200q_ls20 (dev cut)      | 3.40 | 3.49     | 4.28/2.41 | -19.1% | 1.00        |                 |
+
+Family fold-OOS over the 12 non-cost variants of this table (rlib.fold_oos picks per fold): 3.79, min fold 0.86, no negative fold.
+The feature gain carries from 400 names (+1.0) to 1500 names (+0.77 fold-OOS at k20, same seed, same construction), i.e.
+it is additive to the breadth gain, which was the only lever found earlier in the project. The sleeve-recipe rerun on 1497
+names (3.20) is a little below the shipped 1200-name sleeve (3.40 on the dev window): names 1201-1500 cost 1.5 bps and add
+little; the difference is also within seed/row-order noise. Correlation of the new book with the existing sleeve is 0.59,
+lower than expected — the extra features change about half of the picks.
+
+## 3. Kept candidates (agents/onml/cands, written by `final.py`)
