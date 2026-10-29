@@ -10,3 +10,6 @@ dayml_x120dq_k20p	Sh=2.55	09:31 LightGBM (EXT feats, quarterly) L/S 20 |pred|-we
 dayml_x60dq_k10p	Sh=2.42	09:31 LightGBM quarterly, fill 09:33 bar, exit 10:31 bar, L/S top10 |pred|-weighted
 dayml_x60dq_k15p	Sh=2.55	09:31 LightGBM quarterly, fill 09:33 bar, exit 10:31 bar, L/S top15 |pred|-weighted
 dayml_x60dq_k20p	Sh=2.59	09:31 LightGBM quarterly, fill 09:33 bar, exit 10:31 bar, L/S top20 |pred|-weighted
+dayml_x120dq_k10p	Sh=2.32	09:31 LightGBM quarterly, fill 09:33 bar, exit 11:31 bar, L/S top10 |pred|-weighted
+dayml_x120dq_k15p	Sh=2.45	09:31 LightGBM quarterly, fill 09:33 bar, exit 11:31 bar, L/S top15 |pred|-weighted
+dayml_x120dq_k20p	Sh=2.55	09:31 LightGBM quarterly, fill 09:33 bar, exit 11:31 bar, L/S top20 |pred|-weighted
