@@ -31,3 +31,14 @@ u400_c4_z5l_zmoc_zon_lo20_s1.0     Sh  1.72 OOS  1.56 h 2.21/1.03 mdd -13.1% min
 u400_c4_z5l_zmoc_zon_lo20_s1.5     Sh  1.90 OOS  1.74 h 2.46/1.15 mdd -13.4% minfold -0.41 | c {'xslo20s1_150': 0.835, 'onlgb1200q': 0.278, 'spy_cc': 0.459, 'spy_on': 0.679}
 u400_c4_z5l_zmoc_zon_lo30_s1.0     Sh  1.78 OOS  1.63 h 2.27/1.13 mdd -13.2% minfold -0.47 | c {'xslo20s1_150': 0.837, 'onlgb1200q': 0.286, 'spy_cc': 0.488, 'spy_on': 0.731}
 u400_c4_z5l_zmoc_zon_lo10_s1.0     Sh  1.77 OOS  1.65 h 2.29/1.03 mdd -14.1% minfold -1.62 | c {'xslo20s1_150': 0.734, 'onlgb1200q': 0.261, 'spy_cc': 0.479, 'spy_on': 0.692}
+u400_c4_z5l_zmoc_zon_ls20          Sh  1.55 OOS  1.46 h 2.64/0.51 mdd -20.4% minfold -1.16 | c {'xslo20s1_150': 0.234, 'onlgb1200q': 0.258, 'spy_cc': -0.023, 'spy_on': -0.044}
+u400_c4_z5l_zmoc_zon_ls30          Sh  1.37 OOS  1.34 h 2.41/0.38 mdd -15.5% minfold -1.30 | c {'xslo20s1_150': 0.228, 'onlgb1200q': 0.28, 'spy_cc': -0.026, 'spy_on': -0.049}
+u400_c5_z5l_zmoc_zon_vl_lo20_s1.0  Sh  1.75 OOS  1.62 h 2.35/0.92 mdd -16.1% minfold -0.85 | c {'xslo20s1_150': 0.796, 'onlgb1200q': 0.305, 'spy_cc': 0.483, 'spy_on': 0.73}
+u400_c5_z5l_zmoc_zon_vl_lo20_s1.5  Sh  1.91 OOS  1.75 h 2.51/1.09 mdd -15.2% minfold -0.61 | c {'xslo20s1_150': 0.831, 'onlgb1200q': 0.295, 'spy_cc': 0.455, 'spy_on': 0.684}
+u400_c5_z5l_zmoc_zon_vl_lo30_s1.0  Sh  1.91 OOS  1.76 h 2.48/1.13 mdd -16.4% minfold -0.15 | c {'xslo20s1_150': 0.818, 'onlgb1200q': 0.309, 'spy_cc': 0.488, 'spy_on': 0.737}
+u400_c5_z5l_zmoc_zon_vl_lo10_s1.0  Sh  1.94 OOS  1.81 h 2.43/1.26 mdd -14.1% minfold -0.59 | c {'xslo20s1_150': 0.719, 'onlgb1200q': 0.291, 'spy_cc': 0.458, 'spy_on': 0.685}
+u400_c5_z5l_zmoc_zon_vl_ls20       Sh  1.66 OOS  1.60 h 2.81/0.49 mdd -17.0% minfold -1.64 | c {'xslo20s1_150': 0.298, 'onlgb1200q': 0.301, 'spy_cc': 0.034, 'spy_on': 0.045}
+u400_c5_z5l_zmoc_zon_vl_ls30       Sh  1.61 OOS  1.53 h 2.76/0.44 mdd -14.5% minfold -1.40 | c {'xslo20s1_150': 0.304, 'onlgb1200q': 0.331, 'spy_cc': 0.039, 'spy_on': 0.045}
+u400_c6_z5l_vl_lo20_s1.0           Sh  1.85 OOS  1.74 h 2.38/1.11 mdd -15.2% minfold -0.77 | c {'xslo20s1_150': 0.802, 'onlgb1200q': 0.317, 'spy_cc': 0.5, 'spy_on': 0.745}
+u400_c6_z5l_vl_lo20_s1.5           Sh  1.93 OOS  1.79 h 2.37/1.32 mdd -11.6% minfold -0.76 | c {'xslo20s1_150': 0.84, 'onlgb1200q': 0.29, 'spy_cc': 0.477, 'spy_on': 0.695}
+u400_c6_z5l_vl_lo30_s1.0           Sh  1.79 OOS  1.69 h 2.24/1.15 mdd -12.9% minfold -1.12 | c {'xslo20s1_150': 0.829, 'onlgb1200q': 0.309, 'spy_cc': 0.499, 'spy_on': 0.752}

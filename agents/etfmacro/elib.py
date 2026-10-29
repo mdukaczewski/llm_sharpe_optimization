@@ -48,3 +48,25 @@ def corr_report(r, p=True):
     out["SPY"] = float(r.reindex(spy.index).fillna(0).corr(spy))
     if p: print({k: round(v, 3) for k, v in out.items()})
     return out
+
+# ---------------------------------------------------------------- overnight ETP legs from minute bars (split-safe, no |y| cap)
+_MIN = {}
+def minute(tk):
+    from ilib import Min
+    if tk not in _MIN: _MIN[tk] = Min(tk, end=DEV_END)
+    return _MIN[tk]
+
+def on_ret(tk, entry_bin=390, exit_bin=1):
+    """Overnight return indexed at the DECISION day t: fill at close of `entry_bin` of day t (390 = official close,
+    i.e. a decision at bin 389 / the close) -> fill at close of `exit_bin` of day t+1. Split-adjusted (Min.sf)."""
+    M = minute(tk); pin = M.c[:, entry_bin]; pout = np.r_[M.c[1:, exit_bin], np.nan]; sf = np.r_[M.sf[1:], 1.0]
+    r = pout / (pin * sf) - 1
+    return pd.Series(r, index=pd.DatetimeIndex(M.dates))
+
+def leg_ret(w, r, cost=1.5, borrow=0.0):
+    """w: weights decided at t (Series), r: returns of the leg indexed at the decision day t. Net return booked at t+1 (the exit day).
+    cost bps per side on |w| (2 sides), borrow annual on |short|."""
+    idx = w.index; r = r.reindex(idx)
+    g = w * r; c = w.abs() * 2 * cost / 1e4 + w.clip(upper=0).abs() * borrow / 252
+    n = (g - c); n[r.isna()] = 0.0
+    return n.shift(1).fillna(0.0).loc[START:DEV_END]

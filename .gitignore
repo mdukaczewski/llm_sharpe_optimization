@@ -15,3 +15,4 @@ logs/baseline_local.log
 agents/*/out/*.parquet
 *.parquet
 agents/*/out/
+agents/*/log_*.txt
