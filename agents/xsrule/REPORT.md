@@ -45,7 +45,7 @@ of a 9-signal x 6-book grid costs ~0.3 against the single fixed composite.
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | xsr_cAx_lo20_s15_u150 | LO top-20, cAx > 1.5, 150 names | 2.28 | **2.04** | 2.92 / 1.44 | -13.9% | 23.5% | 10.3% | 2.10 | 2 x book/day | 0.87 | 0.28 | 0.05 | 0.44 |
 | xsr_cAx_ls20_u150 | L/S top/bottom 20 by cAx, 150 names | 1.76 | **1.65** | 3.07 / 0.57 | -12.1% | 17.9% | 10.2% | 1.26 | 4 x book/day | 0.29 | 0.30 | 0.01 | 0.01 |
-| xsr_cBx_ls20_u1500 | L/S top/bottom 20 by cBx, 1500 names | 2.10 | **2.05** | 2.95 / 1.20 | -22.7% | 30.4% | 14.5% | 1.94 | 4 x book/day | 0.18 | 0.31 | 0.00 | 0.06 |
+| xsr_cBx_ls20_u1500 | L/S top/bottom 20 by cBx, 1500 names | 2.09 | **2.04** | 2.94 / 1.20 | -22.7% | 30.3% | 14.5% | 1.94 | 4 x book/day | 0.18 | 0.31 | 0.00 | 0.06 |
 
 Turnover: overnight books are opened at the close and fully closed at 09:31, so traded notional is 2x gross exposure
 per day (LO gross 1, L/S gross 2); costs are 1 bp/side on ranks <= 600, 1.5 bps beyond (rlib.book / cost_bps), borrow
@@ -70,7 +70,7 @@ substitute for xslo20s1_150: replacing it gives 3.75); + cAx LS150 3.82; + cBx L
 Correlation of the L/S books to the MAIN portfolio is 0.17-0.24.
 
 ## What I would keep and why
-1. `xsr_cBx_ls20_u1500` is the best new sleeve by every metric that matters here (fold-OOS 2.05, 1.94 at 1.5 bps, 0.17 to
+1. `xsr_cBx_ls20_u1500` is the best new sleeve by every metric that matters here (fold-OOS 2.04, 1.94 at 1.5 bps, 0.17 to
    the portfolio, improves with breadth) IF the closing-print term is accepted (next paragraph). Its 2022H2 fold (-2.2)
    and -22.7% maxDD are the price of 14.5% vol on 1500 names with short books.
 2. `xsr_cAx_ls20_u150` is the clean (fully pre-close) L/S diversifier: fold-OOS 1.65, zero market beta, low drawdown,
@@ -130,6 +130,6 @@ FOMC dates were hard-coded (2016..2026-04, scheduled meetings only).
 `nohup python3 agents/xsrule/final.py > agents/xsrule/final.log 2>&1 &` regenerates exactly the three kept candidates via
 rlib.save_cand("xsrule", ...) from rlib.universe(1500) (1500 names), honouring STRAT_END through rlib.DEV_END, and prints
 the 1.5 bps repricing, the fold-OOS of the dict and of each candidate. Runtime: ~3 min when rlib's v2 caches and the
-lane's own per-ticker extra cache (`agents/xsrule/xcache_root/xcache`, ~45 MB, gitignored; override with XS_SCRATCH) are warm; ~35-45 min from cold (rlib.ticker_frame ~2 min per 400 names, ticker_extra similar). Peak memory
+lane's own per-ticker extra cache (`agents/xsrule/xcache_root/xcache`, ~95 MB, gitignored; override with XS_SCRATCH) are warm; ~35-45 min from cold (rlib.ticker_frame ~2 min per 400 names, ticker_extra similar). Peak memory
 ~4 GB (2.5M-row frame); no intermediate frames are written. A per-ticker cache file that is being written by another
 process at the same moment is skipped with a "skip" line (one name of 1500 in one run; harmless).
