@@ -1,0 +1,1 @@
+onml_f28cal_q_k20	Sh=3.93	LGB rank target, FEATS18+EXTRA10+calendar(dow,dme,qend,dsgap), quarterly expanding retrain, universe(1500), L/S top20 eq-weight

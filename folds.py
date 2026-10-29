@@ -80,7 +80,7 @@ def main():
     if a.commission_bps > 0:
         def gross_of(f, n):
             if f in ("mom", "vol", "ml"): return 0.0                       # monthly / multi-day books: commission negligible
-            if f == "etfmacro": return 0.5                                 # 0.5 VIXY/UVXY short, in and out
+            if f == "etfmacro": return 0.0                                 # one ETF order per side on half the book: $3 is < 0.2 bp
             if "_LO_" in n or "_lo" in n or "XSLO" in n or "_LO" in n: return 1.0
             return 2.0                                                     # L/S top-k books
         fam = {f: {n: s - 2 * gross_of(f, n) * a.commission_bps / 1e4 for n, s in d.items()} for f, d in fam.items()}
