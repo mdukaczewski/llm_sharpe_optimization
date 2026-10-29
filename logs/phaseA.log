@@ -1,0 +1,71 @@
+SPY buy&hold                             Sharpe  0.90  ret  16.1%  vol  18.0%  worst-yr -0.71 (min yr 2022)  cum x4.23
+SPY overnight only (cost 1.0bp/d)        Sharpe  0.60  ret   7.0%  vol  11.6%  worst-yr -1.28 (min yr 2022)  cum x1.87
+SPY intraday only                        Sharpe  0.18  ret   2.5%  vol  13.6%  worst-yr -1.28 (min yr 2018)  cum x1.17
+QQQ buy&hold                             Sharpe  0.95  ret  21.4%  vol  22.6%  worst-yr -1.07 (min yr 2022)  cum x6.56
+QQQ overnight only (cost 1.0bp/d)        Sharpe  0.76  ret  10.4%  vol  13.8%  worst-yr -1.44 (min yr 2022)  cum x2.56
+QQQ intraday only                        Sharpe  0.30  ret   5.3%  vol  17.7%  worst-yr -1.09 (min yr 2016)  cum x1.44
+IWM buy&hold                             Sharpe  0.55  ret  12.6%  vol  23.0%  worst-yr -0.68 (min yr 2022)  cum x2.68
+IWM overnight only (cost 3.0bp/d)        Sharpe  0.58  ret   8.4%  vol  14.4%  worst-yr -1.15 (min yr 2022)  cum x2.08
+IWM intraday only                        Sharpe -0.68  ret -12.2%  vol  18.0%  worst-yr -1.74 (min yr 2018)  cum x0.25
+TLT buy&hold                             Sharpe -0.05  ret  -0.7%  vol  14.8%  worst-yr -3.22 (min yr 2016)  cum x0.83
+TLT overnight only (cost 3.0bp/d)        Sharpe -1.23  ret -13.6%  vol  11.0%  worst-yr -3.70 (min yr 2016)  cum x0.24
+TLT intraday only                        Sharpe -0.50  ret  -5.1%  vol  10.3%  worst-yr -2.77 (min yr 2016)  cum x0.57
+GLD buy&hold                             Sharpe  0.77  ret  12.6%  vol  16.4%  worst-yr -4.19 (min yr 2016)  cum x3.08
+GLD overnight only (cost 3.0bp/d)        Sharpe  0.48  ret   6.0%  vol  12.5%  worst-yr -1.14 (min yr 2022)  cum x1.68
+GLD intraday only                        Sharpe -0.85  ret  -8.5%  vol  10.0%  worst-yr -5.71 (min yr 2016)  cum x0.41
+SPY turn-of-month (d-3..d+3)             Sharpe  0.62  ret   6.3%  vol  10.0%  worst-yr -4.82 (min yr 2016)  cum x1.77
+SPY NOT turn-of-month                    Sharpe  0.65  ret   9.7%  vol  14.9%  worst-yr -1.37 (min yr 2022)  cum x2.36
+SPY weekday 0                            Sharpe  0.58  ret   4.8%  vol   8.2%  worst-yr -0.91 (min yr 2022)  cum x1.56
+SPY weekday 1                            Sharpe  0.45  ret   3.4%  vol   7.5%  worst-yr  0.01 (min yr 2023)  cum x1.37
+SPY weekday 2                            Sharpe  0.53  ret   4.4%  vol   8.3%  worst-yr -0.79 (min yr 2023)  cum x1.50
+SPY weekday 3                            Sharpe  0.03  ret   0.3%  vol   8.3%  worst-yr -1.10 (min yr 2025)  cum x0.99
+SPY weekday 4                            Sharpe  0.41  ret   3.2%  vol   7.9%  worst-yr -0.65 (min yr 2018)  cum x1.33
+multi-asset trend 12m L/S                Sharpe  0.43  ret  43.7%  vol 102.5%  worst-yr -4811623430.35 (min yr 2016)  cum x0.31
+multi-asset trend 6m L/S                 Sharpe  0.26  ret  28.4%  vol 109.4%  worst-yr -6175487008.67 (min yr 2016)  cum x0.03
+multi-asset trend 3m L/S                 Sharpe -0.07  ret  -8.0%  vol 108.3%  worst-yr -8893978025.13 (min yr 2016)  cum x0.00
+multi-asset trend 12m long-only          Sharpe  0.43  ret  43.7%  vol 102.5%  worst-yr -4811623430.35 (min yr 2016)  cum x0.31
+trend ensemble                           Sharpe  0.22  ret  21.4%  vol  95.5%  worst-yr -6627028962.07 (min yr 2016)  cum x0.07
+SVXY bars 2512 first 2016-10-28 00:00:00 last 2026-10-27 00:00:00
+VXX bars 2512 first 2016-10-28 00:00:00 last 2026-10-27 00:00:00
+VIXY bars 2512 first 2016-10-28 00:00:00 last 2026-10-27 00:00:00
+UVXY bars 2512 first 2016-10-28 00:00:00 last 2026-10-27 00:00:00
+short VIXY when below 10d MA             Sharpe  0.32  ret   7.2%  vol  22.8%  worst-yr -1.05 (min yr 2024)  cum x1.58
+long SVXY when VIXY below 10d MA         Sharpe  0.37  ret   9.7%  vol  25.8%  worst-yr -0.91 (min yr 2024)  cum x1.87
+short VIXY when below 21d MA             Sharpe  0.43  ret  10.4%  vol  23.8%  worst-yr -1.00 (min yr 2024)  cum x2.10
+long SVXY when VIXY below 21d MA         Sharpe  0.57  ret  15.2%  vol  26.7%  worst-yr -0.83 (min yr 2024)  cum x3.15
+short VIXY when below 63d MA             Sharpe  0.29  ret   7.6%  vol  26.4%  worst-yr -1.20 (min yr 2024)  cum x1.49
+long SVXY when VIXY below 63d MA         Sharpe  0.33  ret  10.3%  vol  31.3%  worst-yr -1.31 (min yr 2018)  cum x1.66
+SPY overnight when rv20<20%              Sharpe  0.78  ret   5.6%  vol   7.1%  worst-yr -0.46 (min yr 2022)  cum x1.70
+stock momentum long-only (strategy.py)   Sharpe  1.06  ret  24.2%  vol  22.8%  worst-yr -0.55 (min yr 2018)  cum x8.56
+
+Correlation matrix:
+                 SPY_ovn  QQQ_ovn  IWM_ovn  TLT_ovn  GLD_ovn  spy_tom  trend252  trend126  trend63  trend252_lo  trend_ens  shortvix_10  shortvix_21  shortvix_63  spy_ovn_lowvol  mom_lo   spy
+SPY_ovn            1.00     0.93     0.91    -0.23     0.11     0.31      0.05     -0.06    -0.14         0.05      -0.06         0.29         0.31         0.28            0.62    0.46  0.66
+QQQ_ovn            0.93     1.00     0.81    -0.12     0.14     0.31      0.10     -0.01    -0.10         0.10      -0.00         0.28         0.30         0.28            0.66    0.47  0.62
+IWM_ovn            0.91     0.81     1.00    -0.23     0.11     0.30      0.08      0.01    -0.07         0.08       0.01         0.31         0.33         0.30            0.61    0.41  0.59
+TLT_ovn           -0.23    -0.12    -0.23     1.00     0.17    -0.05     -0.04     -0.02     0.02        -0.04      -0.01        -0.07        -0.07        -0.05           -0.07   -0.10 -0.16
+GLD_ovn            0.11     0.14     0.11     0.17     1.00     0.03      0.09      0.05     0.05         0.09       0.07         0.02         0.02         0.02            0.10    0.11  0.09
+spy_tom            0.31     0.31     0.30    -0.05     0.03     1.00      0.22      0.13     0.05         0.22       0.15         0.27         0.27         0.29            0.27    0.40  0.56
+trend252           0.05     0.10     0.08    -0.04     0.09     0.22      1.00      0.77     0.58         1.00       0.87         0.26         0.31         0.41            0.31    0.31  0.19
+trend126          -0.06    -0.01     0.01    -0.02     0.05     0.13      0.77      1.00     0.75         0.77       0.94         0.20         0.23         0.36            0.28    0.14  0.01
+trend63           -0.14    -0.10    -0.07     0.02     0.05     0.05      0.58      0.75     1.00         0.58       0.87         0.14         0.19         0.31            0.20   -0.01 -0.12
+trend252_lo        0.05     0.10     0.08    -0.04     0.09     0.22      1.00      0.77     0.58         1.00       0.87         0.26         0.31         0.41            0.31    0.31  0.19
+trend_ens         -0.06    -0.00     0.01    -0.01     0.07     0.15      0.87      0.94     0.87         0.87       1.00         0.22         0.27         0.40            0.30    0.16  0.03
+shortvix_10        0.29     0.28     0.31    -0.07     0.02     0.27      0.26      0.20     0.14         0.26       0.22         1.00         0.82         0.69            0.29    0.38  0.47
+shortvix_21        0.31     0.30     0.33    -0.07     0.02     0.27      0.31      0.23     0.19         0.31       0.27         0.82         1.00         0.79            0.34    0.40  0.49
+shortvix_63        0.28     0.28     0.30    -0.05     0.02     0.29      0.41      0.36     0.31         0.41       0.40         0.69         0.79         1.00            0.38    0.42  0.50
+spy_ovn_lowvol     0.62     0.66     0.61    -0.07     0.10     0.27      0.31      0.28     0.20         0.31       0.30         0.29         0.34         0.38            1.00    0.30  0.40
+mom_lo             0.46     0.47     0.41    -0.10     0.11     0.40      0.31      0.14    -0.01         0.31       0.16         0.38         0.40         0.42            0.30    1.00  0.72
+spy                0.66     0.62     0.59    -0.16     0.09     0.56      0.19      0.01    -0.12         0.19       0.03         0.47         0.49         0.50            0.40    0.72  1.00
+Traceback (most recent call last):
+  File "phaseA.py", line 85, in <module>
+    combo(["spy_ovn", "spy_tom", "trend_ens", "mom_lo"], "A")
+  File "phaseA.py", line 81, in combo
+    sub = df[names]
+  File "/home/trumpet/.local/lib/python3.8/site-packages/pandas/core/frame.py", line 3767, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/home/trumpet/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 5877, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/home/trumpet/.local/lib/python3.8/site-packages/pandas/core/indexes/base.py", line 5941, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['spy_ovn'] not in index"

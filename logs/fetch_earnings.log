@@ -1,0 +1,4 @@
+5227 tickers, 5227 to fetch
+0 A {'error': 'HTTP 402'}
+100 ADT {'error': 'HTTP 402'}
+200 ALB {'error': 'HTTP 402'}

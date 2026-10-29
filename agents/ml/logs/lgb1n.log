@@ -1,0 +1,56 @@
+load_sub: kept 4095 tickers, 3121 days, 6s
+mask avg names/day 973.5299539170506
+features loaded from cache (3121, 4095, 64)
+   top feats: co1:3%, beta:3%, co5:2%, updays10:2%, r2:2%, vwd1:2%, vwd5:2%, oc1:2%
+train 2015-06-15..2016-10-26 (347 days) -> test 2016-10-28..2017-05-01  IC 0.0256 (t=3.4)  5s
+   top feats: co1:3%, beta:3%, vwd1:3%, r2:2%, updays10:2%, co5:2%, abs_r1:2%, co21:2%
+train 2015-06-15..2017-04-28 (473 days) -> test 2017-05-02..2017-10-27  IC 0.0223 (t=2.5)  6s
+   top feats: co1:3%, vwd1:3%, beta:3%, updays10:3%, co21:2%, r2:2%, mom12_1:2%, abs_r1:2%
+train 2015-06-15..2017-10-26 (599 days) -> test 2017-10-30..2018-05-01  IC 0.0210 (t=2.0)  8s
+   top feats: vwd1:4%, co1:3%, beta:3%, r2:2%, updays10:2%, abs_r1:2%, mom6_1:2%, co5:2%
+train 2015-06-15..2018-04-30 (725 days) -> test 2018-05-02..2018-10-29  IC 0.0174 (t=1.9)  9s
+   top feats: vwd1:4%, co1:3%, beta:3%, vwd5:2%, updays10:2%, abs_r1:2%, lpx:2%, mom6_1:2%
+train 2015-06-15..2018-10-26 (851 days) -> test 2018-10-30..2019-05-02  IC 0.0298 (t=2.8)  11s
+   top feats: vwd1:4%, co1:3%, beta:3%, rp1:2%, abs_r1:2%, resmom:2%, mom6_1:2%, co5:2%
+train 2015-06-15..2019-05-01 (977 days) -> test 2019-05-03..2019-10-30  IC 0.0253 (t=2.2)  13s
+   top feats: vwd1:4%, co1:3%, beta:3%, r2:2%, vwd5:2%, mom12_1:2%, resmom:2%, rp1:2%
+train 2015-06-15..2019-10-29 (1103 days) -> test 2019-10-31..2020-05-01  IC 0.0248 (t=2.0)  15s
+   top feats: vwd1:5%, co1:3%, beta:3%, rp1:3%, resmom:3%, vwd5:2%, mom12_1:2%, abs_r1:2%
+train 2015-06-15..2020-04-30 (1229 days) -> test 2020-05-04..2020-10-29  IC 0.0444 (t=2.6)  17s
+   top feats: vwd1:5%, co1:3%, beta:3%, mom12_1:3%, resmom:2%, rp1:2%, vwd5:2%, abs_r1:2%
+train 2015-06-15..2020-10-28 (1355 days) -> test 2020-10-30..2021-05-03  IC 0.0482 (t=3.1)  18s
+   top feats: vwd1:6%, co1:3%, rp1:3%, beta:3%, vwd5:3%, co5:2%, hi52:2%, resmom:2%
+train 2015-06-15..2021-04-30 (1481 days) -> test 2021-05-04..2021-10-29  IC 0.0232 (t=1.8)  20s
+   top feats: vwd1:6%, beta:3%, co1:3%, hi52:3%, rp1:3%, vwd5:3%, co5:2%, mom12_1:2%
+train 2015-06-15..2021-10-28 (1607 days) -> test 2021-11-01..2022-05-02  IC 0.0481 (t=2.9)  23s
+   top feats: vwd1:6%, hi52:4%, co1:3%, beta:3%, rp1:2%, vwd5:2%, r3:2%, res3:2%
+train 2015-06-15..2022-04-29 (1733 days) -> test 2022-05-03..2022-10-31  IC 0.0307 (t=1.4)  25s
+   top feats: vwd1:6%, hi52:4%, beta:3%, co1:3%, rp1:3%, vwd5:2%, co5:2%, r3:2%
+train 2015-06-15..2022-10-28 (1859 days) -> test 2022-11-01..2023-05-03  IC 0.0337 (t=2.0)  26s
+   top feats: vwd1:6%, hi52:4%, co1:3%, rp1:3%, beta:3%, vwd5:2%, co5:2%, updays10:2%
+train 2015-06-15..2023-05-02 (1985 days) -> test 2023-05-04..2023-11-01  IC 0.0168 (t=1.5)  28s
+   top feats: vwd1:6%, hi52:3%, co1:3%, rp1:3%, beta:3%, vwd5:2%, r3:2%, co5:2%
+train 2015-06-15..2023-10-31 (2111 days) -> test 2023-11-02..2024-05-03  IC 0.0314 (t=2.2)  25s
+   top feats: vwd1:6%, rp1:3%, hi52:3%, beta:3%, co1:3%, vwd5:2%, co5:2%, hl5:2%
+train 2015-06-15..2024-05-02 (2237 days) -> test 2024-05-06..2024-11-01  IC 0.0492 (t=3.9)  26s
+   top feats: vwd1:7%, rp1:4%, hi52:3%, co1:3%, beta:3%, hl21:3%, mom12_1:2%, vwd5:2%
+train 2015-06-15..2024-10-31 (2363 days) -> test 2024-11-04..2025-05-07  IC 0.0473 (t=3.5)  28s
+   top feats: vwd1:7%, rp1:4%, hl21:3%, beta:3%, mom12_1:3%, co1:3%, hi52:2%, co5:2%
+train 2015-06-15..2025-05-06 (2489 days) -> test 2025-05-08..2025-11-05  IC 0.0448 (t=3.4)  30s
+   top feats: vwd1:7%, rp1:4%, beta:3%, mom12_1:3%, hl21:3%, co1:3%, hi52:2%, res5:2%
+train 2015-06-15..2025-11-04 (2615 days) -> test 2025-11-06..2026-05-08  IC 0.0254 (t=2.1)  33s
+   top feats: vwd1:8%, rp1:4%, mom12_1:3%, beta:3%, hi52:3%, co1:3%, hl21:3%, hl1:2%
+train 2015-06-15..2026-05-07 (2741 days) -> test 2026-05-11..2026-10-27  IC 0.0443 (t=2.9)  34s
+OOS rank IC mean 0.0326  std 0.1515  IR(daily) 0.22  by year:
+2016    0.0207
+2017    0.0220
+2018    0.0237
+2019    0.0241
+2020    0.0390
+2021    0.0429
+2022    0.0343
+2023    0.0151
+2024    0.0475
+2025    0.0438
+2026    0.0368
+saved /home/trumpet/strat20/agents/ml/out/pred_lgb1n.npy total 422s

@@ -1,0 +1,106 @@
+loaded 3121x5623 in 15s
+avg pairs selected per date: 252
+pairs {} nextopen                      Sh net -0.34 gross  0.67 | ret  -1.4% vol  4.0% mdd -18.4% | turn   35.3x | npos   200 (min 66) gexp 1.00 | worst-yr -2.28
+    per-year Sharpe: 2016:+0.57 2017:-0.51 2018:-1.35 2019:-0.13 2020:+0.72 2021:-0.07 2022:-0.21 2023:-0.40 2024:-2.28 2025:-0.92 2026:-0.82
+    per-year ret%:   2016:+0.2 2017:-0.9 2018:-3.7 2019:-0.3 2020:+6.1 2021:-0.2 2022:-0.9 2023:-1.2 2024:-6.5 2025:-3.9 2026:-2.6
+pairs {} nextclose                     Sh net -0.42 gross  0.66 | ret  -1.6% vol  3.8% mdd -19.3% | turn   35.4x | npos   200 (min 66) gexp 1.00 | worst-yr -2.43
+   (25s)
+avg pairs selected per date: 252
+pairs {'z_in': 1.5, 'z_out': 0.5} nextopen Sh net -0.46 gross  0.65 | ret  -1.8% vol  3.9% mdd -19.4% | turn   38.0x | npos   262 (min 85) gexp 1.00 | worst-yr -2.27
+    per-year Sharpe: 2016:+0.70 2017:-1.23 2018:-1.57 2019:-1.26 2020:+0.81 2021:-0.30 2022:-0.11 2023:-0.61 2024:-2.27 2025:-1.06 2026:-1.04
+    per-year ret%:   2016:+0.3 2017:-2.0 2018:-4.4 2019:-2.5 2020:+6.7 2021:-0.8 2022:-0.5 2023:-1.7 2024:-5.9 2025:-4.4 2026:-3.0
+pairs {'z_in': 1.5, 'z_out': 0.5} nextclose Sh net -0.62 gross  0.55 | ret  -2.3% vol  3.7% mdd -23.0% | turn   38.0x | npos   262 (min 85) gexp 1.00 | worst-yr -2.64
+   (21s)
+avg pairs selected per date: 252
+pairs {'z_in': 2.5, 'z_out': 1.0} nextopen Sh net -0.29 gross  0.70 | ret  -1.3% vol  4.3% mdd -19.5% | turn   37.9x | npos   106 (min 22) gexp 0.90 | worst-yr -1.31
+    per-year Sharpe: 2016:+0.70 2017:-0.21 2018:-0.40 2019:-0.64 2020:+0.62 2021:-0.74 2022:-0.63 2023:-0.02 2024:-1.31 2025:-1.05 2026:-0.41
+    per-year ret%:   2016:+0.3 2017:-0.4 2018:-1.0 2019:-1.5 2020:+5.5 2021:-2.5 2022:-3.1 2023:-0.1 2024:-3.7 2025:-4.7 2026:-1.5
+pairs {'z_in': 2.5, 'z_out': 1.0} nextclose Sh net -0.32 gross  0.74 | ret  -1.3% vol  4.1% mdd -18.5% | turn   37.9x | npos   106 (min 22) gexp 0.90 | worst-yr -1.28
+   (19s)
+avg pairs selected per date: 252
+pairs {'zwin': 40} nextopen            Sh net -0.41 gross  0.73 | ret  -1.7% vol  4.2% mdd -20.3% | turn   41.7x | npos   196 (min 57) gexp 1.00 | worst-yr -1.76
+    per-year Sharpe: 2016:+0.95 2017:-0.54 2018:-1.40 2019:-0.76 2020:+0.87 2021:-0.54 2022:-0.47 2023:-0.70 2024:-1.76 2025:-1.14 2026:-1.19
+    per-year ret%:   2016:+0.4 2017:-1.0 2018:-4.0 2019:-1.6 2020:+7.9 2021:-1.6 2022:-2.1 2023:-2.1 2024:-4.7 2025:-4.6 2026:-3.6
+pairs {'zwin': 40} nextclose           Sh net -0.57 gross  0.62 | ret  -2.3% vol  4.0% mdd -22.1% | turn   41.7x | npos   196 (min 57) gexp 1.00 | worst-yr -1.89
+   (21s)
+avg pairs selected per date: 252
+pairs {'zwin': 120} nextopen           Sh net -0.34 gross  0.61 | ret  -1.2% vol  3.6% mdd -18.0% | turn   28.5x | npos   216 (min 65) gexp 1.00 | worst-yr -2.70
+    per-year Sharpe: 2016:+1.70 2017:-0.74 2018:-1.14 2019:-0.02 2020:+0.97 2021:+0.10 2022:-0.03 2023:-1.03 2024:-2.70 2025:-0.63 2026:-0.86
+    per-year ret%:   2016:+0.8 2017:-1.4 2018:-3.1 2019:-0.1 2020:+6.6 2021:+0.2 2022:-0.1 2023:-3.0 2024:-7.1 2025:-2.5 2026:-2.4
+pairs {'zwin': 120} nextclose          Sh net -0.44 gross  0.54 | ret  -1.5% vol  3.5% mdd -18.7% | turn   28.5x | npos   216 (min 65) gexp 1.00 | worst-yr -2.89
+   (25s)
+avg pairs selected per date: 393
+pairs {'adf_crit': -2.5, 'topk': 8} nextopen Sh net -0.36 gross  0.53 | ret  -1.6% vol  4.5% mdd -18.7% | turn   34.7x | npos   253 (min 131) gexp 1.00 | worst-yr -2.74
+    per-year Sharpe: 2016:-0.88 2017:-1.45 2018:-1.52 2019:-0.41 2020:+0.73 2021:-0.19 2022:-0.27 2023:+0.03 2024:-2.74 2025:-0.87 2026:-0.70
+    per-year ret%:   2016:-0.4 2017:-2.7 2018:-4.2 2019:-0.9 2020:+7.4 2021:-0.5 2022:-1.4 2023:+0.1 2024:-7.4 2025:-4.1 2026:-2.2
+pairs {'adf_crit': -2.5, 'topk': 8} nextclose Sh net -0.42 gross  0.52 | ret  -1.8% vol  4.3% mdd -19.5% | turn   34.7x | npos   253 (min 131) gexp 1.00 | worst-yr -2.88
+   (33s)
+avg pairs selected per date: 104
+pairs {'adf_crit': -3.5} nextopen      Sh net -0.29 gross  0.61 | ret  -1.1% vol  3.8% mdd -17.2% | turn   28.8x | npos   102 (min 23) gexp 0.87 | worst-yr -2.04
+    per-year Sharpe: 2016:+3.11 2017:+0.40 2018:-1.02 2019:-1.17 2020:+0.59 2021:-0.26 2022:+0.70 2023:-1.14 2024:-2.04 2025:-0.99 2026:-0.67
+    per-year ret%:   2016:+1.0 2017:+0.6 2018:-1.6 2019:-2.6 2020:+4.4 2021:-0.7 2022:+3.1 2023:-3.7 2024:-5.3 2025:-3.9 2026:-2.2
+pairs {'adf_crit': -3.5} nextclose     Sh net -0.28 gross  0.67 | ret  -1.0% vol  3.6% mdd -16.9% | turn   28.8x | npos   102 (min 23) gexp 0.87 | worst-yr -1.92
+   (21s)
+avg pairs selected per date: 249
+pairs {'hl_rng': (2, 15)} nextopen     Sh net -0.32 gross  0.70 | ret  -1.3% vol  4.0% mdd -17.6% | turn   35.4x | npos   198 (min 66) gexp 1.00 | worst-yr -2.27
+    per-year Sharpe: 2016:+0.71 2017:-0.51 2018:-1.27 2019:-0.20 2020:+0.71 2021:+0.03 2022:-0.14 2023:-0.42 2024:-2.27 2025:-0.90 2026:-0.70
+    per-year ret%:   2016:+0.3 2017:-0.9 2018:-3.5 2019:-0.4 2020:+6.0 2021:+0.1 2022:-0.6 2023:-1.3 2024:-6.6 2025:-3.8 2026:-2.2
+pairs {'hl_rng': (2, 15)} nextclose    Sh net -0.39 gross  0.69 | ret  -1.5% vol  3.8% mdd -18.3% | turn   35.4x | npos   198 (min 66) gexp 1.00 | worst-yr -2.42
+   (23s)
+avg pairs selected per date: 252
+pairs {'resel': 10} nextopen           Sh net -0.38 gross  0.65 | ret  -1.5% vol  4.0% mdd -19.3% | turn   35.8x | npos   207 (min 63) gexp 1.00 | worst-yr -2.68
+    per-year Sharpe: 2016:-0.40 2017:-0.70 2018:-1.19 2019:-0.35 2020:+0.88 2021:-0.23 2022:-0.50 2023:-0.27 2024:-2.68 2025:-0.96 2026:-0.94
+    per-year ret%:   2016:-0.2 2017:-1.2 2018:-3.3 2019:-0.7 2020:+7.6 2021:-0.6 2022:-2.3 2023:-0.8 2024:-7.2 2025:-3.9 2026:-2.8
+pairs {'resel': 10} nextclose          Sh net -0.46 gross  0.66 | ret  -1.7% vol  3.8% mdd -19.7% | turn   35.9x | npos   207 (min 63) gexp 1.00 | worst-yr -2.81
+   (40s)
+avg pairs selected per date: 240
+pairs {'win': 126} nextopen            Sh net -0.38 gross  0.63 | ret  -1.6% vol  4.2% mdd -19.3% | turn   36.4x | npos   239 (min 78) gexp 1.00 | worst-yr -1.55
+    per-year Sharpe: 2016:+0.14 2017:-1.34 2018:-0.81 2019:-1.55 2020:+0.32 2021:-0.22 2022:-0.10 2023:-1.15 2024:-1.49 2025:-0.97 2026:+0.85
+    per-year ret%:   2016:+0.1 2017:-2.6 2018:-2.2 2019:-4.1 2020:+2.9 2021:-0.7 2022:-0.5 2023:-3.1 2024:-4.0 2025:-4.2 2026:+2.5
+pairs {'win': 126} nextclose           Sh net -0.50 gross  0.54 | ret  -2.0% vol  4.0% mdd -22.6% | turn   36.4x | npos   239 (min 78) gexp 1.00 | worst-yr -1.67
+   (20s)
+avg pairs selected per date: 252
+pairs {'maxhold': 20} nextopen         Sh net -0.71 gross  0.51 | ret  -2.9% vol  4.1% mdd -27.5% | turn   44.2x | npos   167 (min 53) gexp 0.99 | worst-yr -2.26
+    per-year Sharpe: 2016:+0.25 2017:-1.49 2018:-1.82 2019:-0.28 2020:+0.43 2021:-0.51 2022:-0.85 2023:-0.80 2024:-2.26 2025:-1.33 2026:-1.35
+    per-year ret%:   2016:+0.1 2017:-3.0 2018:-5.2 2019:-0.6 2020:+3.7 2021:-1.4 2022:-3.9 2023:-2.5 2024:-6.2 2025:-5.5 2026:-4.3
+pairs {'maxhold': 20} nextclose        Sh net -0.76 gross  0.54 | ret  -2.9% vol  3.8% mdd -27.7% | turn   44.2x | npos   167 (min 53) gexp 0.99 | worst-yr -2.32
+   (21s)
+avg pairs selected per date: 252
+pairs {'kcap': 60} nextopen            Sh net -0.35 gross  0.67 | ret  -1.4% vol  4.0% mdd -18.4% | turn   35.5x | npos   200 (min 66) gexp 1.00 | worst-yr -2.28
+    per-year Sharpe: 2016:+0.57 2017:-0.59 2018:-1.35 2019:-0.13 2020:+0.72 2021:-0.07 2022:-0.21 2023:-0.40 2024:-2.28 2025:-0.92 2026:-0.82
+    per-year ret%:   2016:+0.2 2017:-1.1 2018:-3.7 2019:-0.3 2020:+6.1 2021:-0.2 2022:-0.9 2023:-1.2 2024:-6.5 2025:-3.9 2026:-2.6
+pairs {'kcap': 60} nextclose           Sh net -0.42 gross  0.67 | ret  -1.6% vol  3.8% mdd -19.3% | turn   35.5x | npos   200 (min 66) gexp 1.00 | worst-yr -2.43
+   (22s)
+avg pairs selected per date: 122
+pairs {'min_corr': 0.75} nextopen      Sh net -0.30 gross  0.79 | ret  -0.9% vol  2.9% mdd -15.3% | turn   27.3x | npos    93 (min 19) gexp 0.83 | worst-yr -2.05
+    per-year Sharpe: 2016:+1.07 2017:+0.37 2018:-0.97 2019:-1.08 2020:+1.01 2021:-0.31 2022:-0.13 2023:-0.78 2024:-1.72 2025:-2.05 2026:+0.25
+    per-year ret%:   2016:+0.5 2017:+0.6 2018:-1.1 2019:-2.3 2020:+5.6 2021:-0.8 2022:-0.4 2023:-2.3 2024:-3.4 2025:-5.8 2026:+0.6
+pairs {'min_corr': 0.75} nextclose     Sh net -0.32 gross  0.81 | ret  -0.9% vol  2.8% mdd -14.6% | turn   27.3x | npos    93 (min 19) gexp 0.83 | worst-yr -2.10
+   (13s)
+                                             name    sh_net  sh_gross       ret       vol       mdd       turn        npos     worst                            cfg       exec
+13             pairs {'adf_crit': -3.5} nextclose -0.283555  0.667827 -0.010103  0.035630 -0.168934  28.832810  101.932325 -1.921547             {'adf_crit': -3.5}  nextclose
+12              pairs {'adf_crit': -3.5} nextopen -0.289865  0.610764 -0.010880  0.037536 -0.171676  28.835726  101.932325 -2.040235             {'adf_crit': -3.5}   nextopen
+4      pairs {'z_in': 2.5, 'z_out': 1.0} nextopen -0.294482  0.699027 -0.012762  0.043339 -0.195303  37.947133  106.416003 -1.314287    {'z_in': 2.5, 'z_out': 1.0}   nextopen
+24              pairs {'min_corr': 0.75} nextopen -0.300273  0.791371 -0.008810  0.029339 -0.153440  27.337255   93.474522 -2.046773             {'min_corr': 0.75}   nextopen
+14             pairs {'hl_rng': (2, 15)} nextopen -0.320596  0.702430 -0.012895  0.040222 -0.175576  35.400706  197.691083 -2.272535            {'hl_rng': (2, 15)}   nextopen
+5     pairs {'z_in': 2.5, 'z_out': 1.0} nextclose -0.322151  0.737265 -0.013128  0.040752 -0.185232  37.947297  106.416003 -1.283669    {'z_in': 2.5, 'z_out': 1.0}  nextclose
+25             pairs {'min_corr': 0.75} nextclose -0.322267  0.814061 -0.009111  0.028271 -0.146421  27.319995   93.474522 -2.096342             {'min_corr': 0.75}  nextclose
+8                    pairs {'zwin': 120} nextopen -0.336609  0.609811 -0.012167  0.036147 -0.179598  28.517461  216.009156 -2.701120                  {'zwin': 120}   nextopen
+0                               pairs {} nextopen -0.344327  0.674751 -0.013883  0.040320 -0.184003  35.342475  199.727707 -2.278221                             {}   nextopen
+22                    pairs {'kcap': 60} nextopen -0.348168  0.674328 -0.014040  0.040325 -0.184003  35.480170  199.727707 -2.278221                   {'kcap': 60}   nextopen
+10   pairs {'adf_crit': -2.5, 'topk': 8} nextopen -0.363894  0.534582 -0.016400  0.045068 -0.186632  34.713454  252.779459 -2.737643  {'adf_crit': -2.5, 'topk': 8}   nextopen
+18                    pairs {'win': 126} nextopen -0.377690  0.625974 -0.015853  0.041974 -0.192517  36.352270  238.771099 -1.549952                   {'win': 126}   nextopen
+16                   pairs {'resel': 10} nextopen -0.384868  0.654181 -0.015423  0.040074 -0.193003  35.839124  207.348328 -2.682051                  {'resel': 10}   nextopen
+15            pairs {'hl_rng': (2, 15)} nextclose -0.393358  0.693538 -0.014941  0.037984 -0.183458  35.414757  197.691083 -2.423205            {'hl_rng': (2, 15)}  nextclose
+6                     pairs {'zwin': 40} nextopen -0.411156  0.729492 -0.017089  0.041562 -0.203223  41.697282  195.673169 -1.761041                   {'zwin': 40}   nextopen
+11  pairs {'adf_crit': -2.5, 'topk': 8} nextclose -0.418845  0.524511 -0.018038  0.043066 -0.195266  34.736534  252.779459 -2.884868  {'adf_crit': -2.5, 'topk': 8}  nextclose
+1                              pairs {} nextclose -0.418873  0.664388 -0.015942  0.038058 -0.192719  35.360825  199.727707 -2.434628                             {}  nextclose
+23                   pairs {'kcap': 60} nextclose -0.421270  0.665567 -0.016035  0.038065 -0.192719  35.499390  199.727707 -2.434628                   {'kcap': 60}  nextclose
+9                   pairs {'zwin': 120} nextclose -0.437977  0.538621 -0.015395  0.035151 -0.186701  28.530609  216.009156 -2.887334                  {'zwin': 120}  nextclose
+17                  pairs {'resel': 10} nextclose -0.457284  0.656379 -0.017155  0.037516 -0.197345  35.861191  207.348328 -2.809335                  {'resel': 10}  nextclose
+2      pairs {'z_in': 1.5, 'z_out': 0.5} nextopen -0.464853  0.649706 -0.018281  0.039326 -0.193918  38.008791  261.933917 -2.269267    {'z_in': 1.5, 'z_out': 0.5}   nextopen
+19                   pairs {'win': 126} nextclose -0.499112  0.544405 -0.020207  0.040486 -0.225645  36.380105  238.771099 -1.672956                   {'win': 126}  nextclose
+7                    pairs {'zwin': 40} nextclose -0.566004  0.624354 -0.022612  0.039951 -0.220854  41.729230  195.673169 -1.892818                   {'zwin': 40}  nextclose
+3     pairs {'z_in': 1.5, 'z_out': 0.5} nextclose -0.624911  0.553042 -0.023325  0.037325 -0.229831  38.024731  261.933917 -2.640487    {'z_in': 1.5, 'z_out': 0.5}  nextclose
+20                 pairs {'maxhold': 20} nextopen -0.708907  0.513144 -0.028994  0.040900 -0.275313  44.203293  166.692277 -2.259233                {'maxhold': 20}   nextopen
+21                pairs {'maxhold': 20} nextclose -0.764991  0.542269 -0.029325  0.038334 -0.276705  44.218926  166.692277 -2.320164                {'maxhold': 20}  nextclose

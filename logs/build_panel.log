@@ -1,0 +1,6 @@
+3237 files 2014-06-02..2026-10-27
+3121 days x 24080 tickers
+splits applied: 5794
+dividends applied: 332321
+types: {'': 1040, 'ADRC': 663, 'CS': 10351, 'ETF': 7250, 'ETN': 250, 'ETS': 132, 'ETV': 97, 'FUND': 572, 'INDEX': 183, 'PFD': 206, 'RIGHT': 279, 'SP': 449, 'UNIT': 1039, 'WARRANT': 1569}
+saved /home/trumpet/strat20/data/panel.npz

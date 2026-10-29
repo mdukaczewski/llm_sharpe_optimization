@@ -1,0 +1,9 @@
+# data and caches (rebuilt on the remote box, see README "Data")
+data/
+agents/ml/cache/
+*.npz
+*.pkl
+__pycache__/
+*.pyc
+agents/vol/etf.csv
+nohup.out

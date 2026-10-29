@@ -1,0 +1,106 @@
+loaded 3121x5623 in 14s
+z1 z h1                                Sh net -6.05 gross  0.39 | ret -44.8% vol  7.4% mdd -98.9% | turn  540.0x | npos   251 (min 35) gexp 1.26 | worst-yr -11.20
+z1 z h2                                Sh net -3.97 gross  0.31 | ret -22.6% vol  5.7% mdd -89.7% | turn  273.6x | npos   417 (min 70) gexp 1.08 | worst-yr -8.80
+z1 z h3                                Sh net -2.93 gross  0.47 | ret -14.2% vol  4.9% mdd -76.2% | turn  183.8x | npos   541 (min 111) gexp 0.96 | worst-yr -7.68
+z1 z h5                                Sh net -2.02 gross  0.63 | ret  -7.7% vol  3.8% mdd -53.9% | turn  111.2x | npos   707 (min 176) gexp 0.82 | worst-yr -5.74
+z1 calm z h1                           Sh net -6.83 gross  0.50 | ret -45.2% vol  6.6% mdd -98.9% | turn  552.3x | npos   226 (min 33) gexp 1.27 | worst-yr -11.64
+z1 calm z h2                           Sh net -4.63 gross  0.33 | ret -23.1% vol  5.0% mdd -90.1% | turn  278.0x | npos   385 (min 67) gexp 1.09 | worst-yr -8.86
+z1 calm z h3                           Sh net -3.40 gross  0.54 | ret -14.4% vol  4.2% mdd -76.5% | turn  186.4x | npos   505 (min 106) gexp 0.98 | worst-yr -7.67
+z1 calm z h5                           Sh net -2.33 gross  0.76 | ret  -7.7% vol  3.3% mdd -53.8% | turn  112.3x | npos   673 (min 169) gexp 0.84 | worst-yr -5.83
+z1 calm2 z h1                          Sh net -7.21 gross  0.43 | ret -47.1% vol  6.5% mdd -99.1% | turn  569.9x | npos   180 (min 31) gexp 1.29 | worst-yr -12.68
+z1 calm2 z h2                          Sh net -4.93 gross  0.30 | ret -23.8% vol  4.8% mdd -90.8% | turn  285.2x | npos   313 (min 63) gexp 1.12 | worst-yr -9.71
+z1 calm2 z h3                          Sh net -3.72 gross  0.45 | ret -15.2% vol  4.1% mdd -78.2% | turn  190.8x | npos   421 (min 100) gexp 1.02 | worst-yr -8.60
+z1 calm2 z h5                          Sh net -2.61 gross  0.66 | ret  -8.3% vol  3.2% mdd -56.6% | turn  114.8x | npos   582 (min 163) gexp 0.88 | worst-yr -7.18
+z1 lowvol z h1                         Sh net -6.39 gross  0.12 | ret -51.1% vol  8.0% mdd -99.4% | turn  603.0x | npos    99 (min 15) gexp 1.33 | worst-yr -11.60
+z1 lowvol z h2                         Sh net -4.59 gross -0.11 | ret -27.0% vol  5.9% mdd -93.4% | turn  300.8x | npos   174 (min 24) gexp 1.18 | worst-yr -8.82
+z1 lowvol z h3                         Sh net -3.46 gross  0.08 | ret -17.4% vol  5.0% mdd -82.5% | turn  200.7x | npos   240 (min 59) gexp 1.09 | worst-yr -7.71
+z1 lowvol z h5                         Sh net -2.50 gross  0.24 | ret  -9.9% vol  4.0% mdd -63.0% | turn  121.0x | npos   351 (min 111) gexp 0.98 | worst-yr -6.91
+z2 calm z h1                           Sh net -5.11 gross  0.37 | ret -35.4% vol  6.9% mdd -97.2% | turn  426.3x | npos   220 (min 40) gexp 1.28 | worst-yr -8.77
+z2 calm z h2                           Sh net -3.72 gross  0.47 | ret -22.1% vol  5.9% mdd -89.2% | turn  280.2x | npos   352 (min 63) gexp 1.23 | worst-yr -7.19
+z2 calm z h3                           Sh net -2.67 gross  0.57 | ret -13.9% vol  5.2% mdd -75.5% | turn  188.2x | npos   456 (min 87) gexp 1.14 | worst-yr -5.65
+z2 calm z h5                           Sh net -1.73 gross  0.72 | ret  -7.3% vol  4.2% mdd -52.1% | turn  113.3x | npos   611 (min 168) gexp 1.00 | worst-yr -3.90
+z3 calm z h1                           Sh net -3.81 gross  0.80 | ret -26.8% vol  7.0% mdd -93.4% | turn  363.1x | npos   214 (min 31) gexp 1.29 | worst-yr -7.72
+z3 calm z h2                           Sh net -2.82 gross  0.66 | ret -17.7% vol  6.3% mdd -83.4% | turn  244.5x | npos   324 (min 56) gexp 1.26 | worst-yr -6.09
+z3 calm z h3                           Sh net -2.18 gross  0.75 | ret -12.6% vol  5.8% mdd -72.0% | turn  189.1x | npos   417 (min 90) gexp 1.22 | worst-yr -5.08
+z3 calm z h5                           Sh net -1.39 gross  0.79 | ret  -6.6% vol  4.8% mdd -49.2% | turn  114.1x | npos   559 (min 164) gexp 1.10 | worst-yr -3.56
+vwapdev z h1                           Sh net -6.19 gross  0.86 | ret -42.6% vol  6.9% mdd -98.6% | turn  577.6x | npos   284 (min 40) gexp 1.35 | worst-yr -10.88
+vwapdev z h2                           Sh net -4.19 gross  0.88 | ret -20.4% vol  4.9% mdd -87.1% | turn  288.6x | npos   466 (min 85) gexp 1.12 | worst-yr -7.71
+vwapdev z h3                           Sh net -3.25 gross  0.96 | ret -12.9% vol  4.0% mdd -72.6% | turn  193.9x | npos   596 (min 115) gexp 0.99 | worst-yr -7.72
+vwapdev z h5                           Sh net -2.67 gross  0.70 | ret  -8.1% vol  3.0% mdd -55.5% | turn  116.2x | npos   763 (min 222) gexp 0.84 | worst-yr -6.53
+vwapdev calm z h1                      Sh net -6.41 gross  1.00 | ret -42.8% vol  6.7% mdd -98.6% | turn  590.5x | npos   263 (min 35) gexp 1.37 | worst-yr -10.94
+vwapdev calm z h2                      Sh net -4.56 gross  0.95 | ret -20.7% vol  4.5% mdd -87.5% | turn  293.6x | npos   441 (min 71) gexp 1.15 | worst-yr -8.14
+vwapdev calm z h3                      Sh net -3.54 gross  1.07 | ret -13.0% vol  3.7% mdd -72.8% | turn  197.1x | npos   570 (min 97) gexp 1.02 | worst-yr -8.21
+vwapdev calm z h5                      Sh net -2.73 gross  0.93 | ret  -7.7% vol  2.8% mdd -53.8% | turn  117.8x | npos   740 (min 206) gexp 0.86 | worst-yr -7.00
+combo calm z h1                        Sh net -7.65 gross  0.92 | ret -39.7% vol  5.2% mdd -98.1% | turn  511.1x | npos   478 (min 154) gexp 1.27 | worst-yr -13.03
+combo calm z h2                        Sh net -5.08 gross  0.88 | ret -19.1% vol  3.8% mdd -85.3% | turn  254.3x | npos   716 (min 285) gexp 0.99 | worst-yr -8.89
+combo calm z h3                        Sh net -3.78 gross  1.00 | ret -12.0% vol  3.2% mdd -69.9% | turn  170.7x | npos   845 (min 402) gexp 0.84 | worst-yr -8.21
+combo calm z h5                        Sh net -2.70 gross  1.07 | ret  -6.6% vol  2.4% mdd -48.4% | turn  102.4x | npos   961 (min 537) gexp 0.66 | worst-yr -6.76
+combo calm rank h1                     Sh net -8.10 gross  0.84 | ret -33.5% vol  4.1% mdd -96.5% | turn  421.7x | npos   974 (min 544) gexp 1.22 | worst-yr -13.80
+combo calm rank h2                     Sh net -5.29 gross  0.88 | ret -15.9% vol  3.0% mdd -79.6% | turn  209.1x | npos  1007 (min 685) gexp 0.81 | worst-yr -9.34
+combo calm rank h3                     Sh net -3.98 gross  0.96 | ret -10.1% vol  2.5% mdd -63.6% | turn  140.4x | npos  1018 (min 693) gexp 0.66 | worst-yr -8.48
+combo calm rank h5                     Sh net -2.91 gross  0.98 | ret  -5.7% vol  2.0% mdd -43.6% | turn   84.4x | npos  1033 (min 708) gexp 0.51 | worst-yr -7.17
+z1 calm dead1.5 z h1                   Sh net -5.54 gross  0.32 | ret -48.6% vol  8.8% mdd -99.3% | turn  595.0x | npos    97 (min 14) gexp 1.32 | worst-yr -9.68
+z1 calm dead1.5 z h2                   Sh net -3.81 gross  0.23 | ret -24.7% vol  6.5% mdd -91.7% | turn  300.2x | npos   171 (min 21) gexp 1.19 | worst-yr -7.02
+z1 calm dead1.5 z h3                   Sh net -2.76 gross  0.49 | ret -15.1% vol  5.5% mdd -78.6% | turn  201.2x | npos   237 (min 34) gexp 1.11 | worst-yr -5.98
+z1 calm dead1.5 z h5                   Sh net -2.01 gross  0.55 | ret  -8.5% vol  4.2% mdd -57.9% | turn  121.2x | npos   349 (min 52) gexp 1.00 | worst-yr -4.77
+z1 calm dead2 z h1                     Sh net -4.19 gross  0.02 | ret -52.5% vol 12.5% mdd -99.5% | turn  629.8x | npos    43 (min 0) gexp 1.38 | worst-yr -7.17
+z1 calm dead2 z h2                     Sh net -3.30 gross -0.28 | ret -29.3% vol  8.9% mdd -94.9% | turn  317.3x | npos    73 (min 14) gexp 1.26 | worst-yr -6.06
+z1 calm dead2 z h3                     Sh net -2.46 gross  0.03 | ret -17.9% vol  7.3% mdd -84.4% | turn  212.3x | npos   101 (min 15) gexp 1.19 | worst-yr -5.24
+z1 calm dead2 z h5                     Sh net -1.85 gross  0.14 | ret -10.3% vol  5.6% mdd -66.0% | turn  127.8x | npos   153 (min 23) gexp 1.11 | worst-yr -4.79
+z1 calm bigfactor z h1                 Sh net -2.34 gross  0.41 | ret  -9.5% vol  4.1% mdd -61.7% | turn  133.6x | npos    59 (min 0) gexp 0.28 | worst-yr -5.46
+z1 calm bigfactor z h2                 Sh net -1.46 gross  0.48 | ret  -4.3% vol  2.9% mdd -35.2% | turn   67.0x | npos   110 (min 0) gexp 0.27 | worst-yr -5.58
+z1 calm bigfactor z h3                 Sh net -1.05 gross  0.51 | ret  -2.6% vol  2.5% mdd -24.0% | turn   45.2x | npos   154 (min 0) gexp 0.25 | worst-yr -3.89
+z1 calm bigfactor z h5                 Sh net -0.67 gross  0.58 | ret  -1.3% vol  1.9% mdd -13.0% | turn   27.2x | npos   229 (min 0) gexp 0.23 | worst-yr -2.54
+                      name    sh_net  sh_gross       ret       vol       mdd        turn         npos      worst                sig  mode  h
+51  z1 calm bigfactor z h5 -0.667112  0.582308 -0.012579  0.018857 -0.129750   27.234531   229.008360  -2.536524  z1 calm bigfactor     z  5
+50  z1 calm bigfactor z h3 -1.051001  0.506429 -0.026008  0.024746 -0.240049   45.192846   154.256369  -3.891619  z1 calm bigfactor     z  3
+23            z3 calm z h5 -1.386153  0.786277 -0.066379  0.047887 -0.492383  114.069859   559.031449  -3.555021            z3 calm     z  5
+49  z1 calm bigfactor z h2 -1.457163  0.479576 -0.042785  0.029362 -0.352017   67.009316   109.937102  -5.579244  z1 calm bigfactor     z  2
+19            z2 calm z h5 -1.729243  0.719833 -0.072845  0.042125 -0.521450  113.339338   611.336385  -3.901273            z2 calm     z  5
+47      z1 calm dead2 z h5 -1.847556  0.142505 -0.103093  0.055800 -0.659628  127.787695   152.967755  -4.787924      z1 calm dead2     z  5
+43    z1 calm dead1.5 z h5 -2.009876  0.546806 -0.085289  0.042435 -0.578870  121.198648   348.972134  -4.770645    z1 calm dead1.5     z  5
+3                  z1 z h5 -2.024656  0.631427 -0.077015  0.038038 -0.539249  111.179015   707.311306  -5.744902                 z1     z  5
+22            z3 calm z h3 -2.178406  0.754862 -0.125684  0.057695 -0.720174  189.079252   416.719347  -5.080382            z3 calm     z  3
+7             z1 calm z h5 -2.328027  0.760428 -0.076847  0.033009 -0.537761  112.323137   672.740446  -5.827966            z1 calm     z  5
+48  z1 calm bigfactor z h1 -2.340194  0.412459 -0.095333  0.040737 -0.616638  133.571892    59.392118  -5.464526  z1 calm bigfactor     z  1
+46      z1 calm dead2 z h3 -2.455174  0.025166 -0.179271  0.073018 -0.843868  212.302873   100.839570  -5.241231      z1 calm dead2     z  3
+15          z1 lowvol z h5 -2.495139  0.242192 -0.099432  0.039850 -0.630437  120.983715   350.680732  -6.908712          z1 lowvol     z  5
+11           z1 calm2 z h5 -2.613571  0.657134 -0.083236  0.031848 -0.565763  114.775050   581.540605  -7.178769           z1 calm2     z  5
+18            z2 calm z h3 -2.668270  0.567629 -0.138807  0.052021 -0.755096  188.189388   455.992834  -5.647601            z2 calm     z  3
+27            vwapdev z h5 -2.673702  0.704308 -0.080581  0.030138 -0.555416  116.197017   763.264729  -6.530657            vwapdev     z  5
+35         combo calm z h5 -2.695039  1.069689 -0.065901  0.024453 -0.484007  102.401704   961.205016  -6.760352         combo calm     z  5
+31       vwapdev calm z h5 -2.732386  0.926712 -0.076829  0.028118 -0.537945  117.818472   740.363057  -7.000047       vwapdev calm     z  5
+42    z1 calm dead1.5 z h3 -2.756517  0.486007 -0.150551  0.054617 -0.785997  201.219290   236.954220  -5.977902    z1 calm dead1.5     z  3
+21            z3 calm z h2 -2.819332  0.660448 -0.177317  0.062893 -0.833889  244.516059   324.161624  -6.093250            z3 calm     z  2
+39      combo calm rank h5 -2.912592  0.981900 -0.057164  0.019627 -0.436462   84.395335  1033.372611  -7.174210         combo calm  rank  5
+2                  z1 z h3 -2.927432  0.469044 -0.142246  0.048591 -0.761840  183.840613   540.533041  -7.677293                 z1     z  3
+26            vwapdev z h3 -3.253122  0.960272 -0.128859  0.039611 -0.726282  193.916526   595.867436  -7.715954            vwapdev     z  3
+45      z1 calm dead2 z h2 -3.300066 -0.276416 -0.292523  0.088642 -0.949311  317.292983    72.831210  -6.057348      z1 calm dead2     z  2
+6             z1 calm z h3 -3.401268  0.539682 -0.143997  0.042336 -0.764951  186.405521   505.327627  -7.674792            z1 calm     z  3
+14          z1 lowvol z h3 -3.456738  0.081862 -0.173612  0.050224 -0.825126  200.747437   240.019108  -7.714418          z1 lowvol     z  3
+30       vwapdev calm z h3 -3.540979  1.066770 -0.129812  0.036660 -0.728415  197.083102   570.306131  -8.211126       vwapdev calm     z  3
+17            z2 calm z h2 -3.715977  0.465609 -0.220908  0.059448 -0.892316  280.212873   351.764331  -7.186461            z2 calm     z  2
+10           z1 calm2 z h3 -3.717846  0.454778 -0.151905  0.040858 -0.782172  190.791344   421.326831  -8.601231           z1 calm2     z  3
+34         combo calm z h3 -3.779736  1.000378 -0.119620  0.031648 -0.698774  170.710923   845.151672  -8.206871         combo calm     z  3
+20            z3 calm z h1 -3.805705  0.796314 -0.268198  0.070473 -0.933845  363.116589   214.270303  -7.717483            z3 calm     z  1
+41    z1 calm dead1.5 z h2 -3.812777  0.225151 -0.247310  0.064864 -0.917204  300.222999   171.182723  -7.021886    z1 calm dead1.5     z  2
+1                  z1 z h2 -3.968966  0.310650 -0.226063  0.056958 -0.897007  273.554384   417.179140  -8.804574                 z1     z  2
+38      combo calm rank h3 -3.980676  0.956550 -0.101007  0.025374 -0.636447  140.425770  1018.267118  -8.478466         combo calm  rank  3
+25            vwapdev z h2 -4.188531  0.881122 -0.203744  0.048643 -0.871187  288.614155   465.878185  -7.707910            vwapdev     z  2
+44      z1 calm dead2 z h1 -4.192914  0.019136 -0.524840  0.125173 -0.995285  629.760099    43.298965  -7.173174      z1 calm dead2     z  1
+29       vwapdev calm z h2 -4.556592  0.950806 -0.206691  0.045361 -0.874586  293.585986   440.842357  -8.135452       vwapdev calm     z  2
+13          z1 lowvol z h2 -4.592700 -0.105543 -0.269533  0.058687 -0.933618  300.788538   174.006369  -8.824340          z1 lowvol     z  2
+5             z1 calm z h2 -4.632808  0.328863 -0.230509  0.049756 -0.901298  277.956490   384.532643  -8.856987            z1 calm     z  2
+9            z1 calm2 z h2 -4.931265  0.299613 -0.238098  0.048283 -0.908379  285.169732   313.497213  -9.714254           z1 calm2     z  2
+33         combo calm z h2 -5.084908  0.882705 -0.190912  0.037545 -0.852757  254.265196   716.403662  -8.887661         combo calm     z  2
+16            z2 calm z h1 -5.114138  0.366651 -0.353559  0.069134 -0.971721  426.252916   220.172771  -8.773984            z2 calm     z  1
+37      combo calm rank h2 -5.288936  0.884146 -0.158945  0.030052 -0.796407  209.122822  1006.857086  -9.339133         combo calm  rank  2
+40    z1 calm dead1.5 z h1 -5.540067  0.321346 -0.486083  0.087740 -0.992577  594.995052    97.023885  -9.682942    z1 calm dead1.5     z  1
+0                  z1 z h1 -6.049937  0.391748 -0.447660  0.073994 -0.988866  540.021825   250.549363 -11.198531                 z1     z  1
+24            vwapdev z h1 -6.187949  0.860618 -0.426467  0.068919 -0.986141  577.552576   283.563296 -10.877238            vwapdev     z  1
+12          z1 lowvol z h1 -6.393022  0.119525 -0.511304  0.079978 -0.994114  603.012690    98.765924 -11.604957          z1 lowvol     z  1
+28       vwapdev calm z h1 -6.412109  1.002158 -0.427748  0.066709 -0.986291  590.504195   263.489252 -10.940390       vwapdev calm     z  1
+4             z1 calm z h1 -6.830841  0.502637 -0.452353  0.066222 -0.989378  552.264189   226.093949 -11.644058            z1 calm     z  1
+8            z1 calm2 z h1 -7.208550  0.425862 -0.471293  0.065380 -0.991137  569.863290   180.027866 -12.681166           z1 calm2     z  1
+32         combo calm z h1 -7.646396  0.915750 -0.397285  0.051957 -0.981279  511.053720   478.115048 -13.025821         combo calm     z  1
+36      combo calm rank h1 -8.100910  0.839592 -0.335461  0.041410 -0.965096  421.653963   974.251990 -13.800890         combo calm  rank  1

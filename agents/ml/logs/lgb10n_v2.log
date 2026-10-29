@@ -1,0 +1,56 @@
+load_sub: kept 4095 tickers, 3121 days, 5s
+mask avg names/day 969.5792272243885
+features loaded from cache (3121, 4095, 64)
+   top feats: beta:8%, lpx:5%, vol60:4%, volr20_120:4%, ivol60:4%, r252:4%, hl21:4%, amihud:3%
+train 2015-06-15..2016-10-13 (338 days) -> test 2016-10-28..2017-05-01  IC -0.0051 (t=-0.7)  4s
+   top feats: beta:7%, lpx:5%, r252:4%, volr20_120:4%, ivol60:4%, hl21:4%, lo52:4%, r63:3%
+train 2015-06-15..2017-04-17 (464 days) -> test 2017-05-02..2017-10-27  IC 0.0119 (t=1.4)  4s
+   top feats: beta:8%, lpx:5%, lo52:4%, r252:4%, hl21:4%, ivol60:4%, ladv:3%, r63:3%
+train 2015-06-15..2017-10-13 (590 days) -> test 2017-10-30..2018-05-01  IC -0.0120 (t=-1.6)  6s
+   top feats: beta:8%, lpx:5%, lo52:4%, ivol60:4%, r252:3%, resmom:3%, hl21:3%, volr20_120:3%
+train 2015-06-15..2018-04-17 (716 days) -> test 2018-05-02..2018-10-29  IC -0.0113 (t=-2.0)  7s
+   top feats: beta:8%, lpx:5%, ivol60:4%, lo52:4%, volr20_120:3%, r252:3%, ladv:3%, vol60:3%
+train 2015-06-15..2018-10-15 (842 days) -> test 2018-10-30..2019-05-02  IC 0.0122 (t=2.0)  8s
+   top feats: beta:8%, lpx:5%, ivol60:4%, lo52:4%, volr20_120:4%, hl21:4%, ladv:3%, resmom:3%
+train 2015-06-15..2019-04-17 (968 days) -> test 2019-05-03..2019-10-30  IC 0.0277 (t=2.8)  10s
+   top feats: beta:8%, lpx:5%, ivol60:4%, hl21:4%, ladv:3%, volr20_120:3%, lo52:3%, co21:3%
+train 2015-06-15..2019-10-16 (1094 days) -> test 2019-10-31..2020-05-01  IC -0.0067 (t=-0.6)  12s
+   top feats: beta:7%, lpx:6%, ladv:4%, ivol60:4%, volr20_120:4%, hl21:4%, lo52:3%, co21:3%
+train 2015-06-15..2020-04-17 (1220 days) -> test 2020-05-04..2020-10-29  IC 0.0185 (t=1.5)  13s
+   top feats: beta:7%, lpx:5%, volr20_120:4%, hl21:4%, ladv:4%, ivol60:3%, lo52:3%, amihud:3%
+train 2015-06-15..2020-10-15 (1346 days) -> test 2020-10-30..2021-05-03  IC 0.0107 (t=0.8)  14s
+   top feats: beta:7%, lpx:6%, hi52:4%, ivol60:3%, amihud:3%, co21:3%, lo52:3%, r252:3%
+train 2015-06-15..2021-04-19 (1472 days) -> test 2021-05-04..2021-10-29  IC 0.0190 (t=2.0)  17s
+   top feats: beta:7%, lpx:5%, hi52:4%, co21:4%, hl21:3%, ivol60:3%, lo52:3%, r252:3%
+train 2015-06-15..2021-10-15 (1598 days) -> test 2021-11-01..2022-05-02  IC 0.0143 (t=1.2)  18s
+   top feats: beta:6%, lpx:5%, hi52:4%, hl21:4%, ivol60:4%, r252:4%, co21:3%, mom12_1:3%
+train 2015-06-15..2022-04-18 (1724 days) -> test 2022-05-03..2022-10-31  IC 0.0372 (t=2.9)  19s
+   top feats: beta:6%, lpx:5%, hi52:4%, hl21:4%, mom12_1:4%, r63:3%, r252:3%, ivol60:3%
+train 2015-06-15..2022-10-17 (1850 days) -> test 2022-11-01..2023-05-03  IC 0.0165 (t=1.3)  21s
+   top feats: beta:6%, lpx:5%, hl21:5%, hi52:4%, mom12_1:4%, r63:3%, ivol60:3%, co21:3%
+train 2015-06-15..2023-04-19 (1976 days) -> test 2023-05-04..2023-11-01  IC 0.0212 (t=2.1)  23s
+   top feats: beta:6%, lpx:6%, hl21:4%, hi52:4%, amihud:3%, r63:3%, ivol60:3%, mom12_1:3%
+train 2015-06-15..2023-10-18 (2102 days) -> test 2023-11-02..2024-05-03  IC 0.0188 (t=1.5)  24s
+   top feats: beta:6%, lpx:6%, hl21:4%, ivol60:4%, r63:4%, hi52:3%, mom12_1:3%, hl5:3%
+train 2015-06-15..2024-04-19 (2228 days) -> test 2024-05-06..2024-11-01  IC 0.0569 (t=7.6)  27s
+   top feats: beta:6%, lpx:5%, hl21:5%, ivol60:4%, mom12_1:4%, r63:4%, hi52:4%, ladv:3%
+train 2015-06-15..2024-10-18 (2354 days) -> test 2024-11-04..2025-05-07  IC 0.0693 (t=7.1)  28s
+   top feats: beta:6%, lpx:5%, hl21:5%, r63:4%, mom12_1:4%, hi52:4%, co21:3%, ivol60:3%
+train 2015-06-15..2025-04-23 (2480 days) -> test 2025-05-08..2025-11-05  IC -0.0082 (t=-0.8)  29s
+   top feats: beta:7%, lpx:5%, r63:4%, mom12_1:4%, hi52:3%, hl21:3%, ivol60:3%, amihud:3%
+train 2015-06-15..2025-10-22 (2606 days) -> test 2025-11-06..2026-05-08  IC 0.0166 (t=2.0)  32s
+   top feats: beta:7%, lpx:5%, r63:4%, hi52:4%, hl21:3%, mom12_1:3%, ivol60:3%, amihud:3%
+train 2015-06-15..2026-04-24 (2732 days) -> test 2026-05-11..2026-10-27  IC 0.0214 (t=2.0)  34s
+OOS rank IC mean 0.0164  std 0.1147  IR(daily) 0.14  by year:
+2016   -0.0265
+2017   -0.0009
+2018   -0.0011
+2019    0.0177
+2020   -0.0036
+2021    0.0415
+2022    0.0087
+2023    0.0090
+2024    0.0491
+2025    0.0315
+2026    0.0206
+saved /home/trumpet/strat20/agents/ml/out/pred_lgb10n.npy total 371s

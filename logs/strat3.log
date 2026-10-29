@@ -1,0 +1,163 @@
+features built
+80 configs
+{'score': 'vs', 'top': 20, 'freq': 'm', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 22.1% Sh 0.98 DD -35% h1 27% h2 17% turn 127
+{'score': 'vs', 'top': 20, 'freq': 'm', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 19.7% Sh 0.94 DD -35% h1 22% h2 18% turn 124
+{'score': 'vs', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 21.1% Sh 0.93 DD -43% h1 22% h2 21% turn 187
+{'score': 'vs', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': 100}  CAGR 19.6% Sh 0.88 DD -42% h1 22% h2 17% turn 205
+{'score': 'vs', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 16.9% Sh 0.85 DD -42% h1 14% h2 20% turn 185
+{'score': 'vs', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 15.4% Sh 0.79 DD -41% h1 14% h2 17% turn 203
+{'score': 'vs', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': None}  CAGR 22.0% Sh 0.96 DD -38% h1 24% h2 20% turn 140
+{'score': 'vs', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': 100}  CAGR 19.4% Sh 0.87 DD -38% h1 23% h2 15% turn 169
+{'score': 'vs', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 17.2% Sh 0.85 DD -37% h1 15% h2 19% turn 140
+{'score': 'vs', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 15.1% Sh 0.77 DD -38% h1 15% h2 15% turn 167
+{'score': 'vs', 'top': 30, 'freq': 'm', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 20.8% Sh 0.93 DD -36% h1 25% h2 17% turn 124
+{'score': 'vs', 'top': 30, 'freq': 'm', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 18.8% Sh 0.90 DD -37% h1 20% h2 17% turn 121
+{'score': 'vs', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 19.2% Sh 0.86 DD -36% h1 19% h2 19% turn 171
+{'score': 'vs', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': 100}  CAGR 17.5% Sh 0.81 DD -35% h1 20% h2 15% turn 193
+{'score': 'vs', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 15.1% Sh 0.77 DD -36% h1 12% h2 19% turn 169
+{'score': 'vs', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 13.7% Sh 0.71 DD -35% h1 12% h2 15% turn 190
+{'score': 'vs', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': None}  CAGR 19.9% Sh 0.90 DD -33% h1 22% h2 17% turn 123
+{'score': 'vs', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': 100}  CAGR 16.8% Sh 0.79 DD -33% h1 20% h2 14% turn 155
+{'score': 'vs', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 15.5% Sh 0.79 DD -32% h1 15% h2 16% turn 123
+{'score': 'vs', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 12.8% Sh 0.68 DD -34% h1 12% h2 14% turn 153
+{'score': 'comp', 'top': 20, 'freq': 'm', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 4.5% Sh 0.32 DD -38% h1 11% h2 -2% turn 159
+{'score': 'comp', 'top': 20, 'freq': 'm', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 4.8% Sh 0.34 DD -38% h1 9% h2 1% turn 156
+{'score': 'comp', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 4.9% Sh 0.34 DD -35% h1 10% h2 -0% turn 353
+{'score': 'comp', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': 100}  CAGR 4.6% Sh 0.33 DD -34% h1 11% h2 -1% turn 357
+{'score': 'comp', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 3.6% Sh 0.29 DD -34% h1 7% h2 0% turn 348
+{'score': 'comp', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 3.4% Sh 0.27 DD -33% h1 7% h2 -1% turn 352
+{'score': 'comp', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': None}  CAGR 6.8% Sh 0.44 DD -35% h1 12% h2 2% turn 229
+{'score': 'comp', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': 100}  CAGR 7.0% Sh 0.45 DD -34% h1 13% h2 1% turn 236
+{'score': 'comp', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 5.3% Sh 0.37 DD -34% h1 9% h2 2% turn 228
+{'score': 'comp', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 5.6% Sh 0.39 DD -33% h1 10% h2 1% turn 234
+{'score': 'comp', 'top': 30, 'freq': 'm', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 5.9% Sh 0.39 DD -37% h1 12% h2 0% turn 148
+{'score': 'comp', 'top': 30, 'freq': 'm', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 6.1% Sh 0.40 DD -37% h1 10% h2 2% turn 145
+{'score': 'comp', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 5.5% Sh 0.37 DD -33% h1 12% h2 -0% turn 297
+{'score': 'comp', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': 100}  CAGR 5.1% Sh 0.36 DD -32% h1 11% h2 -0% turn 302
+{'score': 'comp', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 4.1% Sh 0.31 DD -33% h1 8% h2 0% turn 295
+{'score': 'comp', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 4.0% Sh 0.30 DD -32% h1 8% h2 0% turn 299
+{'score': 'comp', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': None}  CAGR 9.5% Sh 0.57 DD -30% h1 14% h2 5% turn 180
+{'score': 'comp', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': 100}  CAGR 8.7% Sh 0.53 DD -30% h1 14% h2 4% turn 188
+{'score': 'comp', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 7.6% Sh 0.49 DD -30% h1 10% h2 5% turn 180
+{'score': 'comp', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 7.2% Sh 0.47 DD -30% h1 10% h2 4% turn 188
+{'score': 'comp2', 'top': 20, 'freq': 'm', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 13.9% Sh 0.67 DD -38% h1 22% h2 6% turn 144
+{'score': 'comp2', 'top': 20, 'freq': 'm', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 11.7% Sh 0.62 DD -39% h1 17% h2 7% turn 140
+{'score': 'comp2', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 18.8% Sh 0.84 DD -37% h1 25% h2 13% turn 219
+{'score': 'comp2', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': 100}  CAGR 18.4% Sh 0.83 DD -38% h1 25% h2 13% turn 234
+{'score': 'comp2', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 15.1% Sh 0.77 DD -37% h1 18% h2 13% turn 215
+{'score': 'comp2', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 14.8% Sh 0.76 DD -37% h1 17% h2 13% turn 229
+{'score': 'comp2', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': None}  CAGR 20.6% Sh 0.90 DD -33% h1 25% h2 17% turn 159
+{'score': 'comp2', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': 100}  CAGR 19.2% Sh 0.86 DD -37% h1 25% h2 14% turn 180
+{'score': 'comp2', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 16.3% Sh 0.81 DD -33% h1 17% h2 16% turn 157
+{'score': 'comp2', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 15.1% Sh 0.77 DD -37% h1 17% h2 14% turn 177
+{'score': 'comp2', 'top': 30, 'freq': 'm', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 16.8% Sh 0.77 DD -37% h1 26% h2 8% turn 137
+{'score': 'comp2', 'top': 30, 'freq': 'm', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 14.4% Sh 0.72 DD -37% h1 21% h2 8% turn 134
+{'score': 'comp2', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 18.9% Sh 0.85 DD -32% h1 27% h2 12% turn 197
+{'score': 'comp2', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': 100}  CAGR 19.6% Sh 0.88 DD -32% h1 29% h2 11% turn 214
+{'score': 'comp2', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 14.8% Sh 0.76 DD -31% h1 18% h2 11% turn 195
+{'score': 'comp2', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 15.3% Sh 0.78 DD -31% h1 20% h2 11% turn 210
+{'score': 'comp2', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': None}  CAGR 19.2% Sh 0.86 DD -34% h1 24% h2 14% turn 143
+{'score': 'comp2', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': 100}  CAGR 16.7% Sh 0.78 DD -34% h1 25% h2 9% turn 166
+{'score': 'comp2', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 15.3% Sh 0.78 DD -32% h1 18% h2 13% turn 143
+{'score': 'comp2', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 13.2% Sh 0.70 DD -33% h1 18% h2 9% turn 163
+{'score': 'raw', 'top': 20, 'freq': 'm', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 20.8% Sh 0.64 DD -61% h1 29% h2 13% turn 102
+{'score': 'raw', 'top': 20, 'freq': 'm', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 16.9% Sh 0.74 DD -31% h1 17% h2 16% turn 74
+{'score': 'raw', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 25.7% Sh 0.73 DD -57% h1 33% h2 19% turn 135
+{'score': 'raw', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': 100}  CAGR 24.8% Sh 0.72 DD -56% h1 33% h2 17% turn 161
+{'score': 'raw', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 17.9% Sh 0.78 DD -29% h1 20% h2 16% turn 109
+{'score': 'raw', 'top': 20, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 17.7% Sh 0.77 DD -28% h1 19% h2 16% turn 126
+{'score': 'raw', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': None}  CAGR 19.8% Sh 0.63 DD -65% h1 26% h2 14% turn 106
+{'score': 'raw', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': 100}  CAGR 20.5% Sh 0.64 DD -62% h1 27% h2 15% turn 143
+{'score': 'raw', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 13.9% Sh 0.64 DD -36% h1 16% h2 12% turn 90
+{'score': 'raw', 'top': 20, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 15.5% Sh 0.69 DD -34% h1 17% h2 14% turn 116
+{'score': 'raw', 'top': 30, 'freq': 'm', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 21.0% Sh 0.66 DD -59% h1 27% h2 15% turn 98
+{'score': 'raw', 'top': 30, 'freq': 'm', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 17.6% Sh 0.76 DD -36% h1 19% h2 17% turn 75
+{'score': 'raw', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': None}  CAGR 25.2% Sh 0.74 DD -58% h1 31% h2 20% turn 124
+{'score': 'raw', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': None, 'stop_ma': 100}  CAGR 21.6% Sh 0.68 DD -56% h1 27% h2 16% turn 152
+{'score': 'raw', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 17.3% Sh 0.76 DD -34% h1 18% h2 17% turn 105
+{'score': 'raw', 'top': 30, 'freq': 'w', 'hyst': 1.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 15.0% Sh 0.68 DD -32% h1 16% h2 14% turn 126
+{'score': 'raw', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': None}  CAGR 20.4% Sh 0.65 DD -61% h1 26% h2 15% turn 100
+{'score': 'raw', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': None, 'stop_ma': 100}  CAGR 20.2% Sh 0.65 DD -59% h1 25% h2 16% turn 138
+{'score': 'raw', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': None}  CAGR 13.8% Sh 0.64 DD -36% h1 15% h2 13% turn 88
+{'score': 'raw', 'top': 30, 'freq': 'w', 'hyst': 2.5, 'voltarget': 0.25, 'stop_ma': 100}  CAGR 13.8% Sh 0.64 DD -36% h1 14% h2 14% turn 115
+    score  top freq  hyst  voltarget  stop_ma      cagr    sharpe     maxdd       vol        turn   cagr_h1   cagr_h2
+62    raw   20    w   1.5        NaN      NaN  0.257074  0.733707 -0.572691  0.452330  135.258981  0.328636  0.189402
+72    raw   30    w   1.5        NaN      NaN  0.251759  0.742588 -0.578813  0.425544  123.727521  0.310652  0.195542
+63    raw   20    w   1.5        NaN    100.0  0.247885  0.718492 -0.558022  0.450650  161.208524  0.334558  0.166884
+0      vs   20    m   1.5        NaN      NaN  0.220813  0.979630 -0.348349  0.231859  127.368359  0.268899  0.174573
+6      vs   20    w   2.5        NaN      NaN  0.219820  0.956734 -0.376578  0.238049  139.824783  0.235256  0.204585
+73    raw   30    w   1.5        NaN    100.0  0.215971  0.675912 -0.557507  0.422637  151.993929  0.273249  0.161298
+2      vs   20    w   1.5        NaN      NaN  0.210862  0.934641 -0.426925  0.234982  187.066746  0.215732  0.206015
+70    raw   30    m   1.5        NaN      NaN  0.210023  0.661011 -0.594703  0.428737   97.573027  0.270623  0.152345
+10     vs   30    m   1.5        NaN      NaN  0.208238  0.933836 -0.361091  0.232259  123.899272  0.245516  0.172095
+60    raw   20    m   1.5        NaN      NaN  0.207892  0.644168 -0.605586  0.455216  101.702867  0.293339  0.128133
+46  comp2   20    w   2.5        NaN      NaN  0.206220  0.903130 -0.332160  0.240407  158.852631  0.247846  0.166004
+67    raw   20    w   2.5        NaN    100.0  0.204862  0.642563 -0.623686  0.445600  143.213133  0.267426  0.145418
+76    raw   30    w   2.5        NaN      NaN  0.204321  0.654801 -0.607204  0.419384   99.666377  0.258093  0.152875
+77    raw   30    w   2.5        NaN    100.0  0.202366  0.650912 -0.592806  0.419552  137.548358  0.249015  0.157483
+16     vs   30    w   2.5        NaN      NaN  0.198860  0.895602 -0.329862  0.233854  122.840472  0.223951  0.174297
+66    raw   20    w   2.5        NaN      NaN  0.198166  0.627847 -0.648013  0.450806  105.578487  0.258765  0.140514
+1      vs   20    m   1.5       0.25      NaN  0.196982  0.941467 -0.352268  0.216619  124.451929  0.217507  0.176814
+53  comp2   30    w   1.5        NaN    100.0  0.196025  0.877952 -0.319135  0.236574  213.744655  0.293339  0.106081
+3      vs   20    w   1.5        NaN    100.0  0.195764  0.883993 -0.418037  0.233904  205.249627  0.220262  0.171771
+7      vs   20    w   2.5        NaN    100.0  0.193508  0.871048 -0.381177  0.235693  168.736112  0.233397  0.154930
+47  comp2   20    w   2.5        NaN    100.0  0.191989  0.860841 -0.371886  0.237615  180.145851  0.249793  0.136888
+12     vs   30    w   1.5        NaN      NaN  0.191924  0.864243 -0.361828  0.236231  170.506190  0.190383  0.193467
+56  comp2   30    w   2.5        NaN      NaN  0.191724  0.855469 -0.336751  0.239372  143.461291  0.244415  0.141292
+52  comp2   30    w   1.5        NaN      NaN  0.189328  0.849834 -0.321097  0.238271  197.126517  0.266180  0.117179
+42  comp2   20    w   1.5        NaN      NaN  0.188236  0.841745 -0.370897  0.239917  219.173564  0.251282  0.128399
+11     vs   30    m   1.5       0.25      NaN  0.187776  0.900474 -0.370612  0.218342  121.189788  0.201476  0.174239
+43  comp2   20    w   1.5        NaN    100.0  0.184368  0.833306 -0.375190  0.237774  233.687849  0.245751  0.126040
+64    raw   20    w   1.5       0.25      NaN  0.178840  0.780477 -0.290867  0.252452  108.880714  0.198802  0.159222
+65    raw   20    w   1.5       0.25    100.0  0.176532  0.772947 -0.276299  0.252328  126.138962  0.193741  0.159580
+71    raw   30    m   1.5       0.25      NaN  0.175916  0.764322 -0.358977  0.255624   75.124291  0.186001  0.165923
+13     vs   30    w   1.5        NaN    100.0  0.175097  0.810829 -0.346928  0.233397  192.638091  0.198436  0.152224
+74    raw   30    w   1.5       0.25      NaN  0.173334  0.758074 -0.340419  0.254436  105.089438  0.181706  0.165026
+8      vs   20    w   2.5       0.25      NaN  0.171866  0.850490 -0.370621  0.214205  139.772402  0.154189  0.189805
+4      vs   20    w   1.5       0.25      NaN  0.169495  0.845997 -0.420046  0.212489  185.254291  0.135855  0.204112
+61    raw   20    m   1.5       0.25      NaN  0.169460  0.742617 -0.306786  0.255606   73.824786  0.174232  0.164711
+50  comp2   30    m   1.5        NaN      NaN  0.167786  0.772378 -0.366702  0.238452  137.168868  0.263819  0.079097
+17     vs   30    w   2.5        NaN    100.0  0.167786  0.785242 -0.333601  0.232859  154.698221  0.198688  0.137697
+57  comp2   30    w   2.5        NaN    100.0  0.167461  0.776874 -0.343181  0.235960  165.505891  0.251917  0.088744
+48  comp2   20    w   2.5       0.25      NaN  0.162516  0.811449 -0.332769  0.214809  157.132632  0.166688  0.158361
+18     vs   30    w   2.5       0.25      NaN  0.154548  0.788392 -0.318295  0.211426  123.200082  0.147578  0.161557
+69    raw   20    w   2.5       0.25    100.0  0.154517  0.694669 -0.336724  0.254119  116.212662  0.171486  0.137803
+5      vs   20    w   1.5       0.25    100.0  0.154257  0.786384 -0.413999  0.211626  202.623501  0.140605  0.168064
+58  comp2   30    w   2.5       0.25      NaN  0.153139  0.780486 -0.324723  0.212243  142.659944  0.176319  0.130427
+55  comp2   30    w   1.5       0.25    100.0  0.152511  0.779715 -0.310066  0.211537  210.050844  0.201535  0.105513
+9      vs   20    w   2.5       0.25    100.0  0.151449  0.771455 -0.375622  0.212913  167.155200  0.152346  0.150553
+44  comp2   20    w   1.5       0.25      NaN  0.151392  0.767221 -0.365093  0.214569  215.291593  0.175359  0.127926
+14     vs   30    w   1.5       0.25      NaN  0.151390  0.765415 -0.360476  0.215243  169.278325  0.115849  0.188044
+49  comp2   20    w   2.5       0.25    100.0  0.151173  0.770574 -0.367581  0.212903  177.294473  0.165502  0.137028
+75    raw   30    w   1.5       0.25    100.0  0.149588  0.678821 -0.318769  0.253571  125.608030  0.155529  0.143681
+54  comp2   30    w   1.5       0.25      NaN  0.148043  0.757353 -0.311445  0.213101  194.690985  0.183378  0.113781
+45  comp2   20    w   1.5       0.25    100.0  0.147842  0.757538 -0.370619  0.212654  228.887648  0.168828  0.127245
+51  comp2   30    m   1.5       0.25      NaN  0.143715  0.722438 -0.372025  0.220246  133.797745  0.214532  0.077063
+68    raw   20    w   2.5       0.25      NaN  0.139277  0.637451 -0.359836  0.257303   90.290824  0.161376  0.117610
+40  comp2   20    m   1.5        NaN      NaN  0.138841  0.669656 -0.381834  0.236783  144.312850  0.219768  0.063324
+78    raw   30    w   2.5       0.25      NaN  0.137978  0.637015 -0.363084  0.254660   88.171888  0.148990  0.127078
+79    raw   30    w   2.5       0.25    100.0  0.137639  0.638101 -0.362031  0.253153  114.934235  0.136023  0.139256
+15     vs   30    w   1.5       0.25    100.0  0.137271  0.712062 -0.350621  0.213456  189.930342  0.123842  0.150852
+59  comp2   30    w   2.5       0.25    100.0  0.132372  0.698106 -0.329229  0.210669  163.238780  0.178052  0.088486
+19     vs   30    w   2.5       0.25    100.0  0.128032  0.676609 -0.337252  0.212113  153.372050  0.118788  0.137347
+41  comp2   20    m   1.5       0.25      NaN  0.117419  0.624147 -0.386383  0.216026  140.227460  0.166627  0.070311
+36   comp   30    w   2.5        NaN      NaN  0.095188  0.570611 -0.302299  0.192623  179.653482  0.143963  0.048518
+37   comp   30    w   2.5        NaN    100.0  0.087205  0.534359 -0.299067  0.191549  188.348944  0.136082  0.040457
+38   comp   30    w   2.5       0.25      NaN  0.075694  0.489698 -0.301163  0.184567  179.642092  0.102611  0.049449
+39   comp   30    w   2.5       0.25    100.0  0.071644  0.469968 -0.299189  0.184016  187.501151  0.102068  0.042075
+27   comp   20    w   2.5        NaN    100.0  0.069533  0.446097 -0.339117  0.193317  236.112516  0.133396  0.009300
+26   comp   20    w   2.5        NaN      NaN  0.067699  0.436942 -0.346894  0.193541  228.552627  0.120725  0.017209
+31   comp   30    m   1.5       0.25      NaN  0.060537  0.403404 -0.368370  0.192357  145.395588  0.097496  0.024843
+30   comp   30    m   1.5        NaN      NaN  0.059488  0.389644 -0.367874  0.200943  147.606823  0.119701  0.002544
+29   comp   20    w   2.5       0.25    100.0  0.055669  0.387189 -0.329688  0.184721  234.430019  0.100082  0.013071
+32   comp   30    w   1.5        NaN      NaN  0.054736  0.373343 -0.328016  0.193921  297.324138  0.115196 -0.002415
+28   comp   20    w   2.5       0.25      NaN  0.052656  0.371781 -0.341622  0.184640  227.534707  0.085381  0.020935
+33   comp   30    w   1.5        NaN    100.0  0.050860  0.355063 -0.323743  0.193033  301.510946  0.109311 -0.004482
+22   comp   20    w   1.5        NaN      NaN  0.048844  0.343542 -0.345669  0.194892  352.501459  0.104768 -0.004221
+21   comp   20    m   1.5       0.25      NaN  0.047636  0.339998 -0.377775  0.191442  156.216021  0.088407  0.008413
+23   comp   20    w   1.5        NaN    100.0  0.045742  0.328566 -0.340923  0.194478  356.603584  0.107432 -0.012480
+20   comp   20    m   1.5        NaN      NaN  0.045273  0.321173 -0.377775  0.202249  159.261035  0.114715 -0.019808
+34   comp   30    w   1.5       0.25      NaN  0.041169  0.312076 -0.327306  0.184956  295.066057  0.081601  0.002269
+35   comp   30    w   1.5       0.25    100.0  0.039631  0.304155 -0.322434  0.184791  298.958987  0.080712  0.000132
+24   comp   20    w   1.5       0.25      NaN  0.036013  0.285106 -0.343905  0.184824  347.901308  0.070699  0.002468
+25   comp   20    w   1.5       0.25    100.0  0.033705  0.273026 -0.333189  0.184727  351.707507  0.074843 -0.005836

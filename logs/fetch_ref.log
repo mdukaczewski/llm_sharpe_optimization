@@ -1,0 +1,8 @@
+  /v3/reference/splits: 20 pages, 20000 rows
+splits 28805
+tickers active= true 13254
+  /v3/reference/tickers: 20 pages, 20000 rows
+tickers active= false 23576
+  /v3/reference/dividends: 20 pages, 20000 rows
+  /v3/reference/dividends: 40 pages, 40000 rows
+  /v3/reference/dividends: 60 pages, 60000 rows

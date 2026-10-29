@@ -1,0 +1,31 @@
+features built
+base                         CAGR  20.7% Sh 0.93 DD  -34% h1   24% h2   17% turn 125
+top=15                       CAGR  22.0% Sh 0.97 DD  -39% h1   27% h2   18% turn 128
+top=20                       CAGR  22.1% Sh 0.98 DD  -35% h1   27% h2   17% turn 127
+top=30                       CAGR  20.8% Sh 0.93 DD  -36% h1   25% h2   17% turn 124
+top=40                       CAGR  21.3% Sh 0.95 DD  -33% h1   26% h2   16% turn 119
+adv=20M                      CAGR  21.8% Sh 1.04 DD  -32% h1   27% h2   17% turn 123
+adv=100M                     CAGR  24.2% Sh 1.03 DD  -33% h1   30% h2   18% turn 123
+adv=200M                     CAGR  21.6% Sh 0.91 DD  -35% h1   24% h2   19% turn 113
+skip=5                       CAGR  21.7% Sh 0.97 DD  -32% h1   25% h2   19% turn 121
+skip=10                      CAGR  22.7% Sh 1.00 DD  -31% h1   23% h2   22% turn 123
+skip=42                      CAGR  25.1% Sh 1.10 DD  -29% h1   26% h2   24% turn 127
+lb=189                       CAGR  22.2% Sh 1.01 DD  -29% h1   22% h2   22% turn 133
+lb=210                       CAGR  24.7% Sh 1.12 DD  -29% h1   30% h2   20% turn 130
+lb=300                       CAGR  17.3% Sh 0.80 DD  -36% h1   20% h2   15% turn 119
+volw=20                      CAGR  16.2% Sh 0.84 DD  -36% h1   17% h2   15% turn 153
+volw=120                     CAGR  18.2% Sh 0.80 DD  -39% h1   22% h2   15% turn 121
+px10                         CAGR  19.6% Sh 0.89 DD  -35% h1   22% h2   18% turn 125
+score=resid                  CAGR  22.3% Sh 0.80 DD  -52% h1   23% h2   21% turn 115
+score=residraw               CAGR  18.2% Sh 0.60 DD  -65% h1   32% h2    6% turn 100
+score=mix                    CAGR  22.7% Sh 0.92 DD  -35% h1   27% h2   18% turn 119
+score=resid top=15           CAGR  23.2% Sh 0.78 DD  -48% h1   24% h2   22% turn 125
+score=resid top=40           CAGR  21.0% Sh 0.79 DD  -48% h1   22% h2   20% turn 107
+score=mix top=15             CAGR  24.7% Sh 0.97 DD  -36% h1   26% h2   23% turn 124
+score=mix top=40             CAGR  20.7% Sh 0.86 DD  -35% h1   23% h2   19% turn 113
+maxbeta=1.5                  CAGR  14.4% Sh 0.75 DD  -38% h1   18% h2   11% turn 127
+base offset+5d               CAGR  19.1% Sh 0.88 DD  -35% h1   22% h2   16% turn 125
+base offset+10d              CAGR  17.3% Sh 0.81 DD  -34% h1   22% h2   12% turn 126
+base offset+15d              CAGR  21.2% Sh 0.93 DD  -33% h1   24% h2   19% turn 123
+base cost30                  CAGR  18.5% Sh 0.85 DD  -36% h1   22% h2   15% turn 125
+base cost50                  CAGR  15.5% Sh 0.74 DD  -39% h1   19% h2   12% turn 125

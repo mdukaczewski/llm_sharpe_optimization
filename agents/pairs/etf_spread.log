@@ -1,0 +1,383 @@
+loaded 3121x5623 in 13s
+ETF universe avg size: 195.48368442792236  sample: ['AAXJ', 'ACWI', 'ACWX', 'AIRR', 'AOM', 'AOR', 'AVDE', 'AVDV', 'AVEM', 'AVLV', 'AVUS', 'AVUV', 'BBCA', 'BBEU', 'BBJP', 'BBUS', 'BKDV', 'BKLC', 'BLCR', 'BUFR', 'CGBL', 'CGDG', 'CGDV', 'CGGO', 'CGGR', 'CGMM', 'CGUS', 'CGXU', 'CORO', 'CWB', 'DBEF', 'DFAC', 'DFAE', 'DFAI', 'DFAS', 'DFAU', 'DFAX', 'DFEM', 'DFIC', 'DFIV']
+spy etf rev1 rank h1 hedge0            Sh net -1.27 gross  0.45 | ret  -5.3% vol  4.2% mdd -41.9% | turn  335.7x | npos   193 (min 82) gexp 1.00 | worst-yr -4.77
+spy etf rev1 rank h1 hedge1            Sh net -1.41 gross  0.44 | ret  -5.7% vol  4.0% mdd -43.9% | turn  346.2x | npos   194 (min 83) gexp 1.03 | worst-yr -4.89
+spy etf rev1 rank h3 hedge0            Sh net -0.42 gross  0.51 | ret  -1.1% vol  2.7% mdd -14.1% | turn  112.2x | npos   197 (min 86) gexp 0.54 | worst-yr -3.55
+spy etf rev1 rank h3 hedge1            Sh net -0.51 gross  0.49 | ret  -1.3% vol  2.6% mdd -15.1% | turn  115.8x | npos   198 (min 87) gexp 0.55 | worst-yr -3.65
+spy etf rev1 rank h5 hedge0            Sh net -0.06 gross  0.69 | ret  -0.1% vol  2.1% mdd  -7.0% | turn   67.3x | npos   200 (min 88) gexp 0.41 | worst-yr -3.94
+spy etf rev1 rank h5 hedge1            Sh net -0.14 gross  0.67 | ret  -0.3% vol  2.0% mdd  -7.4% | turn   69.5x | npos   201 (min 89) gexp 0.43 | worst-yr -3.96
+spy etf rev1 rank h10 hedge0           Sh net -0.20 gross  0.36 | ret  -0.3% vol  1.5% mdd  -4.6% | turn   34.1x | npos   206 (min 95) gexp 0.29 | worst-yr -2.04
+spy etf rev1 rank h10 hedge1           Sh net -0.26 gross  0.34 | ret  -0.4% vol  1.4% mdd  -5.0% | turn   35.2x | npos   207 (min 96) gexp 0.30 | worst-yr -2.09
+spy etf rev1 z h1 hedge0               Sh net -0.26 gross  0.74 | ret  -2.3% vol  8.6% mdd -30.5% | turn  408.7x | npos    57 (min 0) gexp 0.88 | worst-yr -3.43
+spy etf rev1 z h1 hedge1               Sh net -0.44 gross  0.75 | ret  -3.4% vol  7.8% mdd -34.1% | turn  440.8x | npos    58 (min 0) gexp 0.97 | worst-yr -3.35
+spy etf rev1 z h3 hedge0               Sh net -0.07 gross  0.50 | ret  -0.4% vol  5.5% mdd -18.5% | turn  136.5x | npos   120 (min 5) gexp 0.76 | worst-yr -2.93
+spy etf rev1 z h3 hedge1               Sh net -0.09 gross  0.59 | ret  -0.4% vol  5.0% mdd -19.7% | turn  147.4x | npos   121 (min 6) gexp 0.81 | worst-yr -2.41
+spy etf rev1 z h5 hedge0               Sh net  0.01 gross  0.48 | ret   0.1% vol  4.3% mdd -12.5% | turn   82.1x | npos   151 (min 18) gexp 0.68 | worst-yr -4.12
+spy etf rev1 z h5 hedge1               Sh net  0.02 gross  0.60 | ret   0.1% vol  3.7% mdd -12.3% | turn   88.6x | npos   152 (min 19) gexp 0.72 | worst-yr -3.55
+spy etf rev1 z h10 hedge0              Sh net -0.05 gross  0.34 | ret  -0.1% vol  2.9% mdd  -9.3% | turn   41.3x | npos   184 (min 47) gexp 0.57 | worst-yr -2.95
+spy etf rev1 z h10 hedge1              Sh net -0.04 gross  0.43 | ret  -0.1% vol  2.6% mdd  -8.5% | turn   44.6x | npos   185 (min 48) gexp 0.60 | worst-yr -2.47
+spy etf rev2 rank h1 hedge0            Sh net -0.79 gross  0.38 | ret  -3.5% vol  4.4% mdd -30.8% | turn  235.0x | npos   193 (min 82) gexp 1.00 | worst-yr -3.68
+spy etf rev2 rank h1 hedge1            Sh net -0.88 gross  0.38 | ret  -3.7% vol  4.3% mdd -32.2% | turn  242.5x | npos   194 (min 83) gexp 1.03 | worst-yr -3.75
+spy etf rev2 rank h3 hedge0            Sh net -0.29 gross  0.46 | ret  -1.0% vol  3.4% mdd -17.1% | turn  112.5x | npos   197 (min 86) gexp 0.70 | worst-yr -3.67
+spy etf rev2 rank h3 hedge1            Sh net -0.40 gross  0.42 | ret  -1.3% vol  3.3% mdd -18.5% | turn  116.1x | npos   198 (min 87) gexp 0.72 | worst-yr -3.62
+spy etf rev2 rank h5 hedge0            Sh net -0.14 gross  0.46 | ret  -0.4% vol  2.7% mdd  -9.4% | turn   67.4x | npos   200 (min 88) gexp 0.55 | worst-yr -3.93
+spy etf rev2 rank h5 hedge1            Sh net -0.22 gross  0.43 | ret  -0.6% vol  2.6% mdd -10.0% | turn   69.6x | npos   201 (min 89) gexp 0.57 | worst-yr -3.87
+spy etf rev2 rank h10 hedge0           Sh net -0.15 gross  0.29 | ret  -0.3% vol  2.0% mdd  -5.8% | turn   34.2x | npos   206 (min 95) gexp 0.40 | worst-yr -1.81
+spy etf rev2 rank h10 hedge1           Sh net -0.20 gross  0.27 | ret  -0.4% vol  1.9% mdd  -6.0% | turn   35.3x | npos   207 (min 96) gexp 0.41 | worst-yr -2.03
+spy etf rev2 z h1 hedge0               Sh net -0.45 gross  0.40 | ret  -3.8% vol  8.5% mdd -40.3% | turn  341.0x | npos    57 (min 0) gexp 0.87 | worst-yr -1.76
+spy etf rev2 z h1 hedge1               Sh net -0.56 gross  0.47 | ret  -4.2% vol  7.6% mdd -40.1% | turn  367.0x | npos    58 (min 0) gexp 0.96 | worst-yr -1.91
+spy etf rev2 z h3 hedge0               Sh net -0.27 gross  0.22 | ret  -1.7% vol  6.5% mdd -23.4% | turn  135.6x | npos   112 (min 2) gexp 0.82 | worst-yr -2.52
+spy etf rev2 z h3 hedge1               Sh net -0.34 gross  0.26 | ret  -1.9% vol  5.6% mdd -26.9% | turn  147.0x | npos   113 (min 3) gexp 0.88 | worst-yr -2.58
+spy etf rev2 z h5 hedge0               Sh net -0.19 gross  0.20 | ret  -1.0% vol  5.2% mdd -15.8% | turn   81.6x | npos   143 (min 9) gexp 0.75 | worst-yr -2.50
+spy etf rev2 z h5 hedge1               Sh net -0.20 gross  0.28 | ret  -0.9% vol  4.5% mdd -15.6% | turn   88.2x | npos   144 (min 10) gexp 0.80 | worst-yr -2.40
+spy etf rev2 z h10 hedge0              Sh net -0.20 gross  0.10 | ret  -0.8% vol  3.8% mdd -10.6% | turn   41.0x | npos   179 (min 29) gexp 0.64 | worst-yr -1.88
+spy etf rev2 z h10 hedge1              Sh net -0.18 gross  0.19 | ret  -0.6% vol  3.3% mdd -11.3% | turn   44.3x | npos   180 (min 30) gexp 0.67 | worst-yr -1.98
+spy etf rev3 rank h1 hedge0            Sh net -0.55 gross  0.40 | ret  -2.5% vol  4.6% mdd -24.9% | turn  193.6x | npos   193 (min 82) gexp 1.00 | worst-yr -3.97
+spy etf rev3 rank h1 hedge1            Sh net -0.66 gross  0.36 | ret  -2.9% vol  4.4% mdd -26.7% | turn  199.9x | npos   194 (min 83) gexp 1.03 | worst-yr -3.96
+spy etf rev3 rank h3 hedge0            Sh net -0.15 gross  0.55 | ret  -0.6% vol  3.8% mdd -15.3% | turn  112.4x | npos   197 (min 85) gexp 0.79 | worst-yr -4.49
+spy etf rev3 rank h3 hedge1            Sh net -0.25 gross  0.50 | ret  -0.9% vol  3.6% mdd -16.7% | turn  116.1x | npos   198 (min 86) gexp 0.82 | worst-yr -4.40
+spy etf rev3 rank h5 hedge0            Sh net -0.15 gross  0.39 | ret  -0.5% vol  3.1% mdd -11.1% | turn   67.6x | npos   200 (min 88) gexp 0.65 | worst-yr -3.94
+spy etf rev3 rank h5 hedge1            Sh net -0.21 gross  0.38 | ret  -0.6% vol  2.9% mdd -11.3% | turn   69.9x | npos   201 (min 89) gexp 0.67 | worst-yr -3.81
+spy etf rev3 rank h10 hedge0           Sh net -0.16 gross  0.24 | ret  -0.4% vol  2.3% mdd  -6.6% | turn   34.2x | npos   206 (min 95) gexp 0.48 | worst-yr -1.72
+spy etf rev3 rank h10 hedge1           Sh net -0.21 gross  0.22 | ret  -0.5% vol  2.2% mdd  -6.7% | turn   35.3x | npos   207 (min 96) gexp 0.49 | worst-yr -1.92
+spy etf rev3 z h1 hedge0               Sh net -0.25 gross  0.45 | ret  -2.4% vol  9.3% mdd -37.6% | turn  304.5x | npos    57 (min 0) gexp 0.88 | worst-yr -2.08
+spy etf rev3 z h1 hedge1               Sh net -0.41 gross  0.44 | ret  -3.4% vol  8.3% mdd -41.4% | turn  327.3x | npos    58 (min 0) gexp 0.97 | worst-yr -2.25
+spy etf rev3 z h3 hedge0               Sh net -0.21 gross  0.20 | ret  -1.6% vol  7.7% mdd -27.4% | turn  136.6x | npos   106 (min 4) gexp 0.86 | worst-yr -2.72
+spy etf rev3 z h3 hedge1               Sh net -0.32 gross  0.20 | ret  -2.1% vol  6.6% mdd -26.4% | turn  147.9x | npos   107 (min 5) gexp 0.93 | worst-yr -2.55
+spy etf rev3 z h5 hedge0               Sh net -0.14 gross  0.19 | ret  -0.9% vol  6.1% mdd -19.0% | turn   82.2x | npos   136 (min 9) gexp 0.80 | worst-yr -2.27
+spy etf rev3 z h5 hedge1               Sh net -0.19 gross  0.22 | ret  -1.0% vol  5.3% mdd -18.8% | turn   88.9x | npos   137 (min 10) gexp 0.86 | worst-yr -2.07
+spy etf rev3 z h10 hedge0              Sh net -0.11 gross  0.15 | ret  -0.5% vol  4.6% mdd -11.6% | turn   41.3x | npos   174 (min 29) gexp 0.69 | worst-yr -1.82
+spy etf rev3 z h10 hedge1              Sh net -0.10 gross  0.23 | ret  -0.4% vol  4.0% mdd  -9.3% | turn   44.6x | npos   175 (min 30) gexp 0.74 | worst-yr -1.91
+spy etf rev5 rank h1 hedge0            Sh net -0.23 gross  0.54 | ret  -1.0% vol  4.6% mdd -18.1% | turn  151.3x | npos   193 (min 82) gexp 1.00 | worst-yr -4.26
+spy etf rev5 rank h1 hedge1            Sh net -0.32 gross  0.51 | ret  -1.4% vol  4.4% mdd -19.2% | turn  156.2x | npos   194 (min 83) gexp 1.03 | worst-yr -4.21
+spy etf rev5 rank h3 hedge0            Sh net -0.14 gross  0.39 | ret  -0.6% vol  4.1% mdd -14.8% | turn   87.2x | npos   197 (min 85) gexp 0.87 | worst-yr -3.83
+spy etf rev5 rank h3 hedge1            Sh net -0.21 gross  0.37 | ret  -0.8% vol  3.9% mdd -15.2% | turn   90.1x | npos   198 (min 86) gexp 0.90 | worst-yr -3.66
+spy etf rev5 rank h5 hedge0            Sh net -0.22 gross  0.27 | ret  -0.8% vol  3.6% mdd -13.5% | turn   67.8x | npos   200 (min 88) gexp 0.78 | worst-yr -2.67
+spy etf rev5 rank h5 hedge1            Sh net -0.27 gross  0.25 | ret  -0.9% vol  3.4% mdd -13.4% | turn   70.1x | npos   201 (min 89) gexp 0.80 | worst-yr -2.46
+spy etf rev5 rank h10 hedge0           Sh net -0.17 gross  0.18 | ret  -0.5% vol  2.8% mdd  -7.3% | turn   34.2x | npos   206 (min 95) gexp 0.60 | worst-yr -1.20
+spy etf rev5 rank h10 hedge1           Sh net -0.20 gross  0.17 | ret  -0.5% vol  2.7% mdd  -7.8% | turn   35.3x | npos   207 (min 96) gexp 0.62 | worst-yr -1.23
+spy etf rev5 z h1 hedge0               Sh net -0.45 gross  0.16 | ret  -4.2% vol  9.2% mdd -37.2% | turn  261.5x | npos    58 (min 0) gexp 0.88 | worst-yr -3.57
+spy etf rev5 z h1 hedge1               Sh net -0.49 gross  0.27 | ret  -4.0% vol  8.1% mdd -36.9% | turn  280.5x | npos    59 (min 0) gexp 0.97 | worst-yr -3.32
+spy etf rev5 z h3 hedge0               Sh net -0.43 gross -0.06 | ret  -3.3% vol  7.6% mdd -31.7% | turn  122.1x | npos    99 (min 4) gexp 0.88 | worst-yr -3.97
+spy etf rev5 z h3 hedge1               Sh net -0.40 gross  0.06 | ret  -2.7% vol  6.7% mdd -26.3% | turn  131.4x | npos   100 (min 5) gexp 0.95 | worst-yr -3.68
+spy etf rev5 z h5 hedge0               Sh net -0.17 gross  0.14 | ret  -1.1% vol  6.8% mdd -19.8% | turn   82.7x | npos   126 (min 5) gexp 0.86 | worst-yr -1.97
+spy etf rev5 z h5 hedge1               Sh net -0.12 gross  0.26 | ret  -0.7% vol  5.9% mdd -19.2% | turn   89.2x | npos   128 (min 6) gexp 0.92 | worst-yr -1.81
+spy etf rev5 z h10 hedge0              Sh net -0.15 gross  0.08 | ret  -0.8% vol  5.4% mdd -12.7% | turn   41.4x | npos   165 (min 29) gexp 0.77 | worst-yr -1.60
+spy etf rev5 z h10 hedge1              Sh net -0.12 gross  0.17 | ret  -0.5% vol  4.6% mdd -11.1% | turn   44.6x | npos   166 (min 30) gexp 0.82 | worst-yr -1.69
+spy etf rev10 rank h1 hedge0           Sh net -0.17 gross  0.42 | ret  -0.8% vol  4.6% mdd -15.5% | turn  110.2x | npos   193 (min 82) gexp 1.00 | worst-yr -2.87
+spy etf rev10 rank h1 hedge1           Sh net -0.26 gross  0.38 | ret  -1.1% vol  4.4% mdd -16.7% | turn  113.8x | npos   194 (min 83) gexp 1.03 | worst-yr -2.74
+spy etf rev10 rank h3 hedge0           Sh net -0.09 gross  0.31 | ret  -0.4% vol  4.3% mdd -12.6% | turn   63.2x | npos   197 (min 86) gexp 0.93 | worst-yr -1.50
+spy etf rev10 rank h3 hedge1           Sh net -0.16 gross  0.27 | ret  -0.7% vol  4.1% mdd -13.3% | turn   65.3x | npos   198 (min 87) gexp 0.96 | worst-yr -1.70
+spy etf rev10 rank h5 hedge0           Sh net -0.17 gross  0.19 | ret  -0.7% vol  4.0% mdd -11.7% | turn   48.6x | npos   200 (min 88) gexp 0.88 | worst-yr -1.32
+spy etf rev10 rank h5 hedge1           Sh net -0.21 gross  0.17 | ret  -0.8% vol  3.8% mdd -12.3% | turn   50.2x | npos   201 (min 89) gexp 0.91 | worst-yr -1.19
+spy etf rev10 rank h10 hedge0          Sh net -0.33 gross -0.03 | ret  -1.2% vol  3.5% mdd -13.2% | turn   33.9x | npos   206 (min 95) gexp 0.77 | worst-yr -1.16
+spy etf rev10 rank h10 hedge1          Sh net -0.39 gross -0.07 | ret  -1.3% vol  3.4% mdd -14.5% | turn   35.0x | npos   207 (min 96) gexp 0.80 | worst-yr -1.30
+spy etf rev10 z h1 hedge0              Sh net  0.00 gross  0.46 | ret   0.0% vol  9.9% mdd -26.8% | turn  205.9x | npos    60 (min 0) gexp 0.87 | worst-yr -5.22
+spy etf rev10 z h1 hedge1              Sh net  0.03 gross  0.60 | ret   0.2% vol  8.5% mdd -21.0% | turn  220.6x | npos    61 (min 0) gexp 0.97 | worst-yr -5.33
+spy etf rev10 z h3 hedge0              Sh net -0.12 gross  0.17 | ret  -1.0% vol  8.6% mdd -21.0% | turn   99.2x | npos    90 (min 2) gexp 0.87 | worst-yr -2.75
+spy etf rev10 z h3 hedge1              Sh net -0.05 gross  0.32 | ret  -0.3% vol  7.2% mdd -16.1% | turn  106.6x | npos    91 (min 3) gexp 0.95 | worst-yr -2.70
+spy etf rev10 z h5 hedge0              Sh net -0.08 gross  0.16 | ret  -0.6% vol  7.9% mdd -17.0% | turn   69.5x | npos   112 (min 5) gexp 0.87 | worst-yr -2.02
+spy etf rev10 z h5 hedge1              Sh net  0.01 gross  0.31 | ret   0.1% vol  6.6% mdd -13.6% | turn   74.7x | npos   113 (min 6) gexp 0.95 | worst-yr -2.00
+spy etf rev10 z h10 hedge0             Sh net -0.18 gross  0.01 | ret  -1.2% vol  7.0% mdd -16.3% | turn   40.9x | npos   149 (min 18) gexp 0.84 | worst-yr -2.27
+spy etf rev10 z h10 hedge1             Sh net -0.12 gross  0.12 | ret  -0.7% vol  5.7% mdd -13.3% | turn   44.2x | npos   150 (min 19) gexp 0.91 | worst-yr -2.25
+spy sect rev1 rank h1 hedge0           Sh net -0.64 gross  0.46 | ret  -4.2% vol  6.5% mdd -40.5% | turn  335.3x | npos    10 (min 10) gexp 1.00 | worst-yr -1.93
+spy sect rev1 rank h1 hedge1           Sh net -0.71 gross  0.54 | ret  -4.4% vol  6.1% mdd -41.0% | turn  355.8x | npos    11 (min 11) gexp 1.06 | worst-yr -2.24
+spy sect rev1 rank h3 hedge0           Sh net -0.40 gross  0.25 | ret  -1.5% vol  3.9% mdd -19.3% | turn  111.2x | npos    10 (min 6) gexp 0.54 | worst-yr -2.73
+spy sect rev1 rank h3 hedge1           Sh net -0.36 gross  0.37 | ret  -1.3% vol  3.6% mdd -19.3% | turn  118.1x | npos    11 (min 7) gexp 0.57 | worst-yr -2.91
+spy sect rev1 rank h5 hedge0           Sh net -0.38 gross  0.14 | ret  -1.1% vol  3.0% mdd -15.4% | turn   66.4x | npos    10 (min 7) gexp 0.41 | worst-yr -2.12
+spy sect rev1 rank h5 hedge1           Sh net -0.31 gross  0.27 | ret  -0.9% vol  2.8% mdd -14.1% | turn   70.5x | npos    11 (min 8) gexp 0.44 | worst-yr -2.27
+spy sect rev1 rank h10 hedge0          Sh net -0.20 gross  0.20 | ret  -0.4% vol  2.1% mdd  -6.7% | turn   33.5x | npos    10 (min 6) gexp 0.29 | worst-yr -1.02
+spy sect rev1 rank h10 hedge1          Sh net -0.15 gross  0.30 | ret  -0.3% vol  1.9% mdd  -5.7% | turn   35.6x | npos    11 (min 7) gexp 0.31 | worst-yr -1.09
+spy sect rev1 z h1 hedge0              Sh net -0.20 gross  0.39 | ret  -2.1% vol 10.3% mdd -41.6% | turn  292.5x | npos     3 (min 0) gexp 0.65 | worst-yr -1.76
+spy sect rev1 z h1 hedge1              Sh net -0.28 gross  0.56 | ret  -2.4% vol  8.6% mdd -37.5% | turn  339.9x | npos     4 (min 0) gexp 0.79 | worst-yr -1.74
+spy sect rev1 z h3 hedge0              Sh net -0.14 gross  0.23 | ret  -0.9% vol  6.0% mdd -19.7% | turn   97.3x | npos     7 (min 0) gexp 0.53 | worst-yr -2.16
+spy sect rev1 z h3 hedge1              Sh net -0.12 gross  0.40 | ret  -0.6% vol  5.0% mdd -14.8% | turn  113.2x | npos     8 (min 0) gexp 0.60 | worst-yr -2.35
+spy sect rev1 z h5 hedge0              Sh net -0.02 gross  0.27 | ret  -0.1% vol  4.8% mdd -10.5% | turn   58.6x | npos     8 (min 0) gexp 0.45 | worst-yr -1.76
+spy sect rev1 z h5 hedge1              Sh net -0.04 gross  0.38 | ret  -0.2% vol  3.8% mdd -10.8% | turn   68.4x | npos     9 (min 0) gexp 0.51 | worst-yr -1.84
+spy sect rev1 z h10 hedge0             Sh net -0.03 gross  0.20 | ret  -0.1% vol  3.4% mdd  -7.4% | turn   29.4x | npos    10 (min 0) gexp 0.34 | worst-yr -1.58
+spy sect rev1 z h10 hedge1             Sh net -0.03 gross  0.30 | ret  -0.1% vol  2.7% mdd  -7.2% | turn   34.3x | npos    11 (min 0) gexp 0.39 | worst-yr -1.50
+spy sect rev2 rank h1 hedge0           Sh net -0.43 gross  0.36 | ret  -2.8% vol  6.6% mdd -32.1% | turn  236.6x | npos    10 (min 10) gexp 1.00 | worst-yr -2.10
+spy sect rev2 rank h1 hedge1           Sh net -0.46 gross  0.45 | ret  -2.8% vol  6.1% mdd -31.4% | turn  251.1x | npos    11 (min 11) gexp 1.06 | worst-yr -2.33
+spy sect rev2 rank h3 hedge0           Sh net -0.50 gross  0.04 | ret  -2.4% vol  4.8% mdd -23.6% | turn  111.7x | npos    10 (min 6) gexp 0.70 | worst-yr -2.75
+spy sect rev2 rank h3 hedge1           Sh net -0.48 gross  0.14 | ret  -2.1% vol  4.5% mdd -23.5% | turn  118.8x | npos    11 (min 7) gexp 0.74 | worst-yr -2.92
+spy sect rev2 rank h5 hedge0           Sh net -0.37 gross  0.04 | ret  -1.4% vol  3.9% mdd -18.1% | turn   66.5x | npos    10 (min 7) gexp 0.55 | worst-yr -1.63
+spy sect rev2 rank h5 hedge1           Sh net -0.35 gross  0.12 | ret  -1.3% vol  3.6% mdd -17.7% | turn   70.6x | npos    11 (min 8) gexp 0.58 | worst-yr -1.85
+spy sect rev2 rank h10 hedge0          Sh net -0.25 gross  0.06 | ret  -0.7% vol  2.8% mdd -11.3% | turn   33.4x | npos    10 (min 7) gexp 0.39 | worst-yr -1.15
+spy sect rev2 rank h10 hedge1          Sh net -0.22 gross  0.13 | ret  -0.6% vol  2.6% mdd  -9.9% | turn   35.5x | npos    11 (min 8) gexp 0.41 | worst-yr -1.26
+spy sect rev2 z h1 hedge0              Sh net -0.25 gross  0.26 | ret  -2.5% vol 10.0% mdd -36.7% | turn  233.9x | npos     3 (min 0) gexp 0.66 | worst-yr -2.49
+spy sect rev2 z h1 hedge1              Sh net -0.30 gross  0.42 | ret  -2.4% vol  8.0% mdd -34.5% | turn  271.1x | npos     4 (min 0) gexp 0.80 | worst-yr -2.85
+spy sect rev2 z h3 hedge0              Sh net -0.13 gross  0.19 | ret  -1.0% vol  7.3% mdd -20.0% | turn   99.3x | npos     6 (min 0) gexp 0.60 | worst-yr -2.98
+spy sect rev2 z h3 hedge1              Sh net -0.26 gross  0.21 | ret  -1.5% vol  5.7% mdd -25.9% | turn  115.0x | npos     7 (min 0) gexp 0.69 | worst-yr -3.15
+spy sect rev2 z h5 hedge0              Sh net -0.03 gross  0.21 | ret  -0.2% vol  6.0% mdd -13.2% | turn   59.1x | npos     8 (min 0) gexp 0.53 | worst-yr -2.53
+spy sect rev2 z h5 hedge1              Sh net -0.12 gross  0.25 | ret  -0.5% vol  4.6% mdd -16.1% | turn   68.6x | npos     9 (min 0) gexp 0.60 | worst-yr -2.67
+spy sect rev2 z h10 hedge0             Sh net  0.06 gross  0.26 | ret   0.3% vol  4.3% mdd  -7.0% | turn   29.8x | npos    10 (min 0) gexp 0.41 | worst-yr -1.08
+spy sect rev2 z h10 hedge1             Sh net  0.08 gross  0.37 | ret   0.3% vol  3.3% mdd  -8.3% | turn   34.5x | npos    11 (min 0) gexp 0.47 | worst-yr -1.19
+spy sect rev3 rank h1 hedge0           Sh net -0.44 gross  0.23 | ret  -2.9% vol  6.6% mdd -30.6% | turn  195.1x | npos    10 (min 10) gexp 1.00 | worst-yr -2.76
+spy sect rev3 rank h1 hedge1           Sh net -0.45 gross  0.31 | ret  -2.8% vol  6.2% mdd -31.4% | turn  207.1x | npos    11 (min 11) gexp 1.06 | worst-yr -2.96
+spy sect rev3 rank h3 hedge0           Sh net -0.44 gross  0.04 | ret  -2.4% vol  5.4% mdd -23.6% | turn  111.0x | npos    10 (min 7) gexp 0.79 | worst-yr -2.68
+spy sect rev3 rank h3 hedge1           Sh net -0.40 gross  0.15 | ret  -2.0% vol  5.1% mdd -23.4% | turn  117.9x | npos    11 (min 8) gexp 0.84 | worst-yr -2.83
+spy sect rev3 rank h5 hedge0           Sh net -0.30 gross  0.08 | ret  -1.3% vol  4.4% mdd -19.7% | turn   66.6x | npos    10 (min 8) gexp 0.65 | worst-yr -2.20
+spy sect rev3 rank h5 hedge1           Sh net -0.25 gross  0.17 | ret  -1.0% vol  4.1% mdd -18.8% | turn   70.8x | npos    11 (min 9) gexp 0.69 | worst-yr -1.80
+spy sect rev3 rank h10 hedge0          Sh net -0.20 gross  0.07 | ret  -0.7% vol  3.3% mdd -12.2% | turn   33.5x | npos    10 (min 7) gexp 0.47 | worst-yr -1.26
+spy sect rev3 rank h10 hedge1          Sh net -0.17 gross  0.14 | ret  -0.5% vol  3.1% mdd -11.2% | turn   35.6x | npos    11 (min 8) gexp 0.50 | worst-yr -1.25
+spy sect rev3 z h1 hedge0              Sh net -0.00 gross  0.43 | ret  -0.0% vol 10.0% mdd -35.9% | turn  199.5x | npos     3 (min 0) gexp 0.66 | worst-yr -2.70
+spy sect rev3 z h1 hedge1              Sh net -0.22 gross  0.40 | ret  -1.8% vol  8.1% mdd -30.8% | turn  233.1x | npos     4 (min 0) gexp 0.80 | worst-yr -2.99
+spy sect rev3 z h3 hedge0              Sh net -0.19 gross  0.10 | ret  -1.5% vol  8.1% mdd -24.7% | turn   99.2x | npos     6 (min 0) gexp 0.64 | worst-yr -2.88
+spy sect rev3 z h3 hedge1              Sh net -0.40 gross  0.02 | ret  -2.5% vol  6.4% mdd -30.5% | turn  115.2x | npos     7 (min 0) gexp 0.74 | worst-yr -3.09
+spy sect rev3 z h5 hedge0              Sh net -0.15 gross  0.07 | ret  -1.0% vol  6.7% mdd -17.5% | turn   59.4x | npos     8 (min 0) gexp 0.58 | worst-yr -2.03
+spy sect rev3 z h5 hedge1              Sh net -0.27 gross  0.05 | ret  -1.4% vol  5.3% mdd -20.3% | turn   69.0x | npos     9 (min 0) gexp 0.66 | worst-yr -2.20
+spy sect rev3 z h10 hedge0             Sh net -0.03 gross  0.14 | ret  -0.2% vol  5.1% mdd -10.6% | turn   30.0x | npos     9 (min 0) gexp 0.47 | worst-yr -0.92
+spy sect rev3 z h10 hedge1             Sh net -0.08 gross  0.18 | ret  -0.3% vol  3.9% mdd -12.3% | turn   34.9x | npos    10 (min 0) gexp 0.53 | worst-yr -1.19
+spy sect rev5 rank h1 hedge0           Sh net -0.50 gross  0.03 | ret  -3.4% vol  6.7% mdd -33.3% | turn  153.3x | npos    10 (min 10) gexp 1.00 | worst-yr -2.06
+spy sect rev5 rank h1 hedge1           Sh net -0.45 gross  0.15 | ret  -2.8% vol  6.3% mdd -31.0% | turn  162.7x | npos    11 (min 11) gexp 1.06 | worst-yr -2.23
+spy sect rev5 rank h3 hedge0           Sh net -0.38 gross -0.01 | ret  -2.2% vol  5.8% mdd -26.1% | turn   85.8x | npos    10 (min 8) gexp 0.87 | worst-yr -2.14
+spy sect rev5 rank h3 hedge1           Sh net -0.31 gross  0.11 | ret  -1.7% vol  5.4% mdd -24.9% | turn   91.1x | npos    11 (min 9) gexp 0.92 | worst-yr -1.68
+spy sect rev5 rank h5 hedge0           Sh net -0.28 gross  0.05 | ret  -1.4% vol  5.2% mdd -21.9% | turn   66.6x | npos    11 (min 8) gexp 0.77 | worst-yr -1.67
+spy sect rev5 rank h5 hedge1           Sh net -0.22 gross  0.15 | ret  -1.1% vol  4.9% mdd -18.2% | turn   70.8x | npos    12 (min 9) gexp 0.82 | worst-yr -1.48
+spy sect rev5 rank h10 hedge0          Sh net -0.21 gross  0.02 | ret  -0.9% vol  4.2% mdd -15.0% | turn   33.4x | npos    11 (min 7) gexp 0.59 | worst-yr -1.37
+spy sect rev5 rank h10 hedge1          Sh net -0.17 gross  0.09 | ret  -0.7% vol  3.9% mdd -13.5% | turn   35.5x | npos    12 (min 8) gexp 0.62 | worst-yr -1.55
+spy sect rev5 z h1 hedge0              Sh net  0.04 gross  0.39 | ret   0.5% vol 10.6% mdd -35.3% | turn  163.5x | npos     3 (min 0) gexp 0.67 | worst-yr -1.95
+spy sect rev5 z h1 hedge1              Sh net -0.10 gross  0.40 | ret  -0.8% vol  8.5% mdd -29.0% | turn  191.0x | npos     4 (min 0) gexp 0.81 | worst-yr -2.10
+spy sect rev5 z h3 hedge0              Sh net -0.21 gross  0.03 | ret  -1.8% vol  8.9% mdd -29.9% | turn   84.7x | npos     6 (min 0) gexp 0.66 | worst-yr -1.69
+spy sect rev5 z h3 hedge1              Sh net -0.28 gross  0.06 | ret  -2.0% vol  7.0% mdd -24.9% | turn   98.2x | npos     6 (min 0) gexp 0.78 | worst-yr -1.84
+spy sect rev5 z h5 hedge0              Sh net -0.06 gross  0.14 | ret  -0.5% vol  7.9% mdd -19.6% | turn   60.3x | npos     7 (min 0) gexp 0.64 | worst-yr -1.44
+spy sect rev5 z h5 hedge1              Sh net -0.07 gross  0.22 | ret  -0.4% vol  6.2% mdd -15.0% | turn   70.2x | npos     8 (min 0) gexp 0.74 | worst-yr -1.47
+spy sect rev5 z h10 hedge0             Sh net  0.05 gross  0.19 | ret   0.3% vol  6.3% mdd -14.2% | turn   30.3x | npos     9 (min 0) gexp 0.55 | worst-yr -1.32
+spy sect rev5 z h10 hedge1             Sh net  0.04 gross  0.26 | ret   0.2% vol  4.8% mdd -12.7% | turn   35.2x | npos    10 (min 0) gexp 0.62 | worst-yr -1.48
+spy sect rev10 rank h1 hedge0          Sh net -0.14 gross  0.27 | ret  -1.0% vol  6.6% mdd -20.8% | turn  113.0x | npos    10 (min 10) gexp 1.00 | worst-yr -1.55
+spy sect rev10 rank h1 hedge1          Sh net -0.09 gross  0.38 | ret  -0.6% vol  6.2% mdd -20.9% | turn  120.0x | npos    11 (min 11) gexp 1.06 | worst-yr -1.45
+spy sect rev10 rank h3 hedge0          Sh net -0.13 gross  0.15 | ret  -0.8% vol  6.1% mdd -20.8% | turn   62.5x | npos    10 (min 8) gexp 0.93 | worst-yr -1.44
+spy sect rev10 rank h3 hedge1          Sh net -0.07 gross  0.24 | ret  -0.4% vol  5.7% mdd -20.8% | turn   66.4x | npos    11 (min 9) gexp 0.98 | worst-yr -1.62
+spy sect rev10 rank h5 hedge0          Sh net -0.19 gross  0.05 | ret  -1.1% vol  5.8% mdd -21.0% | turn   47.7x | npos    11 (min 8) gexp 0.87 | worst-yr -1.42
+spy sect rev10 rank h5 hedge1          Sh net -0.14 gross  0.13 | ret  -0.8% vol  5.4% mdd -18.7% | turn   50.7x | npos    12 (min 9) gexp 0.93 | worst-yr -1.62
+spy sect rev10 rank h10 hedge0         Sh net -0.22 gross -0.01 | ret  -1.1% vol  5.1% mdd -18.5% | turn   33.5x | npos    11 (min 8) gexp 0.76 | worst-yr -1.35
+spy sect rev10 rank h10 hedge1         Sh net -0.21 gross  0.02 | ret  -1.0% vol  4.8% mdd -16.7% | turn   35.6x | npos    12 (min 9) gexp 0.81 | worst-yr -1.54
+spy sect rev10 z h1 hedge0             Sh net -0.06 gross  0.22 | ret  -0.6% vol 10.4% mdd -28.6% | turn  126.6x | npos     3 (min 0) gexp 0.67 | worst-yr -2.00
+spy sect rev10 z h1 hedge1             Sh net -0.02 gross  0.39 | ret  -0.2% vol  8.2% mdd -25.5% | turn  148.4x | npos     4 (min 0) gexp 0.82 | worst-yr -1.63
+spy sect rev10 z h3 hedge0             Sh net -0.33 gross -0.14 | ret  -3.0% vol  9.3% mdd -36.9% | turn   66.2x | npos     5 (min 0) gexp 0.67 | worst-yr -1.58
+spy sect rev10 z h3 hedge1             Sh net -0.28 gross -0.01 | ret  -2.0% vol  7.2% mdd -29.9% | turn   77.1x | npos     6 (min 0) gexp 0.80 | worst-yr -1.56
+spy sect rev10 z h5 hedge0             Sh net -0.17 gross -0.02 | ret  -1.5% vol  8.8% mdd -32.1% | turn   48.0x | npos     6 (min 0) gexp 0.67 | worst-yr -1.69
+spy sect rev10 z h5 hedge1             Sh net -0.12 gross  0.10 | ret  -0.8% vol  6.7% mdd -25.5% | turn   55.7x | npos     7 (min 0) gexp 0.78 | worst-yr -1.48
+spy sect rev10 z h10 hedge0            Sh net -0.12 gross  0.00 | ret  -1.0% vol  7.8% mdd -20.1% | turn   30.1x | npos     8 (min 0) gexp 0.64 | worst-yr -1.33
+spy sect rev10 z h10 hedge1            Sh net -0.14 gross  0.04 | ret  -0.8% vol  5.8% mdd -17.5% | turn   35.0x | npos     9 (min 0) gexp 0.74 | worst-yr -1.31
+4f etf rev1 rank h1 hedge0             Sh net -1.25 gross  0.56 | ret  -5.0% vol  4.0% mdd -40.1% | turn  338.2x | npos   193 (min 82) gexp 1.00 | worst-yr -4.69
+4f etf rev1 rank h1 hedge1             Sh net -1.78 gross  0.60 | ret  -5.9% vol  3.3% mdd -44.9% | turn  366.9x | npos   194 (min 83) gexp 1.08 | worst-yr -4.83
+4f etf rev1 rank h3 hedge0             Sh net -0.45 gross  0.53 | ret  -1.2% vol  2.6% mdd -13.8% | turn  112.6x | npos   197 (min 86) gexp 0.54 | worst-yr -3.45
+4f etf rev1 rank h3 hedge1             Sh net -0.78 gross  0.49 | ret  -1.7% vol  2.1% mdd -15.9% | turn  122.3x | npos   198 (min 87) gexp 0.58 | worst-yr -3.83
+4f etf rev1 rank h5 hedge0             Sh net -0.12 gross  0.67 | ret  -0.2% vol  2.0% mdd  -6.6% | turn   67.6x | npos   200 (min 88) gexp 0.41 | worst-yr -4.05
+4f etf rev1 rank h5 hedge1             Sh net -0.36 gross  0.67 | ret  -0.6% vol  1.6% mdd  -7.4% | turn   73.4x | npos   201 (min 89) gexp 0.45 | worst-yr -3.76
+4f etf rev1 rank h10 hedge0            Sh net -0.14 gross  0.46 | ret  -0.2% vol  1.4% mdd  -4.1% | turn   34.4x | npos   206 (min 95) gexp 0.29 | worst-yr -2.64
+4f etf rev1 rank h10 hedge1            Sh net -0.38 gross  0.40 | ret  -0.4% vol  1.2% mdd  -4.7% | turn   37.3x | npos   207 (min 96) gexp 0.32 | worst-yr -2.75
+4f etf rev1 z h1 hedge0                Sh net -0.71 gross  0.69 | ret  -4.8% vol  6.7% mdd -40.1% | turn  447.7x | npos    56 (min 0) gexp 0.97 | worst-yr -3.02
+4f etf rev1 z h1 hedge1                Sh net -0.96 gross  0.88 | ret  -5.5% vol  5.7% mdd -43.6% | turn  494.4x | npos    60 (min 0) gexp 1.11 | worst-yr -2.62
+4f etf rev1 z h3 hedge0                Sh net -0.22 gross  0.56 | ret  -1.0% vol  4.3% mdd -17.4% | turn  149.6x | npos   120 (min 15) gexp 0.82 | worst-yr -2.94
+4f etf rev1 z h3 hedge1                Sh net -0.27 gross  0.75 | ret  -1.0% vol  3.7% mdd -17.4% | turn  165.2x | npos   122 (min 19) gexp 0.89 | worst-yr -3.19
+4f etf rev1 z h5 hedge0                Sh net -0.12 gross  0.51 | ret  -0.4% vol  3.4% mdd -10.5% | turn   89.8x | npos   152 (min 34) gexp 0.72 | worst-yr -1.82
+4f etf rev1 z h5 hedge1                Sh net -0.15 gross  0.68 | ret  -0.4% vol  2.9% mdd -10.3% | turn   99.3x | npos   154 (min 38) gexp 0.77 | worst-yr -2.03
+4f etf rev1 z h10 hedge0               Sh net -0.19 gross  0.30 | ret  -0.5% vol  2.4% mdd  -8.1% | turn   45.3x | npos   186 (min 71) gexp 0.58 | worst-yr -1.38
+4f etf rev1 z h10 hedge1               Sh net -0.23 gross  0.42 | ret  -0.5% vol  2.0% mdd  -7.2% | turn   50.0x | npos   187 (min 74) gexp 0.62 | worst-yr -1.63
+4f etf rev2 rank h1 hedge0             Sh net -0.76 gross  0.47 | ret  -3.2% vol  4.2% mdd -28.7% | turn  236.8x | npos   193 (min 82) gexp 1.00 | worst-yr -3.52
+4f etf rev2 rank h1 hedge1             Sh net -1.17 gross  0.48 | ret  -4.0% vol  3.5% mdd -33.8% | turn  257.3x | npos   194 (min 83) gexp 1.08 | worst-yr -3.86
+4f etf rev2 rank h3 hedge0             Sh net -0.33 gross  0.46 | ret  -1.1% vol  3.3% mdd -17.0% | turn  112.8x | npos   197 (min 85) gexp 0.70 | worst-yr -3.54
+4f etf rev2 rank h3 hedge1             Sh net -0.64 gross  0.42 | ret  -1.7% vol  2.7% mdd -18.1% | turn  122.6x | npos   198 (min 86) gexp 0.76 | worst-yr -3.24
+4f etf rev2 rank h5 hedge0             Sh net -0.15 gross  0.48 | ret  -0.4% vol  2.6% mdd  -9.3% | turn   67.8x | npos   200 (min 88) gexp 0.55 | worst-yr -4.05
+4f etf rev2 rank h5 hedge1             Sh net -0.38 gross  0.46 | ret  -0.8% vol  2.1% mdd -10.2% | turn   73.7x | npos   201 (min 89) gexp 0.60 | worst-yr -3.67
+4f etf rev2 rank h10 hedge0            Sh net -0.08 gross  0.39 | ret  -0.1% vol  1.9% mdd  -4.5% | turn   34.5x | npos   206 (min 95) gexp 0.40 | worst-yr -2.49
+4f etf rev2 rank h10 hedge1            Sh net -0.26 gross  0.36 | ret  -0.4% vol  1.6% mdd  -4.9% | turn   37.5x | npos   207 (min 96) gexp 0.44 | worst-yr -2.49
+4f etf rev2 z h1 hedge0                Sh net -0.86 gross  0.25 | ret  -6.0% vol  7.0% mdd -47.6% | turn  362.4x | npos    57 (min 0) gexp 0.97 | worst-yr -2.78
+4f etf rev2 z h1 hedge1                Sh net -1.22 gross  0.22 | ret  -7.3% vol  5.9% mdd -53.1% | turn  398.8x | npos    60 (min 0) gexp 1.11 | worst-yr -3.23
+4f etf rev2 z h3 hedge0                Sh net -0.53 gross  0.14 | ret  -2.7% vol  5.2% mdd -29.4% | turn  149.0x | npos   113 (min 9) gexp 0.91 | worst-yr -2.91
+4f etf rev2 z h3 hedge1                Sh net -0.79 gross  0.07 | ret  -3.5% vol  4.4% mdd -32.1% | turn  164.9x | npos   115 (min 13) gexp 1.00 | worst-yr -3.18
+4f etf rev2 z h5 hedge0                Sh net -0.37 gross  0.17 | ret  -1.5% vol  4.1% mdd -18.8% | turn   89.7x | npos   144 (min 22) gexp 0.82 | worst-yr -2.03
+4f etf rev2 z h5 hedge1                Sh net -0.55 gross  0.14 | ret  -1.9% vol  3.5% mdd -20.9% | turn   99.2x | npos   146 (min 25) gexp 0.89 | worst-yr -2.00
+4f etf rev2 z h10 hedge0               Sh net -0.23 gross  0.17 | ret  -0.7% vol  3.1% mdd  -9.1% | turn   45.2x | npos   181 (min 67) gexp 0.67 | worst-yr -1.39
+4f etf rev2 z h10 hedge1               Sh net -0.44 gross  0.08 | ret  -1.1% vol  2.6% mdd -11.9% | turn   50.1x | npos   182 (min 70) gexp 0.73 | worst-yr -1.67
+4f etf rev3 rank h1 hedge0             Sh net -0.59 gross  0.41 | ret  -2.6% vol  4.4% mdd -25.1% | turn  194.7x | npos   193 (min 82) gexp 1.00 | worst-yr -3.87
+4f etf rev3 rank h1 hedge1             Sh net -0.96 gross  0.38 | ret  -3.4% vol  3.6% mdd -29.6% | turn  211.6x | npos   194 (min 83) gexp 1.08 | worst-yr -3.87
+4f etf rev3 rank h3 hedge0             Sh net -0.21 gross  0.51 | ret  -0.8% vol  3.7% mdd -16.1% | turn  112.7x | npos   197 (min 85) gexp 0.80 | worst-yr -4.46
+4f etf rev3 rank h3 hedge1             Sh net -0.50 gross  0.47 | ret  -1.5% vol  3.0% mdd -17.6% | turn  122.5x | npos   198 (min 86) gexp 0.87 | worst-yr -3.86
+4f etf rev3 rank h5 hedge0             Sh net -0.18 gross  0.39 | ret  -0.5% vol  3.0% mdd -11.5% | turn   67.9x | npos   200 (min 88) gexp 0.66 | worst-yr -4.20
+4f etf rev3 rank h5 hedge1             Sh net -0.38 gross  0.38 | ret  -0.9% vol  2.4% mdd -11.6% | turn   73.8x | npos   201 (min 89) gexp 0.71 | worst-yr -3.74
+4f etf rev3 rank h10 hedge0            Sh net -0.10 gross  0.31 | ret  -0.2% vol  2.2% mdd  -5.2% | turn   34.5x | npos   206 (min 95) gexp 0.48 | worst-yr -2.27
+4f etf rev3 rank h10 hedge1            Sh net -0.29 gross  0.27 | ret  -0.5% vol  1.8% mdd  -5.9% | turn   37.5x | npos   207 (min 96) gexp 0.52 | worst-yr -2.29
+4f etf rev3 z h1 hedge0                Sh net -0.36 gross  0.59 | ret  -2.6% vol  7.2% mdd -39.7% | turn  314.8x | npos    58 (min 0) gexp 0.97 | worst-yr -3.40
+4f etf rev3 z h1 hedge1                Sh net -0.75 gross  0.48 | ret  -4.6% vol  6.1% mdd -45.2% | turn  346.4x | npos    61 (min 0) gexp 1.11 | worst-yr -3.47
+4f etf rev3 z h3 hedge0                Sh net -0.14 gross  0.46 | ret  -0.8% vol  5.8% mdd -23.9% | turn  148.4x | npos   107 (min 9) gexp 0.95 | worst-yr -3.51
+4f etf rev3 z h3 hedge1                Sh net -0.46 gross  0.33 | ret  -2.2% vol  4.9% mdd -29.3% | turn  164.4x | npos   109 (min 13) gexp 1.06 | worst-yr -2.83
+4f etf rev3 z h5 hedge0                Sh net -0.10 gross  0.37 | ret  -0.5% vol  4.7% mdd -15.9% | turn   89.4x | npos   137 (min 19) gexp 0.87 | worst-yr -3.91
+4f etf rev3 z h5 hedge1                Sh net -0.32 gross  0.30 | ret  -1.3% vol  4.0% mdd -19.1% | turn   99.1x | npos   139 (min 23) gexp 0.96 | worst-yr -3.26
+4f etf rev3 z h10 hedge0               Sh net -0.06 gross  0.29 | ret  -0.2% vol  3.6% mdd  -7.8% | turn   45.1x | npos   175 (min 57) gexp 0.74 | worst-yr -1.61
+4f etf rev3 z h10 hedge1               Sh net -0.32 gross  0.14 | ret  -1.0% vol  3.0% mdd -11.2% | turn   49.9x | npos   176 (min 60) gexp 0.80 | worst-yr -1.56
+4f etf rev5 rank h1 hedge0             Sh net -0.29 gross  0.52 | ret  -1.3% vol  4.4% mdd -19.0% | turn  152.3x | npos   193 (min 82) gexp 1.00 | worst-yr -4.24
+4f etf rev5 rank h1 hedge1             Sh net -0.59 gross  0.49 | ret  -2.1% vol  3.6% mdd -20.7% | turn  165.5x | npos   194 (min 83) gexp 1.09 | worst-yr -3.80
+4f etf rev5 rank h3 hedge0             Sh net -0.19 gross  0.37 | ret  -0.7% vol  3.9% mdd -15.8% | turn   87.5x | npos   197 (min 86) gexp 0.88 | worst-yr -4.02
+4f etf rev5 rank h3 hedge1             Sh net -0.39 gross  0.36 | ret  -1.3% vol  3.2% mdd -15.6% | turn   95.3x | npos   198 (min 87) gexp 0.95 | worst-yr -3.42
+4f etf rev5 rank h5 hedge0             Sh net -0.24 gross  0.27 | ret  -0.8% vol  3.4% mdd -13.6% | turn   68.2x | npos   200 (min 88) gexp 0.78 | worst-yr -3.19
+4f etf rev5 rank h5 hedge1             Sh net -0.42 gross  0.26 | ret  -1.2% vol  2.8% mdd -13.6% | turn   74.2x | npos   201 (min 89) gexp 0.85 | worst-yr -2.77
+4f etf rev5 rank h10 hedge0            Sh net -0.12 gross  0.24 | ret  -0.3% vol  2.8% mdd  -5.9% | turn   34.5x | npos   206 (min 95) gexp 0.60 | worst-yr -1.52
+4f etf rev5 rank h10 hedge1            Sh net -0.29 gross  0.19 | ret  -0.7% vol  2.2% mdd  -7.3% | turn   37.6x | npos   207 (min 96) gexp 0.65 | worst-yr -1.65
+4f etf rev5 z h1 hedge0                Sh net -0.41 gross  0.39 | ret  -3.0% vol  7.2% mdd -37.6% | turn  262.8x | npos    59 (min 1) gexp 0.97 | worst-yr -4.19
+4f etf rev5 z h1 hedge1                Sh net -0.64 gross  0.39 | ret  -4.0% vol  6.2% mdd -38.6% | turn  289.2x | npos    62 (min 5) gexp 1.12 | worst-yr -3.67
+4f etf rev5 z h3 hedge0                Sh net -0.34 gross  0.17 | ret  -2.1% vol  6.1% mdd -25.7% | turn  129.2x | npos    99 (min 8) gexp 0.97 | worst-yr -3.08
+4f etf rev5 z h3 hedge1                Sh net -0.51 gross  0.14 | ret  -2.7% vol  5.2% mdd -28.5% | turn  142.4x | npos   102 (min 12) gexp 1.08 | worst-yr -2.53
+4f etf rev5 z h5 hedge0                Sh net -0.21 gross  0.22 | ret  -1.1% vol  5.3% mdd -20.0% | turn   89.6x | npos   126 (min 20) gexp 0.94 | worst-yr -2.09
+4f etf rev5 z h5 hedge1                Sh net -0.34 gross  0.20 | ret  -1.6% vol  4.6% mdd -21.5% | turn   99.2x | npos   129 (min 23) gexp 1.04 | worst-yr -1.65
+4f etf rev5 z h10 hedge0               Sh net -0.10 gross  0.21 | ret  -0.4% vol  4.2% mdd -10.7% | turn   45.0x | npos   165 (min 42) gexp 0.83 | worst-yr -0.85
+4f etf rev5 z h10 hedge1               Sh net -0.28 gross  0.12 | ret  -1.0% vol  3.6% mdd -11.9% | turn   50.0x | npos   167 (min 45) gexp 0.91 | worst-yr -1.05
+4f etf rev10 rank h1 hedge0            Sh net -0.16 gross  0.46 | ret  -0.7% vol  4.4% mdd -13.8% | turn  111.0x | npos   193 (min 82) gexp 1.00 | worst-yr -3.24
+4f etf rev10 rank h1 hedge1            Sh net -0.45 gross  0.37 | ret  -1.6% vol  3.6% mdd -16.3% | turn  120.5x | npos   194 (min 83) gexp 1.09 | worst-yr -3.07
+4f etf rev10 rank h3 hedge0            Sh net -0.09 gross  0.34 | ret  -0.4% vol  4.1% mdd -11.6% | turn   63.5x | npos   197 (min 86) gexp 0.93 | worst-yr -2.34
+4f etf rev10 rank h3 hedge1            Sh net -0.31 gross  0.26 | ret  -1.0% vol  3.3% mdd -13.0% | turn   69.1x | npos   198 (min 87) gexp 1.02 | worst-yr -2.23
+4f etf rev10 rank h5 hedge0            Sh net -0.14 gross  0.23 | ret  -0.6% vol  3.8% mdd -10.5% | turn   48.9x | npos   200 (min 88) gexp 0.89 | worst-yr -1.74
+4f etf rev10 rank h5 hedge1            Sh net -0.34 gross  0.16 | ret  -1.1% vol  3.1% mdd -11.9% | turn   53.2x | npos   201 (min 89) gexp 0.96 | worst-yr -1.83
+4f etf rev10 rank h10 hedge0           Sh net -0.32 gross  0.00 | ret  -1.1% vol  3.3% mdd -11.7% | turn   34.1x | npos   206 (min 95) gexp 0.78 | worst-yr -1.26
+4f etf rev10 rank h10 hedge1           Sh net -0.57 gross -0.14 | ret  -1.5% vol  2.7% mdd -15.3% | turn   37.2x | npos   207 (min 96) gexp 0.85 | worst-yr -1.54
+4f etf rev10 z h1 hedge0               Sh net -0.05 gross  0.57 | ret  -0.4% vol  7.4% mdd -22.8% | turn  204.5x | npos    60 (min 1) gexp 0.97 | worst-yr -3.92
+4f etf rev10 z h1 hedge1               Sh net -0.33 gross  0.47 | ret  -2.1% vol  6.4% mdd -26.3% | turn  225.0x | npos    63 (min 5) gexp 1.12 | worst-yr -3.91
+4f etf rev10 z h3 hedge0               Sh net -0.01 gross  0.39 | ret  -0.0% vol  6.5% mdd -18.2% | turn  103.7x | npos    90 (min 7) gexp 0.97 | worst-yr -3.16
+4f etf rev10 z h3 hedge1               Sh net -0.20 gross  0.30 | ret  -1.1% vol  5.7% mdd -21.3% | turn  114.3x | npos    93 (min 11) gexp 1.10 | worst-yr -3.11
+4f etf rev10 z h5 hedge0               Sh net  0.05 gross  0.38 | ret   0.3% vol  6.0% mdd -14.0% | turn   73.7x | npos   112 (min 14) gexp 0.97 | worst-yr -2.44
+4f etf rev10 z h5 hedge1               Sh net -0.14 gross  0.29 | ret  -0.7% vol  5.1% mdd -17.0% | turn   81.4x | npos   114 (min 18) gexp 1.09 | worst-yr -2.51
+4f etf rev10 z h10 hedge0              Sh net -0.12 gross  0.15 | ret  -0.6% vol  5.1% mdd -10.3% | turn   44.8x | npos   150 (min 47) gexp 0.94 | worst-yr -1.07
+4f etf rev10 z h10 hedge1              Sh net -0.31 gross  0.04 | ret  -1.4% vol  4.3% mdd -15.2% | turn   49.7x | npos   151 (min 50) gexp 1.04 | worst-yr -1.65
+4f sect rev1 rank h1 hedge0            Sh net -0.52 gross  0.65 | ret  -3.2% vol  6.2% mdd -34.3% | turn  335.8x | npos    10 (min 10) gexp 1.00 | worst-yr -2.46
+4f sect rev1 rank h1 hedge1            Sh net -0.82 gross  0.70 | ret  -4.4% vol  5.3% mdd -40.0% | turn  379.4x | npos    14 (min 14) gexp 1.13 | worst-yr -2.84
+4f sect rev1 rank h3 hedge0            Sh net -0.47 gross  0.20 | ret  -1.7% vol  3.7% mdd -19.4% | turn  111.1x | npos    10 (min 7) gexp 0.54 | worst-yr -2.62
+4f sect rev1 rank h3 hedge1            Sh net -0.61 gross  0.27 | ret  -2.0% vol  3.2% mdd -20.6% | turn  126.0x | npos    14 (min 11) gexp 0.61 | worst-yr -3.00
+4f sect rev1 rank h5 hedge0            Sh net -0.49 gross  0.05 | ret  -1.4% vol  2.9% mdd -16.2% | turn   66.3x | npos    10 (min 6) gexp 0.41 | worst-yr -1.87
+4f sect rev1 rank h5 hedge1            Sh net -0.45 gross  0.25 | ret  -1.1% vol  2.5% mdd -14.2% | turn   75.0x | npos    14 (min 10) gexp 0.47 | worst-yr -2.21
+4f sect rev1 rank h10 hedge0           Sh net -0.31 gross  0.11 | ret  -0.6% vol  2.0% mdd  -7.9% | turn   33.5x | npos    10 (min 7) gexp 0.29 | worst-yr -1.60
+4f sect rev1 rank h10 hedge1           Sh net -0.33 gross  0.22 | ret  -0.6% vol  1.7% mdd  -7.2% | turn   37.9x | npos    14 (min 11) gexp 0.33 | worst-yr -1.56
+4f sect rev1 z h1 hedge0               Sh net -0.05 gross  0.65 | ret  -0.5% vol  9.6% mdd -33.1% | turn  317.3x | npos     3 (min 0) gexp 0.71 | worst-yr -1.42
+4f sect rev1 z h1 hedge1               Sh net -0.52 gross  0.64 | ret  -3.8% vol  7.3% mdd -44.3% | turn  400.4x | npos     7 (min 0) gexp 0.94 | worst-yr -1.85
+4f sect rev1 z h3 hedge0               Sh net -0.39 gross  0.03 | ret  -2.2% vol  5.7% mdd -26.1% | turn  105.8x | npos     7 (min 0) gexp 0.57 | worst-yr -2.40
+4f sect rev1 z h3 hedge1               Sh net -0.66 gross  0.04 | ret  -2.8% vol  4.3% mdd -27.3% | turn  133.4x | npos    11 (min 0) gexp 0.71 | worst-yr -2.86
+4f sect rev1 z h5 hedge0               Sh net -0.25 gross  0.08 | ret  -1.1% vol  4.6% mdd -17.9% | turn   64.0x | npos     8 (min 1) gexp 0.49 | worst-yr -2.44
+4f sect rev1 z h5 hedge1               Sh net -0.46 gross  0.10 | ret  -1.6% vol  3.4% mdd -15.3% | turn   80.7x | npos    12 (min 5) gexp 0.60 | worst-yr -2.64
+4f sect rev1 z h10 hedge0              Sh net -0.23 gross  0.04 | ret  -0.7% vol  3.1% mdd -11.2% | turn   32.2x | npos    10 (min 3) gexp 0.37 | worst-yr -2.25
+4f sect rev1 z h10 hedge1              Sh net -0.48 gross -0.03 | ret  -1.1% vol  2.3% mdd -11.4% | turn   40.7x | npos    14 (min 7) gexp 0.45 | worst-yr -2.33
+4f sect rev2 rank h1 hedge0            Sh net -0.36 gross  0.48 | ret  -2.3% vol  6.2% mdd -26.7% | turn  237.5x | npos    10 (min 10) gexp 1.00 | worst-yr -2.20
+4f sect rev2 rank h1 hedge1            Sh net -0.58 gross  0.55 | ret  -3.0% vol  5.3% mdd -31.5% | turn  269.5x | npos    14 (min 14) gexp 1.13 | worst-yr -2.55
+4f sect rev2 rank h3 hedge0            Sh net -0.53 gross  0.04 | ret  -2.4% vol  4.6% mdd -22.9% | turn  111.7x | npos    10 (min 7) gexp 0.69 | worst-yr -2.44
+4f sect rev2 rank h3 hedge1            Sh net -0.65 gross  0.11 | ret  -2.5% vol  3.9% mdd -24.2% | turn  126.9x | npos    14 (min 11) gexp 0.79 | worst-yr -2.88
+4f sect rev2 rank h5 hedge0            Sh net -0.35 gross  0.09 | ret  -1.3% vol  3.6% mdd -16.7% | turn   66.7x | npos    10 (min 7) gexp 0.55 | worst-yr -1.81
+4f sect rev2 rank h5 hedge1            Sh net -0.35 gross  0.24 | ret  -1.1% vol  3.1% mdd -15.1% | turn   75.6x | npos    14 (min 11) gexp 0.62 | worst-yr -2.05
+4f sect rev2 rank h10 hedge0           Sh net -0.21 gross  0.12 | ret  -0.5% vol  2.6% mdd  -9.9% | turn   33.5x | npos    10 (min 7) gexp 0.39 | worst-yr -1.79
+4f sect rev2 rank h10 hedge1           Sh net -0.22 gross  0.22 | ret  -0.5% vol  2.2% mdd  -8.6% | turn   38.0x | npos    14 (min 11) gexp 0.44 | worst-yr -1.29
+4f sect rev2 z h1 hedge0               Sh net -0.24 gross  0.32 | ret  -2.4% vol  9.7% mdd -33.9% | turn  254.4x | npos     3 (min 0) gexp 0.72 | worst-yr -2.43
+4f sect rev2 z h1 hedge1               Sh net -0.58 gross  0.34 | ret  -4.3% vol  7.5% mdd -44.2% | turn  320.9x | npos     7 (min 0) gexp 0.96 | worst-yr -3.28
+4f sect rev2 z h3 hedge0               Sh net -0.31 gross  0.06 | ret  -2.1% vol  6.8% mdd -23.3% | turn  108.6x | npos     6 (min 0) gexp 0.66 | worst-yr -3.02
+4f sect rev2 z h3 hedge1               Sh net -0.59 gross  0.03 | ret  -3.0% vol  5.1% mdd -30.2% | turn  136.2x | npos    10 (min 0) gexp 0.82 | worst-yr -3.75
+4f sect rev2 z h5 hedge0               Sh net -0.16 gross  0.12 | ret  -0.9% vol  5.7% mdd -15.6% | turn   65.1x | npos     8 (min 0) gexp 0.58 | worst-yr -2.22
+4f sect rev2 z h5 hedge1               Sh net -0.31 gross  0.18 | ret  -1.3% vol  4.1% mdd -17.7% | turn   81.8x | npos    12 (min 0) gexp 0.71 | worst-yr -2.88
+4f sect rev2 z h10 hedge0              Sh net -0.01 gross  0.20 | ret  -0.0% vol  4.3% mdd -10.6% | turn   32.8x | npos    10 (min 2) gexp 0.46 | worst-yr -1.23
+4f sect rev2 z h10 hedge1              Sh net -0.20 gross  0.17 | ret  -0.6% vol  3.0% mdd -10.0% | turn   41.1x | npos    14 (min 6) gexp 0.55 | worst-yr -1.73
+4f sect rev3 rank h1 hedge0            Sh net -0.49 gross  0.21 | ret  -3.1% vol  6.3% mdd -30.7% | turn  196.0x | npos    10 (min 10) gexp 1.00 | worst-yr -2.74
+4f sect rev3 rank h1 hedge1            Sh net -0.69 gross  0.24 | ret  -3.7% vol  5.4% mdd -35.1% | turn  222.5x | npos    14 (min 14) gexp 1.13 | worst-yr -3.28
+4f sect rev3 rank h3 hedge0            Sh net -0.52 gross -0.01 | ret  -2.7% vol  5.1% mdd -25.2% | turn  111.4x | npos    10 (min 7) gexp 0.79 | worst-yr -2.47
+4f sect rev3 rank h3 hedge1            Sh net -0.56 gross  0.12 | ret  -2.5% vol  4.4% mdd -24.0% | turn  126.4x | npos    14 (min 11) gexp 0.90 | worst-yr -2.84
+4f sect rev3 rank h5 hedge0            Sh net -0.40 gross -0.00 | ret  -1.7% vol  4.2% mdd -20.8% | turn   66.9x | npos    10 (min 7) gexp 0.65 | worst-yr -2.65
+4f sect rev3 rank h5 hedge1            Sh net -0.35 gross  0.17 | ret  -1.3% vol  3.6% mdd -17.7% | turn   75.8x | npos    14 (min 11) gexp 0.74 | worst-yr -2.09
+4f sect rev3 rank h10 hedge0           Sh net -0.21 gross  0.08 | ret  -0.7% vol  3.1% mdd -11.9% | turn   33.6x | npos    10 (min 7) gexp 0.47 | worst-yr -2.04
+4f sect rev3 rank h10 hedge1           Sh net -0.22 gross  0.16 | ret  -0.6% vol  2.7% mdd -10.6% | turn   38.1x | npos    14 (min 11) gexp 0.53 | worst-yr -1.37
+4f sect rev3 z h1 hedge0               Sh net -0.15 gross  0.36 | ret  -1.4% vol  9.2% mdd -27.5% | turn  214.6x | npos     3 (min 0) gexp 0.73 | worst-yr -3.03
+4f sect rev3 z h1 hedge1               Sh net -0.71 gross  0.11 | ret  -5.1% vol  7.3% mdd -46.0% | turn  272.7x | npos     7 (min 0) gexp 0.97 | worst-yr -3.55
+4f sect rev3 z h3 hedge0               Sh net -0.07 gross  0.28 | ret  -0.5% vol  7.2% mdd -19.9% | turn  109.4x | npos     6 (min 0) gexp 0.71 | worst-yr -3.11
+4f sect rev3 z h3 hedge1               Sh net -0.52 gross  0.05 | ret  -2.9% vol  5.6% mdd -32.5% | turn  137.4x | npos    10 (min 0) gexp 0.89 | worst-yr -3.54
+4f sect rev3 z h5 hedge0               Sh net -0.06 gross  0.21 | ret  -0.3% vol  6.1% mdd -15.5% | turn   65.9x | npos     8 (min 0) gexp 0.64 | worst-yr -1.95
+4f sect rev3 z h5 hedge1               Sh net -0.35 gross  0.09 | ret  -1.6% vol  4.7% mdd -20.8% | turn   82.7x | npos    12 (min 0) gexp 0.79 | worst-yr -2.31
+4f sect rev3 z h10 hedge0              Sh net  0.10 gross  0.31 | ret   0.5% vol  4.6% mdd  -9.0% | turn   33.2x | npos     9 (min 2) gexp 0.52 | worst-yr -1.16
+4f sect rev3 z h10 hedge1              Sh net -0.16 gross  0.18 | ret  -0.5% vol  3.5% mdd -14.5% | turn   41.7x | npos    13 (min 6) gexp 0.63 | worst-yr -1.75
+4f sect rev5 rank h1 hedge0            Sh net -0.44 gross  0.13 | ret  -2.8% vol  6.2% mdd -29.5% | turn  154.4x | npos    10 (min 10) gexp 1.00 | worst-yr -1.89
+4f sect rev5 rank h1 hedge1            Sh net -0.47 gross  0.29 | ret  -2.5% vol  5.4% mdd -27.1% | turn  175.1x | npos    14 (min 14) gexp 1.13 | worst-yr -2.26
+4f sect rev5 rank h3 hedge0            Sh net -0.42 gross -0.02 | ret  -2.3% vol  5.4% mdd -24.6% | turn   86.1x | npos    10 (min 8) gexp 0.87 | worst-yr -2.60
+4f sect rev5 rank h3 hedge1            Sh net -0.34 gross  0.18 | ret  -1.6% vol  4.7% mdd -20.9% | turn   97.7x | npos    14 (min 12) gexp 0.99 | worst-yr -1.75
+4f sect rev5 rank h5 hedge0            Sh net -0.33 gross  0.02 | ret  -1.6% vol  4.9% mdd -21.7% | turn   66.9x | npos    11 (min 7) gexp 0.77 | worst-yr -2.37
+4f sect rev5 rank h5 hedge1            Sh net -0.27 gross  0.20 | ret  -1.1% vol  4.2% mdd -16.3% | turn   75.9x | npos    15 (min 11) gexp 0.88 | worst-yr -1.51
+4f sect rev5 rank h10 hedge0           Sh net -0.23 gross  0.01 | ret  -0.9% vol  3.9% mdd -13.8% | turn   33.4x | npos    11 (min 8) gexp 0.59 | worst-yr -2.15
+4f sect rev5 rank h10 hedge1           Sh net -0.23 gross  0.10 | ret  -0.8% vol  3.3% mdd -11.9% | turn   38.0x | npos    15 (min 12) gexp 0.67 | worst-yr -1.62
+4f sect rev5 z h1 hedge0               Sh net  0.19 gross  0.60 | ret   1.8% vol  9.5% mdd -18.4% | turn  178.7x | npos     3 (min 0) gexp 0.73 | worst-yr -1.75
+4f sect rev5 z h1 hedge1               Sh net -0.33 gross  0.37 | ret  -2.4% vol  7.2% mdd -28.3% | turn  228.2x | npos     7 (min 0) gexp 0.97 | worst-yr -2.15
+4f sect rev5 z h3 hedge0               Sh net -0.05 gross  0.23 | ret  -0.4% vol  8.0% mdd -18.8% | turn   92.0x | npos     5 (min 0) gexp 0.72 | worst-yr -1.41
+4f sect rev5 z h3 hedge1               Sh net -0.31 gross  0.16 | ret  -1.8% vol  6.0% mdd -20.7% | turn  115.9x | npos     9 (min 0) gexp 0.92 | worst-yr -1.78
+4f sect rev5 z h5 hedge0               Sh net -0.06 gross  0.18 | ret  -0.4% vol  7.0% mdd -17.2% | turn   66.0x | npos     7 (min 0) gexp 0.70 | worst-yr -1.76
+4f sect rev5 z h5 hedge1               Sh net -0.27 gross  0.12 | ret  -1.5% vol  5.3% mdd -17.7% | turn   82.9x | npos    11 (min 0) gexp 0.87 | worst-yr -1.18
+4f sect rev5 z h10 hedge0              Sh net  0.05 gross  0.22 | ret   0.3% vol  5.6% mdd -12.9% | turn   33.0x | npos     9 (min 1) gexp 0.60 | worst-yr -1.82
+4f sect rev5 z h10 hedge1              Sh net -0.14 gross  0.15 | ret  -0.6% vol  4.2% mdd -14.1% | turn   41.5x | npos    13 (min 5) gexp 0.73 | worst-yr -1.81
+4f sect rev10 rank h1 hedge0           Sh net -0.12 gross  0.33 | ret  -0.7% vol  6.2% mdd -17.2% | turn  113.4x | npos    10 (min 10) gexp 1.00 | worst-yr -2.10
+4f sect rev10 rank h1 hedge1           Sh net -0.20 gross  0.40 | ret  -1.0% vol  5.3% mdd -17.6% | turn  128.8x | npos    14 (min 14) gexp 1.13 | worst-yr -1.64
+4f sect rev10 rank h3 hedge0           Sh net -0.11 gross  0.19 | ret  -0.6% vol  5.7% mdd -18.1% | turn   62.4x | npos    10 (min 8) gexp 0.93 | worst-yr -1.28
+4f sect rev10 rank h3 hedge1           Sh net -0.11 gross  0.29 | ret  -0.5% vol  4.9% mdd -18.5% | turn   71.0x | npos    14 (min 12) gexp 1.05 | worst-yr -1.92
+4f sect rev10 rank h5 hedge0           Sh net -0.17 gross  0.08 | ret  -0.9% vol  5.4% mdd -17.5% | turn   47.8x | npos    11 (min 8) gexp 0.87 | worst-yr -1.39
+4f sect rev10 rank h5 hedge1           Sh net -0.17 gross  0.17 | ret  -0.8% vol  4.6% mdd -16.4% | turn   54.4x | npos    15 (min 12) gexp 0.99 | worst-yr -1.85
+4f sect rev10 rank h10 hedge0          Sh net -0.22 gross  0.00 | ret  -1.0% vol  4.8% mdd -16.0% | turn   33.6x | npos    11 (min 7) gexp 0.76 | worst-yr -1.03
+4f sect rev10 rank h10 hedge1          Sh net -0.26 gross  0.03 | ret  -1.1% vol  4.1% mdd -14.5% | turn   38.3x | npos    15 (min 11) gexp 0.86 | worst-yr -1.57
+4f sect rev10 z h1 hedge0              Sh net  0.09 gross  0.40 | ret   0.8% vol 10.0% mdd -24.7% | turn  136.8x | npos     3 (min 0) gexp 0.74 | worst-yr -2.50
+4f sect rev10 z h1 hedge1              Sh net -0.11 gross  0.44 | ret  -0.8% vol  7.4% mdd -22.8% | turn  175.6x | npos     7 (min 0) gexp 0.98 | worst-yr -1.85
+4f sect rev10 z h3 hedge0              Sh net -0.04 gross  0.18 | ret  -0.3% vol  8.7% mdd -26.3% | turn   71.9x | npos     5 (min 0) gexp 0.74 | worst-yr -2.19
+4f sect rev10 z h3 hedge1              Sh net -0.18 gross  0.18 | ret  -1.2% vol  6.5% mdd -27.3% | turn   91.3x | npos     9 (min 0) gexp 0.95 | worst-yr -1.75
+4f sect rev10 z h5 hedge0              Sh net -0.03 gross  0.14 | ret  -0.3% vol  8.1% mdd -24.3% | turn   52.5x | npos     6 (min 0) gexp 0.73 | worst-yr -1.82
+4f sect rev10 z h5 hedge1              Sh net -0.11 gross  0.19 | ret  -0.7% vol  6.0% mdd -23.1% | turn   66.4x | npos    10 (min 0) gexp 0.94 | worst-yr -1.58
+4f sect rev10 z h10 hedge0             Sh net -0.02 gross  0.13 | ret  -0.1% vol  7.1% mdd -16.9% | turn   33.3x | npos     8 (min 1) gexp 0.70 | worst-yr -1.24
+4f sect rev10 z h10 hedge1             Sh net -0.15 gross  0.11 | ret  -0.8% vol  5.1% mdd -17.3% | turn   42.0x | npos    12 (min 5) gexp 0.88 | worst-yr -1.79
+                              name    sh_net  sh_gross       ret       vol       mdd        turn        npos     worst fact   uni   k  mode   h  hedge
+296       4f sect rev5 z h1 hedge0  0.185462  0.602844  0.017605  0.094923 -0.184474  178.699653    3.237659 -1.754731   4f  sect   5     z   1      0
+286      4f sect rev3 z h10 hedge0  0.104626  0.307230  0.004849  0.046345 -0.089552   33.156367    9.491640 -1.161296   4f  sect   3     z  10      0
+312      4f sect rev10 z h1 hedge0  0.085268  0.399271  0.008496  0.099633 -0.246726  136.839692    3.297373 -2.498216   4f  sect  10     z   1      0
+111     spy sect rev2 z h10 hedge1  0.084073  0.370240  0.002752  0.032733 -0.083034   34.528853   10.764729 -1.194374  spy  sect   2     z  10      1
+110     spy sect rev2 z h10 hedge0  0.063201  0.256826  0.002691  0.042577 -0.069630   29.808033    9.765525 -1.082904  spy  sect   2     z  10      0
+236       4f etf rev10 z h5 hedge0  0.052693  0.383102  0.003137  0.059526 -0.140392   73.727771  112.143312 -2.439715   4f   etf  10     z   5      0
+302      4f sect rev5 z h10 hedge0  0.047401  0.222385  0.002650  0.055916 -0.129334   32.993334    8.964968 -1.820683   4f  sect   5     z  10      0
+142     spy sect rev5 z h10 hedge0  0.046342  0.190539  0.002937  0.063380 -0.141932   30.314351    8.994427 -1.315733  spy  sect   5     z  10      0
+136      spy sect rev5 z h1 hedge0  0.044666  0.387460  0.004741  0.106143 -0.353449  163.513620    3.284236 -1.953137  spy  sect   5     z   1      0
+143     spy sect rev5 z h10 hedge1  0.037218  0.255075  0.001773  0.047650 -0.126613   35.249282    9.992834 -1.478092  spy  sect   5     z  10      1
+73       spy etf rev10 z h1 hedge1  0.028712  0.604983  0.002444  0.085116 -0.209621  220.564113   60.703025 -5.325148  spy   etf  10     z   1      1
+13        spy etf rev1 z h5 hedge1  0.023489  0.603730  0.000866  0.036882 -0.122725   88.628762  152.334395 -3.553386  spy   etf   1     z   5      1
+12        spy etf rev1 z h5 hedge0  0.012785  0.476844  0.000549  0.042924 -0.124797   82.073363  151.334395 -4.124218  spy   etf   1     z   5      0
+77       spy etf rev10 z h5 hedge1  0.008883  0.308275  0.000588  0.066142 -0.136235   74.723184  113.061704 -2.004643  spy   etf  10     z   5      1
+72       spy etf rev10 z h1 hedge0  0.000728  0.464839  0.000072  0.098567 -0.268405  205.936193   59.703822 -5.216070  spy   etf  10     z   1      0
+120      spy sect rev3 z h1 hedge0 -0.000504  0.434131 -0.000050  0.099918 -0.359326  199.492303    3.200239 -2.695527  spy  sect   3     z   1      0
+234       4f etf rev10 z h3 hedge0 -0.006881  0.386201 -0.000450  0.065338 -0.182440  103.732630   89.961783 -3.161246   4f   etf  10     z   3      0
+270      4f sect rev2 z h10 hedge0 -0.008402  0.201710 -0.000357  0.042513 -0.105893   32.787314    9.790605 -1.233193   4f  sect   2     z  10      0
+318     4f sect rev10 z h10 hedge0 -0.020224  0.125728 -0.001442  0.071290 -0.168521   33.314914    8.047373 -1.237359   4f  sect  10     z  10      0
+92       spy sect rev1 z h5 hedge0 -0.021089  0.273266 -0.001009  0.047837 -0.104847   58.589887    8.390127 -1.758309  spy  sect   1     z   5      0
+153     spy sect rev10 z h1 hedge1 -0.023911  0.390524 -0.001961  0.082032 -0.254958  148.359797    4.265924 -1.631263  spy  sect  10     z   1      1
+94      spy sect rev1 z h10 hedge0 -0.029888  0.195510 -0.001023  0.034213 -0.074118   29.446808    9.986465 -1.575430  spy  sect   1     z  10      0
+126     spy sect rev3 z h10 hedge0 -0.030328  0.137728 -0.001552  0.051171 -0.105852   30.009902    9.458599 -0.921159  spy  sect   3     z  10      0
+95      spy sect rev1 z h10 hedge1 -0.033085  0.299084 -0.000882  0.026670 -0.072052   34.316611   10.985669 -1.497174  spy  sect   1     z  10      1
+316      4f sect rev10 z h5 hedge0 -0.033182  0.143678 -0.002703  0.081449 -0.242803   52.497719    6.097134 -1.815314   4f  sect  10     z   5      0
+108      spy sect rev2 z h5 hedge0 -0.033627  0.210979 -0.002016  0.059958 -0.131987   59.106233    7.965764 -2.526376  spy  sect   2     z   5      0
+314      4f sect rev10 z h3 hedge0 -0.035210  0.176025 -0.003050  0.086610 -0.262691   71.857873    4.916003 -2.185427   4f  sect  10     z   3      0
+15       spy etf rev1 z h10 hedge1 -0.040921  0.426798 -0.001048  0.025620 -0.084815   44.627472  185.107086 -2.471112  spy   etf   1     z  10      1
+93       spy sect rev1 z h5 hedge1 -0.042441  0.383837 -0.001622  0.038227 -0.107784   68.370097    9.385748 -1.839914  spy  sect   1     z   5      1
+14       spy etf rev1 z h10 hedge0 -0.046973  0.335002 -0.001377  0.029325 -0.092688   41.286644  184.107086 -2.951962  spy   etf   1     z  10      0
+75       spy etf rev10 z h3 hedge1 -0.047615  0.315168 -0.003442  0.072295 -0.161050  106.634916   90.865446 -2.702375  spy   etf  10     z   3      1
+248       4f sect rev1 z h1 hedge0 -0.049212  0.647469 -0.004736  0.096234 -0.330646  317.303601    3.144904 -1.416988   4f  sect   1     z   1      0
+232       4f etf rev10 z h1 hedge0 -0.050829  0.570504 -0.003749  0.073757 -0.227900  204.454470   60.069268 -3.917289   4f   etf  10     z   1      0
+298       4f sect rev5 z h3 hedge0 -0.051010  0.228173 -0.004058  0.079554 -0.188193   92.011220    5.468949 -1.412939   4f  sect   5     z   3      0
+284       4f sect rev3 z h5 hedge0 -0.057117  0.212973 -0.003498  0.061236 -0.154566   65.905700    7.547373 -1.946179   4f  sect   3     z   5      0
+300       4f sect rev5 z h5 hedge0 -0.057573  0.182065 -0.004053  0.070405 -0.171709   65.959848    6.943471 -1.756368   4f  sect   5     z   5      0
+140      spy sect rev5 z h5 hedge0 -0.059139  0.139610 -0.004643  0.078508 -0.195550   60.333612    7.005175 -1.444221  spy  sect   5     z   5      0
+206       4f etf rev3 z h10 hedge0 -0.061330  0.292619 -0.002210  0.036032 -0.078238   45.077687  175.007962 -1.608299   4f   etf   3     z  10      0
+4      spy etf rev1 rank h5 hedge0 -0.061518  0.690521 -0.001270  0.020642 -0.069842   67.294317  200.097532 -3.940101  spy   etf   1  rank   5      0
+152     spy sect rev10 z h1 hedge0 -0.062526  0.218146 -0.006483  0.103680 -0.285537  126.595068    3.347134 -2.003504  spy  sect  10     z   1      0
+10        spy etf rev1 z h3 hedge0 -0.066906  0.495665 -0.003709  0.055434 -0.185361  136.540339  119.810510 -2.932378  spy   etf   1     z   3      0
+141      spy sect rev5 z h5 hedge1 -0.070261  0.219248 -0.004355  0.061982 -0.149610   70.161836    7.996815 -1.474932  spy  sect   5     z   5      1
+282       4f sect rev3 z h3 hedge0 -0.074711  0.278385 -0.005410  0.072406 -0.199471  109.431124    5.916003 -3.105926   4f  sect   3     z   3      0
+147  spy sect rev10 rank h3 hedge1 -0.074914  0.244309 -0.004269  0.056984 -0.207629   66.365561   11.445462 -1.616279  spy  sect  10  rank   3      1
+182    4f etf rev2 rank h10 hedge0 -0.075400  0.390265 -0.001441  0.019111 -0.044554   34.498407  206.068073 -2.493588   4f   etf   2  rank  10      0
+127     spy sect rev3 z h10 hedge1 -0.076255  0.175076 -0.002972  0.038974 -0.123351   34.857181   10.457404 -1.188169  spy  sect   3     z  10      1
+76       spy etf rev10 z h5 hedge0 -0.076617  0.156755 -0.006060  0.079099 -0.170002   69.496728  112.061704 -2.015118  spy   etf  10     z   5      0
+11        spy etf rev1 z h3 hedge1 -0.087507  0.589457 -0.004340  0.049601 -0.197283  147.365336  120.810510 -2.409390  spy   etf   1     z   3      1
+226    4f etf rev10 rank h3 hedge0 -0.087635  0.338326 -0.003575  0.040797 -0.116475   63.542877  197.235669 -2.342294   4f   etf  10  rank   3      0
+145  spy sect rev10 rank h1 hedge1 -0.093539  0.381686 -0.005768  0.061662 -0.209349  119.968946   11.000000 -1.451156  spy  sect  10  rank   1      1
+66    spy etf rev10 rank h3 hedge0 -0.093865  0.312898 -0.003993  0.042544 -0.125532   63.238559  197.238455 -1.498644  spy   etf  10  rank   3      0
+47       spy etf rev3 z h10 hedge1 -0.095931  0.225344 -0.003791  0.039522 -0.093090   44.606592  174.566481 -1.908828  spy   etf   3     z  10      1
+204        4f etf rev3 z h5 hedge0 -0.096180  0.374571 -0.004558  0.047387 -0.158611   89.436092  136.674761 -3.905277   4f   etf   3     z   5      0
+137      spy sect rev5 z h1 hedge1 -0.098847  0.399190 -0.008425  0.085235 -0.289911  190.961552    4.192675 -2.102951  spy  sect   5     z   1      1
+222       4f etf rev5 z h10 hedge0 -0.100882  0.211647 -0.004267  0.042302 -0.106549   45.042594  165.082404 -0.853658   4f   etf   5     z  10      0
+198    4f etf rev3 rank h10 hedge0 -0.103676  0.312871 -0.002314  0.022324 -0.052450   34.495539  206.071656 -2.274015   4f   etf   3  rank  10      0
+313      4f sect rev10 z h1 hedge1 -0.109310  0.435148 -0.008058  0.073717 -0.227979  175.555579    7.061704 -1.854344   4f  sect  10     z   1      1
+307   4f sect rev10 rank h3 hedge1 -0.110222  0.288432 -0.005381  0.048819 -0.184641   70.959832   14.465366 -1.917812   4f  sect  10  rank   3      1
+46       spy etf rev3 z h10 hedge0 -0.112362  0.145208 -0.005180  0.046105 -0.115652   41.310381  173.566481 -1.819373  spy   etf   3     z  10      0
+306   4f sect rev10 rank h3 hedge0 -0.112734  0.185540 -0.006470  0.057394 -0.181130   62.449363   10.465366 -1.276468   4f  sect  10  rank   3      0

@@ -1,0 +1,237 @@
+features built
+192 configs
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 10.6% Sh 0.71 DD -30%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 11.1% Sh 0.70 DD -31%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 6.9% Sh 0.54 DD -30%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 9.2% Sh 0.66 DD -20%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 7.0% Sh 0.71 DD -21%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 6.9% Sh 0.60 DD -26%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 4.5% Sh 0.55 DD -19%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 6.0% Sh 0.63 DD -15%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 20.6% Sh 0.93 DD -42%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 17.9% Sh 0.84 DD -41%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 15.2% Sh 0.81 DD -30%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 15.1% Sh 0.81 DD -31%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 16.6% Sh 0.93 DD -38%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 13.9% Sh 0.80 DD -40%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 13.1% Sh 0.87 DD -27%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 12.3% Sh 0.83 DD -28%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 18.3% Sh 0.98 DD -29%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 13.0% Sh 0.73 DD -38%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 14.2% Sh 0.90 DD -16%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 10.7% Sh 0.70 DD -21%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 10.8% Sh 0.93 DD -22%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 7.8% Sh 0.67 DD -30%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 8.9% Sh 0.94 DD -13%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 6.9% Sh 0.70 DD -16%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 22.1% Sh 0.98 DD -35%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 16.9% Sh 0.80 DD -34%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 14.6% Sh 0.80 DD -30%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 11.7% Sh 0.68 DD -31%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 14.6% Sh 0.88 DD -33%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 12.2% Sh 0.74 DD -34%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 10.6% Sh 0.78 DD -25%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 9.3% Sh 0.69 DD -26%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 17.7% Sh 0.88 DD -35%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 14.7% Sh 0.76 DD -34%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 11.8% Sh 0.74 DD -26%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 10.5% Sh 0.67 DD -24%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 10.6% Sh 0.82 DD -28%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 9.6% Sh 0.72 DD -30%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 7.5% Sh 0.73 DD -16%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 7.1% Sh 0.67 DD -17%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 21.3% Sh 0.95 DD -33%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 15.5% Sh 0.76 DD -33%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 13.0% Sh 0.75 DD -30%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 10.0% Sh 0.61 DD -32%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 14.8% Sh 0.88 DD -29%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 11.7% Sh 0.71 DD -31%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 10.0% Sh 0.75 DD -25%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 8.3% Sh 0.63 DD -27%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 11.2% Sh 0.46 DD -60%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 1.3% Sh 0.26 DD -65%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 1.5% Sh 0.27 DD -71%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR -0.4% Sh 0.20 DD -70%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 18.6% Sh 0.59 DD -59%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 7.8% Sh 0.39 DD -55%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 7.0% Sh 0.38 DD -62%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 5.3% Sh 0.33 DD -58%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 23.5% Sh 0.67 DD -61%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 11.3% Sh 0.46 DD -64%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 11.3% Sh 0.46 DD -65%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 5.0% Sh 0.32 DD -66%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 27.5% Sh 0.73 DD -61%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 17.7% Sh 0.59 DD -61%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 14.3% Sh 0.52 DD -62%
+{'lb': 252, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 10.5% Sh 0.45 DD -61%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 11.1% Sh 0.46 DD -64%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 10.2% Sh 0.44 DD -56%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 2.7% Sh 0.27 DD -68%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 5.7% Sh 0.34 DD -59%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 20.8% Sh 0.65 DD -59%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 16.4% Sh 0.59 DD -50%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 11.1% Sh 0.47 DD -62%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 10.5% Sh 0.46 DD -54%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 20.8% Sh 0.64 DD -61%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 18.8% Sh 0.64 DD -51%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 8.3% Sh 0.40 DD -63%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 9.6% Sh 0.44 DD -56%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 25.8% Sh 0.75 DD -57%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 23.9% Sh 0.77 DD -42%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 13.3% Sh 0.52 DD -59%
+{'lb': 252, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 14.7% Sh 0.58 DD -48%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 15.7% Sh 0.56 DD -60%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 16.8% Sh 0.62 DD -46%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 4.9% Sh 0.31 DD -64%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 10.4% Sh 0.47 DD -50%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 20.6% Sh 0.69 DD -55%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 20.8% Sh 0.74 DD -39%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 9.6% Sh 0.44 DD -58%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 13.4% Sh 0.58 DD -43%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 23.0% Sh 0.72 DD -55%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 18.2% Sh 0.67 DD -42%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 9.3% Sh 0.43 DD -60%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 10.1% Sh 0.47 DD -48%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 26.1% Sh 0.81 DD -48%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 18.7% Sh 0.70 DD -39%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 12.7% Sh 0.53 DD -53%
+{'lb': 252, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 11.7% Sh 0.54 DD -42%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 10.8% Sh 0.66 DD -32%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 10.4% Sh 0.65 DD -30%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 4.8% Sh 0.39 DD -31%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 6.0% Sh 0.46 DD -31%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 6.6% Sh 0.59 DD -25%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 6.5% Sh 0.56 DD -26%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 4.5% Sh 0.51 DD -16%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 4.0% Sh 0.45 DD -20%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 18.0% Sh 0.84 DD -39%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 15.7% Sh 0.79 DD -38%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 8.4% Sh 0.52 DD -45%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 10.8% Sh 0.64 DD -40%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 13.0% Sh 0.77 DD -35%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 12.4% Sh 0.75 DD -31%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 7.4% Sh 0.56 DD -37%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 8.4% Sh 0.61 DD -34%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 12.9% Sh 0.72 DD -33%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 11.0% Sh 0.64 DD -40%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 6.4% Sh 0.46 DD -34%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 6.8% Sh 0.49 DD -39%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 7.2% Sh 0.60 DD -24%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 7.0% Sh 0.57 DD -31%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 4.2% Sh 0.45 DD -22%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 4.5% Sh 0.46 DD -26%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 14.9% Sh 0.73 DD -37%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 12.7% Sh 0.67 DD -34%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 8.5% Sh 0.53 DD -38%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 8.2% Sh 0.52 DD -36%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 12.0% Sh 0.75 DD -29%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 10.8% Sh 0.70 DD -30%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 8.0% Sh 0.63 DD -32%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 7.6% Sh 0.59 DD -31%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 14.6% Sh 0.76 DD -40%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 11.1% Sh 0.63 DD -40%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 8.2% Sh 0.55 DD -31%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 6.9% Sh 0.48 DD -35%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 9.4% Sh 0.70 DD -30%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 7.8% Sh 0.60 DD -30%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 6.0% Sh 0.57 DD -22%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 5.2% Sh 0.49 DD -24%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 14.2% Sh 0.72 DD -37%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 13.9% Sh 0.72 DD -30%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 7.5% Sh 0.50 DD -35%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 8.2% Sh 0.53 DD -32%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 11.2% Sh 0.71 DD -31%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 11.2% Sh 0.71 DD -28%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 7.0% Sh 0.56 DD -29%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'vs', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 7.3% Sh 0.58 DD -27%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR -4.8% Sh 0.18 DD -93%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 4.3% Sh 0.32 DD -79%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR -11.9% Sh -0.02 DD -95%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR -1.3% Sh 0.18 DD -80%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 1.8% Sh 0.30 DD -91%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 8.1% Sh 0.40 DD -74%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR -7.7% Sh 0.07 DD -95%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 2.0% Sh 0.25 DD -77%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 10.4% Sh 0.45 DD -85%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 7.6% Sh 0.39 DD -87%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR -3.9% Sh 0.16 DD -92%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR -3.7% Sh 0.12 DD -90%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 12.4% Sh 0.49 DD -86%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 11.4% Sh 0.47 DD -83%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR -3.2% Sh 0.17 DD -93%
+{'lb': 126, 'skip': 21, 'top': 10, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 0.3% Sh 0.21 DD -86%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 3.8% Sh 0.31 DD -87%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 4.2% Sh 0.30 DD -72%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR -4.5% Sh 0.16 DD -90%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR -1.7% Sh 0.13 DD -78%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 10.5% Sh 0.39 DD -82%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 8.2% Sh 0.40 DD -65%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 1.9% Sh 0.26 DD -87%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 2.8% Sh 0.25 DD -69%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 7.3% Sh 0.38 DD -81%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 23.4% Sh 0.74 DD -52%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR -3.4% Sh 0.12 DD -85%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 11.6% Sh 0.49 DD -59%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 12.3% Sh 0.49 DD -76%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 26.5% Sh 0.83 DD -50%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 1.9% Sh 0.24 DD -78%
+{'lb': 126, 'skip': 21, 'top': 20, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 16.1% Sh 0.62 DD -51%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 5.3% Sh 0.33 DD -77%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 9.1% Sh 0.43 DD -64%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR -2.7% Sh 0.13 DD -82%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 2.5% Sh 0.23 DD -70%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 11.0% Sh 0.44 DD -67%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 11.9% Sh 0.51 DD -54%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 3.1% Sh 0.26 DD -74%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 10000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 5.6% Sh 0.33 DD -60%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': False}  CAGR 17.3% Sh 0.61 DD -62%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'none', 'stock_trend': True}  CAGR 19.6% Sh 0.72 DD -42%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': False}  CAGR 6.1% Sh 0.34 DD -65%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'eq', 'regime': 'spy200', 'stock_trend': True}  CAGR 11.5% Sh 0.52 DD -45%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': False}  CAGR 20.0% Sh 0.69 DD -56%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'none', 'stock_trend': True}  CAGR 18.4% Sh 0.72 DD -42%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': False}  CAGR 9.7% Sh 0.45 DD -56%
+{'lb': 126, 'skip': 21, 'top': 40, 'min_adv': 50000000.0, 'score': 'raw', 'weight': 'iv', 'regime': 'spy200', 'stock_trend': True}  CAGR 12.5% Sh 0.57 DD -40%
+      lb  skip  top     min_adv  ...    sharpe     maxdd       vol        turn
+60   252    21   10  50000000.0  ...  0.728589 -0.612015  0.516228  113.474721
+173  126    21   20  50000000.0  ...  0.832071 -0.496335  0.362815  152.494772
+92   252    21   40  50000000.0  ...  0.811124 -0.477820  0.373320   99.129014
+76   252    21   20  50000000.0  ...  0.750005 -0.574047  0.430793  107.347329
+77   252    21   20  50000000.0  ...  0.765828 -0.418195  0.371179  124.211552
+56   252    21   10  50000000.0  ...  0.665428 -0.611907  0.521983  111.263772
+169  126    21   20  50000000.0  ...  0.738990 -0.522351  0.386171  143.960124
+88   252    21   40  50000000.0  ...  0.716765 -0.545265  0.403687   92.106309
+24   252    21   20  50000000.0  ...  0.979630 -0.348349  0.231859  127.368359
+40   252    21   40  50000000.0  ...  0.954220 -0.327576  0.231093  118.886772
+68   252    21   20  10000000.0  ...  0.654741 -0.586733  0.434263  106.736061
+72   252    21   20  50000000.0  ...  0.644168 -0.605586  0.455216  101.702867
+85   252    21   40  10000000.0  ...  0.742317 -0.386194  0.328001  122.253635
+8    252    21   10  50000000.0  ...  0.928866 -0.415570  0.231429  124.422320
+84   252    21   40  10000000.0  ...  0.685510 -0.553443  0.379877  102.119638
+188  126    21   40  50000000.0  ...  0.692396 -0.564877  0.356988  135.961489
+185  126    21   40  50000000.0  ...  0.716382 -0.415287  0.324239  132.000646
+73   252    21   20  50000000.0  ...  0.637214 -0.505912  0.394063  119.006843
+93   252    21   40  50000000.0  ...  0.702965 -0.389323  0.315334  117.731140
+52   252    21   10  10000000.0  ...  0.587445 -0.593283  0.520280  113.751236
+189  126    21   40  50000000.0  ...  0.719566 -0.419253  0.298085  140.481489
+16   252    21   20  10000000.0  ...  0.977683 -0.294335  0.191156  115.210481
+89   252    21   40  50000000.0  ...  0.665656 -0.421998  0.338593  111.124207
+104  126    21   10  50000000.0  ...  0.841827 -0.391416  0.228789  161.684014
+9    252    21   10  50000000.0  ...  0.838438 -0.412258  0.228131  132.664457
+61   252    21   10  50000000.0  ...  0.587338 -0.610571  0.452098  131.994161
+32   252    21   40  10000000.0  ...  0.881523 -0.346884  0.210454  119.240756
+184  126    21   40  50000000.0  ...  0.607837 -0.617659  0.386100  125.957295
+25   252    21   20  50000000.0  ...  0.799528 -0.344887  0.228353  133.163576
+81   252    21   40  10000000.0  ...  0.617618 -0.459141  0.354418  115.357628
+12   252    21   10  50000000.0  ...  0.925997 -0.377002  0.184499  125.143272
+69   252    21   20  10000000.0  ...  0.589502 -0.495637  0.383723  127.260570
+175  126    21   20  50000000.0  ...  0.617373 -0.508425  0.332193  131.504148
+80   252    21   40  10000000.0  ...  0.564221 -0.602135  0.407457   95.347300
+105  126    21   10  50000000.0  ...  0.785127 -0.377014  0.215318  166.220803
+41   252    21   40  50000000.0  ...  0.759708 -0.332785  0.223944  123.713047
+10   252    21   10  50000000.0  ...  0.808362 -0.304122  0.200502  113.139089
+11   252    21   10  50000000.0  ...  0.809139 -0.306015  0.198202  117.314109
+120  126    21   20  50000000.0  ...  0.731947 -0.374453  0.225464  157.666341
+44   252    21   40  50000000.0  ...  0.879348 -0.294754  0.175220  118.690145
+
+[40 rows x 13 columns]

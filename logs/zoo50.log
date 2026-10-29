@@ -1,0 +1,266 @@
+mask built; avg names/day: 970.2911569381336
+mom12_1_vs [w,nextopen]            Sharpe net  0.29 gross  0.48  ret   5.5%/yr vol 18.8%  turn  25.9x/yr  worst-yr Sh -2.50 
+mom12_1_vs [w,nextclose]           Sharpe net  0.28 gross  0.47  ret   5.2%/yr vol 18.8%  turn  25.9x/yr  worst-yr Sh -2.59 
+mom12_1_vs [m,nextopen]            Sharpe net  0.35 gross  0.48  ret   6.5%/yr vol 18.6%  turn  13.1x/yr  worst-yr Sh -2.40 
+mom12_1_vs [m,nextclose]           Sharpe net  0.32 gross  0.45  ret   6.0%/yr vol 18.6%  turn  13.1x/yr  worst-yr Sh -2.62 
+mom12_1 [w,nextopen]               Sharpe net  0.28 gross  0.44  ret   5.8%/yr vol 20.8%  turn  24.7x/yr  worst-yr Sh -2.46 
+mom12_1 [w,nextclose]              Sharpe net  0.25 gross  0.42  ret   5.3%/yr vol 20.8%  turn  24.7x/yr  worst-yr Sh -2.55 
+mom12_1 [m,nextopen]               Sharpe net  0.31 gross  0.42  ret   6.4%/yr vol 20.5%  turn  12.7x/yr  worst-yr Sh -2.33 
+mom12_1 [m,nextclose]              Sharpe net  0.29 gross  0.40  ret   6.0%/yr vol 20.5%  turn  12.7x/yr  worst-yr Sh -2.59 
+mom6_1 [w,nextopen]                Sharpe net  0.12 gross  0.34  ret   2.3%/yr vol 19.2%  turn  33.2x/yr  worst-yr Sh -0.76 
+mom6_1 [w,nextclose]               Sharpe net  0.09 gross  0.32  ret   1.7%/yr vol 19.1%  turn  33.2x/yr  worst-yr Sh -0.72 
+mom6_1 [m,nextopen]                Sharpe net  0.24 gross  0.38  ret   4.5%/yr vol 18.8%  turn  16.7x/yr  worst-yr Sh -1.26 
+mom6_1 [m,nextclose]               Sharpe net  0.23 gross  0.37  ret   4.3%/yr vol 18.8%  turn  16.7x/yr  worst-yr Sh -1.78 
+rev5 [d,nextopen]                  Sharpe net -0.87 gross  0.75  ret -15.9%/yr vol 18.3%  turn 285.4x/yr  worst-yr Sh -3.79 
+rev5 [d,nextclose]                 Sharpe net -1.00 gross  0.66  ret -17.8%/yr vol 17.8%  turn 285.5x/yr  worst-yr Sh -3.70 
+rev5 [w,nextopen]                  Sharpe net -0.16 gross  0.71  ret  -2.7%/yr vol 17.1%  turn 137.8x/yr  worst-yr Sh -1.99 
+rev5 [w,nextclose]                 Sharpe net -0.54 gross  0.34  ret  -9.0%/yr vol 16.8%  turn 137.8x/yr  worst-yr Sh -1.56 
+rev10 [d,nextopen]                 Sharpe net -0.60 gross  0.52  ret -11.3%/yr vol 18.8%  turn 200.7x/yr  worst-yr Sh -2.24 
+rev10 [d,nextclose]                Sharpe net -0.73 gross  0.42  ret -13.4%/yr vol 18.3%  turn 200.7x/yr  worst-yr Sh -2.60 
+rev10 [w,nextopen]                 Sharpe net -0.24 gross  0.38  ret  -4.1%/yr vol 17.4%  turn  96.2x/yr  worst-yr Sh -1.33 
+rev10 [w,nextclose]                Sharpe net -0.35 gross  0.26  ret  -6.1%/yr vol 17.3%  turn  96.2x/yr  worst-yr Sh -0.94 
+rev10 [m,nextopen]                 Sharpe net -0.32 gross -0.01  ret  -4.5%/yr vol 14.1%  turn  33.4x/yr  worst-yr Sh -1.60 
+rev10 [m,nextclose]                Sharpe net -0.27 gross  0.04  ret  -3.8%/yr vol 14.0%  turn  33.4x/yr  worst-yr Sh -1.39 
+rev21 [d,nextopen]                 Sharpe net -0.33 gross  0.45  ret  -6.1%/yr vol 18.6%  turn 135.7x/yr  worst-yr Sh -1.79 
+rev21 [d,nextclose]                Sharpe net -0.35 gross  0.45  ret  -6.4%/yr vol 18.3%  turn 135.7x/yr  worst-yr Sh -1.81 
+rev21 [w,nextopen]                 Sharpe net  0.14 gross  0.56  ret   2.5%/yr vol 18.0%  turn  66.5x/yr  worst-yr Sh -0.69 
+rev21 [w,nextclose]                Sharpe net  0.02 gross  0.45  ret   0.4%/yr vol 17.8%  turn  66.5x/yr  worst-yr Sh -1.04 
+rev21 [m,nextopen]                 Sharpe net -0.18 gross  0.10  ret  -2.8%/yr vol 15.7%  turn  33.0x/yr  worst-yr Sh -0.88 
+rev21 [m,nextclose]                Sharpe net -0.16 gross  0.12  ret  -2.5%/yr vol 15.6%  turn  33.0x/yr  worst-yr Sh -0.71 
+rev5_resid [d,nextopen]            Sharpe net -1.14 gross  0.62  ret -19.1%/yr vol 16.8%  turn 284.3x/yr  worst-yr Sh -4.12 
+rev5_resid [d,nextclose]           Sharpe net -1.19 gross  0.64  ret -19.1%/yr vol 16.1%  turn 284.3x/yr  worst-yr Sh -4.03 
+rev5_resid [w,nextopen]            Sharpe net -0.32 gross  0.65  ret  -4.9%/yr vol 15.3%  turn 137.6x/yr  worst-yr Sh -2.54 
+rev5_resid [w,nextclose]           Sharpe net -0.56 gross  0.42  ret  -8.4%/yr vol 15.0%  turn 137.6x/yr  worst-yr Sh -1.81 
+rev10_resid [d,nextopen]           Sharpe net -0.74 gross  0.50  ret -12.5%/yr vol 17.0%  turn 200.0x/yr  worst-yr Sh -2.41 
+rev10_resid [d,nextclose]          Sharpe net -0.84 gross  0.42  ret -14.0%/yr vol 16.6%  turn 200.0x/yr  worst-yr Sh -2.60 
+rev10_resid [w,nextopen]           Sharpe net -0.30 gross  0.38  ret  -4.7%/yr vol 15.7%  turn  96.3x/yr  worst-yr Sh -1.25 
+rev10_resid [w,nextclose]          Sharpe net -0.41 gross  0.27  ret  -6.4%/yr vol 15.7%  turn  96.3x/yr  worst-yr Sh -1.20 
+rev10_resid [m,nextopen]           Sharpe net -0.40 gross -0.06  ret  -5.1%/yr vol 12.5%  turn  33.2x/yr  worst-yr Sh -1.23 
+rev10_resid [m,nextclose]          Sharpe net -0.37 gross -0.02  ret  -4.6%/yr vol 12.4%  turn  33.2x/yr  worst-yr Sh -1.29 
+rev21_resid [d,nextopen]           Sharpe net -0.37 gross  0.49  ret  -6.2%/yr vol 17.0%  turn 134.8x/yr  worst-yr Sh -2.04 
+rev21_resid [d,nextclose]          Sharpe net -0.39 gross  0.48  ret  -6.5%/yr vol 16.6%  turn 134.8x/yr  worst-yr Sh -2.21 
+rev21_resid [w,nextopen]           Sharpe net  0.10 gross  0.57  ret   1.6%/yr vol 16.2%  turn  66.3x/yr  worst-yr Sh -1.11 
+rev21_resid [w,nextclose]          Sharpe net  0.01 gross  0.48  ret   0.1%/yr vol 16.0%  turn  66.3x/yr  worst-yr Sh -1.36 
+rev21_resid [m,nextopen]           Sharpe net -0.15 gross  0.16  ret  -2.1%/yr vol 14.0%  turn  33.1x/yr  worst-yr Sh -1.03 
+rev21_resid [m,nextclose]          Sharpe net -0.16 gross  0.15  ret  -2.3%/yr vol 13.9%  turn  33.1x/yr  worst-yr Sh -0.89 
+rev5_vs [d,nextopen]               Sharpe net -1.17 gross  0.71  ret -18.7%/yr vol 16.1%  turn 290.7x/yr  worst-yr Sh -4.77 
+rev5_vs [d,nextclose]              Sharpe net -1.30 gross  0.64  ret -20.2%/yr vol 15.5%  turn 290.8x/yr  worst-yr Sh -4.66 
+rev5_vs [w,nextopen]               Sharpe net -0.41 gross  0.61  ret  -6.0%/yr vol 14.7%  turn 139.8x/yr  worst-yr Sh -2.58 
+rev5_vs [w,nextclose]              Sharpe net -0.66 gross  0.38  ret  -9.5%/yr vol 14.4%  turn 139.8x/yr  worst-yr Sh -2.03 
+lowvol [d,nextopen]                Sharpe net -0.16 gross  0.01  ret  -3.8%/yr vol 23.7%  turn  29.4x/yr  worst-yr Sh -1.13 
+lowvol [d,nextclose]               Sharpe net -0.21 gross -0.04  ret  -4.9%/yr vol 23.7%  turn  29.4x/yr  worst-yr Sh -1.21 
+lowvol [w,nextopen]                Sharpe net -0.18 gross -0.05  ret  -4.1%/yr vol 23.5%  turn  18.9x/yr  worst-yr Sh -1.17 
+lowvol [w,nextclose]               Sharpe net -0.20 gross -0.08  ret  -4.8%/yr vol 23.4%  turn  18.9x/yr  worst-yr Sh -1.24 
+lowvol [m,nextopen]                Sharpe net -0.16 gross -0.07  ret  -3.7%/yr vol 23.1%  turn  11.4x/yr  worst-yr Sh -1.25 
+lowvol [m,nextclose]               Sharpe net -0.19 gross -0.09  ret  -4.3%/yr vol 23.1%  turn  11.4x/yr  worst-yr Sh -1.35 
+lowbeta [d,nextopen]               Sharpe net -0.41 gross -0.29  ret -10.4%/yr vol 25.2%  turn  20.9x/yr  worst-yr Sh -1.93 
+lowbeta [d,nextclose]              Sharpe net -0.39 gross -0.27  ret  -9.9%/yr vol 25.1%  turn  20.9x/yr  worst-yr Sh -1.87 
+lowbeta [w,nextopen]               Sharpe net -0.38 gross -0.29  ret  -9.5%/yr vol 24.9%  turn  13.1x/yr  worst-yr Sh -1.72 
+lowbeta [w,nextclose]              Sharpe net -0.39 gross -0.29  ret  -9.6%/yr vol 24.9%  turn  13.1x/yr  worst-yr Sh -1.75 
+lowbeta [m,nextopen]               Sharpe net -0.36 gross -0.28  ret  -8.6%/yr vol 24.3%  turn   7.8x/yr  worst-yr Sh -2.11 
+lowbeta [m,nextclose]              Sharpe net -0.37 gross -0.30  ret  -9.0%/yr vol 24.2%  turn   7.8x/yr  worst-yr Sh -2.15 
+ivol [d,nextopen]                  Sharpe net -0.12 gross  0.07  ret  -2.5%/yr vol 20.9%  turn  29.6x/yr  worst-yr Sh -1.12 
+ivol [d,nextclose]                 Sharpe net -0.18 gross  0.01  ret  -3.9%/yr vol 20.8%  turn  29.6x/yr  worst-yr Sh -1.27 
+ivol [w,nextopen]                  Sharpe net -0.14 gross  0.01  ret  -2.8%/yr vol 20.7%  turn  19.3x/yr  worst-yr Sh -1.40 
+ivol [w,nextclose]                 Sharpe net -0.16 gross -0.02  ret  -3.4%/yr vol 20.7%  turn  19.3x/yr  worst-yr Sh -1.50 
+ivol [m,nextopen]                  Sharpe net -0.13 gross -0.02  ret  -2.6%/yr vol 20.5%  turn  11.8x/yr  worst-yr Sh -1.76 
+ivol [m,nextclose]                 Sharpe net -0.16 gross -0.05  ret  -3.2%/yr vol 20.5%  turn  11.8x/yr  worst-yr Sh -1.88 
+hi52 [d,nextopen]                  Sharpe net -0.25 gross  0.12  ret  -5.7%/yr vol 22.7%  turn  73.7x/yr  worst-yr Sh -2.14 
+hi52 [d,nextclose]                 Sharpe net -0.28 gross  0.09  ret  -6.2%/yr vol 22.5%  turn  73.7x/yr  worst-yr Sh -2.42 
+hi52 [w,nextopen]                  Sharpe net -0.11 gross  0.09  ret  -2.5%/yr vol 22.2%  turn  35.0x/yr  worst-yr Sh -1.32 
+hi52 [w,nextclose]                 Sharpe net -0.11 gross  0.09  ret  -2.4%/yr vol 22.1%  turn  35.0x/yr  worst-yr Sh -1.67 
+hi52 [m,nextopen]                  Sharpe net  0.11 gross  0.23  ret   2.3%/yr vol 21.1%  turn  16.1x/yr  worst-yr Sh -2.26 
+hi52 [m,nextclose]                 Sharpe net  0.07 gross  0.20  ret   1.6%/yr vol 21.0%  turn  16.1x/yr  worst-yr Sh -2.63 
+max5 [d,nextopen]                  Sharpe net -0.28 gross  0.07  ret  -5.3%/yr vol 19.2%  turn  56.6x/yr  worst-yr Sh -1.40 
+max5 [d,nextclose]                 Sharpe net -0.31 gross  0.04  ret  -5.9%/yr vol 19.1%  turn  56.6x/yr  worst-yr Sh -1.47 
+max5 [w,nextopen]                  Sharpe net -0.21 gross  0.06  ret  -4.0%/yr vol 19.0%  turn  41.7x/yr  worst-yr Sh -1.28 
+max5 [w,nextclose]                 Sharpe net -0.27 gross  0.00  ret  -5.1%/yr vol 19.0%  turn  41.7x/yr  worst-yr Sh -1.44 
+max5 [m,nextopen]                  Sharpe net -0.25 gross -0.07  ret  -4.8%/yr vol 19.3%  turn  24.2x/yr  worst-yr Sh -1.53 
+max5 [m,nextclose]                 Sharpe net -0.25 gross -0.08  ret  -4.9%/yr vol 19.2%  turn  24.2x/yr  worst-yr Sh -1.58 
+absvol [d,nextopen]                Sharpe net -4.50 gross  0.28  ret -41.4%/yr vol  9.2%  turn 428.8x/yr  worst-yr Sh -10.58 
+absvol [d,nextclose]               Sharpe net -5.00 gross -0.04  ret -44.3%/yr vol  8.8%  turn 428.8x/yr  worst-yr Sh -11.17 
+absvol [w,nextopen]                Sharpe net -1.57 gross -0.06  ret -13.7%/yr vol  8.7%  turn 121.6x/yr  worst-yr Sh -4.06 
+absvol [w,nextclose]               Sharpe net -1.94 gross -0.42  ret -16.7%/yr vol  8.6%  turn 121.6x/yr  worst-yr Sh -3.81 
+turn_chg [d,nextopen]              Sharpe net -0.48 gross  0.46  ret  -4.3%/yr vol  8.9%  turn  73.4x/yr  worst-yr Sh -2.43 
+turn_chg [d,nextclose]             Sharpe net -0.63 gross  0.32  ret  -5.5%/yr vol  8.9%  turn  73.4x/yr  worst-yr Sh -2.66 
+turn_chg [w,nextopen]              Sharpe net -0.22 gross  0.50  ret  -2.0%/yr vol  8.9%  turn  53.5x/yr  worst-yr Sh -1.88 
+turn_chg [w,nextclose]             Sharpe net -0.44 gross  0.29  ret  -3.8%/yr vol  8.8%  turn  53.5x/yr  worst-yr Sh -1.99 
+turn_chg [m,nextopen]              Sharpe net -0.23 gross  0.27  ret  -2.0%/yr vol  8.8%  turn  33.9x/yr  worst-yr Sh -3.37 
+turn_chg [m,nextclose]             Sharpe net -0.26 gross  0.24  ret  -2.3%/yr vol  8.8%  turn  33.9x/yr  worst-yr Sh -3.20 
+ovn21 [d,nextopen]                 Sharpe net -1.11 gross -0.20  ret -16.0%/yr vol 14.4%  turn 121.3x/yr  worst-yr Sh -5.59 
+ovn21 [d,nextclose]                Sharpe net -1.30 gross -0.38  ret -18.6%/yr vol 14.3%  turn 121.4x/yr  worst-yr Sh -4.76 
+ovn21 [w,nextopen]                 Sharpe net -1.06 gross -0.54  ret -14.8%/yr vol 13.9%  turn  62.9x/yr  worst-yr Sh -5.00 
+ovn21 [w,nextclose]                Sharpe net -1.04 gross -0.52  ret -14.5%/yr vol 13.9%  turn  62.9x/yr  worst-yr Sh -4.59 
+ovn21 [m,nextopen]                 Sharpe net -0.55 gross -0.23  ret  -7.2%/yr vol 12.9%  turn  32.4x/yr  worst-yr Sh -2.54 
+ovn21 [m,nextclose]                Sharpe net -0.63 gross -0.30  ret  -8.2%/yr vol 12.9%  turn  32.4x/yr  worst-yr Sh -2.53 
+intra21 [d,nextopen]               Sharpe net -0.65 gross  0.27  ret -10.6%/yr vol 16.4%  turn 139.4x/yr  worst-yr Sh -2.99 
+intra21 [d,nextclose]              Sharpe net -0.71 gross  0.22  ret -11.4%/yr vol 16.1%  turn 139.4x/yr  worst-yr Sh -2.26 
+intra21 [w,nextopen]               Sharpe net -0.20 gross  0.28  ret  -3.2%/yr vol 16.0%  turn  66.7x/yr  worst-yr Sh -2.03 
+intra21 [w,nextclose]              Sharpe net -0.30 gross  0.19  ret  -4.7%/yr vol 15.8%  turn  66.7x/yr  worst-yr Sh -1.30 
+intra21 [m,nextopen]               Sharpe net -0.39 gross -0.09  ret  -5.6%/yr vol 14.1%  turn  32.7x/yr  worst-yr Sh -1.84 
+intra21 [m,nextclose]              Sharpe net -0.38 gross -0.07  ret  -5.3%/yr vol 13.9%  turn  32.7x/yr  worst-yr Sh -1.55 
+ovn5 [d,nextopen]                  Sharpe net -2.47 gross -0.65  ret -38.3%/yr vol 15.6%  turn 272.9x/yr  worst-yr Sh -5.29 
+ovn5 [d,nextclose]                 Sharpe net -2.39 gross -0.57  ret -37.2%/yr vol 15.5%  turn 272.9x/yr  worst-yr Sh -4.81 
+ovn5 [w,nextopen]                  Sharpe net -1.48 gross -0.52  ret -22.3%/yr vol 15.1%  turn 135.0x/yr  worst-yr Sh -4.03 
+ovn5 [w,nextclose]                 Sharpe net -1.13 gross -0.17  ret -17.1%/yr vol 15.1%  turn 135.0x/yr  worst-yr Sh -3.59 
+residmom [d,nextopen]              Sharpe net  0.12 gross  0.43  ret   2.4%/yr vol 19.2%  turn  48.9x/yr  worst-yr Sh -2.86 
+residmom [d,nextclose]             Sharpe net  0.13 gross  0.43  ret   2.4%/yr vol 19.2%  turn  48.9x/yr  worst-yr Sh -2.70 
+residmom [w,nextopen]              Sharpe net  0.20 gross  0.39  ret   3.9%/yr vol 19.1%  turn  25.2x/yr  worst-yr Sh -2.61 
+residmom [w,nextclose]             Sharpe net  0.19 gross  0.37  ret   3.6%/yr vol 19.1%  turn  25.2x/yr  worst-yr Sh -2.71 
+residmom [m,nextopen]              Sharpe net  0.28 gross  0.40  ret   5.3%/yr vol 18.9%  turn  12.7x/yr  worst-yr Sh -2.43 
+residmom [m,nextclose]             Sharpe net  0.26 gross  0.38  ret   4.9%/yr vol 18.8%  turn  12.7x/yr  worst-yr Sh -2.68 
+n_trades_chg [d,nextopen]          Sharpe net -2.01 gross -0.06  ret -16.7%/yr vol  8.3%  turn 152.7x/yr  worst-yr Sh -5.29 
+n_trades_chg [d,nextclose]         Sharpe net -2.26 gross -0.27  ret -18.5%/yr vol  8.2%  turn 152.7x/yr  worst-yr Sh -5.63 
+n_trades_chg [w,nextopen]          Sharpe net -1.37 gross  0.01  ret -11.1%/yr vol  8.1%  turn 101.8x/yr  worst-yr Sh -3.92 
+n_trades_chg [w,nextclose]         Sharpe net -1.54 gross -0.17  ret -12.5%/yr vol  8.2%  turn 101.8x/yr  worst-yr Sh -3.60 
+amihud [d,nextopen]                Sharpe net  0.11 gross  0.48  ret   1.4%/yr vol 12.9%  turn  37.6x/yr  worst-yr Sh -1.20 
+amihud [d,nextclose]               Sharpe net  0.01 gross  0.38  ret   0.1%/yr vol 12.9%  turn  37.6x/yr  worst-yr Sh -1.07 
+amihud [w,nextopen]                Sharpe net  0.14 gross  0.39  ret   1.7%/yr vol 12.8%  turn  22.4x/yr  worst-yr Sh -0.80 
+amihud [w,nextclose]               Sharpe net  0.10 gross  0.36  ret   1.3%/yr vol 12.7%  turn  22.4x/yr  worst-yr Sh -0.66 
+amihud [m,nextopen]                Sharpe net  0.13 gross  0.31  ret   1.6%/yr vol 12.6%  turn  12.5x/yr  worst-yr Sh -1.30 
+amihud [m,nextclose]               Sharpe net  0.09 gross  0.27  ret   1.1%/yr vol 12.6%  turn  12.5x/yr  worst-yr Sh -1.24 
+vwap_dev [d,nextopen]              Sharpe net -4.33 gross  0.60  ret -58.8%/yr vol 13.6%  turn 658.5x/yr  worst-yr Sh -9.50 
+vwap_dev [d,nextclose]             Sharpe net -4.67 gross  0.27  ret -63.2%/yr vol 13.5%  turn 658.5x/yr  worst-yr Sh -11.12 
+vwap_dev [w,nextopen]              Sharpe net -0.86 gross  0.25  ret -11.4%/yr vol 13.3%  turn 137.8x/yr  worst-yr Sh -3.06 
+vwap_dev [w,nextclose]             Sharpe net -0.84 gross  0.27  ret -11.3%/yr vol 13.3%  turn 137.8x/yr  worst-yr Sh -3.78 
+range_pos [d,nextopen]             Sharpe net -5.79 gross  0.26  ret -65.3%/yr vol 11.3%  turn 672.5x/yr  worst-yr Sh -10.61 
+range_pos [d,nextclose]            Sharpe net -5.98 gross  0.22  ret -65.8%/yr vol 11.0%  turn 672.6x/yr  worst-yr Sh -13.52 
+range_pos [w,nextopen]             Sharpe net -0.86 gross  0.48  ret  -9.7%/yr vol 11.3%  turn 140.7x/yr  worst-yr Sh -3.08 
+range_pos [w,nextclose]            Sharpe net -0.70 gross  0.63  ret  -8.0%/yr vol 11.4%  turn 140.7x/yr  worst-yr Sh -3.81 
+gap_rev [d,nextopen]               Sharpe net -3.71 gross  0.15  ret -64.3%/yr vol 17.3%  turn 658.6x/yr  worst-yr Sh -10.21 
+gap_rev [d,nextclose]              Sharpe net -3.97 gross -0.03  ret -67.3%/yr vol 17.0%  turn 658.5x/yr  worst-yr Sh -11.09 
+gap_rev [w,nextopen]               Sharpe net -0.61 gross  0.29  ret -10.1%/yr vol 16.7%  turn 138.5x/yr  worst-yr Sh -2.33 
+gap_rev [w,nextclose]              Sharpe net -0.67 gross  0.23  ret -11.1%/yr vol 16.6%  turn 138.5x/yr  worst-yr Sh -2.48 
+              sig reb       exec    sh_net  sh_gross       ret       vol        turn
+2      mom12_1_vs   m   nextopen  0.351899  0.476041  0.065486  0.186093   13.080893
+3      mom12_1_vs   m  nextclose  0.322189  0.446743  0.059886  0.185874   13.080893
+6         mom12_1   m   nextopen  0.313727  0.424646  0.064219  0.204698   12.693150
+0      mom12_1_vs   w   nextopen  0.293953  0.484829  0.055333  0.188236   25.901765
+7         mom12_1   m  nextclose  0.293423  0.404668  0.060032  0.204593   12.693150
+108      residmom   m   nextopen  0.282397  0.403059  0.053236  0.188516   12.727867
+1      mom12_1_vs   w  nextclose  0.279467  0.470697  0.052458  0.187709   25.901765
+4         mom12_1   w   nextopen  0.276814  0.443701  0.057539  0.207861   24.674805
+109      residmom   m  nextclose  0.261239  0.382223  0.049215  0.188390   12.727867
+5         mom12_1   w  nextclose  0.253030  0.420043  0.052526  0.207589   24.674805
+10         mom6_1   m   nextopen  0.242063  0.384635  0.045451  0.187765   16.731818
+11         mom6_1   m  nextclose  0.227684  0.370574  0.042703  0.187553   16.731818
+106      residmom   w   nextopen  0.202877  0.386984  0.038783  0.191167   25.180628
+107      residmom   w  nextclose  0.189186  0.373770  0.036056  0.190584   25.180628
+24          rev21   w   nextopen  0.138086  0.564027  0.024859  0.180029   66.470117
+116        amihud   w   nextopen  0.135723  0.389264  0.017331  0.127696   22.352642
+118        amihud   m   nextopen  0.128528  0.307885  0.016181  0.125897   12.543603
+105      residmom   d  nextclose  0.127517  0.434846  0.024439  0.191657   48.898491
+104      residmom   d   nextopen  0.124296  0.430919  0.023874  0.192078   48.890408
+8          mom6_1   w   nextopen  0.117482  0.343281  0.022509  0.191596   33.241740
+70           hi52   m   nextopen  0.110914  0.234584  0.023402  0.210989   16.074294
+114        amihud   d   nextopen  0.110653  0.478713  0.014319  0.129400   37.624309
+117        amihud   w  nextclose  0.104827  0.359086  0.013347  0.127326   22.352642
+40    rev21_resid   w   nextopen  0.097575  0.570843  0.015766  0.161580   66.255428
+9          mom6_1   w  nextclose  0.089755  0.315516  0.017184  0.191459   33.241740
+119        amihud   m  nextclose  0.087191  0.266487  0.010970  0.125812   12.543603
+71           hi52   m  nextclose  0.074791  0.198886  0.015725  0.210255   16.074294
+25          rev21   w  nextclose  0.022627  0.452040  0.004019  0.177615   66.470117
+41    rev21_resid   w  nextclose  0.007085  0.483097  0.001132  0.159820   66.255428
+115        amihud   d  nextclose  0.006827  0.375146  0.000883  0.129333   37.634696
+69           hi52   w  nextclose -0.110290  0.093299 -0.024376  0.221017   34.984650
+68           hi52   w   nextopen -0.113233  0.089061 -0.025185  0.222416   34.984650
+60           ivol   d   nextopen -0.120679  0.069238 -0.025179  0.208646   29.624142
+64           ivol   m   nextopen -0.127716 -0.021691 -0.026231  0.205388   11.778316
+62           ivol   w   nextopen -0.136549  0.005032 -0.028295  0.207211   19.336731
+42    rev21_resid   m   nextopen -0.147098  0.160322 -0.020657  0.140429   33.092711
+65           ivol   m  nextclose -0.156798 -0.050686 -0.032181  0.205237   11.778316
+14           rev5   w   nextopen -0.157784  0.708539 -0.026971  0.170935  137.769872
+48         lowvol   d   nextopen -0.159773  0.006471 -0.037855  0.236930   29.388075
+27          rev21   m  nextclose -0.160071  0.116698 -0.024915  0.155650   33.023111
+52         lowvol   m   nextopen -0.160181 -0.067730 -0.037071  0.231433   11.399812
+43    rev21_resid   m  nextclose -0.162447  0.147265 -0.022649  0.139424   33.092711
+63           ivol   w  nextclose -0.164152 -0.022580 -0.034015  0.207214   19.336731
+50         lowvol   w   nextopen -0.176448 -0.053237 -0.041399  0.234627   18.911724
+26          rev21   m   nextopen -0.178034  0.095799 -0.028000  0.157273   33.023111
+61           ivol   d  nextclose -0.184930  0.005337 -0.038523  0.208310   29.634582
+53         lowvol   m  nextclose -0.186529 -0.093988 -0.043134  0.231243   11.399812
+96        intra21   w   nextopen -0.199654  0.281170 -0.031890  0.159725   66.670476
+51         lowvol   w  nextclose -0.203318 -0.080014 -0.047667  0.234446   18.911724
+49         lowvol   d  nextclose -0.208530 -0.042082 -0.049361  0.236710   29.398878
+74           max5   w   nextopen -0.209889  0.062237 -0.039871  0.189963   41.677967
+84       turn_chg   w   nextopen -0.222200  0.495929 -0.019682  0.088577   53.497428
+86       turn_chg   m   nextopen -0.226669  0.272352 -0.019987  0.088179   33.902785
+18          rev10   w   nextopen -0.235763  0.376105 -0.040993  0.173876   96.228612
+76           max5   m   nextopen -0.249585 -0.071988 -0.048084  0.192656   24.236398
+66           hi52   d   nextopen -0.249788  0.119605 -0.056595  0.226570   73.695559
+77           max5   m  nextclose -0.253817 -0.075776 -0.048789  0.192222   24.236398
+87       turn_chg   m  nextclose -0.258758  0.240507 -0.022844  0.088285   33.902785
+75           max5   w  nextclose -0.269006  0.003172 -0.051076  0.189870   41.677967
+21          rev10   m  nextclose -0.273937  0.037119 -0.038278  0.139734   33.448393
+72           max5   d   nextopen -0.276533  0.070964 -0.052985  0.191605   56.572934
+67           hi52   d  nextclose -0.277927  0.094605 -0.062448  0.224693   73.709379
+97        intra21   w  nextclose -0.298015  0.187902 -0.046988  0.157670   66.670476
+34    rev10_resid   w   nextopen -0.300751  0.376687 -0.047290  0.157241   96.327506
+73           max5   d  nextclose -0.306832  0.041192 -0.058710  0.191344   56.592073
+20          rev10   m   nextopen -0.316791 -0.007919 -0.044559  0.140657   33.448393
+30     rev5_resid   w   nextopen -0.319851  0.648329 -0.048931  0.152982  137.628407
+22          rev21   d   nextopen -0.328972  0.452222 -0.061348  0.186485  135.655756
+23          rev21   d  nextclose -0.348518  0.447722 -0.063770  0.182975  135.675177
+19          rev10   w  nextclose -0.350441  0.263053 -0.060637  0.173030   96.228612
+58        lowbeta   m   nextopen -0.356217 -0.282941 -0.086462  0.242724    7.789033
+38    rev21_resid   d   nextopen -0.367824  0.485057 -0.062440  0.169755  134.761612
+59        lowbeta   m  nextclose -0.370426 -0.297051 -0.089787  0.242387    7.789033
+37    rev10_resid   m  nextclose -0.370881 -0.022742 -0.046027  0.124103   33.214897
+99        intra21   m  nextclose -0.378764 -0.072925 -0.052827  0.139472   32.708158
+56        lowbeta   w   nextopen -0.380703 -0.287898 -0.094857  0.249163   13.123397
+57        lowbeta   w  nextclose -0.385402 -0.292446 -0.095817  0.248615   13.123397
+39    rev21_resid   d  nextclose -0.391223  0.482691 -0.064810  0.165660  134.779480
+55        lowbeta   d  nextclose -0.393370 -0.270315 -0.098779  0.251109   20.895023
+98        intra21   m   nextopen -0.394235 -0.091863 -0.055622  0.141089   32.708158
+36    rev10_resid   m   nextopen -0.404526 -0.058961 -0.050556  0.124976   33.214897
+35    rev10_resid   w  nextclose -0.406597  0.270495 -0.063806  0.156927   96.327506
+46        rev5_vs   w   nextopen -0.410214  0.608435 -0.060492  0.147465  139.765345
+54        lowbeta   d   nextopen -0.412118 -0.289342 -0.103676  0.251569   20.890050
+85       turn_chg   w  nextclose -0.435612  0.289061 -0.038182  0.087652   53.497428
+82       turn_chg   d   nextopen -0.478045  0.455488 -0.042698  0.089317   73.372378
+15           rev5   w  nextclose -0.535904  0.342875 -0.090081  0.168092  137.769872
+92          ovn21   m   nextopen -0.554938 -0.227443 -0.071726  0.129251   32.377114
+31     rev5_resid   w  nextclose -0.559142  0.423941 -0.083968  0.150172  137.628407
+16          rev10   d   nextopen -0.603769  0.517459 -0.113470  0.187936  200.705099
+130       gap_rev   w   nextopen -0.605698  0.287028 -0.100856  0.166513  138.492835
+83       turn_chg   d  nextclose -0.626046  0.315625 -0.055436  0.088549   73.384434
+93          ovn21   m  nextclose -0.631262 -0.304735 -0.081631  0.129315   32.377114
+94        intra21   d   nextopen -0.645299  0.265144 -0.105871  0.164066  139.364696
+47        rev5_vs   w  nextclose -0.656375  0.380475 -0.094832  0.144478  139.765345
+131       gap_rev   w  nextclose -0.670200  0.228413 -0.110922  0.165506  138.492835
+127     range_pos   w  nextclose -0.702611  0.625594 -0.080151  0.114076  140.748678
+95        intra21   d  nextclose -0.708289  0.219549 -0.114043  0.161012  139.381133
+17          rev10   d  nextclose -0.734551  0.418646 -0.134238  0.182748  200.742079
+32    rev10_resid   d   nextopen -0.735289  0.496621 -0.125311  0.170424  199.951411
+33    rev10_resid   d  nextclose -0.842847  0.421580 -0.139965  0.166062  199.987384
+123      vwap_dev   w  nextclose -0.844708  0.265872 -0.112612  0.133315  137.794391
+126     range_pos   w   nextopen -0.859624  0.476988 -0.097437  0.113349  140.748678
+122      vwap_dev   w   nextopen -0.862838  0.253774 -0.114430  0.132620  137.794391
+12           rev5   d   nextopen -0.872621  0.745371 -0.159412  0.182682  285.434329
+13           rev5   d  nextclose -0.997688  0.662767 -0.177580  0.177992  285.465930
+91          ovn21   w  nextclose -1.043504 -0.521441 -0.145155  0.139103   62.893953
+90          ovn21   w   nextopen -1.061137 -0.538006 -0.147656  0.139149   62.893953
+88          ovn21   d   nextopen -1.110784 -0.196725 -0.159630  0.143709  121.343646
+103          ovn5   w  nextclose -1.132750 -0.173807 -0.171010  0.150969  135.039995
+28     rev5_resid   d   nextopen -1.137407  0.617799 -0.190744  0.167701  284.295207
+44        rev5_vs   d   nextopen -1.166917  0.706211 -0.187415  0.160607  290.724115
+29     rev5_resid   d  nextclose -1.186498  0.637509 -0.191494  0.161395  284.321476
+89          ovn21   d  nextclose -1.300199 -0.381636 -0.185969  0.143031  121.367681
+45        rev5_vs   d  nextclose -1.302610  0.640405 -0.201660  0.154813  290.751836
+112  n_trades_chg   w   nextopen -1.366384  0.008788 -0.111120  0.081324  101.827724
+102          ovn5   w   nextopen -1.479929 -0.524752 -0.223363  0.150928  135.039995
+113  n_trades_chg   w  nextclose -1.536320 -0.167438 -0.125362  0.081599  101.827724
+80         absvol   w   nextopen -1.572724 -0.064178 -0.137120  0.087186  121.580105
+81         absvol   w  nextclose -1.938139 -0.417024 -0.167223  0.086280  121.580105
+110  n_trades_chg   d   nextopen -2.013635 -0.056902 -0.167383  0.083125  152.654078
+111  n_trades_chg   d  nextclose -2.262022 -0.274175 -0.185111  0.081834  152.673289
+101          ovn5   d  nextclose -2.390644 -0.571728 -0.371724  0.155491  272.919866
+100          ovn5   d   nextopen -2.465236 -0.645459 -0.383385  0.155517  272.916410
+128       gap_rev   d   nextopen -3.714249  0.150203 -0.642629  0.173017  658.554121
+129       gap_rev   d  nextclose -3.969067 -0.029105 -0.673443  0.169673  658.514596
+120      vwap_dev   d   nextopen -4.332693  0.597003 -0.587561  0.135611  658.479889
+78         absvol   d   nextopen -4.498669  0.275022 -0.413524  0.091921  428.783679
+121      vwap_dev   d  nextclose -4.673140  0.267433 -0.632358  0.135318  658.496302
+79         absvol   d  nextclose -5.003888 -0.042353 -0.442538  0.088439  428.794848
+124     range_pos   d   nextopen -5.794971  0.259157 -0.653352  0.112745  672.546996
+125     range_pos   d  nextclose -5.983998  0.222405 -0.658137  0.109983  672.566449
