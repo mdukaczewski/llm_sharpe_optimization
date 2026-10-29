@@ -16,3 +16,5 @@ agents/*/out/*.parquet
 *.parquet
 agents/*/out/
 agents/*/log_*.txt
+agents/*/final.log
+agents/*/*.log

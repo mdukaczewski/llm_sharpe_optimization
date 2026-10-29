@@ -5,7 +5,7 @@ N = int(sys.argv[1]); tag = sys.argv[2]
 tks = rlib.universe(1500)[:N]
 D = load(tickers=tks)
 F28 = FEATS18 + EXTRA10
-SETS = {"f28cal": F28 + CAL, "fall_nonn": F28 + XR + MR + CAL, "f28cal_nn": F28 + CAL + ["nnames"], "fall_s1": F28 + XR + MR + CAL + ["nnames"]}
+SETS = {"fall_v2": F28 + XR + MR + CAL + ["nnames"], "f28cal": F28 + CAL, "fall_nonn": F28 + XR + MR + CAL, "f28cal_nn": F28 + CAL + ["nnames"], "f28_v2": F28}
 preds = pd.DataFrame({"date": D.date, "tk": D.tk}); res = {}
 for nm, fs in SETS.items():
     t0 = time.time(); p = wf(D, fs, "yr", "Y", seed=1 if nm == "fall_s1" else 0); preds[nm] = p
