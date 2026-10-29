@@ -30,3 +30,4 @@ agents/*/preds.log
 agents/*/k10.log
 logs/fetch_minute2_local.log
 agents/*/booklab.log
+agents/*/breadth2000.log
