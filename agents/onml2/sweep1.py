@@ -1,9 +1,9 @@
-"""(a) capacity + (b) training window sweep: universe(1500), yearly retrain, f28cal, rank target, seed 0.
+"""(a) capacity + (b) training window sweep: universe(2000), yearly retrain, f26cal (= f28cal minus zmoc/vmoc_share), rank target, seed 0.
 Each raw prediction saved as out/raw_{name}.npy aligned to load(1500) row order. Evaluated at k=10/20 eq at the commission."""
 import sys; sys.path.insert(0, "/home/user/llm_sharpe_optimization/agents/onml2")
 from o2lib import *
 NJ = int(os.environ.get("ONML2_NJOBS", "2"))
-D = load(1500, extra=False)
+NU = int(os.environ.get("ONML2_N", "2000")); D = load(NU, extra=False)
 for c in CAL: pass
 # calendar features are built in olib.load only with extra=True; rebuild them cheaply here
 g = D.groupby("date")
@@ -28,13 +28,15 @@ CFG = {
   "L31_1000":  dict(params=dict(num_leaves=31, n_estimators=1000, learning_rate=0.02)),
   "L63_600":   dict(params=dict(num_leaves=63, n_estimators=600, learning_rate=0.02)),
   "L63_1000":  dict(params=dict(num_leaves=63, n_estimators=1000, learning_rate=0.02)),
+  "L31_600_hl4": dict(params=dict(num_leaves=31, n_estimators=600, learning_rate=0.02), halflife_years=4),
 }
 only = sys.argv[1:] or list(CFG)
-for name in only:
+order = ["base", "mcs500", "mcs1000", "cs05", "roll3", "roll4", "hl2", "hl4", "L31_600", "L63_600", "L31_1000", "L63_1000", "L31_600_hl4"]
+for name in [n for n in order if n in only]:
     kw = CFG[name]; fp = f"{OUT}/raw_{name}.npy"
     if os.path.exists(fp): raw = pd.Series(np.load(fp), index=D.index); log(f"{name}: loaded")
     else:
-        t0 = time.time(); raw = wf2(D, F28CAL, "yr", "Y", seed=0, n_jobs=NJ, **kw); np.save(fp, raw.values.astype(np.float32))
+        t0 = time.time(); raw = wf2(D, F26CAL, "yr", "Y", seed=0, n_jobs=NJ, **kw); np.save(fp, raw.values.astype(np.float32))
         log(f"{name}: trained {time.time()-t0:.0f}s IC {ic(D, raw)}")
     p = xrank(D, raw)
     for k in [10, 20]:

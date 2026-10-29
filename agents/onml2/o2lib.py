@@ -13,6 +13,9 @@ OUT = f"{HERE}/agents/onml2/out"; os.makedirs(OUT, exist_ok=True)
 LOG = f"{HERE}/agents/onml2/log.txt"; olib.LOG = LOG   # olib.load logs here, not into the onml lane
 COMM = 6.0 / 400000.0          # per position per day ($3 in + $3 out on $0.4M)
 F28CAL = FEATS18 + EXTRA10 + CAL
+MOC = ["zmoc", "vmoc_share"]                 # closing print / closing-auction volume: known only AT the close -> not usable for a MOC order
+F26CAL = [f for f in F28CAL if f not in MOC]  # the implementable set used for every kept candidate
+F24CAL = [f for f in F26CAL if f not in ("z5l", "z15l")]   # also without the 15:44-15:59 returns (MOC must be entered by 15:50)
 BASE = dict(n_estimators=300, learning_rate=0.03, num_leaves=15, min_child_samples=200, subsample=0.8, subsample_freq=1, colsample_bytree=0.8)
 
 def log(*a):

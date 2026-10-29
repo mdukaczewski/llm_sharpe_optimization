@@ -1,10 +1,10 @@
 """(c)+(d) construction sweep at the commission on saved predictions.
 usage: constr.py q3            -> agents/onml/out/pred_f28cal_q3.parquet (3-seed quarterly rank-avg; cut at DEV_END)
-       constr.py raw:<name>    -> agents/onml2/out/raw_<name>.npy (yearly raw preds aligned to load(1500, extra=False))"""
+       constr.py raw:<name>    -> agents/onml2/out/raw_<name>.npy (yearly raw preds aligned to load(ONML2_N, extra=False))"""
 import sys; sys.path.insert(0, "/home/user/llm_sharpe_optimization/agents/onml2")
 from o2lib import *
 src = sys.argv[1]; tag = src.replace(":", "_")
-D = load(1500, extra=False)
+D = load(int(os.environ.get("ONML2_N", "2000")), extra=False)
 if src == "q3":
     Pq = pd.read_parquet(f"{HERE}/agents/onml/out/pred_f28cal_q3.parquet"); Pq = Pq[Pq.date <= rlib.DEV_END]
     D = D.merge(Pq, on=["date", "tk"], how="left"); p = D["p"]; raw = None
