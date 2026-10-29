@@ -74,3 +74,59 @@ little; the difference is also within seed/row-order noise. Correlation of the n
 lower than expected — the extra features change about half of the picks.
 
 ## 3. Kept candidates (agents/onml/cands, written by `final.py`)
+All three use feature set f28cal (32 features), rank target, LightGBM baseline params, quarterly expanding retrain from
+2017-01-01 (label lag 3 days), universe(1500) = 1497 names, L/S book exit at the 09:31 bar, rlib costs.  Numbers from the
+final.py dev run (agents/onml/final.log, 2852 s at n_jobs=2 on the shared box); `python3 agents/onml/rep.py` reprints them.
+
+| candidate              | members                    | book            | full | fold-OOS | halves    | maxDD  | ret/vol      | corr sleeve | corr SPY | min fold |
+|------------------------|----------------------------|-----------------|------|----------|-----------|--------|--------------|-------------|----------|----------|
+| onml_f28cal_q_k20      | seed 0                     | top/bot 20 eq   | 3.93 | 3.99     | 4.37/3.44 | -13.4% | 68.1%/17.3%  | 0.59        | -0.04    | 0.77     |
+| onml_f28cal_q3_k20     | seeds 0,1,2 rank-averaged  | top/bot 20 eq   | 3.75 | 3.76     | 4.10/3.35 | -15.3% | 64.6%/17.2%  | 0.60        | -0.03    | 1.10     |
+| onml_f28cal_q3_k30p    | seeds 0,1,2 rank-averaged  | top/bot 30 pred-w | 3.84 | 3.83   | 4.34/3.26 | -12.7% | 56.8%/14.8%  | 0.63        | -0.02    | 0.95     |
+| family (rlib.fold_oos over the three)                           |                 |      | **3.92** | folds mean 4.05, min 0.77, 0/16 negative |
+| existing sleeve onlgb1200q_ls20, same dev window                |                 | 3.40 | 3.49     | 4.28/2.41 | -19.1% | 60.2%/17.7%  | 1.00        |          | 0.07     |
+
+Yearly Sharpe (q3_k20): 17 +3.3, 18 +4.3, 19 +4.1, 20 +5.0, 21 +4.1, 22 +3.7, 23 +3.0, 24 +4.2, 25 +3.8, 26(Jan-Apr) +1.1
+(sleeve: 22 +1.2, 23 +2.4, 26 +1.5).  Candidates are 0.93-0.95 correlated with each other.
+Cost sensitivity (flat 1.5 bps/side instead of rlib.cost_bps, seed-0 k20 book from exp5): 3.93/3.99 -> 3.81/3.87, i.e.
+-0.12 Sharpe (the 1200-name sleeve lost ~0.35 under the same change per README: the new book turns over the same 80 names
+a day but its gross return is higher).  Expect the same -0.12..-0.15 for the two ensembles.
+Honesty note on the seed-0 line: seed 0 happens to be the best of the three seeds at 1500 names (3.93 vs 3.75 for the
+3-seed average); the 3.75-3.85 ensemble numbers are the central estimate, 3.93/3.99 is the optimistic one.  Even so every
+variant is 0.3-0.5 above the existing sleeve on the identical dev window with a lower drawdown and a far better 2022-23.
+
+## 4. What I would keep, and why
+* **onml_f28cal_q3_k20** (3-seed average, top/bottom 20 equal weight) as the replacement of sleeves/onlgb1200q_ls20: same
+  recipe as the existing sleeve (rank target, quarterly expanding retrain, LightGBM 300 trees / 15 leaves / lr 0.03 /
+  min_child_samples 200, k=20 equal weight) with 14 extra close-time / calendar features and the full 1500-name universe.
+  The seed average removes the +-0.15 single-seed spread without changing the mean; the single-seed version
+  (onml_f28cal_q_k20) is kept so the coordinator can see that the ensemble is not doing the work.
+* **onml_f28cal_q3_k30p** (top/bottom 30, prediction-weighted) is the higher-Sharpe / lower-drawdown construction variant;
+  pred-weighting was a consistent +0.1 at both 400 and 1500 names and k30 only helps once breadth is 1500. It holds 60 names
+  instead of 40, so it is the more capacity-friendly line, but it is one more construction choice made after seeing the data.
+* Not kept: the 50-feature 'fall' set (same fold-OOS, -22% drawdown, cross-sectional ranks add nothing at 400 names),
+  the 10:31 exit, vol-scaled and classification targets, 1/rv20 weights, |pred| quantile filters, yearly retrain.
+
+## 5. Leakage / robustness checklist
+* All features come from rlib.ticker_frame (close-time features, lagged rolling std in zsd) or the calendar; dsgap uses
+  |zgap| of day t and earlier (gap of day t is known at the open of t); dme/qend/dow are known in advance.
+  No feature uses y_on, the 09:31 bar of t+1, or any forward quantity.  The vol-scaled target (not kept) used a shift(1)
+  rolling std of past y_on.
+* Training rows end label_lag_days=3 before each quarterly cut; test rows are [cut, next cut).  The per-day rank target is
+  built within each day only.  Predictions are rank-normalised per day before averaging (no cross-day information).
+* Fills/costs = rlib.book conventions: close fill at the official close, exit at the 09:31 bar, 1 bp/side (1.5 bps for ranks
+  > 600), borrow 1%/yr; a 1.5 bps/side flat cost costs 0.12-0.15 Sharpe at 1500 names.
+* Universe = data/univ1500.txt ranked by today's median dollar volume (survivorship, same as the existing sleeve);
+  minute data with |y| > 0.5 removed (split guard); v2 caches split-adjust the forward targets.
+* Selection noise: the feature set was chosen among 5 at 400 names (fold-OOS gap 1.0 vs seed noise 0.15), the construction
+  among ~10 cheap variants; only f28cal and fall were run at 1500 names, and only f28cal was carried into final.py.
+* Remaining in-sample element: the EXTRA10 features were written into rlib.ticker_frame earlier in the project with the
+  whole sample visible, and the LightGBM parameters are the baseline ones (not re-tuned).
+
+## 6. final.py
+`nohup python3 agents/onml/final.py > agents/onml/final.log 2>&1 &` rebuilds the three kept candidates from
+data/minute_npz via rlib (universe(1500), ONML_NJOBS default 4), writes them with rlib.save_cand("onml", ...) and honours
+STRAT_END through rlib.DEV_END (loaders, walk-forward cuts and book() all cut there).  Expected runtime: ~40 s load
+(warm cache; ~15 min if the per-ticker cache must be rebuilt) + 3 quarterly walk-forwards of ~15 min each at n_jobs=2 on
+the shared box (47.5 min measured for the dev run at n_jobs=2 while sharing the box; ~25-30 min alone with n_jobs=4); memory ~2 GB.
+With STRAT_END=2026-10-28 the frame grows by 6 months and the cuts add two quarters: budget ~1 hour.
