@@ -1,12 +1,14 @@
 universe(1500): 1500 names, DEV_END 2026-04-27
   minute_frame 100/1500 1s
-  minute_frame 200/1500 1s
-  minute_frame 300/1500 2s
-  minute_frame 400/1500 2s
-  minute_frame 500/1500 3s
-  minute_frame 600/1500 3s
-  minute_frame 700/1500 4s
-  minute_frame 800/1500 4s
-  minute_frame 900/1500 4s
-  minute_frame 1000/1500 21s
-  minute_frame 1100/1500 57s
+  minute_frame 200/1500 2s
+  minute_frame 300/1500 3s
+  minute_frame 400/1500 4s
+  minute_frame 500/1500 4s
+  minute_frame 600/1500 5s
+  minute_frame 700/1500 6s
+  minute_frame 800/1500 6s
+  minute_frame 900/1500 7s
+  minute_frame 1000/1500 7s
+  minute_frame 1100/1500 8s
+  minute_frame 1200/1500 9s
+  minute_frame 1300/1500 23s

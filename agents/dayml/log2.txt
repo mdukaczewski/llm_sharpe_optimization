@@ -17,3 +17,5 @@ RLJ skip Could not open Parquet input source '<Buffer>': Parquet file size is 0 
 TEN skip Could not open Parquet input source '<Buffer>': Parquet file size is 0 bytes
 SAIC skip Could not open Parquet input source '<Buffer>': Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
   build 1100/1500 81s
+BRKR skip Could not open Parquet input source '<Buffer>': Parquet magic bytes not found in footer. Either the file is corrupted or this is not a parquet file.
+  build 1200/1500 112s
