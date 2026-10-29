@@ -1,0 +1,29 @@
+  minute_frame 100/308 2s
+  minute_frame 200/308 4s
+  minute_frame 300/308 56s
+built rows 699290 names 308
+100s
+cc_rev_zcc_ls20_h1 to1.82      Sh -0.34 OOS -0.33 h -0.57/-0.05 mdd -77.0% minfold -2.36
+cc_rev_zcc_ls20_h2 to0.92      Sh -0.15 OOS -0.11 h -0.38/0.16 mdd -53.9% minfold -1.67
+cc_rev_zcc_ls20_h5 to0.37      Sh  0.06 OOS  0.15 h -0.02/0.17 mdd -33.4% minfold -1.45
+cc_rev_zcc_lo20_h1             Sh  0.34 OOS  0.27 h 0.30/0.40 mdd -62.0% minfold -2.30
+cc_rev_cc5_ls20_h1 to0.93      Sh -0.05 OOS -0.01 h -0.01/-0.09 mdd -67.6% minfold -1.79
+cc_rev_cc5_ls20_h2 to0.63      Sh  0.17 OOS  0.29 h 0.32/-0.01 mdd -57.3% minfold -1.23
+cc_rev_cc5_ls20_h5 to0.37      Sh  0.29 OOS  0.39 h 0.43/0.11 mdd -46.3% minfold -1.69
+cc_rev_cc5_lo20_h1             Sh  0.55 OOS  0.51 h 0.53/0.60 mdd -67.0% minfold -2.65
+cc_rev_z60_ls20_h1 to1.82      Sh  0.91 OOS  0.82 h 1.59/0.21 mdd -34.4% minfold -1.48
+cc_rev_z60_ls20_h2 to0.91      Sh  0.42 OOS  0.29 h 1.07/-0.27 mdd -29.7% minfold -2.23
+cc_rev_z60_ls20_h5 to0.37      Sh  0.29 OOS  0.18 h 0.74/-0.24 mdd -17.9% minfold -1.94
+cc_rev_z60_lo20_h1             Sh  1.05 OOS  0.97 h 1.23/0.81 mdd -45.4% minfold -1.78
+cc_base_ls20_h1 to1.82         Sh  0.85 OOS  0.81 h 1.58/0.10 mdd -36.8% minfold -3.02
+cc_base_ls20_h2 to0.92         Sh  0.48 OOS  0.40 h 1.27/-0.36 mdd -32.8% minfold -2.28
+cc_base_ls20_h5 to0.37         Sh  0.24 OOS  0.16 h 1.08/-0.72 mdd -26.3% minfold -2.77
+cc_base_lo20_h1                Sh  1.07 OOS  1.00 h 1.31/0.75 mdd -32.5% minfold -1.84
+cc_cont_zon_ls20_h1 to1.79     Sh -0.32 OOS -0.17 h 0.07/-0.75 mdd -59.6% minfold -2.18
+cc_cont_zon_ls20_h2 to0.90     Sh -0.21 OOS -0.16 h 0.02/-0.49 mdd -37.1% minfold -2.66
+cc_cont_zon_ls20_h5 to0.37     Sh -0.46 OOS -0.47 h -0.37/-0.56 mdd -43.7% minfold -1.81
+cc_cont_zon_lo20_h1            Sh  0.39 OOS  0.35 h 0.77/-0.08 mdd -34.2% minfold -2.55
+cc_rev_zcc_mr_ls20_h1 to1.82   Sh -0.34 OOS -0.33 h -0.57/-0.05 mdd -77.0% minfold -2.36
+cc_rev_zcc_mr_ls20_h2 to0.92   Sh -0.15 OOS -0.11 h -0.38/0.16 mdd -53.9% minfold -1.67
+cc_rev_zcc_mr_ls20_h5 to0.37   Sh  0.06 OOS  0.15 h -0.02/0.17 mdd -33.4% minfold -1.45
+cc_rev_zcc_mr_lo20_h1          Sh  0.34 OOS  0.27 h 0.30/0.40 mdd -62.0% minfold -2.30

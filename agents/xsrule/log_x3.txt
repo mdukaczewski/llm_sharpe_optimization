@@ -1,0 +1,52 @@
+  minute_frame 100/308 2s
+  minute_frame 200/308 4s
+  minute_frame 300/308 55s
+built rows 699290 names 308
+all-names EW overnight: n~291
+EW overnight every day                   Sh  0.47 | ret    6.1% vol  13.1% mdd  -32.9% | halves 0.69/0.14 | yrs 16:+6.1 17:+1.6 18:+0.5 19:+0.9 20:+0.4 21:+1.9 22:-0.5 23:-0.0 24:+1.3 25:-0.1 26:+0.7
+by weekday of exit morning (Mon=0):
+             mean      std  count       sh
+dow_next                                  
+0.0      -0.00002  0.01071    443 -0.02484
+1.0       0.00076  0.00783    488  1.54616
+2.0       0.00043  0.00714    485  0.95477
+3.0      -0.00046  0.00765    477 -0.95514
+4.0       0.00047  0.00750    470  0.98842
+by days left in month (0=last):
+          mean  count       sh
+mleft                         
+0.0    0.00102    115  1.95899
+1.0   -0.00087    115 -1.68593
+2.0    0.00075    114  1.44799
+3.0    0.00029    114  0.55274
+4.0    0.00105    114  2.03486
+by position in month:
+         mean  count       sh
+mpos                         
+0    -0.00046    115 -0.88086
+1     0.00004    115  0.08544
+2     0.00059    114  1.14724
+3     0.00073    114  1.40682
+FOMC:
+                        mean  count       sh
+fomc_next fomc_prev                         
+False     False      0.00025   2214  0.48020
+          True      -0.00103     75 -1.98356
+True      False      0.00135     75  2.59868
+ew_all                             Sh 0.47 OOS 0.35 halves 0.69/0.14 mdd -32.9% folds min -1.71 neg 6 | corr {'xslo20s1_150': 0.692, 'onlgb1200q': 0.243, 'spy_cc': 0.635, 'spy_on': 0.959}
+ew_tom                             Sh -0.07 OOS -0.68 halves 0.80/-1.13 mdd -23.7% folds min -2.49 neg 9 | corr {'xslo20s1_150': 0.275, 'onlgb1200q': 0.048, 'spy_cc': 0.243, 'spy_on': 0.369}
+ew_fomc                            Sh 0.72 OOS nan halves 0.59/0.91 mdd -1.9% folds min nan neg 0 | corr {'xslo20s1_150': 0.123, 'onlgb1200q': 0.076, 'spy_cc': 0.092, 'spy_on': 0.109}
+ew_notfri                          Sh 0.58 OOS 0.54 halves 0.83/0.22 mdd -15.8% folds min -1.98 neg 5 | corr {'xslo20s1_150': 0.679, 'onlgb1200q': 0.192, 'spy_cc': 0.534, 'spy_on': 0.79}
+ew_tom_fomc                        Sh 0.16 OOS -0.42 halves 0.92/-0.78 mdd -19.4% folds min -2.27 neg 7 | corr {'xslo20s1_150': 0.296, 'onlgb1200q': 0.07, 'spy_cc': 0.257, 'spy_on': 0.383}
+base_on                            Sh 1.52 OOS 1.43 halves 1.97/0.90 mdd -9.5% folds min -1.20 neg 2 | corr {'xslo20s1_150': 0.86, 'onlgb1200q': 0.276, 'spy_cc': 0.483, 'spy_on': 0.701}
+base_id_long                       Sh 0.16 OOS 0.20 halves -0.09/0.42 mdd -34.4% folds min -2.78 neg 8 | corr {'xslo20s1_150': 0.015, 'onlgb1200q': -0.013, 'spy_cc': 0.562, 'spy_on': 0.013}
+base_id_short                      Sh -0.80 OOS -0.81 halves -0.57/-1.03 mdd -69.0% folds min -3.01 neg 10 | corr {'xslo20s1_150': -0.016, 'onlgb1200q': 0.013, 'spy_cc': -0.563, 'spy_on': -0.014}
+base_cc_hold                       Sh 1.37 OOS 1.33 halves 1.54/1.16 mdd -24.0% folds min -1.97 neg 4 | corr {'xslo20s1_150': 0.592, 'onlgb1200q': 0.175, 'spy_cc': 0.729, 'spy_on': 0.482}
+base_on_minus_id                   Sh 0.42 OOS 0.37 halves 1.07/-0.32 mdd -43.7% folds min -2.77 neg 7 | corr {'xslo20s1_150': 0.587, 'onlgb1200q': 0.201, 'spy_cc': -0.081, 'spy_on': 0.478}
+   corr on vs id leg 0.032
+comp_on                            Sh 1.57 OOS 1.42 halves 2.02/0.95 mdd -11.8% folds min -1.46 neg 2 | corr {'xslo20s1_150': 0.802, 'onlgb1200q': 0.284, 'spy_cc': 0.499, 'spy_on': 0.733}
+comp_id_long                       Sh -0.01 OOS 0.03 halves -0.16/0.14 mdd -39.5% folds min -3.16 neg 8 | corr {'xslo20s1_150': 0.019, 'onlgb1200q': -0.011, 'spy_cc': 0.582, 'spy_on': 0.022}
+comp_id_short                      Sh -0.63 OOS -0.64 halves -0.51/-0.76 mdd -65.3% folds min -3.32 neg 10 | corr {'xslo20s1_150': -0.02, 'onlgb1200q': 0.01, 'spy_cc': -0.583, 'spy_on': -0.023}
+comp_cc_hold                       Sh 1.26 OOS 1.19 halves 1.52/0.93 mdd -26.5% folds min -2.41 neg 3 | corr {'xslo20s1_150': 0.551, 'onlgb1200q': 0.181, 'spy_cc': 0.756, 'spy_on': 0.507}
+comp_on_minus_id                   Sh 0.56 OOS 0.47 halves 1.14/-0.10 mdd -40.3% folds min -2.38 neg 7 | corr {'xslo20s1_150': 0.537, 'onlgb1200q': 0.203, 'spy_cc': -0.092, 'spy_on': 0.487}
+   corr on vs id leg 0.032
