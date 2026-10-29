@@ -1,0 +1,2 @@
+xsr_cAx_lo20_s15_u150	Sh=2.28	overnight LO top20 cAx>1.5 on 150 names, exit 09:31, 1bp/side; all inputs pre-close
+xsr_cAx_ls20_u150	Sh=1.76	overnight L/S top/bottom 20 by cAx on 150 names, exit 09:31, 1bp/side; all inputs pre-close
