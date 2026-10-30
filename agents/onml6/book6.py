@@ -37,13 +37,12 @@ def load_H(preds):
     return G
 
 def use_cut(H, sfx):
-    """switch the cost inputs of H to the information of cut sfx ('49' / '59' / 'orig')"""
-    H = H.copy()
+    """switch the cost inputs of H (IN PLACE) to the information of cut sfx ('49' / '59' / 'orig')"""
     if sfx == "orig": H["rv20"] = H.rv20_orig; H["hs1559"] = H.hs1559_orig if "hs1559_orig" in H else H.hs1559
     else: H["rv20"] = H[f"rv20_{sfx}"]; H["hs1559"] = H[f"hs1559_{sfx}"]
     return H
 
-def two_stage(H, p1, p2, k=6, lam=3.0, c=0.3, borrow=0.01, ret_pos=False, stage2="all"):
+def two_stage(H, p1, p2, k=6, lam=3.0, c=0.3, borrow=0.01, ret_pos=False, stage2="all", mocslots=None):
     """(b): H must carry rv20_49, hs1559_49, hs1559_59 and the prediction columns p1 (cut 378) and p2 (cut 388).
     Rows = names with both predictions and y_oo.  Returns the series net of route cost + borrow, before commission."""
     H = H[H[p1].notna() & H[p2].notna() & H.y_oo.notna()].reset_index(drop=True)
@@ -53,6 +52,7 @@ def two_stage(H, p1, p2, k=6, lam=3.0, c=0.3, borrow=0.01, ret_pos=False, stage2
     moc = auction(Hc, order, c, "close").values; moo = auction(Hc, order, c, "open").values
     xe1 = H.hs1559_49.values + ADV; xe2 = H.hs1559_59.values + ADV
     is_moc = moc <= xe1
+    if mocslots is not None: is_moc = np.ones(len(H), bool)       # fixed mix: m MOC names per side at 15:49, k - m crosses at 15:59
     ent1 = np.where(is_moc, moc, xe1)
     ok = np.isfinite(moc) & np.isfinite(moo) & np.isfinite(xe1) & np.isfinite(xe2)
     H = H[ok].reset_index(drop=True); ey1 = ey1[ok].values; ey2 = ey2[ok].values; moc = moc[ok]; moo = moo[ok]; xe1 = xe1[ok]; xe2 = xe2[ok]; is_moc = is_moc[ok]; ent1 = ent1[ok]
@@ -61,7 +61,8 @@ def two_stage(H, p1, p2, k=6, lam=3.0, c=0.3, borrow=0.01, ret_pos=False, stage2
     df = pd.DataFrame({"date": d, "sL1": sL1, "sS1": sS1})
     df["n"] = df.groupby("date").sL1.transform("size"); valid = (df.n >= k + 5).values
     rL1 = df.groupby("date").sL1.rank(method="first", ascending=False).values; rS1 = df.groupby("date").sS1.rank(method="first", ascending=False).values
-    selL1 = valid & (rL1 <= k); selS1 = valid & (rS1 <= k)
+    m1 = k if mocslots is None else mocslots
+    selL1 = valid & (rL1 <= m1); selS1 = valid & (rS1 <= m1)
     mocL = selL1 & is_moc; mocS = selS1 & is_moc & ~mocL
     held = mocL | mocS
     nL = pd.Series(mocL, index=H.index).groupby(d).transform("sum").values; nS = pd.Series(mocS, index=H.index).groupby(d).transform("sum").values

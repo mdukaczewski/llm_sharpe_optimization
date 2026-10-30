@@ -1,3 +1,12 @@
   build 0/2000 7s
   build 200/2000 62s
   build 400/2000 116s
+  build 600/2000 174s
+  build 800/2000 222s
+  build 1000/2000 269s
+  build 1200/2000 317s
+  build 1400/2000 362s
+  build 1600/2000 405s
+  build 1800/2000 449s
+22:23:41 build cut 378: 4452322 rows 2000 names 500s
+22:23:49 build cut 388: 4452322 rows 2000 names 508s

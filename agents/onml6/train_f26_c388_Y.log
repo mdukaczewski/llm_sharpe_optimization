@@ -1,0 +1,2 @@
+22:25:59 train6 cut 388 f26 (29 feats) retrain Y seed 0 n_jobs 1: 2970081 rows, frame 12s; NaN share hs1559 0.000 z60 0.000
+22:34:05 train6 done f26_c388_Y_s0 498s  IC y_oo 0.0281 (t 12.2)

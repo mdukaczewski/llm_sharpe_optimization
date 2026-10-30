@@ -1,0 +1,34 @@
+22:49:52 final6 Y: o40 <- 1 file(s) ['pred_y_f40_on.parquet']
+22:49:54 final6 Y: o26 <- 1 file(s) ['pred_y_f26x_on.parquet']
+22:49:56 final6 Y: p40_378 <- 1 file(s) ['pred_f40_c378_Y_s0.parquet']
+22:49:58 final6 Y: p26_378 <- 1 file(s) ['pred_f26_c378_Y_s0.parquet']
+22:50:00 final6 Y: p40_388 <- 1 file(s) ['pred_f40_c388_Y_s0.parquet']
+22:50:02 final6 Y: p26_388 <- 1 file(s) ['pred_f26_c388_Y_s0.parquet']
+22:50:05 final6 Y: 2886460 rows 2017-01-03..2026-04-27
+22:50:06   IC y_oo p40: 0.0386
+22:50:07   IC y_oo p26: 0.0356
+22:50:08   IC y_oo o40: 0.0361
+22:50:09   IC y_oo o26: 0.0333
+22:50:10   IC y_oo p40_378: 0.0265
+22:50:11   IC y_oo p26_378: 0.0228
+22:50:12   IC y_oo p40_388: 0.0307
+22:50:13   IC y_oo p26_388: 0.0280
+22:50:14   IC y_oo pR_o: 0.0356
+22:50:15   IC y_oo pR_378: 0.0254
+22:50:16   IC y_oo pR_388: 0.0302
+22:50:31   book=ref_pR_o_rte|c0.3 pre=1.86 sh=1.55 fold=1.86 h1=1.87 h2=1.33 mdd=-21.1 ret=22.6 vol=14.6 fneg=3 yrs=17:-3.4 18:+1.0 19:+0.8 20:+4.9 21:+2.9 22:+0.8 23:-0.0 24:+3.6 25:+2.0 26:-0.7 corr_4x=0.85 gross_bps=8.7 cost_bps=3.11 t1%=86.0 x%=2.7
+22:50:39   book=ref_pR_o_moc|c0.3 pre=1.8 sh=1.49 fold=1.79 h1=1.77 h2=1.29 mdd=-21.4 ret=21.6 vol=14.5 fneg=4 yrs=17:-3.5 18:+1.0 19:+0.9 20:+4.9 21:+2.5 22:+0.8 23:-0.1 24:+3.8 25:+1.8 26:-1.0 corr_4x=0.85 gross_bps=8.46 cost_bps=3.07 t1%=86.3 x%=0.0
+22:50:49   book=diag_pR388_rte|c0.3 pre=1.68 sh=1.37 fold=1.56 h1=1.9 h2=1.02 mdd=-25.5 ret=20.0 vol=14.6 fneg=5 yrs=17:-1.8 18:+0.2 19:+0.8 20:+4.2 21:+3.3 22:+0.5 23:-0.9 24:+2.8 25:+2.1 26:-0.8 corr_4x=0.74 gross_bps=7.86 cost_bps=2.8 t1%=89.0 x%=1.2
+22:50:57   book=a_pR378_moc|c0.3 pre=1.19 sh=0.86 fold=1.02 h1=1.73 h2=0.25 mdd=-30.6 ret=11.8 vol=13.7 fneg=6 yrs=17:-2.4 18:+0.9 19:+0.6 20:+4.1 21:+2.5 22:-1.0 23:-0.1 24:+2.7 25:+1.4 26:-3.2 corr_4x=0.65 gross_bps=6.18 cost_bps=2.74 t1%=89.4 x%=0.0
+22:50:57   book=lmt_a_pR378_moc_s1.0|c0.3 sh=1.45 fold=1.49 h1=1.84 h2=0.99 mdd=-15.1 ret=16.5 vol=11.4 fneg=4 yrs=17:+0.4 18:+1.1 19:+1.8 20:+2.9 21:+1.5 22:-0.2 23:+0.8 24:+3.8 25:+1.7 26:-2.5 corr_4x=0.45 fill=45.4 gross_filled=11.07 gross_unfilled=2.12 cost_filled=2.74 net_filled=8.33
+22:50:57   book=lmt_a_pR378_moc_s1.2|c0.3 sh=1.49 fold=1.55 h1=1.88 h2=1.05 mdd=-13.9 ret=16.9 vol=11.3 fneg=4 yrs=17:+0.3 18:+1.0 19:+1.8 20:+3.0 21:+1.8 22:-0.3 23:+0.9 24:+3.8 25:+1.7 26:-2.5 corr_4x=0.45 fill=44.7 gross_filled=11.36 gross_unfilled=2.0 cost_filled=2.74 net_filled=8.61
+22:50:57   book=lmt_a_pR378_moc_s0.0|c0.3 sh=1.48 fold=1.52 h1=1.88 h2=1.0 mdd=-15.4 ret=17.1 vol=11.5 fneg=3 yrs=17:+0.4 18:+1.2 19:+1.8 20:+2.9 21:+1.6 22:-0.3 23:+0.9 24:+3.8 25:+1.8 26:-2.7 corr_4x=0.46 fill=47.7 gross_filled=10.94 gross_unfilled=1.83 cost_filled=2.75 net_filled=8.2
+22:51:06   book=a_p40_378_moc|c0.3 pre=1.45 sh=1.13 fold=1.24 h1=2.08 h2=0.44 mdd=-40.7 ret=16.1 vol=14.2 fneg=6 yrs=17:-2.2 18:+1.2 19:+0.5 20:+4.3 21:+3.5 22:-1.3 23:-0.9 24:+3.4 25:+1.4 26:-2.7 corr_4x=0.65 gross_bps=6.95 cost_bps=2.66 t1%=87.9 x%=0.0
+22:51:06   book=lmt_a_p40_378_moc_s1.0|c0.3 sh=1.82 fold=1.9 h1=2.02 h2=1.59 mdd=-11.5 ret=21.0 vol=11.6 fneg=2 yrs=17:+0.2 18:+1.5 19:+0.8 20:+3.3 21:+2.7 22:+0.5 23:+0.9 24:+4.0 25:+1.9 26:-1.2 corr_4x=0.46 fill=45.1 gross_filled=12.99 gross_unfilled=1.98 cost_filled=2.65 net_filled=10.35
+22:51:06   book=lmt_a_p40_378_moc_s1.2|c0.3 sh=1.86 fold=1.94 h1=2.08 h2=1.6 mdd=-11.4 ret=21.3 vol=11.5 fneg=2 yrs=17:+0.2 18:+1.5 19:+0.9 20:+3.4 21:+2.9 22:+0.5 23:+1.0 24:+3.8 25:+2.0 26:-1.2 corr_4x=0.46 fill=44.3 gross_filled=13.28 gross_unfilled=1.92 cost_filled=2.65 net_filled=10.63
+22:51:07   book=lmt_a_p40_378_moc_s0.0|c0.3 sh=1.81 fold=1.87 h1=2.02 h2=1.57 mdd=-12.3 ret=21.2 vol=11.7 fneg=3 yrs=17:+0.4 18:+1.7 19:+0.6 20:+3.2 21:+2.6 22:+0.4 23:+1.0 24:+4.0 25:+1.9 26:-1.1 corr_4x=0.47 fill=47.5 gross_filled=12.59 gross_unfilled=1.84 cost_filled=2.64 net_filled=9.95
+22:51:17   book=a_p26_378_moc|c0.3 pre=1.16 sh=0.8 fold=1.02 h1=0.88 h2=0.76 mdd=-33.2 ret=10.0 vol=12.6 fneg=6 yrs=17:-3.9 18:-1.1 19:-0.6 20:+3.2 21:+2.5 22:-0.0 23:-0.1 24:+2.8 25:+1.5 26:-1.1 corr_4x=0.59 gross_bps=5.66 cost_bps=2.58 t1%=91.8 x%=0.0
+22:51:28   book=x_pR388_x1559|c0.3 pre=1.2 sh=0.89 fold=1.11 h1=1.43 h2=0.52 mdd=-33.3 ret=13.3 vol=14.9 fneg=6 yrs=17:-2.9 18:-0.3 19:-0.2 20:+4.1 21:+2.6 22:+0.1 23:-1.8 24:+2.1 25:+1.9 26:-0.8 corr_4x=0.77 gross_bps=8.18 cost_bps=4.45 t1%=89.2 x%=100.0
+22:51:41   book=b_two|c0.3 pre=1.21 sh=0.89 fold=1.04 h1=1.66 h2=0.32 mdd=-28.3 ret=12.5 vol=14.0 fneg=5 yrs=17:-2.4 18:+0.5 19:+0.5 20:+4.1 21:+2.4 22:-0.7 23:-0.3 24:+2.9 25:+1.4 26:-3.2 corr_4x=0.66 gross_bps=6.36 cost_bps=2.79 t1%=89.3 x%=3.1
+22:51:54   book=b3_two_m3|c0.3 pre=1.23 sh=0.93 fold=1.13 h1=1.6 h2=0.46 mdd=-34.1 ret=14.3 vol=15.3 fneg=6 yrs=17:-3.2 18:+0.5 19:+0.2 20:+4.2 21:+2.6 22:-0.2 23:-1.3 24:+2.3 25:+1.8 26:-1.7 corr_4x=0.73 gross_bps=7.6 cost_bps=3.66 t1%=88.5 x%=50.1
+22:52:07   book=b_two_p40|c0.3 pre=1.43 sh=1.12 fold=1.22 h1=2.13 h2=0.38 mdd=-43.0 ret=16.2 vol=14.5 fneg=6 yrs=17:-2.2 18:+1.1 19:+0.4 20:+4.5 21:+3.6 22:-1.1 23:-1.3 24:+3.3 25:+1.4 26:-2.6 corr_4x=0.67 gross_bps=7.01 cost_bps=2.69 t1%=87.8 x%=1.9
