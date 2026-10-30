@@ -8,12 +8,12 @@ Saves predictions out/pred_<desc>.parquet and candidates (series NET of the mode
                                  rule with that exit cost.
 usage: python3 step4.py <desc> [ks=6,8,10,12,15] [lam=3] [seeds=0,1,2] [skipfit=1]   desc = a name in step3_runs.RUNS."""
 from lib3 import *
-from step3_runs import RUNS
+from step3_runs import RUNS, apply_filter
 NJ = int(os.environ.get("ONML_NJOBS", "2"))
 desc = sys.argv[1]; kw = dict(a.split("=") for a in sys.argv[2:] if "=" in a)
 ks = [int(x) for x in kw.get("ks", "6,8,10,12,15").split(",")]; lam = float(kw.get("lam", "3")); seeds = [int(x) for x in kw.get("seeds", "0,1,2").split(",")]
-feats, target = [(f, t) for n, f, t in RUNS.values() if n == desc][0]
-t0 = time.time(); D = frame(2000); log(f"step4 FINAL {desc}: {len(feats)} feats target {target} quarterly seeds {seeds} n_jobs={NJ} lam={lam}")
+feats, target, filt = [(v[1], v[2], v[3] if len(v) > 3 else None) for v in RUNS.values() if v[0] == desc][0]
+t0 = time.time(); D = apply_filter(frame(2000), filt); log(f"step4 FINAL {desc}: {len(feats)} feats target {target} quarterly seeds {seeds} n_jobs={NJ} lam={lam}")
 if kw.get("skipfit") == "1" and os.path.exists(f"{OUT}/pred_{desc}.parquet"):
     P = pd.read_parquet(f"{OUT}/pred_{desc}.parquet"); p = D[["date", "tk"]].merge(P, on=["date", "tk"], how="left").p; log("  predictions loaded from disk")
 else:

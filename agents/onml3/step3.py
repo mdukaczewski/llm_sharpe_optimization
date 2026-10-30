@@ -9,7 +9,7 @@ Predictions saved to out/pred_y_<name>.parquet; books: k=10 MOC+MOO c=0.3 (+ k s
 usage: python3 step3.py R2 R1 R3 ..."""
 from lib3 import *
 NJ = int(os.environ.get("ONML_NJOBS", "1"))
-from step3_runs import RUNS
+from step3_runs import RUNS, apply_filter
 which = [a for a in sys.argv[1:] if a in RUNS] or ["R2", "R1", "R3", "R4", "R5"]
 t0 = time.time(); D = frame(2000); D["pc"] = (D.ce + D.cx) / 2
 def books(D, p, name):
@@ -28,11 +28,11 @@ def books(D, p, name):
     return rows
 allrows = []
 for rn in which:
-    name, feats, target = RUNS[rn]; t1 = time.time()
-    log(f"step3 {rn} {name}: {len(feats)} feats, target {target}, yearly seed0 n_jobs={NJ}")
-    p = xrank(D, olib.wf(D, feats, target, "Y", seed=0, n_jobs=NJ)); save_pred(D, p, f"y_{name}")
+    name, feats, target = RUNS[rn][:3]; filt = RUNS[rn][3] if len(RUNS[rn]) > 3 else None; t1 = time.time()
+    Df = apply_filter(D, filt); log(f"step3 {rn} {name}: {len(feats)} feats, target {target}, filter {filt} ({len(Df)} rows), yearly seed0 n_jobs={NJ}")
+    p = xrank(Df, olib.wf(Df, feats, target, "Y", seed=0, n_jobs=NJ)); save_pred(Df, p, f"y_{name}")
     log(f"  fit {time.time()-t1:.0f}s")
-    allrows += books(D, p, name)
+    allrows += books(Df, p, name)
 T = pd.DataFrame([(a, b, k, c, round(m["sh_pre"], 3), round(m["sh"], 3), round(m["fold"], 3), round(m["h1"], 2), round(m["h2"], 2), round(m["mdd"], 3), round(m["ret"], 3)) for a, b, k, c, m in allrows],
                  columns=["model", "exec", "k", "cap", "sh_pre", "sh_04M", "fold_04M", "h1", "h2", "mdd", "ret"])
 T.to_csv(f"{OUT}/step3_{'_'.join(which)}.csv", index=False); log("STEP3 DONE\n" + T.to_string(index=False))
