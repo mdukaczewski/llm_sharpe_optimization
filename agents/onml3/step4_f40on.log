@@ -1,2 +1,3 @@
 11:37:39 frame: cached 2970081 rows 1989 names 2016-09-19..2026-04-27
 11:37:39 step4 FINAL f40_on: 43 feats target yr quarterly seeds [0, 1, 2] n_jobs=2 lam=3.0
+12:14:26   quarterly seed 0 2207s
