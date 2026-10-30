@@ -72,12 +72,15 @@ def main():
     ap.add_argument("--drop", default="", help="comma list of families to exclude")
     ap.add_argument("--keep", default="", help="regex: keep only candidate names matching it (coarser grid = less selection noise)")
     ap.add_argument("--omit", default="", help="regex: drop candidate names matching it")
+    ap.add_argument("--lanes", default="", help="override NEW_LANES: family=lane+lane,family=lane (e.g. onml=onml3,dayml=dayml3,xsrule=xsrule3,etfmacro=etfmacro)")
     ap.add_argument("--voltarget", type=float, default=0.0, help="if >0: scale the portfolio to this annual vol using trailing-20d realized vol of its own past returns (capped at 2x)")
     ap.add_argument("--minhist", type=int, default=200, help="min non-zero days a variant needs in the selection window")
     ap.add_argument("--commission_bps", type=float, default=0.0, help="extra per-side cost (bps) charged on every fully-turned-over minute-bar book: L/S books pay 4x per day, long-only 2x (fixed per-order commission / clip)")
     ap.add_argument("--capital_usd", type=float, default=0.0, help="equity per book; with --order_usd charges each fully-turned-over minute-bar book n_positions x 2 orders x order_usd / capital per day (L/S top-k: 2k positions at 100%% long / 100%% short)")
     ap.add_argument("--order_usd", type=float, default=3.0, help="fixed commission per filled order (used with --capital_usd)")
     a = ap.parse_args()
+    if a.lanes:
+        NEW_LANES.clear(); NEW_LANES.update({f: ls.split("+") for f, ls in (x.split("=") for x in a.lanes.split(","))})
     fam = families()
     if a.capital_usd > 0:
         import re as _re

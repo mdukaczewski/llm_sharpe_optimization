@@ -38,3 +38,6 @@ agents/*/u2000_e30.log
 logs/regen_chain.log
 agents/*/k10_holdout.log
 logs/quotes_check.log
+logs/quotes_panel.log
+logs/liq_build.log
+logs/spread_fit.log
