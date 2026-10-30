@@ -9,3 +9,6 @@ onml_f28cal_q3_k10p	Sh=3.56	3-seed f28cal quarterly, L/S top10 pred-weighted
 onml_f28cal_q3_k15	Sh=3.66	3-seed f28cal quarterly, L/S top15 eq-weighted
 onml_f28cal_q3_k15p	Sh=3.66	3-seed f28cal quarterly, L/S top15 pred-weighted
 onml_f28cal_q3_k20p	Sh=3.59	3-seed f28cal quarterly, L/S top20 pred-weighted
+onml_f26calx_u2000_q3_k10	Sh=4.29	3-seed quarterly LightGBM, implementable feature set (no closing print / auction volume / last-5-min), universe(2000), L/S top10 eq-weight
+onml_f26calx_u2000_q3_k15	Sh=4.36	3-seed quarterly LightGBM, implementable feature set (no closing print / auction volume / last-5-min), universe(2000), L/S top15 eq-weight
+onml_f26calx_u2000_q3_k20	Sh=4.31	3-seed quarterly LightGBM, implementable feature set (no closing print / auction volume / last-5-min), universe(2000), L/S top20 eq-weight
