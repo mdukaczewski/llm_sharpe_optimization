@@ -7,6 +7,7 @@ Run with STRAT_END=2026-10-28 (series on dev dates are identical to a dev run; e
 DEV_CUT=2026-04-27 so the holdout stays unread)."""
 import sys; sys.path.insert(0, "/home/user/llm_sharpe_optimization/agents/onml")
 from olib import *
+from rlib import Min
 NJ = int(os.environ.get("ONML_NJOBS", "2")); CAP = 400000.0; DEV_CUT = "2026-04-27"; N = int(os.environ.get("ONML_N", "2000"))
 XD = f"{rlib.DATA}/cache_x"; os.makedirs(XD, exist_ok=True)
 def exauction(tk):
