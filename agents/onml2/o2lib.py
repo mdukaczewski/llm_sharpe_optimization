@@ -23,6 +23,16 @@ def log(*a):
     print(s, flush=True)
     with open(LOG, "a") as fh: fh.write(s + "\n")
 
+def add_cal(D):
+    """calendar features of olib.load(extra=True) on a load(extra=False) frame (identical code, no cross-sectional ranks)"""
+    D["dow"] = D.date.dt.dayofweek.astype(np.float32)
+    D["dme"] = np.clip(((D.date + pd.offsets.BMonthEnd(0)) - D.date).dt.days, 0, 25).astype(np.float32)
+    D["qend"] = ((D.date.dt.month % 3 == 0) & (D.dme <= 2)).astype(np.float32)
+    big = (D.zgap.abs() > 2.5).astype(int); idx = np.arange(len(D))
+    last = pd.Series(np.where(big == 1, idx, np.nan)).groupby(D.tk).ffill(); first = pd.Series(idx).groupby(D.tk).transform("min")
+    D["dsgap"] = np.clip((idx - last.fillna(first).values), 0, 60).astype(np.float32)
+    return rlib.clean(D, CAL)
+
 # ---------------------------------------------------------------- walk-forward with window / recency weights
 def wf2(D, feats, target="yr", retrain="Y", seed=0, n_jobs=2, params=None, window_years=None, halflife_years=None,
         label_lag_days=3, first="2017-01-01", verbose=False):

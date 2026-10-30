@@ -65,3 +65,84 @@ Reading: same picture at 2000 names.  k=10 equal weight is the commission optimu
 never helps (it removes names on calm days, which still earn); the dispersion filter is strongly negative (the low-dispersion days
 earn nearly as much as the others, skipping them just loses days); long-only and asymmetric books are worse.  Family fold-OOS
 at the commission over the 14 k/weight variants: 3.88.  Construction is settled: **L/S top-10 / bottom-10, equal weight**.
+
+## 2. Model capacity (a) and training window (b): 2000 names, f26cal, yearly retrain, seed 0, L/S k10 / k20 eq-weight
+Single-seed noise on this book is about +-0.15 Sharpe (onml REPORT, 3 seeds at 1500 names).  Run killed by the coordinator's
+wrap-up during `hl2` (recency weights, half-life 2y); `hl4`, `L31_600`, `L63_600`, `L31_1000`, `L63_1000` and the small+large
+ensemble were NOT run (box at load 8).  Fit times at n_jobs=2 on the shared box: 480-660 s per yearly walk-forward.
+
+| model (LightGBM, expanding window unless noted) | IC | k10 spread-only full/fold | k10 comm full/fold | k10 halves (comm) | k20 comm full/fold |
+|---|---|---|---|---|---|
+| **base** (300 trees, lr 0.03, 15 leaves, mcs 200, colsample 0.8) | 0.0371 | 4.20/4.24 | **3.89/3.95** | 4.44/3.27 | 3.51/3.64 |
+| min_child_samples 500 | 0.0368 | 3.98/4.12 | 3.68/3.83 | 3.88/3.45 | 3.23/3.35 |
+| min_child_samples 1000 | 0.0371 | 4.14/4.34 | 3.82/4.04 | 4.10/3.51 | 3.08/3.27 |
+| colsample_bytree 0.5 | — | 4.23/4.27 | 3.91/3.96 | 4.81/2.96 | 3.22/3.25 |
+| rolling 3y window | — | 3.65/3.63 | 3.35/3.35 | 4.28/2.31 | 2.94/3.00 |
+| rolling 4y window | — | 3.78/3.77 | 3.47/3.48 | 4.36/2.45 | 3.03/3.10 |
+| rank-average of base + mcs1000 + colsample0.5 (3 variants) | — | 4.22/4.36 | 3.90/4.06 | 4.32/3.42 | — |
+| reference, 1500 names f28cal (with zmoc) base yearly | 0.0363 | 3.43/3.50 | 3.08/3.17 | 3.21/2.94 | 2.76/2.90 |
+| reference, 2000 names f28cal (with zmoc) base yearly (coordinator) | — | 4.42/4.49 | 4.11/4.19 | 4.96/3.82 | 3.89/3.89 |
+
+Reading: none of the regularisation knobs moves the k10 book beyond seed noise (mcs500 -0.12, mcs1000 +0.09, colsample 0.5 +0.01
+fold-OOS at the commission); the rank-average of the three variants is +0.1 over base, which is the usual seed-averaging effect.
+Rolling windows are clearly negative (-0.5 to -0.6, the second half of the sample collapses to 2.3-2.5): the book wants ALL the
+history — consistent with the earlier finding that breadth (more rows) is the main lever.  Bigger trees / more trees were not
+reached; given that 2.5-3M rows did not reward even min_child_samples changes, I would not expect them to matter, but it is untested.
+Quarterly retrain (+0.25 at 1500 names in the onml lane) was not run on 2000 names in this lane (CPU); keep.py takes retrain="Q".
+
+## 3. Kept candidates (agents/onml2/cands, written by final.py with ONML2_USE_RAW=1 from the sweep1 predictions)
+All: f26cal (26 implementable close-time + calendar features), per-day rank target, LightGBM baseline params, yearly expanding
+retrain from 2017-01-01 (label lag 3 days), universe(2000) = 1989 names, L/S book exit at the 09:31 bar, rlib costs + 1%/yr borrow
++ $3/order commission on $0.4M.  The saved series are NET of everything (the spread-only series and the daily position count P are
+in agents/onml2/out/final_<name>.csv).  Baseline = onml_f28cal_q3_k20 (1500 names, 3-seed quarterly, f28cal incl. zmoc, k20).
+
+| candidate | model | book | P/day | spread-only full/fold | comm full/fold | halves (comm) | maxDD | ret/vol | corr sleeve | corr SPY | min fold | neg folds |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **onml2_f26cal_y_k10** | base, seed 0 | top/bot 10 eq | 20 | 4.20/4.24 | **3.89/3.95** | 4.44/3.27 | -24.9% | 95%/24.3% | 0.57 | -0.04 | -0.68 | 1/16 |
+| **onml2_f26cal_y3_k10** | base+mcs1000+cs05 rank-avg | top/bot 10 eq | 20 | 4.22/4.36 | **3.90/4.06** | 4.32/3.42 | -23.2% | 92%/23.5% | 0.55 | -0.03 | -0.23 | 1/16 |
+| onml2_f26cal_y_k20 | base, seed 0 | top/bot 20 eq | 40 | 4.31/4.39 | 3.51/3.64 | 4.28/2.63 | -24.7% | 66%/18.9% | 0.64 | -0.04 | -0.68 | 1/16 |
+| family (rlib.fold_oos over the three, comm) | | | | | **3.90** | folds mean 4.04, min -0.68, 1/16 negative | | | | | | |
+| baseline onml_f28cal_q3_k20 (1500, comm) | | top/bot 20 eq | 40 | 3.75/3.76 | 2.87/2.93 | 3.26/2.42 | -15.4% | 49%/17.2% | 0.60 | -0.03 | 0.35 | 0/16 |
+| baseline predictions, top/bot 10 (comm) | | top/bot 10 eq | 20 | 3.71/3.81 | 3.37/3.48 | 3.73/2.99 | -16.7% | 74%/21.9% | 0.53 | -0.03 | 1.09 | 0/16 |
+
+Yearly Sharpe at the commission (y_k10): 17 +2.8, 18 +5.4, 19 +5.0, 20 +4.9, 21 +5.2, 22 +1.5, 23 +3.7, 24 +3.5, 25 +4.4, 26(Jan-Apr) +3.0.
+The one negative fold is 2022-H2 (the y3 ensemble -0.2, single model -0.7; all other folds +1.6..+6.9); the 1500-name books have no negative fold (min 0.35-1.09),
+i.e. the 2000-name universe (ranks 1501-2000, 2.5 bps spread) adds +0.5..+0.8 fold-OOS but a worse 2022 and a -25% drawdown
+(vs -15..-17% at 1500 names): higher gross return (95% vs 74%) at higher vol (24% vs 22%).
+Decomposition of the gain vs the baseline at the commission (fold-OOS 2.93 -> 3.95): construction k20 -> k10 +0.55 (on the baseline
+predictions, 3.48), universe 1500 -> 2000 +0.8 (same recipe, 3.17 -> 3.95 yearly), minus zmoc/vmoc_share -0.25, minus quarterly
+retrain (not run here) about -0.25 (the baseline is quarterly, the candidates yearly).
+
+## 4. What I would keep, and why; what was not done
+* Keep **onml2_f26cal_y3_k10** (and the single-model onml2_f26cal_y_k10 as its control): the top-10 construction is the only
+  commission-specific choice, it is the optimum on every prediction set tried (400 / 1500 / 2000 names, yearly and quarterly) with a
+  flat k8-k12 plateau, so it is not a fitted knob.  The three-variant average replaces the 3-seed average of the onml lane (same
+  +0.1 effect, no extra fits beyond the sweep).
+* onml2_f26cal_y_k20 is the reference line (baseline construction on the new universe / feature set); drop it from the family if
+  fewer candidates are wanted — it is never picked by the fold procedure.
+* Next step for whoever has the CPU: the same KEEP with retrain="Q" and seeds [0,1,2] (keep.py), expected +0.2..0.3; the z5l/z15l-free
+  variant (F24CAL in o2lib: MODELS entry `dict(feats=F24CAL)`) for the MOC-implementability question — the coordinator's
+  agents/onml/breadth2b.py measures exactly this on 2000 names (its log had only the f28cal lines when this report was written).
+* Negative results worth recording: rolling windows (-0.5), per-day |raw| quantile filters (-0.1..-0.9, more names removed = worse),
+  dispersion gating (-0.8..-1.3), long-only (-1.1..-1.5, drawdown -40%), asymmetric long/short sizes (-0.1..-0.4), half-size short
+  side (-0.3..-0.7), linear-in-rank and |raw| weights (within +-0.1 of equal weight at k10).  Every model knob was within seed noise.
+
+## 5. Leakage / robustness checklist
+* Features: rlib.ticker_frame close-time features (lagged rolling std in zsd) minus the two close-only ones + calendar; no feature uses
+  y_on, the 09:31 bar of t+1 or any forward quantity; dsgap uses |zgap| of day t and earlier.  Training rows end 3 days before each
+  yearly cut; the per-day rank target is built within the day; raw predictions are rank-normalised per day before averaging.
+* Costs: rlib.cost_bps (2.5 bps for ranks 1501-2000) + 1%/yr borrow + commission P x 6/400000 per day with P counted from the actual
+  filled positions of the day (every name in the top/bottom k with a valid target).  The commission does not depend on fill price,
+  so it is a pure daily drag; the spread cost is unchanged from rlib.book.
+* Selection: k chosen among 7 values on three prediction sets (the choice is identical on all three); model knobs: 6 variants, none
+  kept except as an average; universe 2000 was the coordinator's instruction, not a search.  The remaining in-sample elements are the
+  ones of the onml lane (EXTRA10 features designed with the whole sample visible; LightGBM params = project baseline).
+* Survivorship: universe files ranked by today's dollar volume (same as every book in the project); |y| > 0.5 removed (split guard).
+* One negative fold (2022-H2) at 2000 names; the 1500-name baseline had none — the extra 500 names make the book more volatile.
+
+## 6. final.py
+`nohup python3 agents/onml2/final.py > agents/onml2/final.log 2>&1 &` rebuilds the three kept candidates from data/minute_npz via rlib
+(universe(2000) / env ONML2_N, ONML2_NJOBS default 2), writes them with rlib.save_cand("onml2", ...) and honours STRAT_END through
+rlib.DEV_END.  With ONML2_USE_RAW=1 it reuses agents/onml2/out/raw_{base,mcs1000,cs05}.npy (sweep1 yearly seed-0 predictions, same
+code path) instead of refitting — this is how the saved candidates were produced (final.log).  A full refit = 3 yearly walk-forwards
+of ~8-10 min each at n_jobs=2 on the shared box (~30 min; memory ~1.5 GB); with STRAT_END=2026-10-28 the frame grows by 6 months.
