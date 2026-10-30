@@ -1,0 +1,12 @@
+=== onml=onml4x
+  OOS stitched family onml                   Sharpe  1.70  ret  27.3%  vol  16.0%  maxDD  -20.8%  CAGR  29.7%  yrs 2018:0.1 2019:0.1 2020:5.4 2021:2.2 2022:0.5 2023:0.0 2024:3.0 2025:2.2 2026:-0.3
+DEV FOLDS OOS [sel=all topn=1 w=iv]          Sharpe  2.30  ret  20.2%  vol   8.8%  maxDD   -9.7%  CAGR  21.9%  yrs 2018:-1.0 2019:2.1 2020:4.7 2021:2.6 2022:0.9 2023:1.7 2024:4.5 2025:2.7 2026:-1.8
+fold Sharpes: mean 2.35  median 2.08  min -1.83  negative folds 2/16
+=== onml=onml5
+  OOS stitched family onml                   Sharpe  1.68  ret  26.7%  vol  15.9%  maxDD  -23.8%  CAGR  28.9%  yrs 2018:0.3 2019:0.9 2020:4.7 2021:2.1 2022:0.1 2023:0.0 2024:3.3 2025:2.2 2026:-0.5
+DEV FOLDS OOS [sel=all topn=1 w=iv]          Sharpe  2.30  ret  20.2%  vol   8.8%  maxDD  -10.3%  CAGR  21.9%  yrs 2018:-0.9 2019:2.4 2020:4.6 2021:2.5 2022:0.8 2023:1.7 2024:4.6 2025:2.8 2026:-2.0
+fold Sharpes: mean 2.33  median 2.35  min -1.97  negative folds 2/16
+=== onml=onml4x+onml5
+  OOS stitched family onml                   Sharpe  1.64  ret  26.2%  vol  15.9%  maxDD  -23.8%  CAGR  28.2%  yrs 2018:0.3 2019:0.5 2020:4.7 2021:2.1 2022:0.1 2023:0.0 2024:3.3 2025:2.2 2026:-0.5
+DEV FOLDS OOS [sel=all topn=1 w=iv]          Sharpe  2.28  ret  20.1%  vol   8.8%  maxDD  -10.3%  CAGR  21.7%  yrs 2018:-0.9 2019:2.2 2020:4.6 2021:2.5 2022:0.8 2023:1.7 2024:4.6 2025:2.8 2026:-2.0
+fold Sharpes: mean 2.31  median 2.17  min -1.97  negative folds 2/16
