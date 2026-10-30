@@ -1,0 +1,3 @@
+onml5_pRn_lam3_rte_moo_k6	Sh=2.21	per-day rank average of onml5 q_f40n (new features, quarterly 1-seed) and the saved onml3 f26calx_q3 prediction (= onml4 pR with p40 replaced by p40n); otherwise as onml5_pRnn_lam3_rte_moo_k6
+onml5_pRn_lam3_rte_rtx_k6	Sh=1.87	as onml5_pRn_lam3_rte_moo_k6 with the onml4 routed exit
+onml5_p40n_lam3_rte_moo_k6	Sh=1.99	onml5 q_f40n prediction alone (quarterly 1-seed), otherwise as onml5_pRnn_lam3_rte_moo_k6
