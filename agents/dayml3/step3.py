@@ -9,7 +9,7 @@ from d3lib import *
 NJ = int(os.environ.get("D3_NJOBS", "1")); RETRAIN = os.environ.get("D3_RETRAIN", "Y")
 cfgs = sys.argv[1:] or ["A1", "B1", "C1", "A0", "B0", "C0"]
 log(f"==== step3: refits retrain {RETRAIN} n_jobs {NJ} cfgs {cfgs} ====")
-D = build(1500)
+D = frame(1500); log(f"frame rows {len(D)} cols {len(D.columns)}")
 D["y_60d_net05"] = D["y_60d"] - 0.5 * D["hs_rt"] / 1e4
 D["y_120d_net05"] = D["y_120d"] - 0.5 * D["hs_rt"] / 1e4
 u600 = (D["rank"] <= 600).to_numpy(); u300 = (D["rank"] <= 300).to_numpy()

@@ -1,29 +1,25 @@
-10:35:23 frame: cached 2970081 rows 1989 names 2016-09-19..2026-04-27
-10:35:26 step2: merged 2886460 rows 18s
-10:35:26 --- A. cost cap on the mean per-side auction cost (c=0.3), then top-k by p
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py", line 3641, in get_loc
-    return self._engine.get_loc(casted_key)
-           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
-  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
-  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
-  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
-KeyError: 'pc'
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/user/llm_sharpe_optimization/agents/onml3/step2.py", line 21, in <module>
-    run(f"A_cap{cap}_k{k} (names/day {n_ok:.0f})", k, y="y_oo", ce="ce", cx="cx", cap=cap, capcol="pc")
-    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/user/llm_sharpe_optimization/agents/onml3/step2.py", line 14, in run
-    r = book3(G, k=k, **kw); m = metrics(r, k); log("  " + mline(name, m))
-  File "/home/user/llm_sharpe_optimization/agents/onml3/lib3.py", line 93, in book3
-    if cap is not None: g = g[g[capcol] <= cap]
-                              ~^^^^^^^^
-  File "/usr/local/lib/python3.13/dist-packages/pandas/core/frame.py", line 4378, in __getitem__
-    indexer = self.columns.get_loc(key)
-  File "/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py", line 3648, in get_loc
-    raise KeyError(key) from err
-KeyError: 'pc'
+10:42:06 frame: cached 2970081 rows 1989 names 2016-09-19..2026-04-27
+10:42:11 step2: merged 2886460 rows 21s
+10:42:11 --- A. cost cap on the mean per-side auction cost (c=0.3), then top-k by p
+10:42:12   A_cap5_k6 (names/day 348)              pre-comm Sh  1.55 | $0.4M Sh  1.28 foldOOS  1.49 halves 1.74/0.77 mdd  -27.2% ret  21.1% vol 16.5% | 17:-1.7 18:+0.2 19:+1.5 20:+5.4 21:+1.1 22:+1.3 23:-0.9 24:+1.8 25:+1.9 26:-1.5
+10:42:13   A_cap10_k6 (names/day 671)             pre-comm Sh  0.56 | $0.4M Sh  0.33 foldOOS  0.59 halves 0.62/0.01 mdd  -55.4% ret   6.3% vol 19.4% | 17:-2.5 18:-0.6 19:-0.9 20:+3.9 21:-0.1 22:-0.5 23:-0.7 24:+1.5 25:+1.3 26:-3.2
+10:42:15   A_cap20_k6 (names/day 985)             pre-comm Sh -0.46 | $0.4M Sh -0.66 foldOOS -0.16 halves -0.34/-1.03 mdd  -82.3% ret -15.2% vol 23.0% | 17:-5.3 18:-3.3 19:-1.7 20:+3.5 21:+0.7 22:-1.7 23:-1.8 24:-0.1 25:-0.5 26:-1.1
+10:42:17   A_capNone_k6 (names/day 1244)          pre-comm Sh -6.97 | $0.4M Sh -7.12 foldOOS -6.87 halves -5.52/-9.05 mdd -100.0% ret -215.0% vol 30.2% | 17:-9.2 18:-8.7 19:-8.5 20:-4.7 21:-1.9 22:-9.7 23:-8.2 24:-10.1 25:-8.8 26:-10.4
+10:42:18   A_cap5_k8 (names/day 410)              pre-comm Sh  1.75 | $0.4M Sh  1.37 foldOOS  1.64 halves 1.65/1.07 mdd  -25.0% ret  21.6% vol 15.8% | 17:-1.5 18:-0.5 19:+1.3 20:+5.3 21:+1.3 22:+2.1 23:-0.4 24:+1.9 25:+1.8 26:-1.5
+10:42:19   A_cap10_k8 (names/day 742)             pre-comm Sh  0.59 | $0.4M Sh  0.26 foldOOS  0.62 halves 0.37/0.13 mdd  -60.2% ret   4.6% vol 18.0% | 17:-3.8 18:-0.9 19:-1.5 20:+4.0 21:+0.5 22:-0.3 23:-0.4 24:+1.9 25:+1.0 26:-2.9
+10:42:21   A_cap20_k8 (names/day 1034)            pre-comm Sh -0.63 | $0.4M Sh -0.93 foldOOS -0.48 halves -0.42/-1.50 mdd  -86.4% ret -19.1% vol 20.7% | 17:-5.1 18:-3.3 19:-1.7 20:+3.0 21:+0.6 22:-2.5 23:-2.2 24:-1.1 25:-0.2 26:-1.5
+10:42:22   A_capNone_k8 (names/day 1244)          pre-comm Sh -5.95 | $0.4M Sh -6.19 foldOOS -5.94 halves -4.54/-8.29 mdd -100.0% ret -161.0% vol 26.0% | 17:-8.9 18:-7.3 19:-8.1 20:-3.7 21:-1.0 22:-8.6 23:-7.6 24:-9.1 25:-8.3 26:-9.1
+10:42:25   A_cap5_k10 (names/day 461)             pre-comm Sh  1.57 | $0.4M Sh  1.07 foldOOS  1.34 halves 1.45/0.65 mdd  -30.7% ret  16.2% vol 15.1% | 17:-2.1 18:-0.7 19:+0.6 20:+4.6 21:+1.6 22:+1.8 23:-0.7 24:+1.4 25:+1.5 26:-2.5
+10:42:27   A_cap10_k10 (names/day 796)            pre-comm Sh  0.61 | $0.4M Sh  0.17 foldOOS  0.55 halves 0.57/-0.28 mdd  -54.6% ret   2.9% vol 17.1% | 17:-3.9 18:-0.7 19:-1.3 20:+3.9 21:+1.0 22:-0.7 23:-1.2 24:+1.6 25:+0.4 26:-2.3
+10:42:28   A_cap20_k10 (names/day 1068)           pre-comm Sh -0.50 | $0.4M Sh -0.88 foldOOS -0.51 halves -0.37/-1.49 mdd  -83.6% ret -17.5% vol 19.9% | 17:-4.4 18:-3.2 19:-2.4 20:+2.5 21:+0.9 22:-2.8 23:-2.2 24:-0.8 25:-0.0 26:-1.9
+10:42:30   A_capNone_k10 (names/day 1244)         pre-comm Sh -5.18 | $0.4M Sh -5.50 foldOOS -5.23 halves -3.80/-7.69 mdd -100.0% ret -128.6% vol 23.4% | 17:-8.4 18:-6.2 19:-7.9 20:-2.3 21:-0.6 22:-8.3 23:-7.1 24:-8.4 25:-7.4 26:-9.0
+10:42:30   A_cap5_k12 (names/day 503)             pre-comm Sh  1.48 | $0.4M Sh  0.85 foldOOS  1.10 halves 1.22/0.44 mdd  -33.5% ret  12.4% vol 14.5% | 17:-2.1 18:-1.1 19:+0.6 20:+4.3 21:+1.4 22:+1.3 23:-0.8 24:+1.5 25:+1.0 26:-2.1
+10:42:32   A_cap10_k12 (names/day 839)            pre-comm Sh  0.55 | $0.4M Sh  0.00 foldOOS  0.35 halves 0.52/-0.58 mdd  -54.3% ret   0.1% vol 16.5% | 17:-4.0 18:-0.6 19:-1.5 20:+4.1 21:+0.8 22:-0.7 23:-1.5 24:+1.3 25:-0.3 26:-2.0
+10:42:33   A_cap20_k12 (names/day 1092)           pre-comm Sh -0.47 | $0.4M Sh -0.96 foldOOS -0.52 halves -0.61/-1.36 mdd  -84.9% ret -17.9% vol 18.8% | 17:-5.5 18:-3.4 19:-3.3 20:+2.4 21:+1.1 22:-2.6 23:-2.4 24:-1.0 25:+0.6 26:-2.8
+10:42:35   A_capNone_k12 (names/day 1244)         pre-comm Sh -4.70 | $0.4M Sh -5.12 foldOOS -4.87 halves -3.28/-7.53 mdd -100.0% ret -109.4% vol 21.4% | 17:-7.7 18:-5.5 19:-7.2 20:-1.6 21:-0.2 22:-7.9 23:-7.9 24:-7.8 25:-6.9 26:-7.9
+10:42:36   A_cap5_k15 (names/day 556)             pre-comm Sh  1.46 | $0.4M Sh  0.64 foldOOS  0.94 halves 0.98/0.28 mdd  -41.6% ret   9.0% vol 14.0% | 17:-2.4 18:-1.9 19:+0.4 20:+4.2 21:+1.1 22:+1.0 23:-0.2 24:+1.4 25:+0.5 26:-2.7
+10:42:38   A_cap10_k15 (names/day 890)            pre-comm Sh  0.67 | $0.4M Sh -0.04 foldOOS  0.30 halves 0.54/-0.71 mdd  -56.4% ret  -0.6% vol 16.0% | 17:-3.9 18:-1.0 19:-1.9 20:+4.0 21:+1.4 22:-0.5 23:-1.7 24:+0.8 25:-0.8 26:-2.2
+10:42:39   A_cap20_k15 (names/day 1119)           pre-comm Sh -0.47 | $0.4M Sh -1.13 foldOOS -0.65 halves -0.67/-1.65 mdd  -85.6% ret -19.4% vol 17.2% | 17:-5.9 18:-3.1 19:-3.7 20:+2.8 21:+0.8 22:-2.8 23:-2.4 24:-0.5 25:-0.1 26:-3.6
+10:42:41   A_capNone_k15 (names/day 1244)         pre-comm Sh -3.95 | $0.4M Sh -4.53 foldOOS -4.23 halves -2.79/-6.76 mdd -100.0% ret -88.0% vol 19.4% | 17:-7.7 18:-5.0 19:-7.0 20:-0.8 21:-0.1 22:-6.7 23:-7.3 24:-7.6 25:-6.0 26:-6.8
+10:42:41 --- B. calibrated net score (in-sample 50-bin map of E[y_oo | p])
+10:42:41   E[y_oo | p-bin] bps: 0:-9 1:-3 2:-2 5:+0 10:+1 25:+5 40:+8 45:+12 47:+15 48:+19 49:+33

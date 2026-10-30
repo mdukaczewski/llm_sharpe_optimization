@@ -101,7 +101,7 @@ def book3(G, k=10, y="y_oo", ce="ce", cx="cx", score="p", borrow=0.01, cap=None,
     """Daily return of an L/S top-k equal-weight book from a frame G with columns date, tk, score, y, ce, cx (bps per side).
     cap/capcol: keep only names with capcol <= cap before ranking (cost-aware universe).  Returns the series NET of
     ce + cx + borrow but BEFORE commission (use commission(r, k))."""
-    cols = list(dict.fromkeys(["date", "tk", y, "tier"] + [c for c in (ce, cx) if c is not None]))
+    cols = list(dict.fromkeys(["date", "tk", y, "tier"] + [c for c in (ce, cx, capcol) if c is not None]))
     g = G.loc[G[score].notna() & G[y].notna(), cols].copy(); g["p"] = G.loc[g.index, score].values
     if score_s is not None: g["ps"] = G.loc[g.index, score_s].values      # separate score for the short side (higher = better short)
     if cap is not None: g = g[g[capcol] <= cap]

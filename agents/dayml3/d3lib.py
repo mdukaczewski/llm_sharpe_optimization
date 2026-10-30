@@ -40,6 +40,15 @@ def build(n=1500, verbose=False):
     log(f"build: rows {len(D)} names {D.tk.nunique()} hs coverage {D.hs_rt.notna().mean():.3f} {time.time()-t0:.0f}s")
     return D
 
+KEEP = ["date", "tk", "rank", "y_30d", "y_60d", "y_120d", "hs0931", "hs1001", "hs_rt", "cost_old"]
+def frame(n=1500):
+    """slim modelling frame (KEEP + EXTL features), cached in out/frame.parquet"""
+    fp = f"{OUT}/frame.parquet"
+    if os.path.exists(fp): return pd.read_parquet(fp)
+    D = build(n); D = D[KEEP + EXTL].copy()
+    for c in EXTL: D[c] = D[c].astype(np.float32)
+    D.to_parquet(fp); return D
+
 def xr(D, p):
     s = pd.Series(np.asarray(p, float), index=D.index); return (s.groupby(D.date).rank(pct=True) - 0.5).to_numpy()
 
