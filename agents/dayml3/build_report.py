@@ -167,6 +167,19 @@ and SPY.
 
 {"### 5c. `pair`: quarterly two-sided net-target models B1 (long) + S1 (short), 1500 names" + chr(10) + chr(10) + final_tab("pair") if pair_done else "### 5c. `pair`: quarterly B1 + S1 (two-sided net targets) -- running, see log.txt / final_pair.log"}
 
+The pair's quarterly refit is WEAKER than its yearly version (u1500 k4 fold-OOS 0.28 vs 0.56, u600 k4 0.41 vs
+0.34 / C1+S1_600): with two models the quarterly retrain only adds label noise.  Its three x05 candidates
+(`dayml3_liqnet2s_x05_k4/6/8`, 1500 names) are kept as the second, differently constructed family; they are 0.43-0.54
+correlated with the `liqsel` series.
+
+### 5d. Family view (rlib.fold_oos over the saved candidates, $0.4M commission added from the _k count)
+
+x05 family (6 candidates): stitched fold-OOS **0.77**, every window picks `dayml3_liqsel_u600_x05_k4`; per-window Sharpe
+2018H2 4.61, 2019 2.33 / 1.85, 2020 3.10 / 3.03, 2021 -0.64 / -0.18, 2022 -0.12 / -1.60, 2023 0.73 / 0.41, 2024 -0.03 /
+-1.65, 2025 0.24 / -1.44, 2026H1 1.15 (7 of 16 windows negative, all of them after 2021).  x1 family: -1.23, 13 of 16
+windows negative.  Correlations (daily, $0.4M): liqsel k4 vs liqnet2s k4 0.43, each vs `dayml2_ens_e30_k8` 0.42-0.46,
+x05_k8 vs x1_k8 of the same book 1.00 (same positions, different cost).
+
 ## 6. Leakage checklist
 
 * Every feature of a row is known at the end of the 09:31 bar of day t: `dlib` close-time features are shifted one day

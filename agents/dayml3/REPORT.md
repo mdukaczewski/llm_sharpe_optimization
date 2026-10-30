@@ -14,7 +14,7 @@ Code: `d3lib.py` (frame = `d2lib.build` + 17 liq columns, per-name spread-costed
 targets), `test_causal.py`, `fitq.py` (quarterly fit of one configuration, n_jobs = 2), `final.py` (books + candidates from
 the saved quarterly predictions), `mk_tables.py` / `build_report.py` (this file).  Logs `log.txt`, `step*.log`, `fitq_*.log`,
 `final_*.log`; tables `out/step1.csv`, `out/step1_tiers.csv`, `out/step2.csv`, `out/step2b.csv`, `out/step3_Y.csv`,
-`out/step3b_Y.csv`, `out/step3c_Y.csv`, `out/final.csv`; predictions
+`out/step3b_Y.csv`, `out/step3c_Y.csv`, `out/final.csv`, `out/final_pair.csv`; predictions
 `out/pred_step3_*_Y.parquet` (yearly) and `out/pred_final_*_Q.parquet` (quarterly); daily book frames `out/*_k*.parquet`
 (columns g gross, sc spread cost at f = 1, old old-convention cost, bor borrow, comm commission).
 
@@ -328,6 +328,9 @@ fold-OOS k4 2.64 / k6 2.90 / k8 2.97 (dayml2_ens_e30_k8: 2.40); at f = 0.5 -1.72
 | dayml3_liqsel_u600_x1_k6 | Sh -1.08 fold-OOS -1.23 halves 0.00/-2.25 mdd -85% | dayml2_ens_e30_k8 0.45 onlgb -0.04 SPY -0.02 | 1-300:0.71/-1.0bps 301-600:0.29/-4.1bps 601-1500:0.00/- | NEGATIVE at this spread assumption: not tradable |
 | dayml3_liqsel_u600_x05_k8 | Sh 0.37 fold-OOS 0.19 halves 1.71/-1.10 mdd -60% | dayml2_ens_e30_k8 0.45 onlgb -0.05 SPY -0.03 | 1-300:0.72/+2.4bps 301-600:0.28/+2.1bps 601-1500:0.00/- |  |
 | dayml3_liqsel_u600_x1_k8 | Sh -1.60 fold-OOS -1.70 halves -0.44/-2.87 mdd -88% | dayml2_ens_e30_k8 0.45 onlgb -0.05 SPY -0.02 | 1-300:0.72/-1.7bps 301-600:0.28/-4.8bps 601-1500:0.00/- | NEGATIVE at this spread assumption: not tradable |
+| dayml3_liqnet2s_x05_k4 | Sh 0.57 fold-OOS 0.28 halves 1.44/-0.37 mdd -69% | dayml2_ens_e30_k8 0.42 onlgb -0.04 SPY -0.02 | 1-300:0.56/+2.7bps 301-600:0.24/+3.5bps 601-1500:0.19/+2.8bps |  |
+| dayml3_liqnet2s_x05_k6 | Sh 0.41 fold-OOS 0.08 halves 1.38/-0.65 mdd -68% | dayml2_ens_e30_k8 0.45 onlgb -0.04 SPY -0.04 | 1-300:0.57/+2.0bps 301-600:0.24/+3.4bps 601-1500:0.19/+2.2bps |  |
+| dayml3_liqnet2s_x05_k8 | Sh 0.05 fold-OOS -0.28 halves 1.10/-1.10 mdd -70% | dayml2_ens_e30_k8 0.46 onlgb -0.05 SPY -0.04 | 1-300:0.57/+1.4bps 301-600:0.24/+2.5bps 601-1500:0.18/+0.8bps | NEGATIVE at this spread assumption: not tradable |
 
 f-sensitivity of the kept k4 / k6 / k8 books (u600, $0.4M): see the `sel_A1` table above (columns f = 1 / 0.5 / 0.25 / old);
 at f = 0.25 the k4 book is 1.82 / 1.54 and at the old convention 1.99 / 1.72.  Yearly Sharpe of `dayml3_liqsel_u600_x05_k4`
@@ -335,7 +338,39 @@ at $0.4M: 2017 +2.7, 2018 +4.5, 2019 +2.1, 2020 +3.0, 2021 -0.4, 2022 -0.8, 2023
 Correlation with `dayml2_ens_e30_k8` is 0.43-0.45 (half the positions are different names), ~0 with the overnight sleeve
 and SPY.
 
-### 5c. `pair`: quarterly B1 + S1 (two-sided net targets) -- running, see log.txt / final_pair.log
+### 5c. `pair`: quarterly two-sided net-target models B1 (long) + S1 (short), 1500 names
+
+| universe | k | Sh f=1.0 | fo f=1.0 | Sh f=0.5 | fo f=0.5 | Sh f=0.25 | fo f=0.25 | Sh f=old | fo f=old | Sh f=gross-comm | fo f=gross-comm | halves f=0.5 | mdd f=0.5 | ret f=0.5 | by year f=0.5 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| u1500 | 2 | -0.42 | -0.50 | 0.51 | 0.33 | 0.98 | 0.75 | 1.05 | 0.79 | 1.45 | 1.17 | 0.88/0.15 | -73% | 14% | 17:+2.8 18:+2.4 19:+0.9 20:+1.8 21:-1.1 22:-1.7 23:+1.1 24:-0.7 25:+1.2 26:+0.9 |
+| u1500 | 3 | -0.65 | -0.81 | 0.48 | 0.20 | 1.05 | 0.70 | 1.12 | 0.74 | 1.61 | 1.21 | 1.04/-0.12 | -74% | 11% | 17:+3.6 18:+2.7 19:+1.5 20:+1.8 21:-1.4 22:-2.0 23:+0.6 24:-1.2 25:+1.4 26:+1.0 |
+| u1500 | 4 | -0.75 | -0.89 | 0.57 | 0.28 | 1.22 | 0.86 | 1.30 | 0.89 | 1.87 | 1.45 | 1.44/-0.37 | -69% | 11% | 17:+3.6 18:+3.1 19:+1.3 20:+2.3 21:-0.8 22:-2.1 23:+0.0 24:-1.4 25:+1.0 26:+0.9 |
+| u1500 | 6 | -1.18 | -1.32 | 0.41 | 0.08 | 1.20 | 0.78 | 1.28 | 0.80 | 1.99 | 1.47 | 1.38/-0.65 | -68% | 6% | 17:+3.7 18:+3.3 19:+1.3 20:+2.0 21:-1.3 22:-2.2 23:-0.5 24:-1.6 25:+0.8 26:+0.8 |
+| u1500 | 8 | -1.72 | -1.85 | 0.05 | -0.28 | 0.94 | 0.49 | 1.01 | 0.50 | 1.81 | 1.26 | 1.10/-1.10 | -70% | 1% | 17:+3.3 18:+3.2 19:+0.9 20:+1.4 21:-1.4 22:-2.5 23:-1.1 24:-2.0 25:+0.1 26:+1.3 |
+| u600 | 2 | 0.02 | -0.15 | 0.93 | 0.66 | 1.37 | 1.06 | 1.36 | 1.02 | 1.82 | 1.47 | 1.35/0.39 | -54% | 20% | 17:+3.0 18:+3.5 19:+2.2 20:+2.0 21:-0.9 22:-1.1 23:+0.4 24:+0.3 25:+0.8 26:+3.1 |
+| u600 | 3 | -0.32 | -0.53 | 0.77 | 0.45 | 1.31 | 0.94 | 1.28 | 0.88 | 1.85 | 1.43 | 1.58/-0.21 | -55% | 13% | 17:+3.3 18:+3.9 19:+2.4 20:+1.9 21:-1.0 22:-1.5 23:+0.2 24:-0.8 25:+0.0 26:+2.6 |
+| u600 | 4 | -0.51 | -0.71 | 0.74 | 0.41 | 1.36 | 0.96 | 1.32 | 0.88 | 1.97 | 1.51 | 1.55/-0.22 | -50% | 11% | 17:+3.5 18:+4.0 19:+2.0 20:+1.8 21:-1.2 22:-1.2 23:-0.3 24:-0.5 25:-0.1 26:+2.5 |
+| u600 | 6 | -1.06 | -1.20 | 0.43 | 0.13 | 1.17 | 0.79 | 1.11 | 0.69 | 1.90 | 1.44 | 1.35/-0.65 | -54% | 5% | 17:+3.1 18:+3.6 19:+1.7 20:+1.5 21:-1.1 22:-2.1 23:-0.8 24:-0.8 25:-0.4 26:+3.1 |
+| u600 | 8 | -1.53 | -1.62 | 0.16 | -0.12 | 0.99 | 0.63 | 0.93 | 0.51 | 1.82 | 1.37 | 1.08/-0.92 | -56% | 2% | 17:+2.9 18:+3.1 19:+1.6 20:+1.0 21:-1.3 22:-2.3 23:-1.1 24:-0.9 25:-0.8 26:+2.6 |
+| u300 | 2 | -0.21 | -0.32 | 0.71 | 0.53 | 1.17 | 0.95 | 1.06 | 0.83 | 1.62 | 1.37 | 1.60/-0.23 | -55% | 13% | 17:+2.8 18:+3.4 19:+1.6 20:+1.5 21:-0.3 22:-1.3 23:-1.7 24:-0.4 25:+0.4 26:+2.7 |
+| u300 | 3 | -0.50 | -0.60 | 0.61 | 0.41 | 1.16 | 0.91 | 1.03 | 0.76 | 1.70 | 1.41 | 1.41/-0.26 | -51% | 9% | 17:+3.1 18:+2.7 19:+1.2 20:+1.3 21:-0.5 22:-1.0 23:-2.1 24:-0.1 25:+0.1 26:+2.9 |
+| u300 | 4 | -0.88 | -1.01 | 0.38 | 0.13 | 1.00 | 0.70 | 0.85 | 0.52 | 1.62 | 1.26 | 1.34/-0.67 | -56% | 5% | 17:+2.9 18:+3.1 19:+0.9 20:+1.2 21:-0.8 22:-1.9 23:-1.9 24:-0.5 25:+0.1 26:+2.3 |
+| u300 | 6 | -1.40 | -1.54 | 0.06 | -0.22 | 0.78 | 0.43 | 0.61 | 0.23 | 1.50 | 1.08 | 1.03/-0.98 | -58% | 1% | 17:+3.5 18:+2.9 19:+1.1 20:+0.5 21:-1.4 22:-2.5 23:-2.3 24:-0.1 25:-0.3 26:+1.9 |
+| u300 | 8 | -1.90 | -1.98 | -0.28 | -0.51 | 0.52 | 0.22 | 0.34 | 0.01 | 1.33 | 0.95 | 0.52/-1.16 | -60% | -3% | 17:+2.8 18:+2.4 19:+0.5 20:+0.0 21:-2.0 22:-2.2 23:-3.3 24:-0.4 25:-0.2 26:+1.9 |
+
+
+The pair's quarterly refit is WEAKER than its yearly version (u1500 k4 fold-OOS 0.28 vs 0.56, u600 k4 0.41 vs
+0.34 / C1+S1_600): with two models the quarterly retrain only adds label noise.  Its three x05 candidates
+(`dayml3_liqnet2s_x05_k4/6/8`, 1500 names) are kept as the second, differently constructed family; they are 0.43-0.54
+correlated with the `liqsel` series.
+
+### 5d. Family view (rlib.fold_oos over the saved candidates, $0.4M commission added from the _k count)
+
+x05 family (6 candidates): stitched fold-OOS **0.77**, every window picks `dayml3_liqsel_u600_x05_k4`; per-window Sharpe
+2018H2 4.61, 2019 2.33 / 1.85, 2020 3.10 / 3.03, 2021 -0.64 / -0.18, 2022 -0.12 / -1.60, 2023 0.73 / 0.41, 2024 -0.03 /
+-1.65, 2025 0.24 / -1.44, 2026H1 1.15 (7 of 16 windows negative, all of them after 2021).  x1 family: -1.23, 13 of 16
+windows negative.  Correlations (daily, $0.4M): liqsel k4 vs liqnet2s k4 0.43, each vs `dayml2_ens_e30_k8` 0.42-0.46,
+x05_k8 vs x1_k8 of the same book 1.00 (same positions, different cost).
 
 ## 6. Leakage checklist
 

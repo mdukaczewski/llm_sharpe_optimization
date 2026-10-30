@@ -29,3 +29,13 @@
   wf 2023-10-01 train 1935276 54s
   wf 2024-01-01 train 1996630 58s
   wf 2024-04-01 train 2055783 60s
+  wf 2024-07-01 train 2112065 54s
+  wf 2024-10-01 train 2168733 60s
+  wf 2025-01-01 train 2222539 59s
+  wf 2025-04-01 train 2279299 61s
+  wf 2025-07-01 train 2337896 61s
+  wf 2025-10-01 train 2394751 63s
+  wf 2026-01-01 train 2452002 63s
+  wf 2026-04-01 train 2511820 73s
+13:36:45 fitq S1: done 1659s IC(y_30d) -0.0209 t -9.9 -> /home/user/llm_sharpe_optimization/agents/dayml3/out/pred_final_S1_Q.parquet
+EXIT 0
