@@ -44,12 +44,13 @@ tag = os.environ.get("D3_SAVE_TAG", "sel_ens" if len(SEL) > 1 else f"sel_{SEL[0]
 for k in [4, 6, 8]:
     L, dd = books[(tag, UNI, k)]
     for f, xt in [(0.5, "x05"), (1.0, "x1")]:
-        if xt == "x1" and k == 4: continue
+        if xt == "x1" and (k == 4 or os.environ.get("D3_X1", "1") != "1"): continue
         r = net(dd, f, comm=False); rc = net(dd, f); s = stats(rc); name = f"dayml3_{desc}_{xt}_k{k}"
         cc = pd.DataFrame({"x": rc, "ref": ref, "on": sl, "spy": spy}).dropna().corr()["x"]
         t = tier_table(L, f); tiers = " ".join(f"{r_.tier}:{r_.share:.2f}/{r_.net_bps:+.1f}bps" for r_ in t.itertuples())
-        note = (f"intraday L/S top/bottom {k} eq, decide 09:31, fill 09:33 bar (bin 3), exit 10:01 bar (bin 31); {tag} = quarterly LightGBM {SEL} on dlib.EXT + 17 liq features, "
-                f"causal cost-aware selection (E[y|rank] - 0.5c); universe {UNI}; series NET of f={f} x predicted NBBO half-spread (liq.py hs0931 entry + hs1001 exit) + borrow, BEFORE commission | "
+        note = (f"intraday L/S top/bottom {k} eq, decide 09:31, fill 09:33 bar (bin 3), exit 10:01 bar (bin 31); {tag} = quarterly LightGBM {SEL if tag != 'pair' else PAIR} on dlib.EXT + 17 liq features, "
+                + ("causal cost-aware selection (E[y_30d|rank] - 0.5c long / -E - 0.5c short); " if tag != "pair" else "two-sided net targets rank(y_60d - 0.5c) long / rank(-y_60d - 0.5c) short, top-k of each; ")
+                + f" universe {UNI}; series NET of f={f} x predicted NBBO half-spread (liq.py hs0931 entry + hs1001 exit) + borrow, BEFORE commission | "
                 f"$0.4M: Sh {s['sh']:.2f} fold-OOS {s['fo']:.2f} halves {s['h1']:.2f}/{s['h2']:.2f} mdd {s['mdd']*100:.0f}% | corr dayml2_ens_e30_k8 {cc['ref']:.2f} onlgb {cc['on']:.2f} SPY {cc['spy']:.2f} | tiers {tiers}"
                 + ("" if s['fo'] > 0 else " | NEGATIVE at this spread assumption: not tradable"))
         save(name, r, note); log(f"saved {name}: {note}")
