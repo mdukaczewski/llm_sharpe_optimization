@@ -1,0 +1,29 @@
+10:35:23 frame: cached 2970081 rows 1989 names 2016-09-19..2026-04-27
+10:35:26 step2: merged 2886460 rows 18s
+10:35:26 --- A. cost cap on the mean per-side auction cost (c=0.3), then top-k by p
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py", line 3641, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 168, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 197, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7668, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7676, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'pc'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/llm_sharpe_optimization/agents/onml3/step2.py", line 21, in <module>
+    run(f"A_cap{cap}_k{k} (names/day {n_ok:.0f})", k, y="y_oo", ce="ce", cx="cx", cap=cap, capcol="pc")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/llm_sharpe_optimization/agents/onml3/step2.py", line 14, in run
+    r = book3(G, k=k, **kw); m = metrics(r, k); log("  " + mline(name, m))
+  File "/home/user/llm_sharpe_optimization/agents/onml3/lib3.py", line 93, in book3
+    if cap is not None: g = g[g[capcol] <= cap]
+                              ~^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/pandas/core/frame.py", line 4378, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py", line 3648, in get_loc
+    raise KeyError(key) from err
+KeyError: 'pc'

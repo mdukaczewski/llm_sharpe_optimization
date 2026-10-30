@@ -57,13 +57,27 @@ def frame(n=2000, rebuild=False):
     D = liq.add_liq(D); D = liq.add_y_oo(D)
     D = D[D.date <= rlib.DEV_END].reset_index(drop=True)
     D["rank"] = D.tk.map(rlib.RANK).fillna(9999).astype(np.int32); D["tier"] = D.tk.map(tier_of).astype(np.int8)
+    D = fix_liq(D)
     # targets: per-day ranks of y_oo and of y_oo net of the predicted exit (MOO) auction cost at c=0.3 (see cost_cols)
     cost_cols(D, k=10, c=0.3)
     D["yr_oo"] = (D.groupby("date").y_oo.rank(pct=True) - 0.5).astype(np.float32)
     D["y_oon"] = D.y_oo - D.cx / 1e4
     D["yr_oon"] = (D.groupby("date").y_oon.rank(pct=True) - 0.5).astype(np.float32)
-    D = rlib.clean(D, LIQF)
     D.to_parquet(cp); log(f"frame built {len(D)} rows {D.tk.nunique()} names {time.time()-t0:.0f}s mem {D.memory_usage().sum()/1e9:.2f}GB")
+    return D
+
+def fix_liq(D):
+    """liq columns are NOT passed through rlib.clean (it clips to +-5; ldv20/dv0/dvc are ~15-23, hs0931 is in bps):
+    only +-inf -> NaN (LightGBM handles NaN natively)."""
+    D[LIQF] = D[LIQF].replace([np.inf, -np.inf], np.nan).astype(np.float32); return D
+
+def remerge_liq(n=2000):
+    """repair a cached frame whose LIQF columns were clipped: drop and re-merge them from data/cache_liq"""
+    cp = f"{OUT}/frame_u{n}.parquet"; D = pd.read_parquet(cp); t0 = time.time()
+    D = D.drop(columns=[c for c in LIQF + ["ce", "cx", "y_oon", "yr_oon"] if c in D.columns])
+    D = liq.add_liq(D, cols=LIQF); D = fix_liq(D); cost_cols(D, k=10, c=0.3)
+    D["y_oon"] = D.y_oo - D.cx / 1e4; D["yr_oon"] = (D.groupby("date").y_oon.rank(pct=True) - 0.5).astype(np.float32)
+    D.to_parquet(cp); log(f"remerge_liq done {time.time()-t0:.0f}s; ldv20 median {D.ldv20.median():.2f} hs0931 median {D.hs0931.median():.2f} cx median {D.cx.median():.2f}")
     return D
 
 # ---------------------------------------------------------------- costs
@@ -87,7 +101,7 @@ def book3(G, k=10, y="y_oo", ce="ce", cx="cx", score="p", borrow=0.01, cap=None,
     """Daily return of an L/S top-k equal-weight book from a frame G with columns date, tk, score, y, ce, cx (bps per side).
     cap/capcol: keep only names with capcol <= cap before ranking (cost-aware universe).  Returns the series NET of
     ce + cx + borrow but BEFORE commission (use commission(r, k))."""
-    cols = ["date", "tk", y, "tier"] + [c for c in (ce, cx) if c is not None]
+    cols = list(dict.fromkeys(["date", "tk", y, "tier"] + [c for c in (ce, cx) if c is not None]))
     g = G.loc[G[score].notna() & G[y].notna(), cols].copy(); g["p"] = G.loc[g.index, score].values
     if score_s is not None: g["ps"] = G.loc[g.index, score_s].values      # separate score for the short side (higher = better short)
     if cap is not None: g = g[g[capcol] <= cap]
