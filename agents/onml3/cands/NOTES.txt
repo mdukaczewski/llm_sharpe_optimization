@@ -8,3 +8,4 @@ onml3_f40_on_lam3_moo_k8	Sh=2.12	3-seed quarterly LightGBM, 43 feats (with liq f
 onml3_f40_on_lam3_moo_k10	Sh=2.15	3-seed quarterly LightGBM, 43 feats (with liq feats), target yr, u2000, L/S 10+10 eq, MOC entry + MOO exit; cost-aware selection (E[gross|p] causal map - 3 x auction cost); series net of auction cost c=0.3 (order $400k/20) + borrow 1%, before commission
 onml3_f40_on_lam3_x05_k10	Sh=2.31	same predictions, MOC entry (auction c=0.3) + 09:31-bar exit paying 0.5 x predicted half-spread hs0931, cost-aware selection with that exit cost, borrow 1%, before commission
 onml3_f40_on_lam3_x1_k10	Sh=1.44	same predictions, MOC entry (auction c=0.3) + 09:31-bar exit paying 1.0 x predicted half-spread hs0931, cost-aware selection with that exit cost, borrow 1%, before commission
+# 13:25 removed onml3_f26calx_q3_lam3_x1_k10 (Sh 0.3) and onml3_f26calx_q3_lam3_moo_k10 (dominated) to keep <= 8 candidates

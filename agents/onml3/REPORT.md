@@ -139,3 +139,82 @@ Reading:
 Chosen final configurations (step 4): A = the saved quarterly 3-seed f26calx predictions with the lambda = 3 selection
 (no refit; the reference that isolates the selection effect), B = `f40_on` (F40 features, 09:31-bar rank target)
 quarterly 3-seed with the same selection.
+
+## Step 4: final runs (quarterly retrain, 3 seeds rank-averaged, n_jobs = 2) and the saved candidates
+
+Selection rule in every candidate: long the top-k by E[gross | p] - 3 x (entry + exit cost), short the top-k by
+-E[gross | p] - 3 x cost - borrow/day, with E[gross | p] the CAUSAL expanding yearly 50-bin map of y_oo on the per-day
+prediction rank (`lib3.causal_cal`; 2017 uses its own year's map) and the cost the per-name predicted cost of that
+candidate's own execution (auction c = 0.3 for `moo`; auction entry + f x hs0931 for `x05` / `x1`).  Equal weight,
+100% long / 100% short, fully turned over daily.  Series = net of that modelled cost and borrow, BEFORE commission.
+Predictions: `out/pred_f40_on.parquet` (3-seed rank average; per-seed `pred_f40_on_q_s{0,1,2}.parquet`) and
+`out/pred_f26calx_q3.parquet` (copy of `agents/onml/out/pred_f26calx_u2000_q3.parquet` cut at DEV_END).
+The f40_on run: 3 x ~36 min under a load of 7-8 on 4 cores.  IC of the 3-seed f40_on prediction: 0.038 vs y_on (0.036 for
+the saved f26calx), and plain top-10 under the OLD convention 5.82 full / 5.70 fold-OOS at $0.4M (vs 4.13 / 4.23).
+
+| candidate (`agents/onml3/cands`) | $0.4M Sh | fold-OOS | halves | maxDD | ret / vol | by year 17..26 | corr old k10 / sleeve / SPY |
+|---|---|---|---|---|---|---|---|
+| `onml3_f26calx_q3_lam3_moo_k6` (A) | 1.85 | **1.95** | 2.48 / 1.31 | -19% | 26% / 14% | -0.6 2.2 0.8 5.8 2.3 1.6 -0.1 2.6 2.0 -0.8 | 0.34 / 0.38 / -0.04 |
+| `onml3_f26calx_q3_lam3_moo_k8` (A) | 1.73 | 1.86 | 2.28 / 1.28 | -21% | 22% / 13% | -1.4 1.7 1.1 6.0 1.9 0.9 0.3 2.9 2.2 -1.4 | 0.35 / 0.41 / -0.04 |
+| `onml3_f26calx_q3_lam3_x05_k10` (A) | 1.38 | 1.38 | 1.89 / 0.94 | -20% | 18% / 13% | 0.3 1.0 1.4 3.3 1.8 1.5 -1.0 2.5 1.6 0.2 | 0.40 / 0.48 / -0.04 |
+| `onml3_f40_on_lam3_moo_k6` (B) | 1.82 | 1.70 | 3.03 / 0.82 | -28% | 28% / 15% | 2.5 2.8 0.6 5.9 3.1 -0.1 -0.5 2.1 1.5 0.4 | 0.30 / 0.33 / 0.00 |
+| `onml3_f40_on_lam3_moo_k8` (B) | 1.70 | 1.67 | 3.03 / 0.57 | -24% | 25% / 15% | 0.9 2.6 1.2 6.5 3.0 -0.1 -0.1 1.1 1.5 -0.7 | 0.32 / 0.37 / 0.00 |
+| `onml3_f40_on_lam3_moo_k10` (B) | 1.58 | 1.52 | 2.80 / 0.48 | -23% | 21% / 13% | 0.8 2.6 0.4 5.6 3.2 0.1 -0.5 1.1 1.1 0.0 | 0.35 / 0.40 / -0.01 |
+| `onml3_f40_on_lam3_x05_k10` (B) | 1.79 | **1.82** | 2.81 / 0.82 | -25% | 26% / 15% | 1.2 1.9 2.0 4.5 3.2 0.2 0.1 2.1 1.4 0.2 | 0.41 / 0.49 / -0.02 |
+| `onml3_f40_on_lam3_x1_k10` (B) | 0.83 | 0.86 | 1.65 / 0.18 | -23% | 10% / 12% | -0.1 0.7 0.3 3.6 1.8 -0.3 -0.2 1.5 0.7 -0.8 | 0.34 / 0.39 / -0.02 |
+
+Dropped to stay at 8: `onml3_f26calx_q3_lam3_moo_k10` (1.39 / 1.47, dominated by its k6/k8) and
+`onml3_f26calx_q3_lam3_x1_k10` (0.27 / 0.30).  Family fold-OOS of the 8 (chooser on prior dates, $0.4M): 1.67 (it picks
+B k6 in 11 of 16 folds, A k6 in 3).  A k6 and B k6 are 0.74 correlated; their 50/50 mix: 1.97 / 1.95.
+
+c-sensitivity of the kept MOO books (selection fixed at the c = 0.3 scores, costs re-evaluated; $0.4M Sh / fold-OOS):
+
+| book | c = 0.1 | c = 0.3 | c = 1.0 |
+|---|---|---|---|
+| A moo_k6 | 2.20 / 2.32 | 1.85 / 1.95 | -0.41 / -0.31 |
+| A moo_k8 | 2.11 / 2.26 | 1.73 / 1.86 | -0.69 / -0.55 |
+| B moo_k6 | 2.17 / 2.05 | 1.82 / 1.70 | -0.31 / -0.40 |
+| B moo_k8 | 2.06 / 2.03 | 1.70 / 1.67 | -0.50 / -0.50 |
+| B moo_k10 | 1.95 / 1.90 | 1.58 / 1.52 | -0.76 / -0.79 |
+
+Spread fraction for the 09:31 exits (B, k10): f = 0.5 -> 1.79 / 1.82, f = 1 -> 0.83 / 0.86 (A: 1.38 / 1.38 and 0.27 / 0.30).
+
+By tier, B `moo_k10` (positions 2017-2026; A is the same picture: 84 / 7 / 5 / 4 %):
+
+| rank tier | share of positions | gross bps/trade | cost both sides (c=0.3) | net | share of net PnL |
+|---|---|---|---|---|---|
+| 1-300 | 81% | 8.0 | 2.7 | 5.3 | 73% |
+| 301-600 | 8% | 5.0 | 4.9 | 0.2 | 0% |
+| 601-1500 | 6% | 11.0 | 4.4 | 6.7 | 7% |
+| 1501-2000 | 5% | 28.6 | 5.9 | 22.7 | 20% |
+
+The realistic book is a ranks-1-300 book (81-84% of positions) earning 5 bps net per trade (8 gross) plus a few cheap
+thin names with large modelled edge; the plain k10 book earned 25-37 bps gross per trade beyond rank 600 and paid 56-71.
+
+## Leakage checklist
+* Features: F26X exactly as in `agents/onml/final2000.py` (known by the 15:59 bar; ex-auction volume versions; no
+  closing print / auction share / last-5-min).  Liq columns: 20-day means lagged one day (`_lag_mean(...).shift(1)`),
+  same-day `c_hlc` / `c_nc30` from bins 360-389 (<= 15:59), `hs0931` / `hs1559` are functions of those; none of the
+  `t_` (09:30/09:31 of day t+1... same-day open) columns is used.  Costs use dv0 / dvc / ldv20 (lagged) and rv20 (to the
+  close of t).  All inputs of the selection rule are known at 15:59 of day t.
+* Targets: y_oo = official open of t+1 (daily panel, split-adjusted via the Min split factor) / official close of t;
+  y_on = 09:31 bar close of t+1 / official close of t; |y| > 0.5 -> NaN.  LightGBM walk-forward: expanding window,
+  quarterly cuts from 2017-01-01, training rows with date < cut - 3 days (label lag), test rows [cut, next cut).
+* Calibration map: expanding yearly, fitted on dates < Jan 1 - 3 days; 2017 in-sample (no fold uses it).
+* Selection parameters (lambda = 3, k) chosen on the dev span (plateau, not a peak); the chooser in `folds.py` will pick
+  among the 8 on prior dates.  The spread model `hs0931` is an in-sample calibration by construction (shared `liq.py`).
+* Universe survivorship as before (2016-2026 median dollar volume ranking); the cost-aware book concentrates in ranks
+  1-300, where survivorship matters least.  Dates <= 2026-04-27 only; STRAT_END never set.
+
+## What I would keep
+* `onml3_f26calx_q3_lam3_moo_k6` and `onml3_f40_on_lam3_moo_k6` (or their mix) as the realistic overnight sleeve:
+  about 1.7-2.0 fold-OOS at $0.4M, 26-28%/yr at 14-15% vol, maxDD -19..-28%, correlation 0.3-0.4 with the old k10 book
+  and ~0 with SPY.  `onml3_f40_on_lam3_x05_k10` (1.82) is the fallback if the exit has to be a limit order at 09:31
+  rather than MOO, and shows the liq features matter most there.
+* Honest headline: the learned overnight edge at the official open is real (gross Sharpe 5.8, 127%/yr for the old
+  k10 book; 5.7 fold-OOS under the old cost convention for the refit) but 75% of it sits in names where a $20k auction
+  order costs 2-3x the edge.  What survives realistic execution is a ranks-1-300 book worth ~2 Sharpe at c = 0.3, ~2.3
+  at c = 0.1, nothing at c = 1.0.  The single most valuable next step is measuring c: compare the actual opening /
+  closing auction prints against the pre-auction mid on a sample of these names (as `quotes_check.py` did for the
+  09:31 spread), since the whole result is a sqrt-impact assumption.
+* Do not repeat: cost-net targets (R3), liquid-universe training (R6/R7), plain cost caps instead of the net score.
