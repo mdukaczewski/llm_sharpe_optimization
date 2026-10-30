@@ -133,3 +133,25 @@ def comm_bps(k): return 2 * k * 2 * COMM / CAP * 1e4
 
 def save(name, r, note):
     rlib.save_cand("dayml3", name, r, note)
+
+# ---------------------------------------------------------------- causal cost-aware selection on a gross-target model
+EDGES = np.r_[np.arange(-0.5, -0.45, 0.01), np.arange(-0.45, 0.45, 0.05), np.arange(0.45, 0.5001, 0.01)]
+def causal_calibration(D, pred, y="y_30d", first="2017-07-01", lag_days=3):
+    """E[y | per-day pct rank bucket of pred], calibrated on prior dates only: half-year cuts from `first`, each test window
+    uses every (date, name) with date < cut - lag.  The first window (before `first`) has no prior predictions and uses the
+    linear map E = 12.4 bps x rank (the full-sample slope of step 2; it only affects dates before 2017-07, outside the fold-OOS span)."""
+    r_ = xr(D, pred); b = pd.cut(pd.Series(r_), EDGES, include_lowest=True); dates = D.date.to_numpy(); yv = D[y].to_numpy(float)
+    E = 12.4e-4 * r_
+    cuts = list(pd.date_range(first, DEV_END, freq="6MS")) + [pd.Timestamp("2027-01-01")]
+    for i, c0 in enumerate(cuts[:-1]):
+        c1 = cuts[i + 1]; tr = (dates < np.datetime64(c0 - pd.Timedelta(days=lag_days))) & np.isfinite(r_) & np.isfinite(yv)
+        te = (dates >= np.datetime64(c0)) & (dates < np.datetime64(c1))
+        if tr.sum() < 10000 or te.sum() == 0: continue
+        cal = pd.Series(yv[tr]).groupby(b[tr].to_numpy(), observed=True).mean()
+        E[te] = b[te].map(cal).astype(float).to_numpy()
+    return E
+
+def sel_scores(D, pred, f=0.5, y="y_30d"):
+    """two-sided net scores from a gross model: long E - f c, short -E - f c"""
+    E = causal_calibration(D, pred, y); c = f * D.hs_rt.to_numpy() / 1e4
+    return E - c, -E - c

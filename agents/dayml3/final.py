@@ -1,58 +1,56 @@
 #!/usr/bin/env python3
-"""dayml3 FINAL: quarterly retrain, n_jobs=2, of the chosen step-3 configurations (+ their pair ensemble), books costed at the
-predicted half-spreads, candidates saved as dayml3_<desc>_x05_k{4,6,8} (f = 0.5) and dayml3_<desc>_x1_k{6,8} (f = 1).
-  python3 agents/dayml3/final.py B1 B1x120          # the two models; 'ens' = average per-day pct rank of the two
-Series saved: gross - f x spread cost - borrow, BEFORE the $3 commission (coordinator adds it from the _k count)."""
+"""dayml3 FINAL (books from the saved quarterly predictions out/pred_final_<cfg>_Q.parquet; fit them with fitq.py first).
+Scoring modes:
+  sel   : gross-target model(s) (A1 [+ A1x120 pair, average per-day pct rank]) with the CAUSAL cost-aware two-sided selection
+          long score E[y_30d | rank] - 0.5 c, short -E - 0.5 c  (c = predicted round-trip half-spread, calibration on prior dates)
+  pair  : two-sided net-target models (long B1, short S1)
+Candidates (<= 8): dayml3_<desc>_x05_k{4,6,8} (f = 0.5) and dayml3_<desc>_x1_k{6,8} (f = 1); series = gross - f x spread cost - borrow,
+BEFORE the $3 commission.   python3 agents/dayml3/final.py                       (env D3_SEL_CFGS='A1,A1x120'  D3_UNI=u600)"""
 import sys; sys.path.insert(0, "/home/user/llm_sharpe_optimization/agents/dayml3")
 from d3lib import *
-NJ = int(os.environ.get("D3_NJOBS", "2")); FROM_SAVED = "--from-saved" in sys.argv
-cfgs = [a for a in sys.argv[1:] if not a.startswith("--")]
-DESC = {"A1": "liq", "B1": "liqnet", "C1": "liqnet600", "A0": "base", "B0": "net", "C0": "net600", "B1x120": "liqnet120", "C1x120": "liqnet600_120"}
-SAVE = os.environ.get("D3_SAVE", "ens" if len(cfgs) > 1 else cfgs[0])        # which prediction to save candidates from
-log(f"==== final: cfgs {cfgs} retrain Q n_jobs {NJ} save {SAVE} from_saved {FROM_SAVED} ====")
-D = frame(1500); D["y_60d_net05"] = D["y_60d"] - 0.5 * D["hs_rt"] / 1e4; D["y_120d_net05"] = D["y_120d"] - 0.5 * D["hs_rt"] / 1e4
-u600 = (D["rank"] <= 600).to_numpy(); u300 = (D["rank"] <= 300).to_numpy()
-CFG = {"A0": (dlib.EXT, "y_60d", None), "A1": (EXTL, "y_60d", None), "B0": (dlib.EXT, "y_60d_net05", None), "B1": (EXTL, "y_60d_net05", None),
-       "C0": (dlib.EXT, "y_60d_net05", u600), "C1": (EXTL, "y_60d_net05", u600), "B1x120": (EXTL, "y_120d_net05", None), "C1x120": (EXTL, "y_120d_net05", u600)}
-preds = {}
-for cfg in cfgs:
-    feats, y, m = CFG[cfg]; fp = f"{OUT}/pred_final_{cfg}_Q.parquet"; t0 = time.time()
-    if FROM_SAVED and os.path.exists(fp):
-        P = pd.read_parquet(fp); pred = D[["date", "tk"]].merge(P, on=["date", "tk"], how="left")["p"].to_numpy(float)
-    else:
-        X = d2lib.matrix(D, feats); yr = d2lib.rank_target(D if m is None else D[m], y)
-        if m is not None: yf = np.full(len(D), np.nan, np.float32); yf[m] = yr; yr = yf
-        pred = d2lib.walk_forward(D, X, yr, retrain="Q", n_jobs=NJ, seed=0, verbose=True, train_mask=m); del X
-        if m is not None: pred[~m] = np.nan
-        P = D.loc[np.isfinite(pred), ["date", "tk"]].copy(); P["p"] = pred[np.isfinite(pred)]; P.to_parquet(fp)
-    preds[cfg] = pred; icm, ict = rlib.ic(D, pd.Series(pred, index=D.index), "y_30d")
-    log(f"final {cfg}: feats {len(feats)} target {y} fit {time.time()-t0:.0f}s IC(y_30d) {icm:.4f} t {ict:.1f}")
-if len(cfgs) > 1:
-    e = np.nanmean(np.column_stack([xr(D, preds[c]) for c in cfgs]), axis=1); e[~np.all(np.column_stack([np.isfinite(preds[c]) for c in cfgs]), axis=1)] = np.nan
-    preds["ens"] = e
+SEL = os.environ.get("D3_SEL_CFGS", "A1").split(","); UNI = os.environ.get("D3_UNI", "u600"); PAIR = os.environ.get("D3_PAIR", "")      # e.g. "B1,S1"
+log(f"==== final: sel models {SEL} universe {UNI} pair {PAIR or '-'} ====")
+D = frame(1500); u600 = (D["rank"] <= 600).to_numpy(); u300 = (D["rank"] <= 300).to_numpy(); UNIS = {"u1500": None, "u600": u600, "u300": u300}
+def load(cfg):
+    P = pd.read_parquet(f"{OUT}/pred_final_{cfg}_Q.parquet"); return D[["date", "tk"]].merge(P, on=["date", "tk"], how="left")["p"].to_numpy(float)
+preds = {c: load(c) for c in SEL + ([x for x in PAIR.split(",")] if PAIR else [])}
+for c, p in preds.items():
+    icm, ict = rlib.ic(D, pd.Series(p, index=D.index), "y_30d"); log(f"final {c}: coverage {np.isfinite(p).mean():.3f} IC(y_30d) {icm:.4f} t {ict:.1f}")
+scores = {}
+for c in SEL: scores[f"sel_{c}"] = sel_scores(D, preds[c], 0.5)
+if len(SEL) > 1:
+    e = np.mean(np.column_stack([xr(D, preds[c]) for c in SEL]), axis=1); scores["sel_ens"] = sel_scores(D, e, 0.5)
+    scores["gross_ens"] = (e, -e)
+scores[f"gross_{SEL[0]}"] = (xr(D, preds[SEL[0]]), -xr(D, preds[SEL[0]]))
+if PAIR: b_, s_ = PAIR.split(","); scores["pair"] = (preds[b_], preds[s_])
 rows = []; books = {}
-for tag, pred in preds.items():
-    for uni, m in [("u1500", None), ("u600", u600), ("u300", u300)]:
-        for k in [4, 6, 8]:
-            L = positions(D, pred, k=k, y="y_30d", mask=m); dd = daily(L, k); books[(tag, uni, k)] = (L, dd)
+for tag, (ls, ss) in scores.items():
+    for uni, m in UNIS.items():
+        for k in [2, 3, 4, 6, 8]:
+            L = positions(D, None, k=k, y="y_30d", mask=m, long_score=ls, short_score=ss); dd = daily(L, k); books[(tag, uni, k)] = (L, dd)
             for f in [1.0, 0.5, 0.25]:
                 s = stats(net(dd, f)); s.update(cfg=tag, uni=uni, k=k, f=f); rows.append(s)
             s = stats(net(dd, old=True)); s.update(cfg=tag, uni=uni, k=k, f="old"); rows.append(s)
+            s = stats(net(dd, 0.0)); s.update(cfg=tag, uni=uni, k=k, f="gross-comm"); rows.append(s)
             t = tier_table(L, 0.5); sh_ = " ".join(f"{r.tier}:{r.share:.2f}/{r.net_bps:+.1f}" for r in t.itertuples())
-            log(f"{tag:7s} {uni:5s} k{k} | f1 Sh {rows[-4]['sh']:5.2f} fo {rows[-4]['fo']:5.2f} | f0.5 Sh {rows[-3]['sh']:5.2f} fo {rows[-3]['fo']:5.2f} h {rows[-3]['h1']:4.1f}/{rows[-3]['h2']:4.1f} mdd {rows[-3]['mdd']*100:5.0f}% | f0.25 fo {rows[-2]['fo']:5.2f} | old Sh {rows[-1]['sh']:5.2f} fo {rows[-1]['fo']:5.2f} | tiers {sh_}")
+            log(f"{tag:10s} {uni:5s} k{k} | f1 Sh {rows[-5]['sh']:5.2f} fo {rows[-5]['fo']:5.2f} | f0.5 Sh {rows[-4]['sh']:5.2f} fo {rows[-4]['fo']:5.2f} h {rows[-4]['h1']:4.1f}/{rows[-4]['h2']:4.1f} mdd {rows[-4]['mdd']*100:5.0f}% | f0.25 fo {rows[-3]['fo']:5.2f} | old Sh {rows[-2]['sh']:5.2f} fo {rows[-2]['fo']:5.2f} | tiers {sh_}")
+            dd.to_parquet(f"{OUT}/final_{tag}_{uni}_k{k}.parquet")
 pd.DataFrame(rows).to_csv(f"{OUT}/final.csv", index=False)
-# candidates: the SAVE prediction on the universe given by D3_UNI (default u1500)
-uni = os.environ.get("D3_UNI", "u1500"); desc = DESC.get(SAVE, SAVE) if SAVE != "ens" else "_".join(DESC.get(c, c) for c in cfgs) + "_ens"
-if uni != "u1500": desc += f"_{uni}"
+# ---- candidates
 ref = pd.read_csv(f"{R}/agents/dayml2/cands/dayml2_ens_e30_k8.csv", index_col=0, parse_dates=True).iloc[:, 0]
+sl = pd.read_csv(f"{R}/sleeves/onlgb1200q_ls20.csv", index_col=0, parse_dates=True).iloc[:, 0].loc[:DEV_END]
+spy = rlib.ticker_frame("SPY")["y_cc"].shift(1).loc[:DEV_END]
+tag = os.environ.get("D3_SAVE_TAG", "sel_ens" if len(SEL) > 1 else f"sel_{SEL[0]}"); desc = os.environ.get("D3_DESC", "liqsel") + ("" if UNI == "u1500" else f"_{UNI}")
 for k in [4, 6, 8]:
-    L, dd = books[(SAVE, uni, k)]
-    for f, tag in [(0.5, "x05"), (1.0, "x1")]:
-        if tag == "x1" and k == 4: continue
-        r = net(dd, f, comm=False); rc = net(dd, f); s = stats(rc); name = f"dayml3_{desc}_{tag}_k{k}"
-        corr = pd.concat([rc, ref], axis=1).dropna().corr().iloc[0, 1]
-        note = (f"intraday L/S top/bottom {k}, decide 09:31, fill 09:33 bar, exit 10:01 bar; model {SAVE} ({cfgs}, quarterly, EXT+liq feats); universe {uni}; "
-                f"NET of f={f} x predicted NBBO half-spread (liq.py hs0931 entry + hs1001 exit) and borrow, BEFORE commission | at $0.4M: Sh {s['sh']:.2f} fold-OOS {s['fo']:.2f} halves {s['h1']:.2f}/{s['h2']:.2f} mdd {s['mdd']*100:.0f}% corr dayml2_ens_e30_k8 {corr:.2f}"
-                + ("" if s['fo'] > 0 else " | NEGATIVE: not tradable at this spread assumption"))
+    L, dd = books[(tag, UNI, k)]
+    for f, xt in [(0.5, "x05"), (1.0, "x1")]:
+        if xt == "x1" and k == 4: continue
+        r = net(dd, f, comm=False); rc = net(dd, f); s = stats(rc); name = f"dayml3_{desc}_{xt}_k{k}"
+        cc = pd.DataFrame({"x": rc, "ref": ref, "on": sl, "spy": spy}).dropna().corr()["x"]
+        t = tier_table(L, f); tiers = " ".join(f"{r_.tier}:{r_.share:.2f}/{r_.net_bps:+.1f}bps" for r_ in t.itertuples())
+        note = (f"intraday L/S top/bottom {k} eq, decide 09:31, fill 09:33 bar (bin 3), exit 10:01 bar (bin 31); {tag} = quarterly LightGBM {SEL} on dlib.EXT + 17 liq features, "
+                f"causal cost-aware selection (E[y|rank] - 0.5c); universe {UNI}; series NET of f={f} x predicted NBBO half-spread (liq.py hs0931 entry + hs1001 exit) + borrow, BEFORE commission | "
+                f"$0.4M: Sh {s['sh']:.2f} fold-OOS {s['fo']:.2f} halves {s['h1']:.2f}/{s['h2']:.2f} mdd {s['mdd']*100:.0f}% | corr dayml2_ens_e30_k8 {cc['ref']:.2f} onlgb {cc['on']:.2f} SPY {cc['spy']:.2f} | tiers {tiers}"
+                + ("" if s['fo'] > 0 else " | NEGATIVE at this spread assumption: not tradable"))
         save(name, r, note); log(f"saved {name}: {note}")
 log("final done")

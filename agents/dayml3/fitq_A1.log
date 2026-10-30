@@ -1,0 +1,7 @@
+11:46:52 fitq A1: quarterly, n_jobs 2, feats 60, target y_60d, uni all
+  wf 2017-01-01 train 76839 6s
+  wf 2017-04-01 train 143397 8s
+  wf 2017-07-01 train 213723 9s
+  wf 2017-10-01 train 282066 16s
+  wf 2018-01-01 train 351234 23s
+  wf 2018-04-01 train 422216 23s
