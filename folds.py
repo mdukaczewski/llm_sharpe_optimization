@@ -31,7 +31,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 START, END = "2016-10-28", os.environ.get("FOLDS_END", "2026-10-28")
 NEW_LANES = {"onml": ["onml", "onml2"], "dayml": ["dayml", "dayml2"], "xsrule": ["xsrule"], "etfmacro": ["etfmacro"], "dml": ["dml2"]}   # family -> agent lanes (agents/<lane>/cands/*.csv); phase-4 lanes merge into their family
 L = f"{HERE}/agents/intraday/logs"
-DECISION_DATED = ["onml", "lgb_on", "rule_e1", "rule_late", "xsrule"]   # overnight stock books dated at the decision day t (PnL realised at t+1 morning)
+DECISION_DATED = ["onml", "lgb_on", "rule_e1", "rule_late", "xsrule", "lmton"]   # overnight stock books dated at the decision day t (PnL realised at t+1 morning)
 
 def sh(r): return r.mean() / (r.std() + 1e-12) * np.sqrt(252)
 def load(p):
@@ -87,7 +87,7 @@ def main():
     if a.capital_usd > 0:
         import re as _re
         def npos(f, n):
-            if f in ("mom", "vol", "ml", "etfmacro", "etfon", "dml"): return 0   # etfon / dml series already include their commission                 # monthly / multi-day / 1-2 ETF orders: negligible
+            if f in ("mom", "vol", "ml", "etfmacro", "etfon", "dml", "lmt", "lmton", "lmtday"): return 0   # etfon / dml series already include their commission                 # monthly / multi-day / 1-2 ETF orders: negligible
             m = _re.search(r"(?:top|_k|lo|ls|XSLO|LO|LS)(\d+)", n); k = int(m.group(1)) if m else 20
             sides = 1 if ("_LO_" in n or "_lo" in n or "XSLO" in n or n.endswith("_LO") or "LO_top" in n) else 2
             return k * sides

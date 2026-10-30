@@ -1,0 +1,28 @@
+=== exact_books
+   on-exit W4: exact fill 78.3% proxy 77.6% agreement 90.6%
+   on-exit W30: exact fill 88.1% proxy 87.0% agreement 94.5%
+--- exact vs proxy, onml4x_pR_lam3_rte_moo_k6 positions with a panel exit day (bps per position, net of entry + exit cost, before commission)
+                                       variant   n  exit_fill  net_bps   se  net_long  net_short
+                                   MOO (model) 691        NaN    12.54 6.11     25.04       0.08
+                     cross 09:31:00 real quote 691        NaN     7.95 6.21     20.38      -4.45
+         cross 09:31 bar proxy (c1 -/+ hs0931) 691        NaN     7.17 6.18     17.40      -3.04
+  passive 09:31 real, W4, fb real 935 [strict] 691       78.3    10.43 6.26     22.18      -1.29
+              passive 09:31 PROXY, W4 [strict] 691       77.6    10.77 6.27     22.85      -1.26
+   passive 09:31 real, W4, fb real 935 [touch] 691       78.7    10.49 6.26     22.18      -1.16
+               passive 09:31 PROXY, W4 [touch] 691       80.2    11.31 6.27     23.20      -0.56
+passive 09:31 real, W30, fb real 1001 [strict] 691       88.1    10.19 6.34     20.46      -0.06
+             passive 09:31 PROXY, W30 [strict] 691       87.0    10.54 6.35     21.27      -0.16
+ passive 09:31 real, W30, fb real 1001 [touch] 691       88.1    10.19 6.34     20.46      -0.06
+              passive 09:31 PROXY, W30 [touch] 691       88.3    11.09 6.35     21.77       0.43
+   day [strict] exact fill 84.2% proxy 81.4% agree 90.1% | mid->mid gross of filled -15.92 unfilled +75.36 all -1.51 bps
+   day [touch] exact fill 84.3% proxy 83.2% agree 91.2% | mid->mid gross of filled -15.67 unfilled +74.63 all -1.51 bps
+--- exact vs proxy, dayml3 A1 u600 k8 positions on panel days (bps)
+                                                      variant   n  fill  net_filled  per_signal
+                                mid 09:35 -> mid 10:01 (real) 944 100.0       -1.51       -1.51
+                            cross 09:35 -> cross 10:01 (real) 944 100.0      -22.47      -22.47
+                       bar proxy: c4 + hs0935 -> c31 - hs1001 944 100.0      -24.70      -24.70
+passive 09:35 real, bins 5-30, exit cross 10:01 real [strict] 944  84.2       -9.94       -8.37
+              passive 09:35 PROXY, exit c31 - hs1001 [strict] 944  81.4      -12.12       -9.86
+ passive 09:35 real, bins 5-30, exit cross 10:01 real [touch] 944  84.3       -9.67       -8.15
+               passive 09:35 PROXY, exit c31 - hs1001 [touch] 944  83.2      -10.24       -8.51
+exact_books DONE
