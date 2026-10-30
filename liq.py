@@ -21,6 +21,7 @@ MODEL = f"{rlib.DATA}/spread_model.pkl"
 BASE = ["ldv20", "lpx", "hl1", "hl5", "hlc", "roll30", "n30", "nc30", "dv0", "dvc"]
 TODAY_OPEN = ["t_hl0", "t_hl1", "t_n0", "t_n1", "t_dv0"]; TODAY_CLOSE = ["c_hlc", "c_nc30"]
 FEATS = {"0931": BASE + TODAY_OPEN, "1001": BASE + TODAY_OPEN, "1559": BASE + TODAY_CLOSE}
+FEATS["0935"] = BASE + TODAY_OPEN       # onml4 (2026-10-30): additive 09:35 model, fit by add_spread_model("0935"); the other models are unchanged
 
 def _lag_mean(x, w=20):
     return pd.Series(x).rolling(w, min_periods=5).mean().shift(1).to_numpy()
@@ -115,9 +116,34 @@ def fit_spread_model(verbose=True):
         models[t] = (m, factor); out[t] = (r2, corr, len(S)); print(f"  smearing factor {factor:.3f}", flush=True)
     pickle.dump(models, open(MODEL, "wb")); return out
 
+def add_spread_model(t="0935", verbose=True):
+    """onml4 (additive): fit ONE extra time-of-day model with exactly the fit_spread_model procedure and add it to
+    data/spread_model.pkl, leaving the existing entries (0931 / 1559 / 1001) byte-identical.  hs{t} then appears in liq_frame."""
+    import lightgbm as lgb, pickle
+    R = training_rows(); R = R[R.t == t]
+    parts = []
+    for tk, g in R.groupby("tk"):
+        try: f = raw_frame(tk).reindex(g.date.values)
+        except Exception: continue
+        f["tk"] = tk; f["date"] = g.date.values; f["t"] = g.t.values; f["hs"] = g.hs.values; parts.append(f)
+    S = pd.concat(parts).reset_index(drop=True).dropna(subset=FEATS[t]); y = np.log(S.hs.values); X = S[FEATS[t]].astype(np.float64)
+    P = dict(n_estimators=400, learning_rate=0.03, num_leaves=15, min_child_samples=50, subsample=0.8, subsample_freq=1, colsample_bytree=0.8, verbose=-1)
+    grp = pd.util.hash_pandas_object(S.tk, index=False).values % 5; pred = np.zeros(len(S))
+    for k in range(5):
+        m = lgb.LGBMRegressor(**P).fit(X[grp != k], y[grp != k]); pred[grp == k] = m.predict(X[grp == k])
+    r2 = 1 - np.var(y - pred) / np.var(y); corr = np.corrcoef(np.exp(pred), S.hs)[0, 1]
+    factor = S.hs.mean() / np.exp(pred).mean(); pred = pred + np.log(factor); mae = np.mean(np.abs(np.exp(pred) - S.hs))
+    yr = pd.DataFrame({"y": S.hs.values, "p": np.exp(pred), "yr": S.date.dt.year.values}).groupby("yr").mean().round(1)
+    if verbose: print(f"spread model {t}: n {len(S)} names {S.tk.nunique()}  grouped-CV R2(log) {r2:.3f}  corr(bps) {corr:.3f}  MAE {mae:.1f} bps\n{yr.T.to_string()}\n  smearing factor {factor:.3f}", flush=True)
+    m = lgb.LGBMRegressor(**P).fit(X, y)
+    models = pickle.load(open(MODEL, "rb")); models[t] = (m, factor)
+    tmp = MODEL + ".tmp"; pickle.dump(models, open(tmp, "wb")); os.replace(tmp, MODEL)
+    return r2, corr, len(S)
+
 if __name__ == "__main__":
     if "build" in sys.argv: build_all()
     if "fit" in sys.argv: fit_spread_model()
+    if "add0935" in sys.argv: add_spread_model("0935")
 
 # ------------------------------------------------------------------ official open target and execution-cost helpers
 _panel = None
