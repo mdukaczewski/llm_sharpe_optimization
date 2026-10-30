@@ -29,8 +29,9 @@ def line(name, r, k):
 t0 = time.time(); D = load(N); D = add_x(D); D = rlib.clean(D, ["vlast_x", "vday_rel_x", "ldv_x"]); log(f"final2000: {D.tk.nunique()} names, DEV_END={rlib.DEV_END}, {time.time()-t0:.0f}s")
 FS = FEATS18 + EXTRA10 + CAL
 F26 = [f for f in FS if f not in ("zmoc", "vmoc_share", "z5l")]
-F26X = [f if f not in ("vlast_share", "vday_rel", "ldv") else f + "_x" for f in F26]
-for name, fs in [("f26cal", F26), ("f26calx", F26X)]:
+XMAP = {"vlast_share": "vlast_x", "vday_rel": "vday_rel_x", "ldv": "ldv_x"}
+F26X = [XMAP.get(f, f) for f in F26]
+for name, fs in [("f26calx", F26X)]:          # f26cal yearly check already logged (4.14 at $0.4M, k10)
     p = xrank(D, wf(D, fs, "yr", "Y", seed=0, n_jobs=NJ))
     for k in [10, 20]: log("  " + line(f"u{N} {name} yearly s0", book2(D, p, k=k, p=False), k))
 members = []
