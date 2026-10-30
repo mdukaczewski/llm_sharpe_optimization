@@ -41,3 +41,4 @@ logs/quotes_check.log
 logs/quotes_panel.log
 logs/liq_build.log
 logs/spread_fit.log
+out/quotes_panel.csv
