@@ -45,7 +45,7 @@ def frame(n=1500):
     """slim modelling frame (KEEP + EXTL features), cached in out/frame.parquet"""
     fp = f"{OUT}/frame.parquet"
     if os.path.exists(fp): return pd.read_parquet(fp)
-    D = build(n); D = D[KEEP + EXTL].copy()
+    D = build(n); D = D[KEEP + [c for c in EXTL if c not in KEEP]].copy()
     for c in EXTL: D[c] = D[c].astype(np.float32)
     D.to_parquet(fp); return D
 
