@@ -96,3 +96,46 @@ Sensitivity of `B lambda 2 causal` to c (selection fixed at the c = 0.3 scores, 
 c = 0.1 / 0.3 / 1.0: k6 2.4 / 1.8 / -0.9; k8 2.3 / 1.7 / -1.1; k10 2.1 / 1.5 / -1.5.  At c = 1.0 nothing survives.
 Spread exits with the same rule (score uses ce + f x hs0931): half the half-spread k6 1.73 / 1.85, k10 1.45 / 1.53;
 crossing k6 1.02 / 1.05, k10 0.67 / 0.72.
+
+## Step 3: refit with liquidity / spread features (yearly retrain, seed 0, n_jobs = 1, universe 2000)
+
+Feature sets: F26X = the f26calx set (26 features of `agents/onml/final2000.py`); F40 = F26X + the 14 liq columns
+`ldv20 lpx hl1 hl5 hlc roll30 n30 nc30 dv0 dvc c_hlc c_nc30 hs0931 hs1559` (lagged 20-day means, or same-day values of
+bins 360-389, or the calibrated spread predictions from them: all known at 15:59 of day t; the `t_` columns are
+next-morning information and were not used).  Targets: `yr` = per-day rank of y_on (09:31 bar), `yr_oo` = rank of y_oo
+(official open), `yr_oon` = rank of y_oo - MOO auction cost (c = 0.3, fraction).  Rows: 2.97M; a yearly fit took 8-11 min.
+Also two "liquid-universe" models (R6/R7): trained AND predicted only on names whose predicted mean per-side cost at
+k = 10, c = 0.3 is <= 10 bps (64% of the rows, ~800 names/day; the rank target recomputed within that set).
+
+$0.4M Sharpe / fold-OOS; "selection" = rule B of step 2 with the causal map (lambda 2 or 3, the better one):
+
+| run | feats / target | IC y_oo | old convention: plain top-10, 09:31 exit, 1-2.5 bps | plain top-10 MOC+MOO c=0.3 | cap 10, k10 | selection k6 | k8 | k10 | selection, half-spread exit k6 / k10 |
+|---|---|---|---|---|---|---|---|---|---|
+| R5 `f26x_on` | F26X / yr (= the old model, 1 seed) | 0.033 | 3.68 / 3.77 | -5.5 / -5.2 | 0.1 / 0.5 | 1.54 / 1.79 | 1.42 / 1.64 | 1.39 / 1.55 | 1.21 / 1.34, 0.89 / 1.06 |
+| R1 `f26x_oo` | F26X / yr_oo | 0.035 | 3.87 / 3.91 | -5.2 / -5.0 | 0.4 / 0.8 | 1.74 / 1.90 | 1.56 / 1.67 | 1.46 / 1.57 | 1.28 / 1.40, 0.81 / 0.97 |
+| **R4 `f40_on`** | **F40 / yr** | 0.036 | **5.23 / 5.31** | -7.9 / -7.8 | 1.1 / 1.5 | **1.74 / 1.93** | **1.76 / 1.94** | **1.58 / 1.72** | **1.62 / 1.78, 1.52 / 1.63** |
+| R2 `f40_oo` | F40 / yr_oo | 0.038 | 5.06 / 5.09 | -6.7 / -6.6 | 1.2 / 1.5 | 1.82 / 1.71 | 1.64 / 1.53 | 1.64 / 1.60 | 1.28 / 1.21, 1.02 / 1.03 |
+| R3 `f40_oon` | F40 / yr_oon | 0.003 | 0.78 / 1.04 | -18.8 / -18.4 | -1.0 / -0.8 | 0.10 / 0.21 | 0.08 / 0.19 | -0.04 / 0.09 | negative |
+| R6 `f40_oo_liq` | F40 / yr_oo, liquid universe | 0.032 | 2.34 / 2.49 | 1.04 / 1.38 | (same) | 1.50 / 1.48 | 1.32 / 1.31 | 1.15 / 1.15 | 0.78 / 0.83, 0.34 / 0.41 |
+| R7 `f26x_oo_liq` | F26X / yr_oo, liquid universe | 0.030 | 1.94 / 2.04 | 0.20 / 0.54 | (same) | 1.22 / 1.37 | 0.98 / 1.11 | 0.77 / 0.87 | 0.55 / 0.64, 0.17 / 0.20 |
+| ref: saved `f26calx_q3` (quarterly, 3 seeds) | F26X / yr | 0.036 | 4.13 / 4.23 | -5.5 / -5.2 | 0.2 / 0.6 | 1.85 / 1.95 | 1.73 / 1.86 | 1.39 / 1.47 | 1.73 / 1.85, 1.38 / 1.38 |
+
+Reading:
+* The liq features add a lot at the mid (old convention 5.2-5.3 vs 3.7-3.9 for the same yearly seed-0 setup), but the
+  model spends it on the names with the widest spreads (plain MOC+MOO books get worse: -7.9 vs -5.5).  Under the
+  cost-aware selection they still add +0.15..0.3 fold-OOS at every k and much more with the half-spread exit
+  (1.78 vs 1.34 at k6, 1.63 vs 1.06 at k10): spread-aware features let the model rank well among the names it is allowed
+  to trade.
+* The official-open target helps the model without liq features a little (+0.1) and not the model with them; with F40
+  the old 09:31-bar target is better (yr: 1.93 / 1.94 / 1.72 vs yr_oo 1.71 / 1.53 / 1.60) - the y_oo prints of thin
+  names are noisier labels, and the liq features already carry the spread information.
+* Target net of cost (R3) is dead: the per-name cost term is symmetric in the target but the book is not (it pushes
+  expensive names to the BOTTOM of the ranking, i.e. into the shorts), IC collapses to 0.003.  Do not repeat.
+* Training only on the liquid universe (R6/R7) loses: fewer rows, weaker model (1.48 vs 1.7-1.9 under the same
+  selection), even though its plain books are the only plain books that are positive.  Train on everything, select after.
+* The cap-10 universe + plain top-k (what the brief suggested as the simplest variant) is far below the lambda rule
+  at every setting (1.5 vs 1.9).
+
+Chosen final configurations (step 4): A = the saved quarterly 3-seed f26calx predictions with the lambda = 3 selection
+(no refit; the reference that isolates the selection effect), B = `f40_on` (F40 features, 09:31-bar rank target)
+quarterly 3-seed with the same selection.
