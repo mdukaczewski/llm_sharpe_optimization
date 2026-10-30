@@ -37,3 +37,4 @@ agents/*/final2000b.log
 agents/*/u2000_e30.log
 logs/regen_chain.log
 agents/*/k10_holdout.log
+logs/quotes_check.log
