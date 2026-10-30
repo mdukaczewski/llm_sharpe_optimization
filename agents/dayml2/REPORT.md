@@ -67,7 +67,7 @@ k6 eq fold-OOS at $0.4M (spread-only in brackets), halves at $0.4M:
 | EXT2 + overnight model's prediction at yesterday's close (agents/onml/out/pred_f28cal_q3, shifted to the next trading day) | 0.0269 (11.8) | 1.91 (2.08) | 1.82 / 1.87 | 2.25 / **1.76** |
 | 600 trees, lr 0.02 | 0.0287 (12.3) | 2.10 (2.25) | 2.03 / 1.88 | 2.99 / 1.44 |
 | rolling 3-year training window | 0.0249 (10.7) | 0.96 (1.11) | 1.08 / 0.91 | 2.51 / -0.08 |
-| recency weights, half-life 2 years | HL2_LINE |
+| recency weights, half-life 2 years | not run: the fit was killed by the coordinator (wrap-up) 16 min into the job; no result |
 | num_leaves 31/63 with 600/1000 trees, min_child 500/1000, colsample 0.5; thin-name (rank > 600) training; dedicated bin-31 / bin-91 targets | not run: the box was handed over to the 2000-name runs (configs are in lab2.py: cap31, cap63, thin, y30, y90) |
 
 * The new 09:31 features **do not help**: IC unchanged, the book is worse (more noise in the top ranks).  Adding the
@@ -79,7 +79,10 @@ k6 eq fold-OOS at $0.4M (spread-only in brackets), halves at $0.4M:
   the old data still helps in the new regime; the expanding window is right.
 
 ## 3. Refit predictions under the kept constructions — lab3
-LAB3_BLOCK
+Not run: the wrap-up request came before lab3 could be started (it needs only the saved out/pred_{base,t600,ext2on}.npy
+and ~5 minutes of single-core book construction: `python3 agents/dayml2/lab3.py base t600 ext2on --ens base+ext2on,base+t600`).
+The open question it would answer: does the bin-31 exit / ensemble gain carry over to a model with the overnight prediction
+as a feature (whose post-2021 half is better)?
 
 ## 4. Candidates (`rlib.save_cand("dayml2", ...)`), all built from the two quarterly models of the dayml lane
 FINAL_BLOCK
