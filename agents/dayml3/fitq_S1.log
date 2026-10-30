@@ -1,1 +1,19 @@
 13:09:05 fitq S1: quarterly, n_jobs 2, feats 60, target ys_net05, uni all
+  wf 2017-01-01 train 76839 5s
+  wf 2017-04-01 train 143397 8s
+  wf 2017-07-01 train 213723 12s
+  wf 2017-10-01 train 282066 15s
+  wf 2018-01-01 train 351234 17s
+  wf 2018-04-01 train 422216 20s
+  wf 2018-07-01 train 494726 25s
+  wf 2018-10-01 train 563322 27s
+  wf 2019-01-01 train 638288 29s
+  wf 2019-04-01 train 709916 34s
+  wf 2019-07-01 train 782043 37s
+  wf 2019-10-01 train 854518 39s
+  wf 2020-01-01 train 923071 43s
+  wf 2020-04-01 train 998603 48s
+  wf 2020-07-01 train 1080017 49s
+  wf 2020-10-01 train 1154369 56s
+  wf 2021-01-01 train 1222958 58s
+  wf 2021-04-01 train 1291457 54s

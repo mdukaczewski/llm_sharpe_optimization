@@ -8,7 +8,7 @@ Candidates (<= 8): dayml3_<desc>_x05_k{4,6,8} (f = 0.5) and dayml3_<desc>_x1_k{6
 BEFORE the $3 commission.   python3 agents/dayml3/final.py                       (env D3_SEL_CFGS='A1,A1x120'  D3_UNI=u600)"""
 import sys; sys.path.insert(0, "/home/user/llm_sharpe_optimization/agents/dayml3")
 from d3lib import *
-SEL = os.environ.get("D3_SEL_CFGS", "A1").split(","); UNI = os.environ.get("D3_UNI", "u600"); PAIR = os.environ.get("D3_PAIR", "")      # e.g. "B1,S1"
+SEL = [c for c in os.environ.get("D3_SEL_CFGS", "A1").split(",") if c]; CSV = os.environ.get("D3_CSV", "final.csv"); UNI = os.environ.get("D3_UNI", "u600"); PAIR = os.environ.get("D3_PAIR", "")      # e.g. "B1,S1"
 log(f"==== final: sel models {SEL} universe {UNI} pair {PAIR or '-'} ====")
 D = frame(1500); u600 = (D["rank"] <= 600).to_numpy(); u300 = (D["rank"] <= 300).to_numpy(); UNIS = {"u1500": None, "u600": u600, "u300": u300}
 def load(cfg):
@@ -21,7 +21,7 @@ for c in SEL: scores[f"sel_{c}"] = sel_scores(D, preds[c], 0.5)
 if len(SEL) > 1:
     e = np.mean(np.column_stack([xr(D, preds[c]) for c in SEL]), axis=1); scores["sel_ens"] = sel_scores(D, e, 0.5)
     scores["gross_ens"] = (e, -e)
-scores[f"gross_{SEL[0]}"] = (xr(D, preds[SEL[0]]), -xr(D, preds[SEL[0]]))
+if SEL: scores[f"gross_{SEL[0]}"] = (xr(D, preds[SEL[0]]), -xr(D, preds[SEL[0]]))
 if PAIR: b_, s_ = PAIR.split(","); scores["pair"] = (preds[b_], preds[s_])
 rows = []; books = {}
 for tag, (ls, ss) in scores.items():
@@ -35,12 +35,12 @@ for tag, (ls, ss) in scores.items():
             t = tier_table(L, 0.5); sh_ = " ".join(f"{r.tier}:{r.share:.2f}/{r.net_bps:+.1f}" for r in t.itertuples())
             log(f"{tag:10s} {uni:5s} k{k} | f1 Sh {rows[-5]['sh']:5.2f} fo {rows[-5]['fo']:5.2f} | f0.5 Sh {rows[-4]['sh']:5.2f} fo {rows[-4]['fo']:5.2f} h {rows[-4]['h1']:4.1f}/{rows[-4]['h2']:4.1f} mdd {rows[-4]['mdd']*100:5.0f}% | f0.25 fo {rows[-3]['fo']:5.2f} | old Sh {rows[-2]['sh']:5.2f} fo {rows[-2]['fo']:5.2f} | tiers {sh_}")
             dd.to_parquet(f"{OUT}/final_{tag}_{uni}_k{k}.parquet")
-pd.DataFrame(rows).to_csv(f"{OUT}/final.csv", index=False)
+pd.DataFrame(rows).to_csv(f"{OUT}/{CSV}", index=False)
 # ---- candidates
 ref = pd.read_csv(f"{R}/agents/dayml2/cands/dayml2_ens_e30_k8.csv", index_col=0, parse_dates=True).iloc[:, 0]
 sl = pd.read_csv(f"{R}/sleeves/onlgb1200q_ls20.csv", index_col=0, parse_dates=True).iloc[:, 0].loc[:DEV_END]
 spy = rlib.ticker_frame("SPY")["y_cc"].shift(1).loc[:DEV_END]
-tag = os.environ.get("D3_SAVE_TAG", "sel_ens" if len(SEL) > 1 else f"sel_{SEL[0]}"); desc = os.environ.get("D3_DESC", "liqsel") + ("" if UNI == "u1500" else f"_{UNI}")
+tag = os.environ.get("D3_SAVE_TAG", "sel_ens" if len(SEL) > 1 else (f"sel_{SEL[0]}" if SEL else "pair")); desc = os.environ.get("D3_DESC", "liqsel") + ("" if UNI == "u1500" else f"_{UNI}")
 for k in [4, 6, 8]:
     L, dd = books[(tag, UNI, k)]
     for f, xt in [(0.5, "x05"), (1.0, "x1")]:
