@@ -1,0 +1,11 @@
+load_sub: 3921 tickers, 2994 days (2014-06-02..2026-04-27), 94s
+mask avg names/day 948.5
+features (2585013, 59) 149s
+   fit 2016-10-28..2017-05-01 train rows 256584 13s
+   fit 2017-05-02..2017-10-27 train rows 354962 12s
+   fit 2017-10-30..2018-05-01 train rows 453112 15s
+   fit 2018-05-02..2018-10-29 train rows 557511 26s
+   fit 2018-10-30..2019-05-02 train rows 662000 23s
+   fit 2019-05-03..2019-10-30 train rows 767409 45s
+   fit 2019-10-31..2020-05-01 train rows 870322 97s
+   fit 2020-05-04..2020-10-29 train rows 979784 63s

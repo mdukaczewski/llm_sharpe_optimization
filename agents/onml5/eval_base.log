@@ -1,0 +1,56 @@
+18:38:03 base {'book': 'pR rte_moo_k6', 'pre': np.float64(2.19), 'sh': np.float64(1.89), 'fold': np.float64(1.88), 'h1': np.float64(2.48), 'h2': np.float64(1.43), 'mdd': np.float64(-21.5), 'ret': np.float64(29.4), 'vol': np.float64(15.5), 'fneg': 4, 'yrs': '+0.8 +1.4 +0.3 +6.8 +2.1 +0.5 +0.0 +3.8 +2.7 -0.9', 'gross_bps': np.float64(9.98), 't1_pct': np.float64(83.5), 'fold_c0.1': np.float64(2.85), 'fold_c1': np.float64(0.69), 'corr_rtx': np.float64(0.82)}
+18:38:03 base {'book': 'pR rte_rtx_k6', 'pre': np.float64(2.25), 'sh': np.float64(1.99), 'fold': np.float64(2.07), 'h1': np.float64(2.48), 'h2': np.float64(1.53), 'mdd': np.float64(-16.7), 'ret': np.float64(34.4), 'vol': np.float64(17.3), 'fneg': 3, 'yrs': '+1.1 +0.6 +1.8 +5.6 +1.8 +1.5 +0.1 +3.6 +2.6 -0.9', 'gross_bps': np.float64(11.07), 't1_pct': np.float64(75.9), 'fold_c0.1': np.float64(2.66), 'fold_c1': np.float64(1.03), 'corr_rtx': np.float64(1.0)}
+18:38:03 base tiers
+         book      tier     n  pos_pct  gross  cost   net  pnl_pct
+pR rte_moo_k6     1-300 23259     83.5   9.32  2.68  6.63     79.8
+pR rte_moo_k6   301-600  1917      6.9   4.18  4.98 -0.80     -1.0
+pR rte_moo_k6  601-1500  1605      5.8  12.15  3.72  8.43      7.0
+pR rte_moo_k6 1501-2000  1059      3.8  31.66  6.38 25.28     14.2
+18:38:03 base tiers
+         book      tier     n  pos_pct  gross  cost   net  pnl_pct
+pR rte_rtx_k6     1-300 21139     75.9  10.28  2.74  7.54     72.3
+pR rte_rtx_k6   301-600  3527     12.7   9.52  4.14  5.38      8.4
+pR rte_rtx_k6  601-1500  2010      7.2  10.69  4.02  6.67      6.0
+pR rte_rtx_k6 1501-2000  1164      4.2  30.76  6.13 24.63     13.3
+18:38:59 base {'book': 'p40 rte_moo_k6', 'pre': np.float64(2.02), 'sh': np.float64(1.73), 'fold': np.float64(1.66), 'h1': np.float64(2.9), 'h2': np.float64(0.79), 'mdd': np.float64(-26.0), 'ret': np.float64(27.7), 'vol': np.float64(16.0), 'fneg': 6, 'yrs': '+1.9 +1.3 +0.8 +6.7 +3.2 +0.0 -0.3 +1.8 +1.6 -0.2', 'gross_bps': np.float64(9.63), 't1_pct': np.float64(82.3), 'fold_c0.1': np.float64(3.06), 'fold_c1': np.float64(0.49), 'corr_rtx': np.float64(0.71)}
+18:38:59 base {'book': 'p40 rte_rtx_k6', 'pre': np.float64(1.97), 'sh': np.float64(1.7), 'fold': np.float64(1.71), 'h1': np.float64(2.8), 'h2': np.float64(0.65), 'mdd': np.float64(-33.9), 'ret': np.float64(29.0), 'vol': np.float64(17.0), 'fneg': 4, 'yrs': '+1.4 +1.1 +1.6 +6.1 +2.8 +0.1 -0.9 +1.8 +1.7 +0.0', 'gross_bps': np.float64(10.03), 't1_pct': np.float64(71.8), 'fold_c0.1': np.float64(2.87), 'fold_c1': np.float64(1.27), 'corr_rtx': np.float64(0.78)}
+18:38:59 base tiers
+          book      tier     n  pos_pct  gross  cost   net  pnl_pct
+p40 rte_moo_k6     1-300 22916     82.3   9.55  2.57  6.98     87.2
+p40 rte_moo_k6   301-600  1918      6.9  -0.61  5.00 -5.60     -6.3
+p40 rte_moo_k6  601-1500  1821      6.5  12.94  4.02  8.92      8.8
+p40 rte_moo_k6 1501-2000  1185      4.3  22.78  7.27 15.51     10.3
+18:38:59 base tiers
+          book      tier     n  pos_pct  gross  cost   net  pnl_pct
+p40 rte_rtx_k6     1-300 19980     71.8  10.65  2.62  8.03     84.8
+p40 rte_rtx_k6   301-600  4284     15.4   2.14  3.89 -1.75     -4.7
+p40 rte_rtx_k6  601-1500  2213      7.9  12.48  4.55  7.93      9.1
+p40 rte_rtx_k6 1501-2000  1363      4.9  21.73  6.98 14.76     10.8
+18:39:48 base {'book': 'p26 rte_moo_k6', 'pre': np.float64(2.13), 'sh': np.float64(1.82), 'fold': np.float64(1.94), 'h1': np.float64(2.29), 'h2': np.float64(1.44), 'mdd': np.float64(-20.3), 'ret': np.float64(26.5), 'vol': np.float64(14.6), 'fneg': 2, 'yrs': '-1.7 +1.5 +1.0 +6.2 +2.1 +1.5 +0.6 +3.0 +1.6 -1.2', 'gross_bps': np.float64(9.28), 't1_pct': np.float64(85.4), 'fold_c0.1': np.float64(2.69), 'fold_c1': np.float64(0.68), 'corr_rtx': np.float64(0.73)}
+18:39:48 base {'book': 'p26 rte_rtx_k6', 'pre': np.float64(1.73), 'sh': np.float64(1.46), 'fold': np.float64(1.72), 'h1': np.float64(1.39), 'h2': np.float64(1.53), 'mdd': np.float64(-21.2), 'ret': np.float64(24.3), 'vol': np.float64(16.7), 'fneg': 3, 'yrs': '-1.5 -0.0 +1.2 +3.5 +2.3 +2.1 +0.1 +2.5 +2.5 -1.1', 'gross_bps': np.float64(8.95), 't1_pct': np.float64(76.6), 'fold_c0.1': np.float64(2.5), 'fold_c1': np.float64(0.94), 'corr_rtx': np.float64(0.77)}
+18:39:48 base tiers
+          book      tier     n  pos_pct  gross  cost   net  pnl_pct
+p26 rte_moo_k6     1-300 23787     85.4   9.08  2.64  6.44     86.4
+p26 rte_moo_k6   301-600  1654      5.9   2.32  4.80 -2.48     -2.5
+p26 rte_moo_k6  601-1500  1525      5.5  11.83  3.53  8.30      7.2
+p26 rte_moo_k6 1501-2000   874      3.1  23.41  5.78 17.63      9.0
+18:39:48 base tiers
+          book      tier     n  pos_pct  gross  cost   net  pnl_pct
+p26 rte_rtx_k6     1-300 21329     76.6   8.71  2.62  6.10     78.7
+p26 rte_rtx_k6   301-600  3879     13.9   5.44  4.35  1.09      2.4
+p26 rte_rtx_k6  601-1500  1728      6.2  10.99  3.78  7.21      7.6
+p26 rte_rtx_k6 1501-2000   904      3.2  25.81  5.66 20.16     11.4
+18:40:47 base {'book': 'o3:y_f40_on rte_moo_k6', 'pre': np.float64(1.75), 'sh': np.float64(1.46), 'fold': np.float64(1.69), 'h1': np.float64(1.81), 'h2': np.float64(1.22), 'mdd': np.float64(-18.7), 'ret': np.float64(22.8), 'vol': np.float64(15.6), 'fneg': 3, 'yrs': '-2.4 +0.8 +0.9 +4.9 +2.4 +0.4 -0.2 +3.2 +2.0 +0.0', 'gross_bps': np.float64(8.43), 't1_pct': np.float64(84.2), 'fold_c0.1': np.float64(3.02), 'fold_c1': np.float64(0.3), 'corr_rtx': np.float64(0.67)}
+18:40:47 base {'book': 'o3:y_f40_on rte_rtx_k6', 'pre': np.float64(1.5), 'sh': np.float64(1.25), 'fold': np.float64(1.43), 'h1': np.float64(1.4), 'h2': np.float64(1.11), 'mdd': np.float64(-23.4), 'ret': np.float64(22.6), 'vol': np.float64(18.1), 'fneg': 4, 'yrs': '-0.6 -0.3 +1.2 +3.5 +2.0 +1.1 +0.2 +2.2 +1.8 -0.2', 'gross_bps': np.float64(8.52), 't1_pct': np.float64(76.1), 'fold_c0.1': np.float64(2.73), 'fold_c1': np.float64(0.82), 'corr_rtx': np.float64(0.73)}
+18:40:47 base tiers
+                  book      tier     n  pos_pct  gross  cost   net  pnl_pct
+o3:y_f40_on rte_moo_k6     1-300 23429     84.2   7.90  2.49  5.40     81.0
+o3:y_f40_on rte_moo_k6   301-600  1745      6.3   0.85  4.55 -3.70     -4.6
+o3:y_f40_on rte_moo_k6  601-1500  1667      6.0  10.71  3.30  7.41      7.8
+o3:y_f40_on rte_moo_k6 1501-2000   999      3.6  30.34  6.42 23.92     15.8
+18:40:47 base tiers
+                  book      tier     n  pos_pct  gross  cost   net  pnl_pct
+o3:y_f40_on rte_rtx_k6     1-300 21186     76.1   8.18  2.51  5.66     77.6
+o3:y_f40_on rte_rtx_k6   301-600  3573     12.8   3.87  3.85  0.02     -0.6
+o3:y_f40_on rte_rtx_k6  601-1500  1958      7.0   8.11  4.06  4.05      4.9
+o3:y_f40_on rte_rtx_k6 1501-2000  1123      4.0  30.52  6.18 24.34     18.2

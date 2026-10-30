@@ -1,0 +1,3 @@
+onml4x_pR_lam3_rte_moo_k6	Sh=2.09	onml4 pR_lam3_rte_moo_k6 config with the measured 15:59:30-cross adverse selection (+1.85 bps per cross entry, NBBO panel) in selection and charge; c=0.3, f=1; net of route cost + borrow, before commission
+onml4x_pR_lam3_rte_rtx_k6	Sh=1.84	onml4 pR_lam3_rte_rtx_k6 config with the measured 15:59:30-cross adverse selection (+1.85 bps per cross entry, NBBO panel) in selection and charge; c=0.3, f=1; net of route cost + borrow, before commission
+onml4x_pR_lam3_moc_moo_k6	Sh=2.10	onml4 pR_lam3_moc_moo_k6 config with the measured 15:59:30-cross adverse selection (+1.85 bps per cross entry, NBBO panel) in selection and charge; c=0.3, f=1; net of route cost + borrow, before commission

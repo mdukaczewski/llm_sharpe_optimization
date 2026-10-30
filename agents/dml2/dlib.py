@@ -247,39 +247,42 @@ class Sim:
                 w = np.zeros(N); w[L] = 1.0 / k; w[Sx] = -1.0 / k
                 yield t, w
 
-    def run(self, S, k=25, mode="tranche", hold=5, reb=1, buf=0, mt=None, hedge=True, hedge_band=0.02, timing="A",
-            c=0.3, cap=CAP, order_usd=ORDER_USD, borrow=0.01, legs=False):
+    def run(self, S, k=25, mode="tranche", hold=5, reb=1, buf=0, mt=0.0, drift=0.3, hedge=True, hedge_band=0.02, timing="A",
+            c=0.3, cap=CAP, order_usd=ORDER_USD, borrow=0.01, tg=None):
+        """trade name i at close t if (its target changed and |target - holding| > mt) or it enters / exits, or its
+        holding drifted more than `drift` x target away.  SPY hedge to -beta x book (beta known at t-1), re-set when off by
+        more than hedge_band (fraction of equity)."""
         P = self.P; N = P.N; T = P.T; spy = self.spy
-        if mt is None: mt = 0.5 / (k * hold) if mode == "tranche" else 0.5 / k
-        h = np.zeros(N); gross = np.zeros(T); imp = np.zeros(T); com = np.zeros(T); bor = np.zeros(T); nord = np.zeros(T); turn = np.zeros(T)
-        expo = np.zeros(T); bet = np.zeros(T)
-        tg = dict(self.targets(S, k, mode, hold, reb, buf, timing))
+        bk = self.beta.copy(); bk[:, spy] = 0.0
+        h = np.zeros(N); wp = np.zeros(N)
+        gross = np.zeros(T); imp = np.zeros(T); com = np.zeros(T); bor = np.zeros(T); nord = np.zeros(T); turn = np.zeros(T)
+        bet = np.zeros(T); betn = np.zeros(T); nl = np.zeros(T)
+        if tg is None: tg = dict(self.targets(S, k, mode, hold, reb, buf, timing))
+        notspy = np.ones(N, bool); notspy[spy] = False
         for t in range(self.i0 - hold - 15, T):
-            # PnL of holdings set at close t-1, realised on day t
             if t > 0:
                 r = self.R[t]; g = float(h @ r); gross[t] = g
                 h = h * (1 + r) / (1 + g)
             if t in tg:
-                w = tg[t].copy()
-                d = w - h; d[spy] = 0.0
-                tr = (np.abs(d) > mt) | ((w == 0) & (h != 0) & (np.arange(N) != spy)) | ((w != 0) & (h == 0))
-                tr[spy] = False
-                newh = np.where(tr, w, h); newh[spy] = h[spy]
+                w = tg[t]; d = np.abs(w - h)
+                tr = ((np.abs(w - wp) > 1e-9) & (d > mt)) | ((w == 0) & (h != 0)) | ((w != 0) & (h == 0)) | (d > drift * np.abs(w))
+                tr &= notspy
+                newh = np.where(tr, w, h); wp = w
                 if hedge:
-                    bt_ = float(np.delete(newh, spy) @ np.delete(self.beta[t], spy)); tgt = -np.clip(bt_, -0.5, 0.5)
+                    tgt = -np.clip(float(newh @ bk[t]), -0.5, 0.5)
                     if abs(newh[spy] - tgt) > hedge_band: newh[spy] = tgt
-                elif newh[spy] != 0: newh[spy] = 0.0
+                else: newh[spy] = 0.0
                 dd = np.abs(newh - h); trd = dd > 1e-12
                 if trd.any():
                     cb = auction_bps(dd[trd] * cap, self.aud[t, trd], self.rvd[t, trd], c)
                     imp[t] = float(dd[trd] @ cb) / 1e4; nord[t] = trd.sum(); com[t] = nord[t] * order_usd / cap; turn[t] = dd.sum()
                 h = newh
             bor[t] = np.clip(-h, 0, None).sum() * borrow / 252
-            expo[t] = np.abs(h).sum(); bet[t] = float(h @ self.beta[t])
-        # costs at close t charged on t; borrow on positions held over night t->t+1 charged on t+1
+            bet[t] = float(h @ bk[t]); betn[t] = bet[t] + h[spy]; nl[t] = (h[notspy] != 0).sum()
         bor = np.r_[0.0, bor[:-1]]
         sl = slice(self.i0, T); ix = P.dates[sl]
-        df = pd.DataFrame({"gross": gross[sl], "imp": imp[sl], "com": com[sl], "bor": bor[sl], "orders": nord[sl], "turn": turn[sl], "expo": expo[sl], "beta": bet[sl]}, index=ix)
+        df = pd.DataFrame({"gross": gross[sl], "imp": imp[sl], "com": com[sl], "bor": bor[sl], "orders": nord[sl], "turn": turn[sl],
+                           "beta_book": bet[sl], "beta_net": betn[sl], "npos": nl[sl]}, index=ix)
         df["net"] = df.gross - df.imp - df.com - df.bor
         return df
 
@@ -290,4 +293,4 @@ def summ(df, name=""):
     return dict(name=name, sh=round(s, 2), foos=round(rlib.sh(oos), 2), gross=round(rlib.sh(df.gross), 2), ret=round(n.mean() * 252 * 100, 1),
                 vol=round(n.std() * np.sqrt(252) * 100, 1), mdd=round(mdd * 100, 1), h1=round(rlib.sh(h1), 2), h2=round(rlib.sh(h2), 2),
                 ord_d=round(df.orders.mean(), 1), turn_d=round(df.turn.mean(), 3), imp_bp=round(df.imp.mean() * 1e4, 2), com_bp=round(df.com.mean() * 1e4, 2),
-                bor_bp=round(df.bor.mean() * 1e4, 2), gross_bp=round(df.gross.mean() * 1e4, 2), beta=round(df.beta.mean(), 2))
+                bor_bp=round(df.bor.mean() * 1e4, 2), gross_bp=round(df.gross.mean() * 1e4, 2), npos=round(df.npos.mean(), 1), beta_book=round(df.beta_book.mean(), 2), beta_net=round(df.beta_net.mean(), 2))
