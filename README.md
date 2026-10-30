@@ -370,4 +370,38 @@ Mechanics, from the agents' reports (`agents/onml2/REPORT.md`, `agents/dayml2/RE
 * Dead this phase: variable book size, dispersion gating, long-only books, rolling
   training windows, recency weights (unfinished), 2000-name rule books.
 
-HOLDOUT2_PLACEHOLDER
+## Phase 4 final (`bash final_eval.sh --show_holdout`, output in `out/final_eval_phase4.txt`)
+
+This is the SECOND look at the holdout (the first was the phase-3 table above); every
+phase-4 choice was made on dev folds only, but a second look is a second look.
+
+| portfolio (8 families, picks and weights from prior dates)        | dev folds 2018-07..2026-04 | holdout 2026-04-28..2026-10-28 |
+|--------------------------------------------------------------------|----------------------------|--------------------------------|
+| **$3 per order, $0.4M equity per book, inverse-vol weights**       | **4.32** (maxDD -9.1%)     | **3.51** (maxDD -2.8%)         |
+| $3 per order, $0.4M per book, Sharpe x inverse-vol weights         | 4.66                       | 2.78                           |
+| $3 per order, $2M per book, inverse-vol                            | 4.95                       | 3.83                           |
+| spread only (1-1.5 bps/side), inverse-vol                          | 5.07                       | 3.92                           |
+| reference: phase-3 portfolio at $0.4M (first look)                 | 3.14                       | 3.45                           |
+
+Dev fold Sharpes at $0.4M (iv): mean 4.50, median 4.74, min 0.37 (2026 Q1), none
+negative.  Per-family stitched fold-OOS at $0.4M: overnight LightGBM 4.16 (2000 names,
+10 per side), intraday LightGBM 2.38 (8 per side, exit 10:01), previous overnight
+LightGBM 2.05, rule composite 1.68, VIX ETP overnight 1.22, momentum 1.13, vol spread
+1.06, daily ML 0.71.
+
+Reading: the dev target (4 / 4.5) is met at the user's cost assumption; the holdout
+(126 days, standard error ~1.4) comes in at 3.5, below dev as expected from shrinkage
+and from the post-2021 decay of both learned books (second-half Sharpes 3.1-3.6 vs
+4.2-4.8 first half).  Plain inverse-vol weights hold up out of sample better than
+Sharpe-weighted ones, which concentrate in the books that decayed; use iv.  Remaining
+caveats are those of phase 3 plus: the 2000-name universe is ranked by today's
+liquidity (survivorship) and names ranked 1501-2000 trade $3-11M a day, where $20k
+clips at the closing auction and the 09:31 print are assumed to fill at 2.5 bps; the
+EXTRA10 feature design, the LightGBM parameters and the k=10 / exit-10:01 choices were
+made on the dev span; the overnight book's z15l / z60 inputs end at the 15:59 bar while
+a market-on-close order must be entered by 15:50 (NYSE) / 15:55 (Nasdaq).
+
+Regenerate: `STRAT_END=2026-10-28` runs of `agents/onml/final2000.py` (~50 min),
+`agents/onml2/final.py`, `agents/dayml/final.py` + `agents/dayml/preds.py` +
+`agents/dayml/small.py`, `agents/dayml2/final.py --from-saved`, `agents/xsrule/final.py`
++ `agents/xsrule/k10.py`, `agents/etfmacro/final.py`; then `bash final_eval.sh --show_holdout`.
