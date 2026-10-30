@@ -5,3 +5,9 @@
 600 834s
 800 1094s
 1000 1320s
+1200 1537s
+1400 1776s
+1600 1986s
+1800 2204s
+16:00:11 step0 done 2886460 rows 1988 names 2387s; vs onml3 frame: rows 2886460, y_oo corr 1.00000 maxdiff 1.49e-08 y_on corr 1.00000 maxdiff 0.00e+00 hs0931 corr 0.97582 maxdiff 1.93e+02 dv0 corr 1.00000 maxdiff 0.00e+00 rv20 corr 0.23705 maxdiff 5.05e+02
+16:00:11 step0 NaN share: y_oo 0.001 y_on 0.006 y_0935 0.001 y_1001 0.001 y_1031 0.001 hs0935 0.000 n_hs1001 0.000 zcAx 0.883

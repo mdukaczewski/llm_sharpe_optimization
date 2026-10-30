@@ -31,16 +31,19 @@ def netted(k, lam, wA=0.5):
     _, LA = route_book(HA, k, lam, ENTRY, EXIT, C, F, ret_pos=True); _, LB = route_book(HB, k, lam, ENTRY, EXIT, C, F, ret_pos=True)
     LA = LA[["date", "tk", "w", "exit", "entry"]].assign(w=LA.w * wA); LB = LB[["date", "tk", "w", "exit", "entry"]].assign(w=LB.w * (1 - wA))
     N = pd.concat([LA, LB]).groupby(["date", "tk"]).agg(w=("w", "sum"), exit=("exit", "first"), entry=("entry", "first")).reset_index()
-    N = N[N.w.abs() > 1e-12].merge(HA[["date", "tk", "tier", "y_oo", "y_1001", "y_0935", "y_1031", "y_split", "rv20", "dv0", "dvc", "ldv20", "hs1559", "n_hs1001", "hs1001", "n_hs0935", "hs0935"]], on=["date", "tk"], how="left")
+    N = N[N.w.abs() > 1e-12].merge(HA[["date", "tk", "tier", "y_oo", "y_1001", "y_0935", "y_1031", "y_split", "rv20", "dv0", "dvc", "ldv20", "hs1559", "r_moc", "n_hs1001", "hs1001", "n_hs0935", "hs0935"]], on=["date", "tk"], how="left")
     order = N.w.abs().values * CAP
     def auc(o, side): return auction(N, o, C, side).values
-    ent = {"moc": auc(order, "close"), "x1559": F * N.hs1559.values, "split": 0.5 * auc(order / 2, "close") + 0.5 * F * N.hs1559.values}
+    ent = {"moc": auc(order, "close"), "x1559": F * N.hs1559.values, "split": 0.5 * auc(order / 2, "close") + 0.5 * F * N.hs1559.values + comm_bps(6) * 0}
+    if ENTRY == "route":     # re-choose the cheapest entry at the NETTED order size (split excluded: never chosen in step 2)
+        N["entry"] = np.where(ent["x1559"] < ent["moc"], "x1559", "moc")
     ex = {"moo": auc(order, "open"), "x1001": F * N.n_hs1001.fillna(N.hs1001).values, "x1031": F * N.n_hs1001.fillna(N.hs1001).values,
           "x0935": F * N.n_hs0935.fillna(N.hs0935).values, "split": 0.5 * auc(order / 2, "open") + 0.5 * F * N.n_hs1001.fillna(N.hs1001).values}
     ycol = {"moo": "y_oo", "x1001": "y_1001", "x1031": "y_1031", "x0935": "y_0935", "split": "y_split"}
     N["y"] = [N.at[i, ycol[e]] for i, e in zip(N.index, N.exit)] if N.exit.nunique() > 1 else N[ycol[N.exit.iloc[0]]]
     ce = np.choose(N.entry.map({e: i for i, e in enumerate(ent)}).values, list(ent.values()))
     cx = np.choose(N.exit.map({e: i for i, e in enumerate(ex)}).values, list(ex.values()))
+    dy = np.where(N.entry == "x1559", N.r_moc.fillna(0), np.where(N.entry == "split", 0.5 * N.r_moc.fillna(0), 0.0)); N["y"] = (1 + N.y) * (1 + dy) - 1
     N["c"] = ce + cx; N["xo"] = (N.exit == "split").astype(float) + (N.entry == "split").astype(float)
     N["g"] = N.w * N.y; N["cost"] = N.w.abs() * N.c / 1e4 + N.w.clip(upper=0).abs() * 0.01 / 252 + N.xo * ORDER_USD / CAP; N["net"] = N.g - N.cost
     D = N.groupby("date").agg(g=("g", "sum"), cost=("cost", "sum"), npos=("w", "size"), gl=("w", lambda s: s[s > 0].sum()))

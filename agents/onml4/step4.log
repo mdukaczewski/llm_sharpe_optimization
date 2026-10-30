@@ -1,0 +1,94 @@
+16:20:00 {'book': 'onml4_pR_lam3_rte_moo_k6', 'pre': np.float64(2.19), 'sh': np.float64(1.89), 'fold': np.float64(1.88), 'h1': np.float64(2.48), 'h2': np.float64(1.43), 'mdd': np.float64(-21.5), 'ret': np.float64(29.4), 'vol': np.float64(15.5), 'fneg': 4, 'corr_A': np.float64(0.81), 'corr_B': np.float64(0.8), 'corr_xsr': np.float64(0.47), 'gross_bps': np.float64(9.98), 'cost_bps': np.float64(3.04), 'xo': np.float64(0.0), 'entry_x1559': np.float64(0.82), 'exit_moo': np.float64(1.0)}
+16:20:42 {'book': 'onml4_pR_lam3_rte_moo_k8', 'pre': np.float64(2.11), 'sh': np.float64(1.69), 'fold': np.float64(1.71), 'h1': np.float64(2.54), 'h2': np.float64(0.99), 'mdd': np.float64(-21.5), 'ret': np.float64(24.2), 'vol': np.float64(14.3), 'fneg': 3, 'corr_A': np.float64(0.8), 'corr_B': np.float64(0.78), 'corr_xsr': np.float64(0.49), 'gross_bps': np.float64(9.21), 'cost_bps': np.float64(3.0), 'xo': np.float64(0.0), 'entry_x1559': np.float64(0.79), 'exit_moo': np.float64(1.0)}
+16:21:23 {'book': 'onml4_pR_lam3_rte_rtx_k6', 'pre': np.float64(2.25), 'sh': np.float64(1.99), 'fold': np.float64(2.07), 'h1': np.float64(2.48), 'h2': np.float64(1.53), 'mdd': np.float64(-16.7), 'ret': np.float64(34.4), 'vol': np.float64(17.3), 'fneg': 3, 'corr_A': np.float64(0.7), 'corr_B': np.float64(0.68), 'corr_xsr': np.float64(0.45), 'gross_bps': np.float64(11.07), 'cost_bps': np.float64(3.15), 'xo': np.float64(0.0), 'entry_x1559': np.float64(0.86), 'exit_moo': np.float64(0.6)}
+16:22:34 {'book': 'onml4_pR_lam3_rte_rtx_k8', 'pre': np.float64(2.02), 'sh': np.float64(1.63), 'fold': np.float64(1.72), 'h1': np.float64(2.23), 'h2': np.float64(1.07), 'mdd': np.float64(-22.4), 'ret': np.float64(25.4), 'vol': np.float64(15.6), 'fneg': 4, 'corr_A': np.float64(0.71), 'corr_B': np.float64(0.69), 'corr_xsr': np.float64(0.47), 'gross_bps': np.float64(9.53), 'cost_bps': np.float64(3.1), 'xo': np.float64(0.0), 'entry_x1559': np.float64(0.82), 'exit_moo': np.float64(0.66)}
+16:23:46 {'book': 'onml4_p26_lam3_rte_moo_k6', 'pre': np.float64(2.13), 'sh': np.float64(1.82), 'fold': np.float64(1.94), 'h1': np.float64(2.29), 'h2': np.float64(1.44), 'mdd': np.float64(-20.3), 'ret': np.float64(26.5), 'vol': np.float64(14.6), 'fneg': 2, 'corr_A': np.float64(0.9), 'corr_B': np.float64(0.71), 'corr_xsr': np.float64(0.44), 'gross_bps': np.float64(9.28), 'cost_bps': np.float64(2.91), 'xo': np.float64(0.0), 'entry_x1559': np.float64(0.81), 'exit_moo': np.float64(1.0)}
+16:24:36 {'book': 'onml4_p40_lam3_rte_moo_k6', 'pre': np.float64(2.02), 'sh': np.float64(1.73), 'fold': np.float64(1.66), 'h1': np.float64(2.9), 'h2': np.float64(0.79), 'mdd': np.float64(-26.0), 'ret': np.float64(27.7), 'vol': np.float64(16.0), 'fneg': 6, 'corr_A': np.float64(0.73), 'corr_B': np.float64(0.91), 'corr_xsr': np.float64(0.47), 'gross_bps': np.float64(9.63), 'cost_bps': np.float64(3.03), 'xo': np.float64(0.0), 'entry_x1559': np.float64(0.8), 'exit_moo': np.float64(1.0)}
+16:25:11 --- STEP4 final candidates (c=0.3, f=1; $0.4M commission)
+                     book  pre   sh  fold   h1   h2   mdd  ret  vol  fneg  corr_A  corr_B  corr_xsr  gross_bps  cost_bps  xo  entry_x1559  exit_moo
+ onml4_pR_lam3_rte_moo_k6 2.19 1.89  1.88 2.48 1.43 -21.5 29.4 15.5     4    0.81    0.80      0.47       9.98      3.04 0.0         0.82      1.00
+ onml4_pR_lam3_rte_moo_k8 2.11 1.69  1.71 2.54 0.99 -21.5 24.2 14.3     3    0.80    0.78      0.49       9.21      3.00 0.0         0.79      1.00
+ onml4_pR_lam3_rte_rtx_k6 2.25 1.99  2.07 2.48 1.53 -16.7 34.4 17.3     3    0.70    0.68      0.45      11.07      3.15 0.0         0.86      0.60
+ onml4_pR_lam3_rte_rtx_k8 2.02 1.63  1.72 2.23 1.07 -22.4 25.4 15.6     4    0.71    0.69      0.47       9.53      3.10 0.0         0.82      0.66
+onml4_p26_lam3_rte_moo_k6 2.13 1.82  1.94 2.29 1.44 -20.3 26.5 14.6     2    0.90    0.71      0.44       9.28      2.91 0.0         0.81      1.00
+onml4_p40_lam3_rte_moo_k6 2.02 1.73  1.66 2.90 0.79 -26.0 27.7 16.0     6    0.73    0.91      0.47       9.63      3.03 0.0         0.80      1.00
+16:25:11 --- STEP4 by year ($0.4M)
+                     book                                               yrs
+ onml4_pR_lam3_rte_moo_k6 +0.8 +1.4 +0.3 +6.8 +2.1 +0.5 +0.0 +3.8 +2.7 -0.9
+ onml4_pR_lam3_rte_moo_k8 +0.4 +1.1 +1.2 +7.3 +1.5 +0.1 +0.2 +2.5 +2.5 -1.7
+ onml4_pR_lam3_rte_rtx_k6 +1.1 +0.6 +1.8 +5.6 +1.8 +1.5 +0.1 +3.6 +2.6 -0.9
+ onml4_pR_lam3_rte_rtx_k8 +0.7 +0.3 +1.5 +5.9 +1.2 +1.0 -0.1 +2.9 +2.3 -1.9
+onml4_p26_lam3_rte_moo_k6 -1.7 +1.5 +1.0 +6.2 +2.1 +1.5 +0.6 +3.0 +1.6 -1.2
+onml4_p40_lam3_rte_moo_k6 +1.9 +1.3 +0.8 +6.7 +3.2 +0.0 -0.3 +1.8 +1.6 -0.2
+16:25:11 --- STEP4 sensitivity (fixed = selection at c=0.3/f=1 then charged; resel = selection re-run with that cost)
+                     book    c             f  fixed_sh  fixed_fold  resel_sh  resel_fold
+ onml4_pR_lam3_rte_moo_k6  0.1           1.0      2.23        2.22      2.83        2.85
+ onml4_pR_lam3_rte_moo_k6  1.0           1.0      0.23        0.24      0.56        0.69
+ onml4_pR_lam3_rte_moo_k6  0.3           0.5      2.01        1.99      2.11        2.09
+ onml4_pR_lam3_rte_moo_k6  0.3           2.0      1.66        1.66      1.76        1.76
+ onml4_pR_lam3_rte_moo_k6  old 1-2.5bp 09:31      1.94        1.95       NaN         NaN
+ onml4_pR_lam3_rte_moo_k8  0.1           1.0      2.03        2.06      2.66        2.75
+ onml4_pR_lam3_rte_moo_k8  1.0           1.0     -0.07       -0.03      0.10        0.21
+ onml4_pR_lam3_rte_moo_k8  0.3           0.5      1.81        1.83      1.97        1.96
+ onml4_pR_lam3_rte_moo_k8  0.3           2.0      1.44        1.47      1.64        1.65
+ onml4_pR_lam3_rte_moo_k8  old 1-2.5bp 09:31      1.74        1.79       NaN         NaN
+ onml4_pR_lam3_rte_rtx_k6  0.1           1.0      2.21        2.30      2.62        2.66
+ onml4_pR_lam3_rte_rtx_k6  1.0           1.0      0.96        1.03      0.90        1.03
+ onml4_pR_lam3_rte_rtx_k6  0.3           0.5      2.22        2.29      1.88        2.04
+ onml4_pR_lam3_rte_rtx_k6  0.3           2.0      1.53        1.64      1.66        1.68
+ onml4_pR_lam3_rte_rtx_k6  old 1-2.5bp 09:31      2.33        2.37       NaN         NaN
+ onml4_pR_lam3_rte_rtx_k8  0.1           1.0      1.88        1.97      2.48        2.58
+ onml4_pR_lam3_rte_rtx_k8  1.0           1.0      0.43        0.49      0.86        0.99
+ onml4_pR_lam3_rte_rtx_k8  0.3           0.5      1.86        1.93      1.58        1.71
+ onml4_pR_lam3_rte_rtx_k8  0.3           2.0      1.17        1.28      1.54        1.57
+ onml4_pR_lam3_rte_rtx_k8  old 1-2.5bp 09:31      2.03        2.08       NaN         NaN
+onml4_p26_lam3_rte_moo_k6  0.1           1.0      2.14        2.28      2.50        2.69
+onml4_p26_lam3_rte_moo_k6  1.0           1.0      0.13        0.27      0.48        0.68
+onml4_p26_lam3_rte_moo_k6  0.3           0.5      1.94        2.06      2.07        2.22
+onml4_p26_lam3_rte_moo_k6  0.3           2.0      1.58        1.72      1.91        2.01
+onml4_p26_lam3_rte_moo_k6  old 1-2.5bp 09:31      1.82        1.93       NaN         NaN
+onml4_p40_lam3_rte_moo_k6  0.1           1.0      2.05        1.98      2.96        3.06
+onml4_p40_lam3_rte_moo_k6  1.0           1.0      0.13        0.11      0.46        0.49
+onml4_p40_lam3_rte_moo_k6  0.3           0.5      1.84        1.77      1.91        1.84
+onml4_p40_lam3_rte_moo_k6  0.3           2.0      1.51        1.45      1.59        1.51
+onml4_p40_lam3_rte_moo_k6  old 1-2.5bp 09:31      1.86        1.82       NaN         NaN
+16:25:11 --- STEP4 tiers (c=0.3)
+                     book      tier     n  pos_pct  gross  cost   net  pnl_pct
+ onml4_pR_lam3_rte_moo_k6     1-300 23259     83.5   9.32  2.68  6.63     79.8
+ onml4_pR_lam3_rte_moo_k6   301-600  1917      6.9   4.18  4.98 -0.80     -1.0
+ onml4_pR_lam3_rte_moo_k6  601-1500  1605      5.8  12.15  3.72  8.43      7.0
+ onml4_pR_lam3_rte_moo_k6 1501-2000  1059      3.8  31.66  6.38 25.28     14.2
+ onml4_pR_lam3_rte_moo_k8     1-300 30589     82.4   8.52  2.58  5.94     78.7
+ onml4_pR_lam3_rte_moo_k8   301-600  2889      7.8   4.59  4.86 -0.27     -0.6
+ onml4_pR_lam3_rte_moo_k8  601-1500  2105      5.7  11.21  4.16  7.05      6.4
+ onml4_pR_lam3_rte_moo_k8 1501-2000  1537      4.1  28.83  6.29 22.54     15.5
+ onml4_pR_lam3_rte_rtx_k6     1-300 21139     75.9  10.28  2.74  7.54     72.3
+ onml4_pR_lam3_rte_rtx_k6   301-600  3527     12.7   9.52  4.14  5.38      8.4
+ onml4_pR_lam3_rte_rtx_k6  601-1500  2010      7.2  10.69  4.02  6.67      6.0
+ onml4_pR_lam3_rte_rtx_k6 1501-2000  1164      4.2  30.76  6.13 24.63     13.3
+ onml4_pR_lam3_rte_rtx_k8     1-300 28043     75.5   8.89  2.63  6.26     73.5
+ onml4_pR_lam3_rte_rtx_k8   301-600  4820     13.0   6.39  4.13  2.25      4.2
+ onml4_pR_lam3_rte_rtx_k8  601-1500  2624      7.1  11.42  4.31  7.11      7.8
+ onml4_pR_lam3_rte_rtx_k8 1501-2000  1633      4.4  26.91  6.19 20.71     14.5
+onml4_p26_lam3_rte_moo_k6     1-300 23787     85.4   9.08  2.64  6.44     86.4
+onml4_p26_lam3_rte_moo_k6   301-600  1654      5.9   2.32  4.80 -2.48     -2.5
+onml4_p26_lam3_rte_moo_k6  601-1500  1525      5.5  11.83  3.53  8.30      7.2
+onml4_p26_lam3_rte_moo_k6 1501-2000   874      3.1  23.41  5.78 17.63      9.0
+onml4_p40_lam3_rte_moo_k6     1-300 22916     82.3   9.55  2.57  6.98     87.2
+onml4_p40_lam3_rte_moo_k6   301-600  1918      6.9  -0.61  5.00 -5.60     -6.3
+onml4_p40_lam3_rte_moo_k6  601-1500  1821      6.5  12.94  4.02  8.92      8.8
+onml4_p40_lam3_rte_moo_k6 1501-2000  1185      4.3  22.78  7.27 15.51     10.3
+16:25:11 --- STEP4 correlation matrix ($0.4M)
+                           onml4_pR_lam3_rte_moo_k6  onml4_pR_lam3_rte_moo_k8  onml4_pR_lam3_rte_rtx_k6  onml4_pR_lam3_rte_rtx_k8  onml4_p26_lam3_rte_moo_k6  onml4_p40_lam3_rte_moo_k6  onml3_A_k6  onml3_B_k6  xsr3_u50
+onml4_pR_lam3_rte_moo_k6                       1.00                      0.94                      0.82                      0.83                       0.86                       0.84        0.81        0.80      0.47
+onml4_pR_lam3_rte_moo_k8                       0.94                      1.00                      0.79                      0.86                       0.84                       0.84        0.80        0.78      0.49
+onml4_pR_lam3_rte_rtx_k6                       0.82                      0.79                      1.00                      0.93                       0.73                       0.71        0.70        0.68      0.45
+onml4_pR_lam3_rte_rtx_k8                       0.83                      0.86                      0.93                      1.00                       0.75                       0.74        0.71        0.69      0.47
+onml4_p26_lam3_rte_moo_k6                      0.86                      0.84                      0.73                      0.75                       1.00                       0.76        0.90        0.71      0.44
+onml4_p40_lam3_rte_moo_k6                      0.84                      0.84                      0.71                      0.74                       0.76                       1.00        0.73        0.91      0.47
+onml3_A_k6                                     0.81                      0.80                      0.70                      0.71                       0.90                       0.73        1.00        0.74      0.42
+onml3_B_k6                                     0.80                      0.78                      0.68                      0.69                       0.71                       0.91        0.74        1.00      0.46
+xsr3_u50                                       0.47                      0.49                      0.45                      0.47                       0.44                       0.47        0.42        0.46      1.00
+16:25:11 STEP4 family fold-OOS over the 6 candidates: 1.90; picks {'onml4_p40_lam3_rte_moo_k6': 11, 'onml4_pR_lam3_rte_rtx_k6': 3, 'onml4_p26_lam3_rte_moo_k6': 2}
+16:25:11 STEP4 family fold-OOS with the two onml3 k6 books added: 1.79; picks {'onml3_B': 13, 'onml4_pR_lam3_rte_rtx_k6': 3}
+16:25:11 STEP4 DONE

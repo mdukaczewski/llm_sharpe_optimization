@@ -1,0 +1,271 @@
+16:14:48 p40: mean causal decay ratios (gross to exit / gross to open, extreme 5%) by tier
+           rL_y_on  rS_y_on  rL_y_0935  rS_y_0935  rL_y_1001  rS_y_1001  rL_y_1031  rS_y_1031
+1-300        0.957    0.839      0.897      1.115      0.834      1.005      0.785      0.998
+301-600      0.971    1.120      0.808      0.736      0.769      0.376      0.779      0.273
+601-1500     1.073    1.153      0.695      1.157      0.588      0.758      0.590      0.647
+1501-2000    0.950    1.459      0.770      1.365      0.590      1.102      0.624      0.913
+16:14:59 {'book': 'p40 moc->moo c0.1 f1 k6', 'pre': np.float64(3.25), 'sh': np.float64(3.02), 'fold': np.float64(3.16), 'h1': np.float64(3.94), 'h2': np.float64(2.11), 'mdd': np.float64(-23.8), 'ret': np.float64(59.0), 'vol': np.float64(19.5), 'fneg': 1, 'yrs': '+1.4 +3.1 +2.0 +7.3 +4.5 +1.4 +2.1 +3.4 +2.2 +0.1', 'gross_bps': np.float64(16.12), 'cost_bps': np.float64(3.32), 'xo': np.float64(0.0), 't1_pct': np.float64(51.4)}
+16:15:03 {'book': 'p40 moc->moo c0.3 f1 k6', 'pre': np.float64(1.92), 'sh': np.float64(1.62), 'fold': np.float64(1.54), 'h1': np.float64(2.68), 'h2': np.float64(0.75), 'mdd': np.float64(-28.6), 'ret': np.float64(24.8), 'vol': np.float64(15.3), 'fneg': 4, 'yrs': '+2.1 +1.5 +0.6 +5.8 +3.1 -0.1 -0.5 +2.0 +1.5 -0.1', 'gross_bps': np.float64(9.18), 'cost_bps': np.float64(3.16), 'xo': np.float64(0.0), 't1_pct': np.float64(83.8)}
+16:15:10 {'book': 'p40 moc->moo c1 f1 k6', 'pre': np.float64(-0.1), 'sh': np.float64(-0.54), 'fold': np.float64(-0.51), 'h1': np.float64(-0.7), 'h2': np.float64(-0.46), 'mdd': np.float64(-52.4), 'ret': np.float64(-5.6), 'vol': np.float64(10.4), 'fneg': 12, 'yrs': '-1.4 -1.6 -3.1 +1.2 +0.7 -1.6 -2.0 +1.3 +0.5 -1.3', 'gross_bps': np.float64(4.98), 'cost_bps': np.float64(4.99), 'xo': np.float64(0.0), 't1_pct': np.float64(89.5)}
+16:15:14 {'book': 'p40 moc->x0935 c0.3 f1 k6', 'pre': np.float64(1.28), 'sh': np.float64(0.98), 'fold': np.float64(0.85), 'h1': np.float64(2.04), 'h2': np.float64(0.05), 'mdd': np.float64(-26.0), 'ret': np.float64(14.7), 'vol': np.float64(15.0), 'fneg': 5, 'yrs': '+0.9 +1.5 +0.9 +4.3 +1.0 -0.3 -0.5 +1.1 +1.4 -2.0', 'gross_bps': np.float64(7.74), 'cost_bps': np.float64(3.72), 'xo': np.float64(0.0), 't1_pct': np.float64(82.9)}
+16:15:18 {'book': 'p40 moc->x0935 c0.3 f0.5 k6', 'pre': np.float64(1.86), 'sh': np.float64(1.61), 'fold': np.float64(1.54), 'h1': np.float64(2.47), 'h2': np.float64(0.77), 'mdd': np.float64(-26.1), 'ret': np.float64(28.3), 'vol': np.float64(17.6), 'fneg': 3, 'yrs': '+0.9 +2.5 +2.1 +4.4 +1.3 +0.3 -0.2 +2.2 +2.0 -1.5', 'gross_bps': np.float64(9.88), 'cost_bps': np.float64(3.16), 'xo': np.float64(0.0), 't1_pct': np.float64(78.5)}
+16:15:24 {'book': 'p40 moc->x1001 c0.3 f1 k6', 'pre': np.float64(1.03), 'sh': np.float64(0.78), 'fold': np.float64(0.74), 'h1': np.float64(1.52), 'h2': np.float64(0.09), 'mdd': np.float64(-40.7), 'ret': np.float64(13.9), 'vol': np.float64(18.0), 'fneg': 4, 'yrs': '+0.8 -0.1 +1.7 +3.1 +0.7 -0.7 -0.8 +1.4 +2.1 -2.0', 'gross_bps': np.float64(6.96), 'cost_bps': np.float64(3.1), 'xo': np.float64(0.0), 't1_pct': np.float64(84.6)}
+16:15:29 {'book': 'p40 moc->x1001 c0.3 f0.5 k6', 'pre': np.float64(1.26), 'sh': np.float64(1.03), 'fold': np.float64(0.92), 'h1': np.float64(1.74), 'h2': np.float64(0.37), 'mdd': np.float64(-39.0), 'ret': np.float64(20.2), 'vol': np.float64(19.6), 'fneg': 5, 'yrs': '+1.7 +1.0 +1.5 +3.4 +0.1 -0.0 -0.7 +1.5 +1.8 -0.6', 'gross_bps': np.float64(7.75), 'cost_bps': np.float64(2.65), 'xo': np.float64(0.0), 't1_pct': np.float64(81.3)}
+16:15:34 {'book': 'p40 moc->x1031 c0.3 f1 k6', 'pre': np.float64(1.11), 'sh': np.float64(0.86), 'fold': np.float64(0.82), 'h1': np.float64(1.53), 'h2': np.float64(0.3), 'mdd': np.float64(-38.4), 'ret': np.float64(16.1), 'vol': np.float64(18.6), 'fneg': 4, 'yrs': '+1.1 -0.1 +0.9 +3.4 +0.9 -0.0 -1.1 +1.5 +1.9 -1.1', 'gross_bps': np.float64(7.36), 'cost_bps': np.float64(3.07), 'xo': np.float64(0.0), 't1_pct': np.float64(84.0)}
+16:15:38 {'book': 'p40 moc->x1031 c0.3 f0.5 k6', 'pre': np.float64(1.42), 'sh': np.float64(1.2), 'fold': np.float64(1.13), 'h1': np.float64(1.95), 'h2': np.float64(0.53), 'mdd': np.float64(-39.8), 'ret': np.float64(24.6), 'vol': np.float64(20.5), 'fneg': 3, 'yrs': '+1.7 +0.9 +1.7 +3.4 +1.2 +0.4 -1.4 +1.9 +1.8 -0.2', 'gross_bps': np.float64(8.62), 'cost_bps': np.float64(2.64), 'xo': np.float64(0.0), 't1_pct': np.float64(80.1)}
+16:15:43 {'book': 'p40 moc->split c0.3 f1 k6', 'pre': np.float64(1.55), 'sh': np.float64(1.27), 'fold': np.float64(1.17), 'h1': np.float64(2.18), 'h2': np.float64(0.46), 'mdd': np.float64(-33.1), 'ret': np.float64(20.5), 'vol': np.float64(16.1), 'fneg': 5, 'yrs': '+1.8 +1.0 +1.2 +4.5 +1.6 +0.1 -0.6 +1.9 +1.3 -1.1', 'gross_bps': np.float64(8.79), 'cost_bps': np.float64(3.18), 'xo': np.float64(1.0), 't1_pct': np.float64(84.9)}
+16:15:47 {'book': 'p40 moc->split c0.3 f0.5 k6', 'pre': np.float64(1.64), 'sh': np.float64(1.37), 'fold': np.float64(1.3), 'h1': np.float64(2.39), 'h2': np.float64(0.43), 'mdd': np.float64(-32.3), 'ret': np.float64(23.2), 'vol': np.float64(17.0), 'fneg': 4, 'yrs': '+1.6 +1.3 +1.4 +5.2 +1.7 +0.2 -0.6 +1.4 +1.1 -0.5', 'gross_bps': np.float64(9.06), 'cost_bps': np.float64(2.9), 'xo': np.float64(1.0), 't1_pct': np.float64(82.5)}
+16:15:52 {'book': 'p40 moc->split c0.1 f1 k6', 'pre': np.float64(2.21), 'sh': np.float64(1.99), 'fold': np.float64(2.04), 'h1': np.float64(2.66), 'h2': np.float64(1.3), 'mdd': np.float64(-21.2), 'ret': np.float64(40.5), 'vol': np.float64(20.3), 'fneg': 4, 'yrs': '+1.4 +2.1 +2.0 +4.5 +2.0 +1.2 +0.1 +2.9 +2.7 -1.8', 'gross_bps': np.float64(13.01), 'cost_bps': np.float64(3.43), 'xo': np.float64(1.0), 't1_pct': np.float64(62.0)}
+16:16:00 {'book': 'p40 moc->split c1 f1 k6', 'pre': np.float64(-0.09), 'sh': np.float64(-0.47), 'fold': np.float64(-0.53), 'h1': np.float64(-0.09), 'h2': np.float64(-0.76), 'mdd': np.float64(-51.7), 'ret': np.float64(-5.6), 'vol': np.float64(11.9), 'fneg': 11, 'yrs': '-1.0 -0.9 -1.2 +1.5 +0.3 -2.6 -1.5 +0.9 +0.6 -1.9', 'gross_bps': np.float64(4.6), 'cost_bps': np.float64(4.16), 'xo': np.float64(1.0), 't1_pct': np.float64(88.9)}
+16:16:10 {'book': 'p40 moc->route c0.3 f1 k6', 'pre': np.float64(1.85), 'sh': np.float64(1.57), 'fold': np.float64(1.55), 'h1': np.float64(2.76), 'h2': np.float64(0.48), 'mdd': np.float64(-37.5), 'ret': np.float64(25.3), 'vol': np.float64(16.1), 'fneg': 5, 'yrs': '+1.6 +1.1 +2.1 +6.1 +2.4 -0.1 -1.1 +2.0 +1.2 -0.5', 'gross_bps': np.float64(9.39), 'cost_bps': np.float64(3.27), 'xo': np.float64(0.0), 't1_pct': np.float64(80.9)}
+16:16:10 route mix by tier p40 moc->route c0.3 f1 k6
+exit         moo  split  x0935  x1001  x1031
+1-300      17148      4    461   2597   2306
+301-600     1277      0     71    303    760
+601-1500     801      0    793     91    241
+1501-2000    821      0    102     30     34
+16:16:15 {'book': 'p40 moc->route c0.3 f0.5 k6', 'pre': np.float64(1.91), 'sh': np.float64(1.64), 'fold': np.float64(1.56), 'h1': np.float64(2.75), 'h2': np.float64(0.53), 'mdd': np.float64(-29.8), 'ret': np.float64(28.2), 'vol': np.float64(17.2), 'fneg': 4, 'yrs': '+2.6 +1.3 +1.9 +5.0 +2.4 +0.1 -0.7 +2.0 +1.2 -1.2', 'gross_bps': np.float64(9.9), 'cost_bps': np.float64(3.21), 'xo': np.float64(0.0), 't1_pct': np.float64(76.1)}
+16:16:15 route mix by tier p40 moc->route c0.3 f0.5 k6
+exit         moo  split  x0935  x1001  x1031
+1-300      11354      0   1600   5140   3106
+301-600      998      1    304    596   1334
+601-1500     486      2   1280    207    295
+1501-2000    744      0    273     45     75
+16:16:20 {'book': 'p40 moc->route c0.1 f1 k6', 'pre': np.float64(3.05), 'sh': np.float64(2.82), 'fold': np.float64(2.96), 'h1': np.float64(3.67), 'h2': np.float64(1.95), 'mdd': np.float64(-24.0), 'ret': np.float64(55.5), 'vol': np.float64(19.7), 'fneg': 1, 'yrs': '+1.2 +3.0 +1.3 +7.2 +4.1 +1.1 +2.0 +3.2 +2.3 +0.2', 'gross_bps': np.float64(15.5), 'cost_bps': np.float64(3.38), 'xo': np.float64(0.0), 't1_pct': np.float64(50.5)}
+16:16:20 route mix by tier p40 moc->route c0.1 f1 k6
+exit         moo  split  x0935  x1001  x1031
+1-300      13059      0    164    549    282
+301-600     5549      1     15    206    474
+601-1500    3643      0    665     30     20
+1501-2000   2986      0    137     43     17
+16:16:25 {'book': 'p40 moc->route c1 f1 k6', 'pre': np.float64(0.57), 'sh': np.float64(0.23), 'fold': np.float64(0.19), 'h1': np.float64(1.25), 'h2': np.float64(-0.58), 'mdd': np.float64(-45.5), 'ret': np.float64(3.1), 'vol': np.float64(13.3), 'fneg': 8, 'yrs': '+0.2 +0.2 +1.3 +2.5 +1.2 -2.0 -1.4 +1.0 +0.4 -0.9', 'gross_bps': np.float64(5.9), 'cost_bps': np.float64(4.2), 'xo': np.float64(0.0), 't1_pct': np.float64(88.6)}
+16:16:25 route mix by tier p40 moc->route c1 f1 k6
+exit        moo  split  x0935  x1001  x1031
+1-300      7990     10   2072   7355   7244
+301-600     305      0     77    181    506
+601-1500    222      0    675    145    875
+1501-2000    55      0     51     20     57
+16:16:28 {'book': 'p40 x1559->moo c0.3 f1 k6', 'pre': np.float64(1.98), 'sh': np.float64(1.7), 'fold': np.float64(1.63), 'h1': np.float64(2.8), 'h2': np.float64(0.81), 'mdd': np.float64(-26.2), 'ret': np.float64(27.5), 'vol': np.float64(16.2), 'fneg': 5, 'yrs': '+1.8 +1.5 +0.7 +6.3 +3.0 +0.0 -0.3 +1.9 +1.6 -0.2', 'gross_bps': np.float64(9.6), 'cost_bps': np.float64(3.05), 'xo': np.float64(0.0), 't1_pct': np.float64(83.4)}
+16:16:33 {'book': 'p40 x1559->moo c0.3 f0.5 k6', 'pre': np.float64(2.18), 'sh': np.float64(1.9), 'fold': np.float64(1.82), 'h1': np.float64(3.03), 'h2': np.float64(0.95), 'mdd': np.float64(-23.9), 'ret': np.float64(31.5), 'vol': np.float64(16.5), 'fneg': 5, 'yrs': '+2.4 +1.7 +0.8 +6.6 +3.1 +0.4 -0.4 +1.8 +1.9 -0.4', 'gross_bps': np.float64(10.1), 'cost_bps': np.float64(2.76), 'xo': np.float64(0.0), 't1_pct': np.float64(81.1)}
+16:16:37 {'book': 'p40 split->moo c0.3 f1 k6', 'pre': np.float64(1.85), 'sh': np.float64(1.57), 'fold': np.float64(1.52), 'h1': np.float64(2.65), 'h2': np.float64(0.67), 'mdd': np.float64(-29.8), 'ret': np.float64(25.0), 'vol': np.float64(16.0), 'fneg': 4, 'yrs': '+1.2 +1.5 +0.7 +6.1 +2.9 +0.1 -0.6 +1.4 +1.6 -0.6', 'gross_bps': np.float64(9.67), 'cost_bps': np.float64(3.16), 'xo': np.float64(1.0), 't1_pct': np.float64(83.2)}
+16:16:41 {'book': 'p40 route->moo c0.3 f1 k6', 'pre': np.float64(2.02), 'sh': np.float64(1.73), 'fold': np.float64(1.66), 'h1': np.float64(2.9), 'h2': np.float64(0.79), 'mdd': np.float64(-26.0), 'ret': np.float64(27.7), 'vol': np.float64(16.0), 'fneg': 6, 'yrs': '+1.9 +1.3 +0.8 +6.7 +3.2 +0.0 -0.3 +1.8 +1.6 -0.2', 'gross_bps': np.float64(9.63), 'cost_bps': np.float64(3.03), 'xo': np.float64(0.0), 't1_pct': np.float64(82.3)}
+16:16:41 route mix by tier p40 route->moo c0.3 f1 k6
+exit         moo
+1-300      22916
+301-600     1918
+601-1500    1821
+1501-2000   1185
+16:16:47 {'book': 'p40 route->route c0.3 f1 k6', 'pre': np.float64(1.97), 'sh': np.float64(1.7), 'fold': np.float64(1.71), 'h1': np.float64(2.8), 'h2': np.float64(0.65), 'mdd': np.float64(-33.9), 'ret': np.float64(29.0), 'vol': np.float64(17.0), 'fneg': 4, 'yrs': '+1.4 +1.1 +1.6 +6.1 +2.8 +0.1 -0.9 +1.8 +1.7 +0.0', 'gross_bps': np.float64(10.03), 'cost_bps': np.float64(3.19), 'xo': np.float64(0.0), 't1_pct': np.float64(71.8)}
+16:16:47 route mix by tier p40 route->route c0.3 f1 k6
+exit         moo  split  x0935  x1001  x1031
+1-300      14079     14    501   3182   2204
+301-600     1340      3    169   1251   1521
+601-1500     780      1   1020    261    151
+1501-2000   1032      0    219     77     35
+16:16:52 {'book': 'p40 route->route c0.3 f0.5 k6', 'pre': np.float64(2.21), 'sh': np.float64(2.0), 'fold': np.float64(1.97), 'h1': np.float64(2.64), 'h2': np.float64(1.35), 'mdd': np.float64(-18.7), 'ret': np.float64(43.2), 'vol': np.float64(21.6), 'fneg': 4, 'yrs': '+2.2 +2.1 +1.2 +4.2 +3.0 +1.2 -0.0 +3.3 +1.8 -0.3', 'gross_bps': np.float64(12.55), 'cost_bps': np.float64(2.87), 'xo': np.float64(0.0), 't1_pct': np.float64(57.5)}
+16:16:52 route mix by tier p40 route->route c0.3 f0.5 k6
+exit        moo  split  x0935  x1001  x1031
+1-300      7674      2   1465   4472   2399
+301-600    1009      7    661   1618   2375
+601-1500    541      1   2197    820    112
+1501-2000   972      0   1175    206    134
+16:16:57 {'book': 'p40 route->route c0.1 f1 k6', 'pre': np.float64(2.98), 'sh': np.float64(2.75), 'fold': np.float64(2.87), 'h1': np.float64(3.62), 'h2': np.float64(1.86), 'mdd': np.float64(-25.4), 'ret': np.float64(54.1), 'vol': np.float64(19.7), 'fneg': 2, 'yrs': '+1.1 +3.1 +1.3 +6.9 +4.1 +0.9 +1.9 +3.3 +2.1 +0.4', 'gross_bps': np.float64(15.09), 'cost_bps': np.float64(3.26), 'xo': np.float64(0.0), 't1_pct': np.float64(52.7)}
+16:16:57 route mix by tier p40 route->route c0.1 f1 k6
+exit         moo  split  x0935  x1001  x1031
+1-300      13495      1    164    621    377
+301-600     5210      2     13    179    444
+601-1500    3475      0    674     29     29
+1501-2000   2930      0    140     41     16
+16:17:02 {'book': 'p40 route->route c1 f1 k6', 'pre': np.float64(1.51), 'sh': np.float64(1.27), 'fold': np.float64(1.27), 'h1': np.float64(2.02), 'h2': np.float64(0.58), 'mdd': np.float64(-26.9), 'ret': np.float64(23.3), 'vol': np.float64(18.4), 'fneg': 4, 'yrs': '+0.5 +1.1 +1.6 +3.3 +1.9 +0.7 -0.1 +1.6 +2.0 -2.4', 'gross_bps': np.float64(9.0), 'cost_bps': np.float64(3.28), 'xo': np.float64(0.0), 't1_pct': np.float64(72.8)}
+16:17:02 route mix by tier p40 route->route c1 f1 k6
+exit        moo  split  x0935  x1001  x1031
+1-300      4318      8   2017   7262   6651
+301-600     208      4    542   1757   2341
+601-1500     92      0   1181    448    231
+1501-2000   103      0    505    102     70
+16:17:05 p40 15:59-bar entry diagnostic (moc->moo k6 positions): side x (close/c389 - 1) mean -0.11 bps; by tier 1-300 -0.05 301-600 -0.48 601-1500 -0.44 1501-2000 -0.23
+16:17:09 p26: mean causal decay ratios (gross to exit / gross to open, extreme 5%) by tier
+           rL_y_on  rS_y_on  rL_y_0935  rS_y_0935  rL_y_1001  rS_y_1001  rL_y_1031  rS_y_1031
+1-300        0.878    1.096      0.789      0.924      0.676      0.751      0.669      0.783
+301-600      0.993    1.220      0.879      0.701      0.895      0.607      0.876      0.648
+601-1500     1.056    1.500      0.760      1.367      0.584      1.026      0.545      0.902
+1501-2000    0.965    1.454      0.770      1.369      0.601      1.108      0.618      0.859
+16:17:15 {'book': 'p26 moc->moo c0.1 f1 k6', 'pre': np.float64(2.61), 'sh': np.float64(2.37), 'fold': np.float64(2.49), 'h1': np.float64(2.65), 'h2': np.float64(2.05), 'mdd': np.float64(-23.8), 'ret': np.float64(43.9), 'vol': np.float64(18.5), 'fneg': 1, 'yrs': '+0.2 +1.5 +2.0 +5.3 +2.4 +1.8 +2.0 +3.6 +2.5 -3.0', 'gross_bps': np.float64(12.57), 'cost_bps': np.float64(2.77), 'xo': np.float64(0.0), 't1_pct': np.float64(63.0)}
+16:17:19 {'book': 'p26 moc->moo c0.3 f1 k6', 'pre': np.float64(2.09), 'sh': np.float64(1.77), 'fold': np.float64(1.84), 'h1': np.float64(2.39), 'h2': np.float64(1.27), 'mdd': np.float64(-19.1), 'ret': np.float64(24.8), 'vol': np.float64(14.0), 'fneg': 4, 'yrs': '-0.4 +1.6 +0.8 +5.8 +2.3 +1.6 -0.1 +2.6 +2.0 -1.4', 'gross_bps': np.float64(9.09), 'cost_bps': np.float64(3.07), 'xo': np.float64(0.0), 't1_pct': np.float64(86.8)}
+16:17:22 {'book': 'p26 moc->moo c1 f1 k6', 'pre': np.float64(-0.06), 'sh': np.float64(-0.58), 'fold': np.float64(-0.39), 'h1': np.float64(-1.74), 'h2': np.float64(0.06), 'mdd': np.float64(-54.7), 'ret': np.float64(-5.1), 'vol': np.float64(8.8), 'fneg': 11, 'yrs': '-3.6 -3.5 -3.7 +0.2 +0.3 -1.4 -1.4 +1.6 +1.4 -1.5', 'gross_bps': np.float64(4.91), 'cost_bps': np.float64(4.82), 'xo': np.float64(0.0), 't1_pct': np.float64(89.5)}
+16:17:26 {'book': 'p26 moc->x0935 c0.3 f1 k6', 'pre': np.float64(1.39), 'sh': np.float64(1.05), 'fold': np.float64(1.19), 'h1': np.float64(1.45), 'h2': np.float64(0.73), 'mdd': np.float64(-17.1), 'ret': np.float64(13.9), 'vol': np.float64(13.2), 'fneg': 4, 'yrs': '-0.7 +0.0 +1.6 +3.0 +1.1 +0.3 -0.0 +2.5 +2.1 -1.9', 'gross_bps': np.float64(7.34), 'cost_bps': np.float64(3.49), 'xo': np.float64(0.0), 't1_pct': np.float64(84.0)}
+16:17:29 {'book': 'p26 moc->x0935 c0.3 f0.5 k6', 'pre': np.float64(1.55), 'sh': np.float64(1.25), 'fold': np.float64(1.27), 'h1': np.float64(1.71), 'h2': np.float64(0.83), 'mdd': np.float64(-21.6), 'ret': np.float64(19.0), 'vol': np.float64(15.2), 'fneg': 4, 'yrs': '+0.4 +1.3 +1.4 +3.4 +1.2 +0.7 -0.3 +2.8 +1.5 -1.1', 'gross_bps': np.float64(7.76), 'cost_bps': np.float64(2.89), 'xo': np.float64(0.0), 't1_pct': np.float64(80.6)}
+16:17:33 {'book': 'p26 moc->x1001 c0.3 f1 k6', 'pre': np.float64(1.08), 'sh': np.float64(0.79), 'fold': np.float64(0.92), 'h1': np.float64(0.76), 'h2': np.float64(0.83), 'mdd': np.float64(-30.0), 'ret': np.float64(12.3), 'vol': np.float64(15.6), 'fneg': 4, 'yrs': '-0.2 -1.0 +1.1 +1.0 +1.2 +0.5 -0.3 +1.9 +2.5 -0.1', 'gross_bps': np.float64(6.65), 'cost_bps': np.float64(3.11), 'xo': np.float64(0.0), 't1_pct': np.float64(79.5)}
+16:17:36 {'book': 'p26 moc->x1001 c0.3 f0.5 k6', 'pre': np.float64(1.23), 'sh': np.float64(0.96), 'fold': np.float64(1.12), 'h1': np.float64(0.95), 'h2': np.float64(1.0), 'mdd': np.float64(-22.4), 'ret': np.float64(16.3), 'vol': np.float64(16.9), 'fneg': 4, 'yrs': '-0.3 -0.6 +1.2 +1.9 +0.9 +0.9 -0.4 +2.2 +2.8 -0.8', 'gross_bps': np.float64(6.99), 'cost_bps': np.float64(2.66), 'xo': np.float64(0.0), 't1_pct': np.float64(75.6)}
+16:17:40 {'book': 'p26 moc->x1031 c0.3 f1 k6', 'pre': np.float64(0.98), 'sh': np.float64(0.71), 'fold': np.float64(0.85), 'h1': np.float64(0.85), 'h2': np.float64(0.62), 'mdd': np.float64(-37.6), 'ret': np.float64(11.6), 'vol': np.float64(16.4), 'fneg': 5, 'yrs': '-1.0 -0.4 +1.7 +0.6 +1.5 +1.1 -1.1 +1.4 +2.6 -1.7', 'gross_bps': np.float64(6.49), 'cost_bps': np.float64(3.1), 'xo': np.float64(0.0), 't1_pct': np.float64(80.1)}
+16:17:44 {'book': 'p26 moc->x1031 c0.3 f0.5 k6', 'pre': np.float64(1.12), 'sh': np.float64(0.86), 'fold': np.float64(1.02), 'h1': np.float64(0.85), 'h2': np.float64(0.88), 'mdd': np.float64(-33.3), 'ret': np.float64(14.9), 'vol': np.float64(17.4), 'fneg': 4, 'yrs': '-0.7 -1.1 +1.2 +1.7 +1.2 +1.2 -0.9 +1.5 +2.9 -0.9', 'gross_bps': np.float64(6.69), 'cost_bps': np.float64(2.64), 'xo': np.float64(0.0), 't1_pct': np.float64(76.6)}
+16:17:48 {'book': 'p26 moc->split c0.3 f1 k6', 'pre': np.float64(1.5), 'sh': np.float64(1.18), 'fold': np.float64(1.28), 'h1': np.float64(1.58), 'h2': np.float64(0.9), 'mdd': np.float64(-23.8), 'ret': np.float64(16.7), 'vol': np.float64(14.1), 'fneg': 4, 'yrs': '-1.1 +1.0 +1.1 +3.6 +1.7 +0.9 -0.4 +2.3 +2.3 -2.2', 'gross_bps': np.float64(7.93), 'cost_bps': np.float64(3.08), 'xo': np.float64(1.0), 't1_pct': np.float64(85.9)}
+16:17:51 {'book': 'p26 moc->split c0.3 f0.5 k6', 'pre': np.float64(1.6), 'sh': np.float64(1.3), 'fold': np.float64(1.38), 'h1': np.float64(1.7), 'h2': np.float64(0.98), 'mdd': np.float64(-22.9), 'ret': np.float64(19.5), 'vol': np.float64(15.0), 'fneg': 4, 'yrs': '-1.0 +1.3 +0.8 +4.2 +1.5 +1.3 -0.4 +2.3 +2.0 -1.5', 'gross_bps': np.float64(8.23), 'cost_bps': np.float64(2.8), 'xo': np.float64(1.0), 't1_pct': np.float64(84.4)}
+16:17:55 {'book': 'p26 moc->split c0.1 f1 k6', 'pre': np.float64(1.82), 'sh': np.float64(1.57), 'fold': np.float64(1.82), 'h1': np.float64(1.52), 'h2': np.float64(1.62), 'mdd': np.float64(-22.3), 'ret': np.float64(28.7), 'vol': np.float64(18.3), 'fneg': 5, 'yrs': '-1.1 +0.7 +1.1 +3.4 +1.5 +1.7 -0.2 +3.2 +3.0 -0.8', 'gross_bps': np.float64(10.38), 'cost_bps': np.float64(3.14), 'xo': np.float64(1.0), 't1_pct': np.float64(64.4)}
+16:17:58 {'book': 'p26 moc->split c1 f1 k6', 'pre': np.float64(0.35), 'sh': np.float64(-0.11), 'fold': np.float64(0.07), 'h1': np.float64(-0.68), 'h2': np.float64(0.22), 'mdd': np.float64(-40.5), 'ret': np.float64(-1.1), 'vol': np.float64(9.8), 'fneg': 7, 'yrs': '-2.7 -3.2 -1.1 +1.3 +0.7 -1.2 -1.1 +1.9 +1.6 -0.9', 'gross_bps': np.float64(5.31), 'cost_bps': np.float64(3.99), 'xo': np.float64(1.0), 't1_pct': np.float64(88.9)}
+16:18:04 {'book': 'p26 moc->route c0.3 f1 k6', 'pre': np.float64(1.71), 'sh': np.float64(1.4), 'fold': np.float64(1.51), 'h1': np.float64(1.79), 'h2': np.float64(1.06), 'mdd': np.float64(-20.4), 'ret': np.float64(20.6), 'vol': np.float64(14.8), 'fneg': 6, 'yrs': '-0.4 +0.7 +1.7 +3.0 +2.4 +1.3 -0.5 +3.1 +1.7 -2.0', 'gross_bps': np.float64(8.32), 'cost_bps': np.float64(3.13), 'xo': np.float64(0.0), 't1_pct': np.float64(84.7)}
+16:18:04 route mix by tier p26 moc->route c0.3 f1 k6
+exit         moo  split  x0935  x1001  x1031
+1-300      16420      0    394   4363   2398
+301-600     1132      1     63    758     53
+601-1500     930      0    382    173     46
+1501-2000    641      0     61     20      5
+16:18:10 {'book': 'p26 moc->route c0.3 f0.5 k6', 'pre': np.float64(1.73), 'sh': np.float64(1.44), 'fold': np.float64(1.51), 'h1': np.float64(1.8), 'h2': np.float64(1.12), 'mdd': np.float64(-20.4), 'ret': np.float64(22.8), 'vol': np.float64(15.8), 'fneg': 6, 'yrs': '+0.1 +1.0 +1.7 +2.5 +2.6 +1.2 -0.6 +2.9 +1.8 -0.6', 'gross_bps': np.float64(8.6), 'cost_bps': np.float64(2.98), 'xo': np.float64(0.0), 't1_pct': np.float64(81.0)}
+16:18:10 route mix by tier p26 moc->route c0.3 f0.5 k6
+exit         moo  split  x0935  x1001  x1031
+1-300      10394      2   1406   6888   3860
+301-600      896      0    146   1588    188
+601-1500     668      0    735    206     95
+1501-2000    532      0    176     36     24
+16:18:15 {'book': 'p26 moc->route c0.1 f1 k6', 'pre': np.float64(2.38), 'sh': np.float64(2.13), 'fold': np.float64(2.29), 'h1': np.float64(2.26), 'h2': np.float64(1.99), 'mdd': np.float64(-24.3), 'ret': np.float64(39.7), 'vol': np.float64(18.6), 'fneg': 2, 'yrs': '-0.3 +1.2 +1.4 +4.8 +2.2 +1.6 +1.9 +3.6 +2.6 -2.7', 'gross_bps': np.float64(11.77), 'cost_bps': np.float64(2.79), 'xo': np.float64(0.0), 't1_pct': np.float64(63.6)}
+16:18:15 route mix by tier p26 moc->route c0.1 f1 k6
+exit         moo  x0935  x1001  x1031
+1-300      15066     76   2169    396
+301-600     4174     67    642      0
+601-1500    2650    270     99      2
+1501-2000   2150     48     25      6
+16:18:20 {'book': 'p26 moc->route c1 f1 k6', 'pre': np.float64(0.43), 'sh': np.float64(0.05), 'fold': np.float64(0.3), 'h1': np.float64(-0.16), 'h2': np.float64(0.19), 'mdd': np.float64(-35.9), 'ret': np.float64(0.6), 'vol': np.float64(11.9), 'fneg': 8, 'yrs': '-1.9 -3.2 +1.1 -0.4 +2.7 +0.2 -1.3 +0.9 +1.1 -1.3', 'gross_bps': np.float64(5.18), 'cost_bps': np.float64(3.96), 'xo': np.float64(0.0), 't1_pct': np.float64(89.2)}
+16:18:20 route mix by tier p26 moc->route c1 f1 k6
+exit        moo  split  x0935  x1001  x1031
+1-300      5766      4   1991   7472   9604
+301-600     323      0     14    715    168
+601-1500    521      0    390    266    466
+1501-2000    45      0     40     22     33
+16:18:24 {'book': 'p26 x1559->moo c0.3 f1 k6', 'pre': np.float64(1.98), 'sh': np.float64(1.66), 'fold': np.float64(1.8), 'h1': np.float64(2.03), 'h2': np.float64(1.37), 'mdd': np.float64(-20.4), 'ret': np.float64(24.1), 'vol': np.float64(14.5), 'fneg': 2, 'yrs': '-1.7 +1.4 +0.5 +5.6 +2.1 +1.4 +0.4 +2.9 +1.7 -1.3', 'gross_bps': np.float64(8.85), 'cost_bps': np.float64(2.96), 'xo': np.float64(0.0), 't1_pct': np.float64(86.1)}
+16:18:28 {'book': 'p26 x1559->moo c0.3 f0.5 k6', 'pre': np.float64(2.37), 'sh': np.float64(2.07), 'fold': np.float64(2.22), 'h1': np.float64(2.51), 'h2': np.float64(1.68), 'mdd': np.float64(-19.8), 'ret': np.float64(30.7), 'vol': np.float64(14.8), 'fneg': 3, 'yrs': '-1.3 +1.5 +1.6 +6.8 +1.7 +1.6 +0.8 +3.4 +2.2 -1.2', 'gross_bps': np.float64(9.83), 'cost_bps': np.float64(2.65), 'xo': np.float64(0.0), 't1_pct': np.float64(84.3)}
+16:18:32 {'book': 'p26 split->moo c0.3 f1 k6', 'pre': np.float64(1.99), 'sh': np.float64(1.67), 'fold': np.float64(1.84), 'h1': np.float64(2.15), 'h2': np.float64(1.27), 'mdd': np.float64(-20.3), 'ret': np.float64(24.4), 'vol': np.float64(14.6), 'fneg': 3, 'yrs': '-2.0 +1.1 +0.7 +6.4 +2.0 +1.0 +0.4 +2.8 +2.0 -1.5', 'gross_bps': np.float64(9.45), 'cost_bps': np.float64(3.07), 'xo': np.float64(1.0), 't1_pct': np.float64(86.1)}
+16:18:36 {'book': 'p26 route->moo c0.3 f1 k6', 'pre': np.float64(2.13), 'sh': np.float64(1.82), 'fold': np.float64(1.94), 'h1': np.float64(2.29), 'h2': np.float64(1.44), 'mdd': np.float64(-20.3), 'ret': np.float64(26.5), 'vol': np.float64(14.6), 'fneg': 2, 'yrs': '-1.7 +1.5 +1.0 +6.2 +2.1 +1.5 +0.6 +3.0 +1.6 -1.2', 'gross_bps': np.float64(9.28), 'cost_bps': np.float64(2.91), 'xo': np.float64(0.0), 't1_pct': np.float64(85.4)}
+16:18:36 route mix by tier p26 route->moo c0.3 f1 k6
+exit         moo
+1-300      23787
+301-600     1654
+601-1500    1525
+1501-2000    874
+16:18:42 {'book': 'p26 route->route c0.3 f1 k6', 'pre': np.float64(1.73), 'sh': np.float64(1.46), 'fold': np.float64(1.72), 'h1': np.float64(1.39), 'h2': np.float64(1.53), 'mdd': np.float64(-21.2), 'ret': np.float64(24.3), 'vol': np.float64(16.7), 'fneg': 3, 'yrs': '-1.5 -0.0 +1.2 +3.5 +2.3 +2.1 +0.1 +2.5 +2.5 -1.1', 'gross_bps': np.float64(8.95), 'cost_bps': np.float64(3.03), 'xo': np.float64(0.0), 't1_pct': np.float64(76.6)}
+16:18:42 route mix by tier p26 route->route c0.3 f1 k6
+exit         moo  split  x0935  x1001  x1031
+1-300      13056     12    438   5066   2757
+301-600     1254      3    127   2265    230
+601-1500     839      0    536    310     43
+1501-2000    728      0    130     38      8
+16:18:47 {'book': 'p26 route->route c0.3 f0.5 k6', 'pre': np.float64(1.53), 'sh': np.float64(1.32), 'fold': np.float64(1.49), 'h1': np.float64(1.04), 'h2': np.float64(1.6), 'mdd': np.float64(-25.3), 'ret': np.float64(28.4), 'vol': np.float64(21.6), 'fneg': 5, 'yrs': '-0.6 +0.4 +1.0 +1.5 +1.8 +2.4 -0.2 +2.5 +2.7 -0.6', 'gross_bps': np.float64(9.19), 'cost_bps': np.float64(2.45), 'xo': np.float64(0.0), 't1_pct': np.float64(62.1)}
+16:18:47 route mix by tier p26 route->route c0.3 f0.5 k6
+exit        moo  split  x0935  x1001  x1031
+1-300      5651      8   1105   7212   3316
+301-600     915      7    270   4165    824
+601-1500    576      0   1510    762     25
+1501-2000   580      0    731    142     41
+16:18:52 {'book': 'p26 route->route c0.1 f1 k6', 'pre': np.float64(2.53), 'sh': np.float64(2.28), 'fold': np.float64(2.5), 'h1': np.float64(2.27), 'h2': np.float64(2.29), 'mdd': np.float64(-23.5), 'ret': np.float64(41.0), 'vol': np.float64(18.0), 'fneg': 1, 'yrs': '-0.7 +1.1 +2.1 +4.7 +2.1 +2.0 +2.5 +3.5 +3.0 -2.1', 'gross_bps': np.float64(11.89), 'cost_bps': np.float64(2.66), 'xo': np.float64(0.0), 't1_pct': np.float64(65.2)}
+16:18:52 route mix by tier p26 route->route c0.1 f1 k6
+exit         moo  x0935  x1001  x1031
+1-300      14568     92   2833    652
+301-600     3831     67    720      2
+601-1500    2543    279    101      1
+1501-2000   2069     56     21      5
+16:18:57 {'book': 'p26 route->route c1 f1 k6', 'pre': np.float64(0.9), 'sh': np.float64(0.65), 'fold': np.float64(0.94), 'h1': np.float64(0.12), 'h2': np.float64(1.11), 'mdd': np.float64(-33.7), 'ret': np.float64(11.7), 'vol': np.float64(18.0), 'fneg': 5, 'yrs': '-1.7 -1.2 +1.6 -0.1 +0.6 +1.8 -0.4 +1.3 +3.2 -1.2', 'gross_bps': np.float64(6.5), 'cost_bps': np.float64(3.08), 'xo': np.float64(0.0), 't1_pct': np.float64(72.0)}
+16:18:57 route mix by tier p26 route->route c1 f1 k6
+exit        moo  split  x0935  x1001  x1031
+1-300      1769      4   1232   9200   7832
+301-600     175      6    176   4208   1116
+601-1500    239      0    766    559     99
+1501-2000    38      0    312     60     49
+16:19:00 p26 15:59-bar entry diagnostic (moc->moo k6 positions): side x (close/c389 - 1) mean -0.25 bps; by tier 1-300 -0.17 301-600 -0.82 601-1500 -1.14 1501-2000 -0.00
+16:19:00 --- STEP2 routes k6 lam3 ($0.4M commission; gross/cost = bps per position, cost both sides; xo = extra orders per position)
+                         book   pre    sh  fold    h1    h2   mdd  ret  vol  fneg  gross_bps  cost_bps  xo  t1_pct
+      p40 moc->moo c0.1 f1 k6  3.25  3.02  3.16  3.94  2.11 -23.8 59.0 19.5     1      16.12      3.32 0.0    51.4
+      p40 moc->moo c0.3 f1 k6  1.92  1.62  1.54  2.68  0.75 -28.6 24.8 15.3     4       9.18      3.16 0.0    83.8
+        p40 moc->moo c1 f1 k6 -0.10 -0.54 -0.51 -0.70 -0.46 -52.4 -5.6 10.4    12       4.98      4.99 0.0    89.5
+    p40 moc->x0935 c0.3 f1 k6  1.28  0.98  0.85  2.04  0.05 -26.0 14.7 15.0     5       7.74      3.72 0.0    82.9
+  p40 moc->x0935 c0.3 f0.5 k6  1.86  1.61  1.54  2.47  0.77 -26.1 28.3 17.6     3       9.88      3.16 0.0    78.5
+    p40 moc->x1001 c0.3 f1 k6  1.03  0.78  0.74  1.52  0.09 -40.7 13.9 18.0     4       6.96      3.10 0.0    84.6
+  p40 moc->x1001 c0.3 f0.5 k6  1.26  1.03  0.92  1.74  0.37 -39.0 20.2 19.6     5       7.75      2.65 0.0    81.3
+    p40 moc->x1031 c0.3 f1 k6  1.11  0.86  0.82  1.53  0.30 -38.4 16.1 18.6     4       7.36      3.07 0.0    84.0
+  p40 moc->x1031 c0.3 f0.5 k6  1.42  1.20  1.13  1.95  0.53 -39.8 24.6 20.5     3       8.62      2.64 0.0    80.1
+    p40 moc->split c0.3 f1 k6  1.55  1.27  1.17  2.18  0.46 -33.1 20.5 16.1     5       8.79      3.18 1.0    84.9
+  p40 moc->split c0.3 f0.5 k6  1.64  1.37  1.30  2.39  0.43 -32.3 23.2 17.0     4       9.06      2.90 1.0    82.5
+    p40 moc->split c0.1 f1 k6  2.21  1.99  2.04  2.66  1.30 -21.2 40.5 20.3     4      13.01      3.43 1.0    62.0
+      p40 moc->split c1 f1 k6 -0.09 -0.47 -0.53 -0.09 -0.76 -51.7 -5.6 11.9    11       4.60      4.16 1.0    88.9
+    p40 moc->route c0.3 f1 k6  1.85  1.57  1.55  2.76  0.48 -37.5 25.3 16.1     5       9.39      3.27 0.0    80.9
+  p40 moc->route c0.3 f0.5 k6  1.91  1.64  1.56  2.75  0.53 -29.8 28.2 17.2     4       9.90      3.21 0.0    76.1
+    p40 moc->route c0.1 f1 k6  3.05  2.82  2.96  3.67  1.95 -24.0 55.5 19.7     1      15.50      3.38 0.0    50.5
+      p40 moc->route c1 f1 k6  0.57  0.23  0.19  1.25 -0.58 -45.5  3.1 13.3     8       5.90      4.20 0.0    88.6
+    p40 x1559->moo c0.3 f1 k6  1.98  1.70  1.63  2.80  0.81 -26.2 27.5 16.2     5       9.60      3.05 0.0    83.4
+  p40 x1559->moo c0.3 f0.5 k6  2.18  1.90  1.82  3.03  0.95 -23.9 31.5 16.5     5      10.10      2.76 0.0    81.1
+    p40 split->moo c0.3 f1 k6  1.85  1.57  1.52  2.65  0.67 -29.8 25.0 16.0     4       9.67      3.16 1.0    83.2
+    p40 route->moo c0.3 f1 k6  2.02  1.73  1.66  2.90  0.79 -26.0 27.7 16.0     6       9.63      3.03 0.0    82.3
+  p40 route->route c0.3 f1 k6  1.97  1.70  1.71  2.80  0.65 -33.9 29.0 17.0     4      10.03      3.19 0.0    71.8
+p40 route->route c0.3 f0.5 k6  2.21  2.00  1.97  2.64  1.35 -18.7 43.2 21.6     4      12.55      2.87 0.0    57.5
+  p40 route->route c0.1 f1 k6  2.98  2.75  2.87  3.62  1.86 -25.4 54.1 19.7     2      15.09      3.26 0.0    52.7
+    p40 route->route c1 f1 k6  1.51  1.27  1.27  2.02  0.58 -26.9 23.3 18.4     4       9.00      3.28 0.0    72.8
+      p26 moc->moo c0.1 f1 k6  2.61  2.37  2.49  2.65  2.05 -23.8 43.9 18.5     1      12.57      2.77 0.0    63.0
+      p26 moc->moo c0.3 f1 k6  2.09  1.77  1.84  2.39  1.27 -19.1 24.8 14.0     4       9.09      3.07 0.0    86.8
+        p26 moc->moo c1 f1 k6 -0.06 -0.58 -0.39 -1.74  0.06 -54.7 -5.1  8.8    11       4.91      4.82 0.0    89.5
+    p26 moc->x0935 c0.3 f1 k6  1.39  1.05  1.19  1.45  0.73 -17.1 13.9 13.2     4       7.34      3.49 0.0    84.0
+  p26 moc->x0935 c0.3 f0.5 k6  1.55  1.25  1.27  1.71  0.83 -21.6 19.0 15.2     4       7.76      2.89 0.0    80.6
+    p26 moc->x1001 c0.3 f1 k6  1.08  0.79  0.92  0.76  0.83 -30.0 12.3 15.6     4       6.65      3.11 0.0    79.5
+  p26 moc->x1001 c0.3 f0.5 k6  1.23  0.96  1.12  0.95  1.00 -22.4 16.3 16.9     4       6.99      2.66 0.0    75.6
+    p26 moc->x1031 c0.3 f1 k6  0.98  0.71  0.85  0.85  0.62 -37.6 11.6 16.4     5       6.49      3.10 0.0    80.1
+  p26 moc->x1031 c0.3 f0.5 k6  1.12  0.86  1.02  0.85  0.88 -33.3 14.9 17.4     4       6.69      2.64 0.0    76.6
+    p26 moc->split c0.3 f1 k6  1.50  1.18  1.28  1.58  0.90 -23.8 16.7 14.1     4       7.93      3.08 1.0    85.9
+  p26 moc->split c0.3 f0.5 k6  1.60  1.30  1.38  1.70  0.98 -22.9 19.5 15.0     4       8.23      2.80 1.0    84.4
+    p26 moc->split c0.1 f1 k6  1.82  1.57  1.82  1.52  1.62 -22.3 28.7 18.3     5      10.38      3.14 1.0    64.4
+      p26 moc->split c1 f1 k6  0.35 -0.11  0.07 -0.68  0.22 -40.5 -1.1  9.8     7       5.31      3.99 1.0    88.9
+    p26 moc->route c0.3 f1 k6  1.71  1.40  1.51  1.79  1.06 -20.4 20.6 14.8     6       8.32      3.13 0.0    84.7
+  p26 moc->route c0.3 f0.5 k6  1.73  1.44  1.51  1.80  1.12 -20.4 22.8 15.8     6       8.60      2.98 0.0    81.0
+    p26 moc->route c0.1 f1 k6  2.38  2.13  2.29  2.26  1.99 -24.3 39.7 18.6     2      11.77      2.79 0.0    63.6
+      p26 moc->route c1 f1 k6  0.43  0.05  0.30 -0.16  0.19 -35.9  0.6 11.9     8       5.18      3.96 0.0    89.2
+    p26 x1559->moo c0.3 f1 k6  1.98  1.66  1.80  2.03  1.37 -20.4 24.1 14.5     2       8.85      2.96 0.0    86.1
+  p26 x1559->moo c0.3 f0.5 k6  2.37  2.07  2.22  2.51  1.68 -19.8 30.7 14.8     3       9.83      2.65 0.0    84.3
+    p26 split->moo c0.3 f1 k6  1.99  1.67  1.84  2.15  1.27 -20.3 24.4 14.6     3       9.45      3.07 1.0    86.1
+    p26 route->moo c0.3 f1 k6  2.13  1.82  1.94  2.29  1.44 -20.3 26.5 14.6     2       9.28      2.91 0.0    85.4
+  p26 route->route c0.3 f1 k6  1.73  1.46  1.72  1.39  1.53 -21.2 24.3 16.7     3       8.95      3.03 0.0    76.6
+p26 route->route c0.3 f0.5 k6  1.53  1.32  1.49  1.04  1.60 -25.3 28.4 21.6     5       9.19      2.45 0.0    62.1
+  p26 route->route c0.1 f1 k6  2.53  2.28  2.50  2.27  2.29 -23.5 41.0 18.0     1      11.89      2.66 0.0    65.2
+    p26 route->route c1 f1 k6  0.90  0.65  0.94  0.12  1.11 -33.7 11.7 18.0     5       6.50      3.08 0.0    72.0
+16:19:00 --- STEP2 tier tables k6
+               book      tier     n  pos_pct  gross  cost   net  pnl_pct
+  p40 moc->route k6     1-300 22516     80.9   9.50  2.86  6.65     88.3
+  p40 moc->route k6   301-600  2411      8.7   0.95  4.70 -3.74     -5.9
+  p40 moc->route k6  601-1500  1926      6.9   9.09  4.24  4.85      5.3
+  p40 moc->route k6 1501-2000   987      3.5  27.97  7.31 20.66     12.3
+p40 route->route k6     1-300 19980     71.8  10.65  2.62  8.03     84.8
+p40 route->route k6   301-600  4284     15.4   2.14  3.89 -1.75     -4.7
+p40 route->route k6  601-1500  2213      7.9  12.48  4.55  7.93      9.1
+p40 route->route k6 1501-2000  1363      4.9  21.73  6.98 14.76     10.8
+    p40 moc->moo k6     1-300 23340     83.8   9.11  2.81  6.29     87.9
+    p40 moc->moo k6   301-600  1678      6.0   0.05  5.05 -5.01     -5.5
+    p40 moc->moo k6  601-1500  1879      6.7   9.42  3.63  5.79      6.3
+    p40 moc->moo k6 1501-2000   943      3.4  26.76  7.34 19.42     11.2
+  p26 moc->route k6     1-300 23575     84.7   8.10  2.88  5.22     85.1
+  p26 moc->route k6   301-600  2007      7.2   4.08  4.53 -0.45     -0.9
+  p26 moc->route k6  601-1500  1531      5.5   9.66  3.62  6.03      6.4
+  p26 moc->route k6 1501-2000   727      2.6  24.08  6.09 17.99      9.4
+p26 route->route k6     1-300 21329     76.6   8.71  2.62  6.10     78.7
+p26 route->route k6   301-600  3879     13.9   5.44  4.35  1.09      2.4
+p26 route->route k6  601-1500  1728      6.2  10.99  3.78  7.21      7.6
+p26 route->route k6 1501-2000   904      3.2  25.81  5.66 20.16     11.4
+    p26 moc->moo k6     1-300 24161     86.8   9.02  2.88  6.15     88.7
+    p26 moc->moo k6   301-600  1387      5.0   2.83  4.75 -1.92     -1.8
+    p26 moc->moo k6  601-1500  1567      5.6   9.15  3.29  5.86      5.5
+    p26 moc->moo k6 1501-2000   725      2.6  23.21  6.05 17.16      7.6
+16:19:00 --- STEP2 route mix k6
+ exit_moo  exit_x1031  exit_x1001  exit_x0935  exit_split  entry_moc                          book  entry_x1559
+    0.720       0.120       0.109       0.051       0.000      1.000     p40 moc->route c0.3 f1 k6        0.000
+    0.488       0.173       0.215       0.124       0.000      1.000   p40 moc->route c0.3 f0.5 k6        0.000
+    0.907       0.028       0.030       0.035       0.000      1.000     p40 moc->route c0.1 f1 k6        0.000
+    0.308       0.312       0.277       0.103       0.000      1.000       p40 moc->route c1 f1 k6        0.000
+    1.000       0.000       0.000       0.000       0.000      0.200     p40 route->moo c0.3 f1 k6        0.800
+    0.619       0.140       0.171       0.069       0.001      0.163   p40 route->route c0.3 f1 k6        0.837
+    0.366       0.180       0.256       0.197       0.000      0.021 p40 route->route c0.3 f0.5 k6        0.979
+    0.902       0.031       0.031       0.036       0.000      0.580   p40 route->route c0.1 f1 k6        0.420
+    0.170       0.334       0.344       0.152       0.000      0.009     p40 route->route c1 f1 k6        0.991
+    0.687       0.090       0.191       0.032       0.000      1.000     p26 moc->route c0.3 f1 k6        0.000
+    0.449       0.150       0.313       0.088       0.000      1.000   p26 moc->route c0.3 f0.5 k6        0.000
+    0.864       0.015       0.105       0.017       0.000      1.000     p26 moc->route c0.1 f1 k6        0.000
+    0.239       0.369       0.304       0.087       0.000      1.000       p26 moc->route c1 f1 k6        0.000
+    1.000       0.000       0.000       0.000       0.000      0.188     p26 route->moo c0.3 f1 k6        0.812
+    0.570       0.109       0.276       0.044       0.001      0.130   p26 route->route c0.3 f1 k6        0.870
+    0.277       0.151       0.441       0.130       0.001      0.014 p26 route->route c0.3 f0.5 k6        0.986
+    0.827       0.024       0.132       0.018       0.000      0.484   p26 route->route c0.1 f1 k6        0.516
+    0.080       0.327       0.504       0.089       0.000      0.007     p26 route->route c1 f1 k6        0.993
+16:19:00 STEP2 DONE

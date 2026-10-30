@@ -169,13 +169,15 @@ def route_book(H, k, lam=3.0, entry="moc", exit="moo", c=0.3, f=1.0, c_sel=None,
                     H.y_split.values, np.ones(n))
         yv = YEXIT[x]
         return H.ey.values * H["rL_" + yv].values, -H.ey.values * H["rS_" + yv].values, Cs[x][0].values, Cc[x][1].values, H[yv].values, np.zeros(n)
-    def entry_opt(x):  # -> (sel cost, chg cost, extra orders)
-        if x == "split": return 0.5 * Cs["moc_half"][0].values + 0.5 * Cs["x1559"][0].values + cb, 0.5 * Cc["moc_half"][1].values + 0.5 * Cc["x1559"][1].values, np.ones(n)
-        return Cs[x][0].values, Cc[x][1].values, np.zeros(n)
+    rm = H.r_moc.fillna(0).values
+    def entry_opt(x):  # -> (sel cost, chg cost, extra orders, entry-price adjustment)
+        # a 15:59:30 cross fills near the 15:59-bar close, not the official close: gross = (1+y)(1+r_moc)-1, r_moc = close/c389-1
+        if x == "split": return 0.5 * Cs["moc_half"][0].values + 0.5 * Cs["x1559"][0].values + cb, 0.5 * Cc["moc_half"][1].values + 0.5 * Cc["x1559"][1].values, np.ones(n), 0.5 * rm
+        return Cs[x][0].values, Cc[x][1].values, np.zeros(n), (rm if x == "x1559" else np.zeros(n))
     ens = (entries or ENTRY_OPTS) if entry == "route" else [entry]
     EN = [entry_opt(x) for x in ens]; es = np.stack([e[0] for e in EN], 1); es = np.where(np.isfinite(es), es, np.inf)
     ie = np.argmin(es, 1); rr = np.arange(n)
-    e_sel = np.stack([e[0] for e in EN], 1)[rr, ie]; e_chg = np.stack([e[1] for e in EN], 1)[rr, ie]; e_xo = np.stack([e[2] for e in EN], 1)[rr, ie]
+    e_sel = np.stack([e[0] for e in EN], 1)[rr, ie]; e_chg = np.stack([e[1] for e in EN], 1)[rr, ie]; e_xo = np.stack([e[2] for e in EN], 1)[rr, ie]; e_dy = np.stack([e[3] for e in EN], 1)[rr, ie]
     exs = (exits or EXIT_OPTS) if exit == "route" else [exit]
     EX = [exit_opt(x) for x in exs]
     out = {}
@@ -183,7 +185,7 @@ def route_book(H, k, lam=3.0, entry="moc", exit="moo", c=0.3, f=1.0, c_sel=None,
         val = np.stack([o[j] - o[2] / 1e4 for o in EX], 1); val = np.where(np.isfinite(val), val, -np.inf)
         ix = np.argmax(val, 1)
         pick = lambda m: np.stack([o[m] for o in EX], 1)[rr, ix]
-        E = pick(j); csel = pick(2) + e_sel; cchg = pick(3) + e_chg; yv = pick(4); xo = pick(5) + e_xo
+        E = pick(j); csel = pick(2) + e_sel; cchg = pick(3) + e_chg; yv = (1 + pick(4)) * (1 + e_dy) - 1; xo = pick(5) + e_xo
         s = E - lam * csel / 1e4 - (borrow / 252 if side == "S" else 0.0)
         out[side] = (pd.Series(s), pd.Series(yv), pd.Series(cchg), pd.Series(xo), pd.Series(ix), pd.Series(ie))
     res = book(H, k, out["L"][0], out["S"][0], out["L"][1], out["S"][1], out["L"][2], out["S"][2], out["L"][3], out["S"][3], borrow=borrow, ret_pos=ret_pos)
