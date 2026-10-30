@@ -158,3 +158,23 @@ def corr_with(r, s):
 
 def save_pred(D, p, name):
     pd.DataFrame({"date": D.date, "tk": D.tk, "p": p}).dropna().to_parquet(f"{OUT}/pred_{name}.parquet")
+
+# ---------------------------------------------------------------- cost-aware selection (step 2)
+def causal_cal(G, y="y_oo", nb=50, lag_days=3, first_year_insample=True):
+    """E[y | p-bin] with an EXPANDING map: the map used in calendar year Y is fitted on dates < Jan 1 of Y minus lag_days.
+    For the first year (no prior predictions) the map of that year itself is used when first_year_insample (flagged in the report;
+    fold-OOS starts 2018-07 so it never touches a fold).  Returns the expected gross overnight return (fraction) per row."""
+    pb = ((G.p.clip(-0.5, 0.4999) + 0.5) * nb // 1).astype(int); yrs = G.date.dt.year; ey = pd.Series(np.nan, index=G.index)
+    ok = G[y].notna()
+    for Y in sorted(yrs.unique()):
+        prior = ok & (G.date < pd.Timestamp(f"{Y}-01-01") - pd.Timedelta(days=lag_days))
+        if prior.sum() < 50000:
+            if not first_year_insample: continue
+            prior = ok & (yrs == Y)
+        m = G.loc[prior, y].groupby(pb[prior]).mean(); sel = yrs == Y; ey[sel] = pb[sel].map(m).values
+    return ey.astype(np.float32)
+
+def net_scores(G, ey, lam, ce="ce", cx="cx", borrow=0.01):
+    """long score = E[gross] - lam x (entry + exit cost); short score = -E[gross] - lam x cost - borrow/day"""
+    c = (G[ce] + G[cx]) / 1e4
+    G["sL"] = ey - lam * c; G["sS"] = -ey - lam * c - borrow / 252; return G
