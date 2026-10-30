@@ -1,0 +1,66 @@
+s4_save start
+frame cached /home/user/llm_sharpe_optimization/agents/xsrule3/out/D_u600_2026-04-27.parquet: rows 1297124 names 600
+xsr3_cAx_u150_moo_lo10                     Sh  1.29 (pre-comm  1.59) OOS  1.08 halves  2.19/ 0.12 mdd  -23.6% ret  16.3% vol 12.6% worst fold -2.6 neg 7/16
+   corr {'xsr_lo10_old': 0.97, 'onml_k10': 0.25, 'spy_cc': 0.46}  picks/day 8.7  hs0931 mean 9.8  cost/side c=0.3 in 2.30 out 3.79
+   folds: -0.2 +1.9 +2.0 +2.6 +4.7 +3.0 -1.5 -0.5 -0.1 +0.7 -0.9 +0.9 +3.5 -0.4 +1.2 -2.6
+   tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50   7311   0.37      17.24  1.46   2.13    5.82
+ 51-100   6424   0.32      14.42  2.49   4.06   10.60
+101-150   6218   0.31      14.03  3.10   5.45   13.60
+   sensitivity (Sh / OOS at commission): c=0.1 1.90/1.66  c=0.3 1.29/1.08  c=1.0 -1.15/-1.25  x1 0.29/0.09  x05 1.11/0.88  old 1bp 1.97/1.72
+xsr3_cAx_u150_moo_lo20                     Sh  1.10 (pre-comm  1.87) OOS  0.93 halves  1.94/-0.03 mdd  -16.9% ret  10.9% vol  9.9% worst fold -3.1 neg 6/16
+   corr {'xsr_lo10_old': 0.91, 'onml_k10': 0.26, 'spy_cc': 0.46}  picks/day 14.6  hs0931 mean 9.8  cost/side c=0.3 in 1.65 out 2.62
+   folds: -0.8 +1.2 +1.3 +3.1 +3.9 +2.9 -1.5 -0.1 -0.7 +0.1 +0.3 +0.8 +2.6 -1.3 +2.1 -3.1
+   tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50  12476   0.37      15.12  1.16   1.55    5.84
+ 51-100  10970   0.33      13.48  1.75   2.82   10.55
+101-150  10181   0.30      14.20  2.15   3.72   13.69
+   sensitivity (Sh / OOS at commission): c=0.1 1.48/1.30  c=0.3 1.10/0.93  c=1.0 -0.68/-0.77  x1 -0.14/-0.27  x05 0.74/0.57  old 1bp 1.54/1.35
+xsr3_cAx_u50_moo_lo10                      Sh  1.62 (pre-comm  2.02) OOS  1.39 halves  2.43/ 0.66 mdd  -15.3% ret  15.5% vol  9.5% worst fold -1.6 neg 6/16
+   corr {'xsr_lo10_old': 0.79, 'onml_k10': 0.24, 'spy_cc': 0.44}  picks/day 6.7  hs0931 mean 5.9  cost/side c=0.3 in 1.44 out 2.09
+   folds: -0.4 +1.9 +0.8 +3.7 +5.0 +2.6 +0.6 -0.1 -0.9 -0.3 +2.6 +0.8 +3.8 -0.2 +3.1 -1.6
+   tiers:
+tier  picks  share  gross_bps  c_in  c_out  hs0931
+1-50  14439    1.0      14.84  1.44   2.09    5.87
+   sensitivity (Sh / OOS at commission): c=0.1 1.88/1.64  c=0.3 1.62/1.39  c=1.0 0.23/0.02  x1 1.01/0.75  x05 1.52/1.26  old 1bp 1.93/1.67
+xsr3_cAx_u150_fhs10_moo_lo10               Sh  1.54 (pre-comm  1.88) OOS  1.28 halves  2.45/ 0.48 mdd  -18.9% ret  17.1% vol 11.1% worst fold -1.6 neg 4/16
+   corr {'xsr_lo10_old': 0.87, 'onml_k10': 0.25, 'spy_cc': 0.42}  picks/day 8.0  hs0931 mean 5.3  cost/side c=0.3 in 2.05 out 3.28
+   folds: -0.5 +2.0 +1.1 +2.7 +4.8 +3.1 -0.2 +1.0 -0.9 +0.6 +0.6 +0.5 +3.2 +0.1 +1.6 -1.6
+   tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50   8735   0.49      17.30  1.42   2.05    4.56
+ 51-100   5550   0.31      12.73  2.39   3.81    5.93
+101-150   3668   0.20      16.91  3.04   5.41    6.09
+   sensitivity (Sh / OOS at commission): c=0.1 2.07/1.79  c=0.3 1.54/1.28  c=1.0 -0.68/-0.84  x1 1.08/0.83  x05 1.54/1.26  old 1bp 2.01/1.71
+xsr3_cAx_u150_fhs10_moo_ls10               Sh  0.67 (pre-comm  1.31) OOS  0.64 halves  1.93/-0.43 mdd  -33.5% ret   7.8% vol 11.7% worst fold -1.8 neg 9/16
+   corr {'xsr_lo10_old': 0.36, 'onml_k10': 0.15, 'spy_cc': 0.01}  picks/day 20.0  hs0931 mean 5.5  cost/side c=0.3 in 1.57 out 2.42
+   folds: -0.1 -0.1 -0.3 +4.0 +6.2 +1.8 +0.7 +0.9 -1.8 -0.7 -1.8 -1.8 +2.3 +0.3 -0.7 -1.5
+   tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50  21681   0.45       7.87  1.19   1.58    4.69
+ 51-100  15227   0.32       4.99  1.73   2.70    6.05
+101-150  10892   0.23       8.90  2.11   3.70    6.24
+   sensitivity (Sh / OOS at commission): c=0.1 1.45/1.42  c=0.3 0.67/0.64  c=1.0 -3.14/-3.04  x1 -0.84/-0.84  x05 0.26/0.20  old 1bp 1.18/1.09
+xsr3_cAx_u150_x05_lo10                     Sh  1.11 (pre-comm  1.40) OOS  0.88 halves  1.99/-0.04 mdd  -27.1% ret  14.4% vol 13.0% worst fold -2.0 neg 6/16
+   corr {'xsr_lo10_old': 1.0, 'onml_k10': 0.26, 'spy_cc': 0.46}  picks/day 8.7  hs0931 mean 9.8  cost/side c=0.3 in 2.30 out 3.79
+   folds: +0.2 +1.8 +1.5 +2.5 +4.1 +2.0 -2.0 -0.5 -0.1 +0.2 -0.5 +0.2 +3.0 -0.6 +0.3 -1.2
+   tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50   7311   0.37      17.27  1.46   5.82    5.82
+ 51-100   6424   0.32      14.48  2.49  10.60   10.60
+101-150   6218   0.31      14.56  3.10  13.60   13.60
+   sensitivity (Sh / OOS at commission): c=0.1 1.90/1.66  c=0.3 1.29/1.08  c=1.0 -1.15/-1.25  x1 0.29/0.09  x05 1.11/0.88  old 1bp 1.97/1.72
+family fold-OOS over the saved set (at commission): 1.10 | picks {'xsr3_cAx_u150_fhs10_moo_lo10': 8, 'xsr3_cAx_u50_moo_lo10': 8}
+family fold-OOS LO moo books: 1.12 picks {'xsr3_cAx_u150_fhs10_moo_lo10': 8, 'xsr3_cAx_u50_moo_lo10': 8}
+family fold-OOS L/S moo books: 0.64 picks {'xsr3_cAx_u150_fhs10_moo_ls10': 16}
+candidate-candidate correlations:
+                              xsr3_cAx_u150_moo_lo10  xsr3_cAx_u150_moo_lo20  xsr3_cAx_u50_moo_lo10  xsr3_cAx_u150_fhs10_moo_lo10  xsr3_cAx_u150_fhs10_moo_ls10  xsr3_cAx_u150_x05_lo10
+xsr3_cAx_u150_moo_lo10                          1.00                    0.94                   0.81                          0.90                          0.37                    0.97
+xsr3_cAx_u150_moo_lo20                          0.94                    1.00                   0.87                          0.92                          0.33                    0.91
+xsr3_cAx_u50_moo_lo10                           0.81                    0.87                   1.00                          0.85                          0.33                    0.79
+xsr3_cAx_u150_fhs10_moo_lo10                    0.90                    0.92                   0.85                          1.00                          0.45                    0.87
+xsr3_cAx_u150_fhs10_moo_ls10                    0.37                    0.33                   0.33                          0.45                          1.00                    0.36
+xsr3_cAx_u150_x05_lo10                          0.97                    0.91                   0.79                          0.87                          0.36                    1.00
+s4_save done

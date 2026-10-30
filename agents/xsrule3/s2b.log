@@ -1,0 +1,159 @@
+s2b_extra start
+frame cached /home/user/llm_sharpe_optimization/agents/xsrule3/out/D_u600_2026-04-27.parquet: rows 1297124 names 600
+--- lo10_s15 u50: picks/day 6.7 gross y_oo 14.8 bps cost/side in 1.44 out 2.09
+lo10_s15_u50_moo_c03                       Sh  1.62 (pre-comm  2.02) OOS  1.39 halves  2.43/ 0.66 mdd  -15.3% ret  15.5% vol  9.5% worst fold -1.6 neg 6/16
+lo10_s15_u50_moo_c01                       Sh  1.88 (pre-comm  2.27) OOS  1.64 halves  2.67/ 0.95 mdd  -13.5% ret  18.0% vol  9.6% worst fold -1.3 neg 4/16
+lo10_s15_u50_x05                           Sh  1.52 (pre-comm  1.91) OOS  1.26 halves  2.36/ 0.52 mdd  -14.9% ret  14.9% vol  9.8% worst fold -1.1 neg 4/16
+lo10_s15_u50_old1bp                        Sh  1.93 (pre-comm  2.31) OOS  1.67 halves  2.71/ 0.99 mdd  -13.1% ret  19.0% vol  9.8% worst fold -0.7 neg 3/16
+--- lo10_s15 u75: picks/day 7.6 gross y_oo 15.1 bps cost/side in 1.73 out 2.65
+lo10_s15_u75_moo_c03                       Sh  1.55 (pre-comm  1.91) OOS  1.30 halves  2.56/ 0.34 mdd  -14.2% ret  16.6% vol 10.7% worst fold -1.3 neg 4/16
+lo10_s15_u75_moo_c01                       Sh  1.94 (pre-comm  2.29) OOS  1.68 halves  2.91/ 0.76 mdd  -12.9% ret  20.8% vol 10.7% worst fold -0.9 neg 2/16
+lo10_s15_u75_x05                           Sh  1.41 (pre-comm  1.75) OOS  1.16 halves  2.33/ 0.28 mdd  -14.3% ret  15.5% vol 11.0% worst fold -0.6 neg 6/16
+lo10_s15_u75_old1bp                        Sh  1.95 (pre-comm  2.30) OOS  1.70 halves  2.81/ 0.90 mdd  -13.0% ret  21.5% vol 11.0% worst fold +0.1 neg 0/16
+--- lo10_s15 u100: picks/day 8.0 gross y_oo 15.3 bps cost/side in 1.93 out 3.01
+lo10_s15_u100_moo_c03                      Sh  1.48 (pre-comm  1.81) OOS  1.26 halves  2.42/ 0.30 mdd  -18.0% ret  17.2% vol 11.6% worst fold -2.6 neg 5/16
+lo10_s15_u100_moo_c01                      Sh  1.94 (pre-comm  2.26) OOS  1.70 halves  2.85/ 0.79 mdd  -15.2% ret  22.5% vol 11.6% worst fold -2.2 neg 3/16
+lo10_s15_u100_x05                          Sh  1.32 (pre-comm  1.64) OOS  1.10 halves  2.26/ 0.13 mdd  -19.3% ret  15.7% vol 11.9% worst fold -1.4 neg 5/16
+lo10_s15_u100_old1bp                       Sh  1.99 (pre-comm  2.31) OOS  1.75 halves  2.86/ 0.89 mdd  -15.0% ret  23.7% vol 11.9% worst fold -0.4 neg 2/16
+=== lo10_s15_u150_base: picks/day 8.7 gross 15.3 bps hs0931 mean 9.8
+tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50   7311   0.37      17.24  1.46   2.13    5.82
+ 51-100   6424   0.32      14.42  2.49   4.06   10.60
+101-150   6218   0.31      14.03  3.10   5.45   13.60
+lo10_s15_u150_base_moo_c01                 Sh  1.90 (pre-comm  2.20) OOS  1.66 halves  2.78/ 0.76 mdd  -18.8% ret  24.0% vol 12.6% worst fold -1.9 neg 2/16
+lo10_s15_u150_base_moo_c03                 Sh  1.29 (pre-comm  1.59) OOS  1.08 halves  2.19/ 0.12 mdd  -23.6% ret  16.3% vol 12.6% worst fold -2.6 neg 7/16
+   folds: -0.2 +1.9 +2.0 +2.6 +4.7 +3.0 -1.5 -0.5 -0.1 +0.7 -0.9 +0.9 +3.5 -0.4 +1.2 -2.6  corr {'xsr_lo10_old': 0.97, 'onml_k10': 0.25, 'spy_cc': 0.46}
+lo10_s15_u150_base_moo_c1                  Sh -1.15 (pre-comm -0.85) OOS -1.25 halves -0.16/-2.45 mdd  -75.3% ret -14.4% vol 12.5% worst fold -5.1 neg 13/16
+lo10_s15_u150_base_x1                      Sh  0.29 (pre-comm  0.58) OOS  0.09 halves  1.25/-0.97 mdd  -46.9% ret   3.7% vol 13.0% worst fold -2.9 neg 10/16
+lo10_s15_u150_base_x05                     Sh  1.11 (pre-comm  1.40) OOS  0.88 halves  1.99/-0.04 mdd  -27.1% ret  14.4% vol 13.0% worst fold -2.0 neg 6/16
+lo10_s15_u150_base_old1bp                  Sh  1.97 (pre-comm  2.26) OOS  1.72 halves  2.78/ 0.93 mdd  -18.8% ret  25.7% vol 13.0% worst fold -1.1 neg 1/16
+=== lo10_s15_u150_fhs10: picks/day 8.0 gross 15.8 bps hs0931 mean 5.3
+tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50   8735   0.49      17.30  1.42   2.05    4.56
+ 51-100   5550   0.31      12.73  2.39   3.81    5.93
+101-150   3668   0.20      16.91  3.04   5.41    6.09
+lo10_s15_u150_fhs10_moo_c01                Sh  2.07 (pre-comm  2.41) OOS  1.79 halves  2.97/ 1.03 mdd  -17.2% ret  23.0% vol 11.1% worst fold -1.1 neg 2/16
+lo10_s15_u150_fhs10_moo_c03                Sh  1.54 (pre-comm  1.88) OOS  1.28 halves  2.45/ 0.48 mdd  -18.9% ret  17.1% vol 11.1% worst fold -1.6 neg 4/16
+   folds: -0.5 +2.0 +1.1 +2.7 +4.8 +3.1 -0.2 +1.0 -0.9 +0.6 +0.6 +0.5 +3.2 +0.1 +1.6 -1.6  corr {'xsr_lo10_old': 0.87, 'onml_k10': 0.25, 'spy_cc': 0.42}
+lo10_s15_u150_fhs10_moo_c1                 Sh -0.68 (pre-comm -0.33) OOS -0.84 halves  0.26/-1.77 mdd  -60.3% ret  -7.5% vol 11.0% worst fold -3.6 neg 12/16
+lo10_s15_u150_fhs10_x1                     Sh  1.08 (pre-comm  1.41) OOS  0.83 halves  1.89/ 0.17 mdd  -21.0% ret  12.5% vol 11.5% worst fold -1.0 neg 7/16
+lo10_s15_u150_fhs10_x05                    Sh  1.54 (pre-comm  1.87) OOS  1.26 halves  2.35/ 0.63 mdd  -19.8% ret  17.8% vol 11.5% worst fold -0.7 neg 2/16
+lo10_s15_u150_fhs10_old1bp                 Sh  2.01 (pre-comm  2.34) OOS  1.71 halves  2.82/ 1.10 mdd  -18.6% ret  23.2% vol 11.5% worst fold -0.3 neg 1/16
+=== lo10_s15_u150_fac5: picks/day 8.2 gross 13.4 bps hs0931 mean 8.8
+tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50   8476   0.46      16.84  1.42   2.02    5.79
+ 51-100   5763   0.31      10.97  1.98   3.03    9.94
+101-150   4216   0.23       9.84  2.11   3.29   13.20
+lo10_s15_u150_fac5_moo_c01                 Sh  2.02 (pre-comm  2.41) OOS  1.75 halves  3.18/ 0.75 mdd  -14.3% ret  19.5% vol  9.7% worst fold -1.9 neg 3/16
+lo10_s15_u150_fac5_moo_c03                 Sh  1.53 (pre-comm  1.92) OOS  1.28 halves  2.69/ 0.26 mdd  -17.1% ret  14.8% vol  9.7% worst fold -2.4 neg 4/16
+   folds: +0.2 +1.7 +2.2 +3.0 +5.9 +3.7 -0.7 +0.5 -1.5 +1.0 +0.3 +0.8 +3.6 -0.3 +1.7 -2.4  corr {'xsr_lo10_old': 0.85, 'onml_k10': 0.22, 'spy_cc': 0.4}
+lo10_s15_u150_fac5_moo_c1                  Sh -0.62 (pre-comm -0.23) OOS -0.78 halves  0.53/-1.89 mdd  -58.3% ret  -6.0% vol  9.6% worst fold -4.4 neg 11/16
+lo10_s15_u150_fac5_x1                      Sh  0.20 (pre-comm  0.58) OOS -0.03 halves  1.36/-1.07 mdd  -42.4% ret   2.0% vol  9.9% worst fold -2.5 neg 10/16
+lo10_s15_u150_fac5_x05                     Sh  1.12 (pre-comm  1.50) OOS  0.87 halves  2.21/-0.08 mdd  -18.5% ret  11.1% vol  9.9% worst fold -1.8 neg 5/16
+lo10_s15_u150_fac5_old1bp                  Sh  1.99 (pre-comm  2.37) OOS  1.72 halves  3.00/ 0.87 mdd  -14.5% ret  19.7% vol  9.9% worst fold -1.1 neg 2/16
+=== lo10_s15_u300_fac5: picks/day 8.6 gross 12.5 bps hs0931 mean 10.1
+tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50   6558   0.33      17.90  1.44   2.05    5.77
+ 51-100   4394   0.22      11.19  2.00   3.06   10.00
+101-150   3105   0.16      11.41  2.13   3.34   13.22
+151-300   5573   0.28       7.78  2.33   3.67   13.42
+lo10_s15_u300_fac5_moo_c01                 Sh  1.92 (pre-comm  2.31) OOS  1.71 halves  3.11/ 0.68 mdd  -15.2% ret  18.7% vol  9.8% worst fold -1.9 neg 3/16
+lo10_s15_u300_fac5_moo_c03                 Sh  1.32 (pre-comm  1.71) OOS  1.13 halves  2.50/ 0.09 mdd  -18.6% ret  12.9% vol  9.7% worst fold -2.4 neg 7/16
+   folds: -0.2 +1.6 +2.0 +3.4 +5.3 +4.0 -0.9 -0.1 -1.7 +0.5 -0.5 +1.8 +4.3 -0.1 +0.6 -2.4  corr {'xsr_lo10_old': 0.83, 'onml_k10': 0.22, 'spy_cc': 0.38}
+lo10_s15_u300_fac5_moo_c1                  Sh -1.18 (pre-comm -0.79) OOS -1.27 halves -0.06/-2.36 mdd  -68.8% ret -11.5% vol  9.7% worst fold -4.5 neg 12/16
+lo10_s15_u300_fac5_x1                      Sh -0.31 (pre-comm  0.07) OOS -0.51 halves  0.80/-1.50 mdd  -55.1% ret  -3.1% vol 10.0% worst fold -2.9 neg 12/16
+lo10_s15_u300_fac5_x05                     Sh  0.78 (pre-comm  1.16) OOS  0.56 halves  1.83/-0.33 mdd  -24.5% ret   7.8% vol 10.0% worst fold -2.1 neg 8/16
+lo10_s15_u300_fac5_old1bp                  Sh  1.86 (pre-comm  2.23) OOS  1.63 halves  2.83/ 0.82 mdd  -16.3% ret  18.6% vol 10.0% worst fold -1.3 neg 3/16
+=== lo10_s15_u300_fhs10: picks/day 8.6 gross 15.7 bps hs0931 mean 5.6
+tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50   6698   0.34      19.04  1.44   2.07    4.58
+ 51-100   4198   0.21      13.30  2.42   3.85    5.93
+101-150   2781   0.14      15.38  3.10   5.53    6.09
+151-300   5983   0.30      13.66  3.52   6.39    6.30
+lo10_s15_u300_fhs10_moo_c01                Sh  2.01 (pre-comm  2.32) OOS  1.79 halves  2.96/ 0.90 mdd  -15.6% ret  23.9% vol 11.9% worst fold -1.2 neg 3/16
+lo10_s15_u300_fhs10_moo_c03                Sh  1.28 (pre-comm  1.59) OOS  1.09 halves  2.24/ 0.14 mdd  -18.3% ret  15.2% vol 11.9% worst fold -1.7 neg 5/16
+   folds: -0.0 +1.7 +0.9 +3.3 +4.5 +2.9 -1.3 +0.7 -1.0 +1.1 -1.1 +0.7 +2.6 +0.2 +0.9 -1.7  corr {'xsr_lo10_old': 0.86, 'onml_k10': 0.23, 'spy_cc': 0.42}
+lo10_s15_u300_fhs10_moo_c1                 Sh -1.57 (pre-comm -1.25) OOS -1.63 halves -0.57/-2.75 mdd  -83.1% ret -18.6% vol 11.9% worst fold -5.8 neg 14/16
+lo10_s15_u300_fhs10_x1                     Sh  0.76 (pre-comm  1.06) OOS  0.58 halves  1.70/-0.31 mdd  -29.1% ret   9.4% vol 12.4% worst fold -1.9 neg 9/16
+lo10_s15_u300_fhs10_x05                    Sh  1.24 (pre-comm  1.55) OOS  1.03 halves  2.18/ 0.17 mdd  -20.0% ret  15.5% vol 12.4% worst fold -1.4 neg 4/16
+lo10_s15_u300_fhs10_old1bp                 Sh  1.82 (pre-comm  2.12) OOS  1.58 halves  2.75/ 0.76 mdd  -18.1% ret  22.6% vol 12.5% worst fold -0.7 neg 2/16
+=== lo20_s15_u150_base: picks/day 14.6 gross 14.3 bps hs0931 mean 9.8
+tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50  12476   0.37      15.12  1.16   1.55    5.84
+ 51-100  10970   0.33      13.48  1.75   2.82   10.55
+101-150  10181   0.30      14.20  2.15   3.72   13.69
+lo20_s15_u150_base_moo_c01                 Sh  1.48 (pre-comm  2.24) OOS  1.30 halves  2.30/ 0.38 mdd  -15.0% ret  14.7% vol  9.9% worst fold -2.7 neg 5/16
+lo20_s15_u150_base_moo_c03                 Sh  1.10 (pre-comm  1.87) OOS  0.93 halves  1.94/-0.03 mdd  -16.9% ret  10.9% vol  9.9% worst fold -3.1 neg 6/16
+   folds: -0.8 +1.2 +1.3 +3.1 +3.9 +2.9 -1.5 -0.1 -0.7 +0.1 +0.3 +0.8 +2.6 -1.3 +2.1 -3.1  corr {'xsr_lo10_old': 0.91, 'onml_k10': 0.26, 'spy_cc': 0.46}
+lo20_s15_u150_base_moo_c1                  Sh -0.68 (pre-comm  0.09) OOS -0.77 halves  0.28/-1.99 mdd  -58.0% ret  -6.6% vol  9.8% worst fold -5.2 neg 12/16
+lo20_s15_u150_base_x1                      Sh -0.14 (pre-comm  0.60) OOS -0.27 halves  0.77/-1.37 mdd  -48.9% ret  -1.4% vol 10.2% worst fold -3.7 neg 12/16
+lo20_s15_u150_base_x05                     Sh  0.74 (pre-comm  1.48) OOS  0.57 halves  1.54/-0.34 mdd  -22.2% ret   7.6% vol 10.3% worst fold -2.2 neg 8/16
+lo20_s15_u150_base_old1bp                  Sh  1.54 (pre-comm  2.28) OOS  1.35 halves  2.24/ 0.61 mdd  -15.8% ret  15.9% vol 10.3% worst fold -1.2 neg 4/16
+=== ls10_u150_base: picks/day 20.0 gross 7.4 bps hs0931 mean 10.7
+tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50  15296   0.32       8.59  1.18   1.59    6.09
+ 51-100  15651   0.33       7.02  1.81   2.91   11.24
+101-150  16913   0.35       6.54  2.16   3.74   14.30
+ls10_u150_base_moo_c01                     Sh  1.41 (pre-comm  2.03) OOS  1.38 halves  2.65/ 0.33 mdd  -24.2% ret  17.5% vol 12.4% worst fold -2.0 neg 5/16
+ls10_u150_base_moo_c03                     Sh  0.49 (pre-comm  1.10) OOS  0.47 halves  1.55/-0.46 mdd  -36.1% ret   6.0% vol 12.3% worst fold -3.0 neg 10/16
+   folds: -0.8 -1.1 -0.0 +4.0 +6.3 +0.9 -1.4 +1.6 -0.3 -2.0 -3.0 -1.5 +3.4 -0.9 +0.4 -2.2  corr {'xsr_lo10_old': 0.47, 'onml_k10': 0.14, 'spy_cc': 0.05}
+ls10_u150_base_moo_c1                      Sh -3.69 (pre-comm -3.08) OOS -3.58 halves -3.36/-4.04 mdd  -98.7% ret -45.5% vol 12.3% worst fold -7.7 neg 15/16
+ls10_u150_base_x1                          Sh -2.71 (pre-comm -2.14) OOS -2.72 halves -1.98/-3.40 mdd  -97.0% ret -36.1% vol 13.3% worst fold -6.3 neg 14/16
+ls10_u150_base_x05                         Sh -0.68 (pre-comm -0.12) OOS -0.75 halves  0.22/-1.52 mdd  -72.3% ret  -9.1% vol 13.3% worst fold -4.2 neg 12/16
+ls10_u150_base_old1bp                      Sh  1.23 (pre-comm  1.80) OOS  1.15 halves  2.32/ 0.26 mdd  -25.2% ret  16.5% vol 13.4% worst fold -2.2 neg 5/16
+=== ls10_u150_fhs10: picks/day 20.0 gross 7.2 bps hs0931 mean 5.5
+tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50  21681   0.45       7.87  1.19   1.58    4.69
+ 51-100  15227   0.32       4.99  1.73   2.70    6.05
+101-150  10892   0.23       8.90  2.11   3.70    6.24
+ls10_u150_fhs10_moo_c01                    Sh  1.45 (pre-comm  2.10) OOS  1.42 halves  2.85/ 0.25 mdd  -18.2% ret  17.1% vol 11.8% worst fold -1.2 neg 5/16
+ls10_u150_fhs10_moo_c03                    Sh  0.67 (pre-comm  1.31) OOS  0.64 halves  1.93/-0.43 mdd  -33.5% ret   7.8% vol 11.7% worst fold -1.8 neg 9/16
+   folds: -0.1 -0.1 -0.3 +4.0 +6.2 +1.8 +0.7 +0.9 -1.8 -0.7 -1.8 -1.8 +2.3 +0.3 -0.7 -1.5  corr {'xsr_lo10_old': 0.36, 'onml_k10': 0.15, 'spy_cc': 0.01}
+ls10_u150_fhs10_moo_c1                     Sh -3.14 (pre-comm -2.49) OOS -3.04 halves -2.51/-3.74 mdd  -97.1% ret -36.7% vol 11.7% worst fold -6.5 neg 14/16
+ls10_u150_fhs10_x1                         Sh -0.84 (pre-comm -0.24) OOS -0.84 halves  0.00/-1.59 mdd  -71.7% ret -10.6% vol 12.6% worst fold -3.4 neg 12/16
+ls10_u150_fhs10_x05                        Sh  0.26 (pre-comm  0.85) OOS  0.20 halves  1.26/-0.62 mdd  -42.7% ret   3.2% vol 12.6% worst fold -2.1 neg 10/16
+ls10_u150_fhs10_old1bp                     Sh  1.18 (pre-comm  1.78) OOS  1.09 halves  2.34/ 0.18 mdd  -23.4% ret  14.9% vol 12.7% worst fold -1.2 neg 7/16
+=== ls10_u150_fhs20: picks/day 20.0 gross 7.6 bps hs0931 mean 8.1
+tiers:
+   tier  picks  share  gross_bps  c_in  c_out  hs0931
+   1-50  17396   0.36       8.13  1.19   1.61    5.90
+ 51-100  15657   0.33       7.25  1.78   2.82    8.60
+101-150  14787   0.31       7.39  2.15   3.71   10.17
+ls10_u150_fhs20_moo_c01                    Sh  1.51 (pre-comm  2.11) OOS  1.50 halves  2.82/ 0.37 mdd  -19.5% ret  18.9% vol 12.5% worst fold -1.5 neg 5/16
+ls10_u150_fhs20_moo_c03                    Sh  0.65 (pre-comm  1.26) OOS  0.66 halves  1.81/-0.36 mdd  -34.2% ret   8.2% vol 12.5% worst fold -2.3 neg 9/16
+   folds: -0.1 -0.8 +1.4 +4.6 +5.9 +1.2 -0.6 +1.6 -0.8 -1.4 -2.3 -1.3 +2.8 -1.4 +0.9 -2.0  corr {'xsr_lo10_old': 0.41, 'onml_k10': 0.14, 'spy_cc': 0.01}
+ls10_u150_fhs20_moo_c1                     Sh -3.30 (pre-comm -2.69) OOS -3.15 halves -2.84/-3.76 mdd  -98.1% ret -41.0% vol 12.4% worst fold -6.9 neg 14/16
+ls10_u150_fhs20_x1                         Sh -1.66 (pre-comm -1.09) OOS -1.63 halves -0.84/-2.41 mdd  -89.0% ret -22.2% vol 13.4% worst fold -4.8 neg 13/16
+ls10_u150_fhs20_x05                        Sh -0.13 (pre-comm  0.44) OOS -0.16 halves  0.89/-1.03 mdd  -62.0% ret  -1.7% vol 13.4% worst fold -3.1 neg 11/16
+ls10_u150_fhs20_old1bp                     Sh  1.28 (pre-comm  1.84) OOS  1.20 halves  2.49/ 0.22 mdd  -22.7% ret  17.2% vol 13.4% worst fold -1.5 neg 6/16
+per-fold Sharpe (moo_c03, at commission), half-years from 2018H2:
+                     2018-07  2019-01  2019-07  2020-01  2020-07  2021-01  2021-07  2022-01  2022-07  2023-01  2023-07  2024-01  2024-07  2025-01  2025-07  2026-01
+lo10_s15_u150_base      -0.2      1.9      2.0      2.6      4.7      3.0     -1.5     -0.5     -0.1      0.7     -0.9      0.9      3.4     -0.4      1.2     -2.6
+lo10_s15_u150_fhs10     -0.5      2.0      1.1      2.7      4.8      3.1     -0.2      1.0     -0.9      0.6      0.6      0.5      3.2      0.1      1.6     -1.6
+lo10_s15_u150_fac5       0.2      1.7      2.2      3.0      5.9      3.7     -0.7      0.5     -1.5      1.0      0.3      0.8      3.6     -0.3      1.7     -2.4
+lo10_s15_u300_fac5      -0.2      1.6      2.0      3.4      5.4      4.0     -0.9     -0.1     -1.7      0.5     -0.5      1.8      4.3     -0.1      0.6     -2.4
+lo10_s15_u300_fhs10     -0.0      1.7      1.0      3.3      4.5      2.9     -1.3      0.7     -1.0      1.1     -1.1      0.7      2.6      0.2      0.9     -1.7
+lo20_s15_u150_base      -0.8      1.2      1.3      3.1      3.9      2.9     -1.5     -0.1     -0.7      0.1      0.3      0.8      2.6     -1.3      2.1     -3.1
+ls10_u150_base          -0.8     -1.1     -0.0      4.0      6.3      0.9     -1.4      1.6     -0.3     -2.0     -3.0     -1.5      3.4     -0.9      0.4     -2.2
+ls10_u150_fhs10         -0.1     -0.1     -0.3      4.0      6.2      1.8      0.7      0.9     -1.8     -0.6     -1.8     -1.8      2.3      0.3     -0.7     -1.5
+ls10_u150_fhs20         -0.1     -0.8      1.4      4.6      5.9      1.2     -0.6      1.6     -0.8     -1.4     -2.3     -1.3      2.8     -1.4      0.9     -2.0
+correlations among the shortlisted moo_c03 books:
+                     lo10_s15_u150_base  lo10_s15_u150_fhs10  lo10_s15_u150_fac5  lo10_s15_u300_fac5  lo10_s15_u300_fhs10  lo20_s15_u150_base  ls10_u150_base  ls10_u150_fhs10  ls10_u150_fhs20
+lo10_s15_u150_base                 1.00                 0.90                0.88                0.86                 0.89                0.94            0.48             0.37             0.42
+lo10_s15_u150_fhs10                0.90                 1.00                0.87                0.82                 0.93                0.92            0.41             0.45             0.40
+lo10_s15_u150_fac5                 0.88                 0.87                1.00                0.94                 0.83                0.89            0.40             0.36             0.38
+lo10_s15_u300_fac5                 0.86                 0.82                0.94                1.00                 0.84                0.85            0.40             0.35             0.37
+lo10_s15_u300_fhs10                0.89                 0.93                0.83                0.84                 1.00                0.88            0.41             0.40             0.39
+lo20_s15_u150_base                 0.94                 0.92                0.89                0.85                 0.88                1.00            0.38             0.33             0.34
+ls10_u150_base                     0.48                 0.41                0.40                0.40                 0.41                0.38            1.00             0.79             0.93
+ls10_u150_fhs10                    0.37                 0.45                0.36                0.35                 0.40                0.33            0.79             1.00             0.83
+ls10_u150_fhs20                    0.42                 0.40                0.38                0.37                 0.39                0.34            0.93             0.83             1.00
+s2b_extra done
