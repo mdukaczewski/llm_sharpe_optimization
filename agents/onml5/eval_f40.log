@@ -1,0 +1,45 @@
+18:56:51 f40 {'book': 'y_f40 rte_moo_k6', 'pre': np.float64(1.95), 'sh': np.float64(1.67), 'fold': np.float64(1.86), 'h1': np.float64(2.37), 'h2': np.float64(1.15), 'mdd': np.float64(-21.8), 'ret': np.float64(26.4), 'vol': np.float64(15.8), 'fneg': 3, 'yrs': '-1.4 +1.1 +1.3 +6.3 +2.8 +0.5 -0.1 +2.2 +2.3 -0.4', 'gross_bps': np.float64(9.16), 't1_pct': np.float64(84.1), 'fold_c0.1': np.float64(2.99), 'fold_c1': np.float64(0.47), 'corr_rtx': np.float64(0.67)}
+18:56:51 f40 {'book': 'y_f40 rte_rtx_k6', 'pre': np.float64(1.47), 'sh': np.float64(1.21), 'fold': np.float64(1.34), 'h1': np.float64(1.42), 'h2': np.float64(1.05), 'mdd': np.float64(-30.0), 'ret': np.float64(21.9), 'vol': np.float64(18.0), 'fneg': 7, 'yrs': '-0.1 -1.3 +0.6 +5.3 +2.4 +0.7 -0.4 +2.5 +2.4 -0.9', 'gross_bps': np.float64(8.48), 't1_pct': np.float64(75.2), 'fold_c0.1': np.float64(2.44), 'fold_c1': np.float64(0.97), 'corr_rtx': np.float64(0.66)}
+18:56:51 f40 tiers
+            book      tier     n  pos_pct  gross  cost   net  pnl_pct
+y_f40 rte_moo_k6     1-300 23423     84.1   8.82  2.48  6.34     84.3
+y_f40 rte_moo_k6   301-600  1703      6.1   1.43  4.64 -3.21     -3.5
+y_f40 rte_moo_k6  601-1500  1636      5.9  12.17  3.41  8.76      8.1
+y_f40 rte_moo_k6 1501-2000  1078      3.9  24.20  6.68 17.52     11.0
+18:56:51 f40 tiers
+            book      tier     n  pos_pct  gross  cost   net  pnl_pct
+y_f40 rte_rtx_k6     1-300 20942     75.2   8.57  2.61  5.96     83.1
+y_f40 rte_rtx_k6   301-600  3107     11.2   2.42  4.06 -1.64     -4.1
+y_f40 rte_rtx_k6  601-1500  2458      8.8   8.24  3.79  4.45      6.9
+y_f40 rte_rtx_k6 1501-2000  1333      4.8  21.50  6.00 15.50     14.0
+18:57:46 f40 {'book': 'y_f40+o3:y_f26x_on rte_moo_k6', 'pre': np.float64(2.03), 'sh': np.float64(1.73), 'fold': np.float64(1.88), 'h1': np.float64(2.42), 'h2': np.float64(1.24), 'mdd': np.float64(-22.0), 'ret': np.float64(26.3), 'vol': np.float64(15.2), 'fneg': 3, 'yrs': '-2.1 +1.8 +1.4 +6.1 +2.6 +0.4 +0.5 +2.9 +2.0 -0.9', 'gross_bps': np.float64(9.2), 't1_pct': np.float64(85.3), 'fold_c0.1': np.float64(2.69), 'fold_c1': np.float64(0.39), 'corr_rtx': np.float64(0.72)}
+18:57:46 f40 {'book': 'y_f40+o3:y_f26x_on rte_rtx_k6', 'pre': np.float64(1.24), 'sh': np.float64(1.0), 'fold': np.float64(1.26), 'h1': np.float64(0.87), 'h2': np.float64(1.13), 'mdd': np.float64(-33.9), 'ret': np.float64(18.8), 'vol': np.float64(18.8), 'fneg': 4, 'yrs': '-2.5 -0.1 +0.1 +2.5 +1.8 +1.1 +0.0 +2.5 +2.3 -1.0', 'gross_bps': np.float64(7.78), 't1_pct': np.float64(78.4), 'fold_c0.1': np.float64(2.43), 'fold_c1': np.float64(0.85), 'corr_rtx': np.float64(0.7)}
+18:57:46 f40 tiers
+                         book      tier     n  pos_pct  gross  cost   net  pnl_pct
+y_f40+o3:y_f26x_on rte_moo_k6     1-300 23746     85.3   8.96  2.61  6.35     85.8
+y_f40+o3:y_f26x_on rte_moo_k6   301-600  1675      6.0   0.20  4.74 -4.54     -4.7
+y_f40+o3:y_f26x_on rte_moo_k6  601-1500  1468      5.3  10.60  3.36  7.24      6.0
+y_f40+o3:y_f26x_on rte_moo_k6 1501-2000   951      3.4  29.00  6.02 22.97     12.8
+18:57:46 f40 tiers
+                         book      tier     n  pos_pct  gross  cost   net  pnl_pct
+y_f40+o3:y_f26x_on rte_rtx_k6     1-300 21825     78.4   7.43  2.68  4.75     77.4
+y_f40+o3:y_f26x_on rte_rtx_k6   301-600  2687      9.7   4.60  3.90  0.71      1.0
+y_f40+o3:y_f26x_on rte_rtx_k6  601-1500  2227      8.0   6.70  3.44  3.26      5.1
+y_f40+o3:y_f26x_on rte_rtx_k6 1501-2000  1101      4.0  24.69  5.21 19.48     16.5
+18:57:46 --- f40 IC vs y_oo (per-day Spearman; tier columns = within tier; ic1_h1/h2 = ranks 1-300 halves)
+              pred  ic_all  ic_1-300  ic_301-600  ic_601-1500  ic_1501-2000  ic1_h1  ic1_h2
+             y_f40  0.0459    0.0415      0.0378       0.0424        0.0711  0.0578  0.0240
+y_f40+o3:y_f26x_on  0.0457    0.0429      0.0380       0.0413        0.0679  0.0583  0.0263
+18:57:46 --- f40 books k6 lam3 c=0.3 f=1 ($0.4M)
+                         book  pre   sh  fold   h1   h2   mdd  ret  vol  fneg  gross_bps  t1_pct  fold_c0.1  fold_c1  corr_rtx
+             y_f40 rte_moo_k6 1.95 1.67  1.86 2.37 1.15 -21.8 26.4 15.8     3       9.16    84.1       2.99     0.47      0.67
+             y_f40 rte_rtx_k6 1.47 1.21  1.34 1.42 1.05 -30.0 21.9 18.0     7       8.48    75.2       2.44     0.97      0.66
+y_f40+o3:y_f26x_on rte_moo_k6 2.03 1.73  1.88 2.42 1.24 -22.0 26.3 15.2     3       9.20    85.3       2.69     0.39      0.72
+y_f40+o3:y_f26x_on rte_rtx_k6 1.24 1.00  1.26 0.87 1.13 -33.9 18.8 18.8     4       7.78    78.4       2.43     0.85      0.70
+18:57:46 --- f40 by year
+                         book                                               yrs
+             y_f40 rte_moo_k6 -1.4 +1.1 +1.3 +6.3 +2.8 +0.5 -0.1 +2.2 +2.3 -0.4
+             y_f40 rte_rtx_k6 -0.1 -1.3 +0.6 +5.3 +2.4 +0.7 -0.4 +2.5 +2.4 -0.9
+y_f40+o3:y_f26x_on rte_moo_k6 -2.1 +1.8 +1.4 +6.1 +2.6 +0.4 +0.5 +2.9 +2.0 -0.9
+y_f40+o3:y_f26x_on rte_rtx_k6 -2.5 -0.1 +0.1 +2.5 +1.8 +1.1 +0.0 +2.5 +2.3 -1.0
+18:57:46 f40 DONE

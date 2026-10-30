@@ -1,0 +1,2 @@
+19:34:37 train5 q_f40n: feats f40n (59) w none tgt yr filt none rt Q seeds [0, 1, 2] rows 2970081 load 8s
+20:04:22 train5 q_f40n seed 0 1786s; top gain: spy_zgap:9.7% spy_oc:9.5% spy_z60:7.6% spy_z30:7.0% zvwap:4.7% hl5:4.5% rv20:4.5% rngpos:4.3% lpx:3.5% zon_prev_sr:3.1% hlc:2.8% dow:2.6% z30:2.6% zo15:2.5% z60_sr:2.3% | new feats gain share 13.2%

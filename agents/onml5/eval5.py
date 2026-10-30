@@ -17,10 +17,10 @@ cache = {}
 def load(spec):
     if spec in G.columns: return G[spec]
     if spec in cache: return cache[spec]
-    if spec.startswith("splice:"):
-        _, a, b = spec.split(":"); s = splice(load(a), load(b))
-    elif "+" in spec:
+    if "+" in spec:
         parts = spec.split("+"); s = prank(sum(prank(load(x), G.date) for x in parts) / len(parts), G.date)
+    elif spec.startswith("splice:"):
+        _, a, b = spec.split(":"); s = splice(load(a), load(b))
     else:
         path = f"{HERE}/agents/onml3/out/pred_{spec[3:]}.parquet" if spec.startswith("o3:") else f"{OUT}/pred_{spec}.parquet"
         P = pd.read_parquet(path, columns=["date", "tk", "p"]); s = G[["date", "tk"]].merge(P, on=["date", "tk"], how="left").p

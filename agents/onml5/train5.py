@@ -25,7 +25,7 @@ F26X = [XMAP.get(f, f) for f in F26]
 LIQF = ["ldv20", "lpx", "hl1", "hl5", "hlc", "roll30", "n30", "nc30", "dv0", "dvc", "c_hlc", "c_nc30", "hs0931", "hs1559"]
 NA = ["z60_sr", "z30_sr", "z15l_sr", "zoc_sr", "zgap_sr", "zon_prev_sr", "sec_b", "ron5_r", "ron20_r", "rid5_r", "rid20_r"]
 NC = ["gmax5", "vmax5", "z60_g5", "drank", "z60_l600"]
-FEATS = {"f40": F26X + LIQF, "f40n": F26X + LIQF + NA + NC, "f40a": F26X + LIQF + NA, "f40c": F26X + LIQF + NC}[FS]
+FEATS = {"f40": F26X + LIQF, "f40n": F26X + LIQF + NA + NC, "f40a": F26X + LIQF + NA, "f40c": F26X + LIQF + NC, "f26n": F26X + NA + NC}[FS]
 t0 = time.time()
 cols = list(dict.fromkeys(["date", "tk", "y_on", "rv20", "dv0", "dvc"] + [f for f in FEATS if f not in NA + NC]))
 D = pd.read_parquet(FRAME, columns=cols)

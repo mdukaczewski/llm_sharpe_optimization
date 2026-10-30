@@ -1,0 +1,9 @@
+# name|pred|k|lam|entry|exit|note     (names not starting with onml5_ are diagnostics, never saved)
+onml5_pRnn_lam3_rte_moo_k6|pRnn|6|3|route|moo|per-day rank average of two NEW quarterly 1-seed LightGBM predictions (onml5 q_f40n = onml3 f40_on features + 16 liquid-tier features: sector-ETF-relative z60/z30/z15l/zoc/zgap/zon_prev with a causal quarterly sector map, residual overnight/intraday 5/20d sums, gap/volume event proxies, lagged-$vol rank and z60 rank within the dynamic top-600; q_f26n = onml3 f26calx features + the same 16), u2000, L/S 6+6 eq; onml4 pipeline with the measured +1.85 bps 15:59:30-cross adverse selection (onml4x): causal yearly calibration E[y_oo|rank] - 3 x route cost; entry routed per name MOC (c=0.3) or 15:59:30 cross (1 x hs1559), exit MOO (c=0.3); net of that cost + borrow 1%, before commission; rv20-NaN rows untradable
+onml5_pRnn_lam3_rte_rtx_k6|pRnn|6|3|route|route|as onml5_pRnn_lam3_rte_moo_k6 but exit routed per name and side (MOO c=0.3 / 09:35 / 10:01 / 10:31 at 1 x predicted half-spread of t+1 / half MOO + half 10:01, by causal expected gross minus predicted cost, onml4 rtx); net of cost + borrow + extra split commission, before base commission
+onml5_pRn_lam3_rte_moo_k6|pRn|6|3|route|moo|per-day rank average of onml5 q_f40n (new features, quarterly 1-seed) and the saved onml3 f26calx_q3 prediction (= onml4 pR with p40 replaced by p40n); otherwise as onml5_pRnn_lam3_rte_moo_k6
+onml5_pRn_lam3_rte_rtx_k6|pRn|6|3|route|route|as onml5_pRn_lam3_rte_moo_k6 with the onml4 routed exit
+onml5_p40n_lam3_rte_moo_k6|p40n|6|3|route|moo|onml5 q_f40n prediction alone (quarterly 1-seed), otherwise as onml5_pRnn_lam3_rte_moo_k6
+onml5_p40n_lam3_rte_rtx_k6|p40n|6|3|route|route|onml5 q_f40n prediction alone, routed exit as onml4 rtx
+diag_pR3_lam3_rte_moo_k6|pR3|6|3|route|moo|diagnostic: rank average of p40, p26 and p40n
+diag_pR3_lam3_rte_rtx_k6|pR3|6|3|route|route|diagnostic

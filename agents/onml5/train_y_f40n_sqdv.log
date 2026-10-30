@@ -1,0 +1,4 @@
+18:55:44 train5 y_f40n_sqdv: weight sqdv quantiles 0.01:0.190 0.1:0.349 0.5:0.784 0.9:1.821 0.99:4.045 | mean weight by dynamic rank tier: 1-300 2.04 301-600 1.00 601-1500 0.51 1501-3000 0.26
+18:55:44 train5 y_f40n_sqdv: feats f40n (59) w sqdv tgt yr filt none rt Y seeds [0] rows 2970081 load 7s
+19:03:53 train5 y_f40n_sqdv seed 0 489s; top gain: spy_zgap:10.2% spy_oc:9.4% spy_z60:7.0% spy_z30:6.7% rv20:3.9% hl5:3.7% hlc:2.7% z30:2.7% dow:2.7% zvwap:2.7% c_hlc:2.6% zo15:2.3% vlast_x:2.2% drank:2.1% dv0:2.1% | new feats gain share 12.0%
+19:03:55 train5 y_f40n_sqdv DONE 498s
