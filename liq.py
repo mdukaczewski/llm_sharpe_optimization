@@ -77,6 +77,7 @@ def training_rows():
             rows.append(pd.DataFrame({"tk": g.tk, "date": g.d_in, "t": tin, "hs": g.hs_in}))
             rows.append(pd.DataFrame({"tk": g.tk, "date": g.d_out, "t": tout, "hs": g.hs_out}))
     p = f"{HERE}/out/quotes_panel.csv"
+    if not os.path.exists(p) and os.path.exists(p + ".gz"): p = p + ".gz"
     if os.path.exists(p):
         Q = pd.read_csv(p, parse_dates=["date"], dtype={"t": str}).dropna(subset=["bid", "ask"])
         rows.append(pd.DataFrame({"tk": Q.tk, "date": Q.date, "t": Q.t, "hs": (Q.ask - Q.bid) / (Q.ask + Q.bid) * 1e4}))
