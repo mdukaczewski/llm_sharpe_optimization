@@ -1,35 +1,39 @@
-# Multi-sleeve US-equity portfolio: fold-OOS Sharpe 4.3 at $3 per order on $0.4M per book
+# Multi-sleeve US-equity portfolio under realistic execution: fold-OOS Sharpe 2.5, holdout 2.3
 
-Daily long/short and long-only books on US stocks and ETFs built from Polygon (Massive) daily and
-minute bars, combined with inverse-vol weights.  Every variant choice and every weight is made on
-dates before each half-year test window; the last half year (2026-04-28..2026-10-28) is a holdout
-that was read twice in the project's life and never used for a decision.  **Caveat first:** these
-numbers assume fills at 1-2.5 bps per side; the NBBO check (section "Realistic fills") finds a
-median half-spread of ~21 bps at 09:31 in the names the books trade, at which crossing the spread
-turns every minute-bar book negative.  The signals hold at the mid-quote; the execution does not.
+Daily long/short and long-only books on US stocks and ETFs built from Polygon (Massive) daily, minute
+and NBBO quote data, combined with inverse-vol weights.  Every variant choice and every weight is made
+on dates before each half-year test window; the last half year (2026-04-28..2026-10-28) is a holdout
+never used for a decision (read three times in the project's life, the last time for the table below).
+Costs are the user's $3 per filled order on $0.4M of equity per book, plus a modelled execution cost
+per fill: auction impact for market-on-close / market-on-open orders, a calibrated NBBO half-spread
+for continuous-market orders (section "Execution model").
 
-| portfolio (8 families, picks and weights from prior dates only)   | dev folds 2018-07-01..2026-04-27 | holdout 2026-04-28..2026-10-28 |
-|--------------------------------------------------------------------|----------------------------------|--------------------------------|
-| **$3 per order, $0.4M equity per book, inverse-vol weights**       | **4.32** (ret 37.6%, vol 8.7%, maxDD -9.1%) | **3.51** (ret 30.5%, vol 8.7%, maxDD -2.8%) |
-| $3 per order, $0.4M per book, Sharpe x inverse-vol weights         | 4.66                             | 2.78                           |
-| $3 per order, $2M per book, inverse-vol                            | 4.95                             | 3.83                           |
-| spread only (1-2.5 bps/side), inverse-vol                          | 5.07                             | 3.92                           |
+| portfolio (picks and weights from prior dates only, $3 per order, $0.4M per book, inverse-vol) | dev folds 2018-07..2026-04 | holdout 2026-04-28..10-28 |
+|-----------------------------------------------------------------------------------------------|----------------------------|---------------------------|
+| **auction-executed overnight books + daily sleeves (6 families)**                             | **2.52** (ret 19.9%, vol 7.9%, maxDD -11.5%) | **2.25** (ret 13.1%, vol 5.8%, maxDD -2.3%) |
+| same + the intraday book assuming fills at half the half-spread                               | 2.69                       | 2.25                      |
+| same as the first line, $2M per book                                                          | 2.68                       | 2.25                      |
+| reference: the same signals at the old 1-2.5 bps/side fill assumption (8 families)            | 4.32                       | 3.51                      |
 
-Dev fold Sharpes at $0.4M (16 half-years): mean 4.50, median 4.74, min 0.37 (2026 Q1), none
-negative; by year 2018 4.6, 2019 5.8, 2020 6.5, 2021 4.5, 2022 1.6, 2023 4.0, 2024 5.2, 2025 4.7.
-The holdout is 126 trading days (standard error of a half-year Sharpe ~1.4).  Plain inverse-vol
-weights hold up out of sample better than Sharpe-weighted ones, which concentrate in the books that
-decayed after 2021; use inverse-vol.  Full output: `out/final_eval_phase4.txt`; stitched dev series:
-`out/folds_all_oos.csv`.
+Dev fold Sharpes (first line): mean 2.50, median 2.45, min -1.76 (2026 Q1), one negative fold of 16;
+by year 2018 0.1, 2019 2.3, 2020 5.6, 2021 3.1, 2022 0.5, 2023 1.6, 2024 3.8, 2025 3.3.  The holdout is
+126 trading days (standard error ~1.4).  Full output: `out/final_eval_phase6.txt` (four variants);
+reproduce with `bash final_eval6.sh --show_holdout`.  The old-convention run is `out/final_eval_phase4.txt`
+(`bash final_eval.sh --show_holdout`): it measures signal quality at the mid-quote, not achievable
+performance, because the NBBO data show a 10-50 bps half-spread at 09:31 in the names those books trade.
 
-Reproduce: `bash final_eval.sh --show_holdout` (six runs of `folds.py`: inverse-vol and
-Sharpe-weighted, each at spread-only, $0.4M and $2M per book).
+The gap between 4.3 and 2.5 is entirely execution: the learned overnight book drops from 4.0 to 1.6-1.8
+once it must trade through the auctions with an impact charge and is pushed into liquid names, the
+intraday book is negative when it pays the spread, and the rule book loses a third.  The single most
+important unresolved input is the auction-impact coefficient c (below): at c = 0.1 the overnight sleeve
+is ~2.2 and the portfolio ~2.8; at c = 1.0 the overnight books are negative.
 
 ## Cost model
 
-* **Spread / impact per side** (`rlib.cost_bps`): 1.0 bps for universe ranks <= 600, 1.5 bps for
-  601-1500, 2.5 bps for 1501-2000; 1.5 bps on the VIX ETPs; 15 bps on the monthly momentum book,
-  10 bps on the daily-bar ML book, 2 bps on the VIX spread.
+* **Daily-bar sleeves and ETFs**: 15 bps per side on the monthly momentum book, 10 bps on the
+  daily-bar ML book, 2 bps on the VIX spread, 1.5 bps on the VIX ETPs (their half-spread is 2-4
+  bps).  The old stock-book convention (`rlib.cost_bps`: 1 / 1.5 / 2.5 bps per side by rank tier)
+  survives only in the reference run.
 * **Borrow** 1%/yr on every short (2% VIXY, 5% UVXY).
 * **Commission** $3 per filled order (user's figure).  Every minute-bar book is fully turned over
   every day, so a long/short top-k book holds 2k positions and pays 2k x 2 x $3 per day; on $0.4M of
@@ -37,94 +41,95 @@ Sharpe-weighted, each at spread-only, $0.4M and $2M per book).
   bps/day, a 10-name long-only one 1.5 bps/day.  `folds.py --capital_usd 400000 --order_usd 3`
   subtracts this from every minute-bar candidate (position count parsed from the candidate name);
   momentum, VIX spread, daily ML and the VIX-ETP books trade too few orders to matter.
-* Fills in the series: official close (market-on-close), the 09:31 bar close, the 09:33 bar close
-  and the 10:01 bar close are taken as exact at the spread above.  **The NBBO check below shows the
-  real 09:31 half-spread in the chosen names is ~21 bps, not 1-2.5; read the headline table as
-  signal quality at the mid, not as achievable net performance.**
+* **Execution model (phase 6, `liq.py`).**  Auction orders (MOC entry, MOO exit) pay
+  `max(1 bp, c x daily vol in bps x sqrt(order / expected auction dollar volume))` per side, with the
+  opening-auction volume proxied by the lagged 20-day mean dollar volume of the 09:30 bar, the closing
+  one by max(16:00-bar volume, 5% of daily volume), order = $400k / positions, and c = 0.3 as the central
+  assumption (0.1 and 1.0 reported).  Continuous-market orders pay a fraction f of the predicted NBBO
+  half-spread at that time of day (f = 1 crosses the spread, 0.5 is the passive case); the half-spread
+  is predicted per name and day by a LightGBM fit on 497k measured quotes (section "NBBO data").  The
+  old convention (1 / 1.5 / 2.5 bps per side by rank) is kept only for the reference line.
 
 ## Sleeves (families) and what the chooser picks
 
-`folds.py` holds eight families.  In each fold it picks, per family, the candidate with the best
-Sharpe over all prior dates (5-day gap, >= 200 non-zero days) and weights the families by 1/vol
-of that prior window (a family with negative prior Sharpe gets weight 0).  Picks and weights at
-$0.4M in the last dev fold (2026-01..04):
+`folds.py --lanes onml=onml3,xsrule=xsrule3,etfmacro=etfmacro` (as in `final_eval6.sh`) holds six
+families.  In each fold it picks, per family, the candidate with the best Sharpe over all prior dates
+(5-day gap, >= 200 non-zero days) and weights the families by 1/vol of that prior window.  Picks and
+weights in the last dev fold (2026-01..04), family fold-OOS at $0.4M with the realistic costs:
 
-| family   | pick in the last fold                 | weight | family fold-OOS at $0.4M | by year 2018..2026 |
-|----------|----------------------------------------|--------|--------------------------|--------------------|
-| onml     | onml_f26calx_u2000_q3_k10              | 0.09   | 3.98 (ret 95%, vol 24%, maxDD -23%) | 6.4 4.3 6.3 4.1 1.7 4.1 3.9 4.3 2.1 |
-| dayml    | dayml2_ens_e30_k8                      | 0.12   | 2.35 (ret 49%, vol 21%, maxDD -16%) | 6.0 4.0 4.8 2.6 1.0 1.3 1.1 1.3 1.1 |
-| lgb_on   | onml_a1200q_pred_lgb_LS_top20          | 0.13   | 1.95 (maxDD -43%)        | 2.7 3.2 2.7 3.2 0.4 1.4 2.0 3.1 0.6 |
-| xsrule   | xsr_cAx_lo10_s15_u150                  | 0.18   | 1.78 (maxDD -19%)        | 1.2 2.6 3.3 1.0 0.4 1.0 2.8 1.0 2.1 |
-| etfmacro | vixon_r95_ls                           | 0.14   | 1.15 (maxDD -27%)        | -0.4 1.4 2.6 1.2 0.4 2.0 1.7 0.9 -1.7 |
-| mom      | mom_E4_top25                           | 0.10   | 1.06 (maxDD -30%)        | -1.1 1.5 1.9 1.1 -0.2 0.9 2.0 2.0 0.8 |
-| vol      | spread_thr14_thu1                      | 0.17   | 1.03 (maxDD -19%)        | 0.0 0.7 1.5 3.2 0.7 1.6 0.0 1.0 0.4 |
-| ml       | ml_k25_h5_d_eq_buf0_H_sm5              | 0.07   | 0.98 (maxDD -42%)        | 0.0 0.0 0.4 -0.7 0.9 0.3 2.3 1.7 2.2 |
+| family   | pick in the last fold                 | weight | family fold-OOS (realistic) | old convention | by year 2018..2026 (realistic) |
+|----------|----------------------------------------|--------|------------------------------|----------------|--------------------------------|
+| onml     | onml3_f26calx_q3_lam3_moo_k6           | 0.18   | 1.61 (ret 25%, vol 15%, maxDD -28%) | 3.98 | 2.0 0.6 5.9 3.1 -0.1 -0.3 1.5 2.0 -0.5 |
+| etfmacro | vixon_r95_ls                           | 0.15   | 1.15 (maxDD -27%)            | 1.15           | -0.4 1.4 2.6 1.2 0.4 2.0 1.7 0.9 -1.7 |
+| mom      | mom_E4_top25                           | 0.11   | 1.06 (maxDD -30%)            | 1.06           | -1.1 1.5 1.9 1.1 -0.2 0.9 2.0 2.0 0.8 |
+| xsrule   | xsr3_cAx_u50_moo_lo10                  | 0.28   | 1.06 (maxDD -19%)            | 1.78           | -0.4 1.5 3.0 1.1 -0.5 0.6 2.4 1.2 -1.0 |
+| vol      | spread_thr14_thu1                      | 0.19   | 1.03 (maxDD -19%)            | 1.03           | 0.0 0.7 1.5 3.2 0.7 1.6 0.0 1.0 0.4 |
+| ml       | ml_k25_h5_d_eq_buf0_H_sm5              | 0.08   | 0.98 (maxDD -42%)            | 0.98           | 0.0 0.0 0.4 -0.7 0.9 0.3 2.3 1.7 2.2 |
+| dayml    | (dropped: negative when paying the spread; 0.75 at half-spread, flat since 2021) | | | 2.35 | |
+| lgb_on   | (dropped: the 1200-name 09:31-exit book has no auction-executed version)   | | | 1.95 | |
 
-The picks are stable: from 2021 on every fold chooses the same candidate in every family except
-onml (k10 / k15 / k20 of the same predictions) and xsrule (lo10 / lo20 / ls20 of the same signal).
+### onml: learned overnight book, auction-executed (`agents/onml3`, built on `agents/onml`)
+* Universe `rlib.universe(2000)` (`data/univ1500.txt` + `data/univ2000x.txt`: CS/ADRC names ranked by
+  median dollar volume 2016-10..2026-10, survivorship).
+* Features known by 15:59 of day t (`rlib.ticker_frame`, `agents/onml/olib.py`): FEATS18 = z30 z60
+  z30l z120 zoc zo15 zgap rngpos rng vlast_share vday_rel zcc cc5 rv20 zon_prev spy_z60 spy_z30 spy_oc
+  (z-scores = window return / lagged 20-day sd), plus z15l zvwap vfirst_share ldv cc21 rv5_20 spy_zgap,
+  plus calendar dow / business days to month end / quarter-end dummy / days since the last |gap| z > 2.5.
+  Volume shares are ex-auction (`vlast_x`, `vday_rel_x`, `ldv_x`); the closing print, the auction
+  volume share and the last-5-minute return are not used (a MOC order cannot know them).  The
+  `f40_on` variant adds 14 liquidity features from `liq.liq_frame` (lagged `ldv20 lpx hl1 hl5 hlc
+  roll30 n30 nc30 dv0 dvc`, same-day `c_hlc c_nc30`, predicted half-spreads `hs0931 hs1559`).
+* Target: per-day percentile rank of the overnight return close -> 09:31 bar (the official-open
+  target `y_oo` gives the same book once liquidity features are in).  LightGBM, 300 trees, 15 leaves,
+  lr 0.03, min_child_samples 200, expanding window, quarterly retrain from 2017, label lag 3 days,
+  3 seeds rank-averaged per day.
+* **Cost-aware selection** (`agents/onml3/lib3.py`): each day the prediction rank is mapped to an
+  expected gross return with an expanding, causal calibration (fitted on prior years), and names are
+  scored long = E[gross] - 3 x (entry + exit auction cost), short = -E[gross] - 3 x cost - borrow; long
+  the top 6, short the bottom 6, equal weight, MOC entry, MOO exit.  This moves 81-84% of positions
+  into ranks 1-300 (5 bps net per trade on 8 gross).  Without it the broad book is -5 at c = 0.3:
+  75% of its picks are beyond rank 600, where a $20k auction order costs 2-3x the 25-37 bps gross.
+* Kept candidates (series net of auction cost at c = 0.3 and borrow, before commission; numbers at
+  the $0.4M commission, full dev / fold-OOS): `onml3_f26calx_q3_lam3_moo_k6` 1.85 / 1.95 (halves
+  2.5 / 1.3), `_k8` 1.73 / 1.86; `onml3_f40_on_lam3_moo_k6` 1.82 / 1.70 (3.0 / 0.8), `_k8`, `_k10`;
+  `onml3_f40_on_lam3_x05_k10` 1.79 / 1.82 (MOC entry, 09:31 exit paying half the half-spread);
+  `_x1_k10` 0.83 / 0.86 (crossing).  Sensitivity: c = 0.1 -> 2.0-2.3, c = 1.0 -> negative for every
+  MOO book.  Correlation with the old book 0.3-0.4, with SPY ~0.
+* Liquidity features as model inputs: +1.4 Sharpe at the mid (old convention 5.3 vs 3.8 for the same
+  book), +0.15-0.3 under cost-aware selection, +0.4 for the half-spread exit.  Training on the net
+  target (gross minus cost) is dead (it pushes expensive names into the shorts); restricting training
+  to liquid names loses data and is worse.  Predictions: `agents/onml3/out/pred_f40_on.parquet`,
+  `agents/onml/out/pred_f26calx_u2000_q3.parquet`.
 
-### onml: learned overnight book, 2000 names (`agents/onml`, final script `final2000.py`)
-* Universe: `rlib.universe(2000)` = `data/univ1500.txt` (1500 CS/ADRC names ranked by median
-  dollar volume 2016-10..2026-10) + `data/univ2000x.txt` (ranks 1501-2000 plus liquid names with
-  shorter histories such as BKNG, PDD, NIO).
-* Per (day, name) features known by the 15:59 bar, built in `rlib.ticker_frame` and
-  `agents/onml/olib.py` ("f26calx", 26 features): FEATS18 = z30 z60 z30l z120 zoc zo15 zgap
-  rngpos rng vlast_share vday_rel zcc cc5 rv20 zon_prev spy_z60 spy_z30 spy_oc (z-scores are the
-  return over the window divided by its lagged 20-day sd); plus z15l zvwap vfirst_share ldv cc21
-  rv5_20 spy_zgap; plus calendar dow, business days to month end, quarter-end dummy, days since the
-  last |gap| z-score > 2.5.  The volume shares vlast_share / vday_rel / ldv are the ex-auction
-  versions (`vlast_x`, `vday_rel_x`, `ldv_x`, cache `data/cache_x`).  The closing print (zmoc), the
-  closing-auction volume share (vmoc_share) and the last-5-minute return (z5l) are NOT used:
-  a market-on-close order cannot know them.
-* Target: per-day percentile rank of the overnight return from the official close to the 09:31
-  bar close (split-adjusted).  Model: LightGBM regression, 300 trees, 15 leaves, learning rate
-  0.03, min_child_samples 200, expanding window, quarterly retrain from 2017-01-01, labels lagged
-  3 days before each cut; three seeds, predictions rank-averaged per day.
-* Book: long the top 10, short the bottom 10 by prediction, equal weight, 100% long / 100% short,
-  entered at the close, exited at the 09:31 bar.  k = 10 is the optimum under the fixed commission
-  (k8-k12 flat; k15/k20 variants are in the chooser).  Only 4-5% of the names repeat in the
-  top/bottom bucket the next day, so nothing is held through.
-* Alone at $0.4M: Sharpe 4.3 full dev sample, 3.98 stitched fold-OOS, first/second half 4.8 / 3.3.
-* Predictions: `agents/onml/out/pred_f26calx_u2000_q3.parquet` (gitignored).  Also in the family:
-  `agents/onml2` (`onml2_f26cal_y_k10`, `y3_k10`, `y_k20`): same recipe with yearly retrain and
-  the auction-volume share kept (defensible via the exchange imbalance feeds from 15:50/15:55);
-  and the 1500-name f28cal candidates (`onml_f28cal_q3_k10/15/20`) which use zmoc and vmoc_share.
+### dayml: learned intraday book (`agents/dayml3`, built on `agents/dayml`, `agents/dayml2`): not tradable at the spread
+Decide at the 09:31 bar, fill at the 09:33 bar, exit at the 10:01 bar, L/S top/bottom k, quarterly
+LightGBM on 43 features of the previous close and the first minute plus 17 liquidity features.  The
+gross edge is 10-16 bps per trade; the predicted round-trip spread cost is 20 / 34 / 53 bps in ranks
+1-300 / 301-600 / 601-1500.  Result: nothing is positive when crossing the spread on any universe
+(best -0.5 fold-OOS; the old `dayml2_ens_e30_k8` re-costed is -7.6); at half the half-spread only a
+cost-aware 4-name book on ranks <= 600 survives (`dayml3_liqsel_u600_x05_k4`: 1.03 / 0.77, flat since
+2021).  The liquidity features raise the mid-quote book from 2.4 to 3.0 (old convention) but push it
+into thin names.  The family is dropped from the headline portfolio; its half-spread variants are in
+`agents/dayml3/cands` and the second line of the headline table.
 
-### dayml: learned intraday book (`agents/dayml`, `agents/dayml2`)
-* Universe 1500 names.  Features (`agents/dayml/dlib.py` EXT, 43): yesterday's close-time
-  features (FEATS18 and extras, shifted one day inside the ticker), today's gap, first-minute
-  return and first-minute volume relative to its 20-day mean (all known at the end of the 09:31
-  bar), market versions from SPY/QQQ, day of week, lagged log dollar volume.
-* Two LightGBM models (same parameters as onml, quarterly expanding retrain, label lag 3 days):
-  rank targets `y_60d` = return from the 09:33 bar close to the 10:31 bar close and `y_120d` = to
-  the 11:31 bar close.  The ensemble averages the per-day percentile ranks of the two models.
-* Book `dayml2_ens_e30_k8`: long top 8 / short bottom 8, equal weight, decided at 09:31, filled at
-  the 09:33 bar close (bin 3; the 09:32 bar is never used because single-print minute bars there
-  harvest bid-ask bounce), exited at the 10:01 bar close (bin 31).  The 09:31 signal is realised
-  in the first 30 minutes; holding to 10:31 or 11:31 only adds variance.
-* Alone at $0.4M: 2.67 full dev sample, 2.35 stitched fold-OOS, halves 4.2 / 1.4.  The post-2021
-  decay is across the whole cross-section (every liquidity tier halves), not a thin-name effect.
-* Predictions: `agents/dayml/out/pred_y_{60d,120d}_Q.parquet`.  Other candidates in the family:
-  single-model books k6-k20 with exits at 10:31 / 11:31, 2000-name variants (`*_u2000_*`).
+### lgb_on: previous learned overnight book (`agents/intraday`, `on_ml.py`) — reference only
+LightGBM on FEATS18, 1200 names, quarterly, L/S top 20, close -> 09:31 bar.  No auction-executed
+version was built; it is in the old-convention reference run only.
 
-### lgb_on: previous learned overnight book (`agents/intraday`, `on_ml.py`)
-LightGBM on FEATS18 only, 1200 names (`data/next600d.txt` chain), quarterly retrain, long/short
-top 20 equal weight, close -> 09:31.  Kept because it is only 0.6 correlated with onml (the extra
-features change about half the picks) and the chooser keeps giving it weight.  Series in
-`agents/intraday/logs/onml_a1200q_pred_lgb_*.csv`.
-
-### xsrule: rule overnight book on 150 names (`agents/xsrule`)
+### xsrule: rule overnight book, auction-executed (`agents/xsrule3`, built on `agents/xsrule`)
 Signal with fixed, untuned weights, all inputs known by the 15:59 bar:
 
     cAx = 0.5*z30 - z60 - 0.5*z5l + 0.3*zon_prev - rank(vlast_x)
 
-z30 = first-30-minute return, z60 = last-60-minute return, z5l = last-5-minute return (each over
-its lagged 20-day sd), zon_prev = previous night's return z-score, vlast_x = cross-sectional
-percentile rank (demeaned) of the last hour's share of continuous-session volume.  Book
-`xsr_cAx_lo10_s15_u150`: long the top 10 of the 150 most liquid names with cAx > 1.5, equal
-weight, close -> 09:31 bar.  Variants in the chooser: top 20, threshold 2.0, and long/short 10 or
-20.  Fold-OOS 1.78 at $0.4M; correlation 0.3 with the learned overnight books, 0.44 with SPY
-close-to-close for the long-only book.
+z30 = first-30-minute return, z60 = last-60-minute return, z5l = last-5-minute return (each over its
+lagged 20-day sd), zon_prev = previous night's z-score, vlast_x = cross-sectional rank of the last
+hour's share of continuous-session volume.  Long the top 10 with cAx > 1.5, equal weight, MOC entry,
+MOO exit.  Kept: `xsr3_cAx_u50_moo_lo10` (50 most liquid names: 1.62 / 1.39 fold-OOS, the only one
+positive at c = 1.0), `xsr3_cAx_u150_fhs10_moo_lo10` (150 names, skip predicted hs0931 > 10 bps:
+1.54 / 1.28), `_u150_moo_lo10` (1.29 / 1.08), `_lo20`, a half-spread 09:31-exit variant and one L/S
+(0.64).  The edge to the official open equals the edge to the 09:31 bar (15 bps per pick); breadth
+beyond 150 names fails with the auction cost (300: 0.46, 600: negative); a liquidity tilt inside the
+signal adds nothing.  Family fold-OOS 1.06-1.12; 2026 H1 negative for every realistic variant.
 
 ### etfmacro: VIX-ETP overnight book (`agents/etfmacro`)
 VIX-ETP decay is an overnight phenomenon (VIXY close->09:31 -11 bps/night, 09:32->close -1 bps).
@@ -132,7 +137,8 @@ VIX-ETP decay is an overnight phenomenon (VIXY close->09:31 -11 bps/night, 09:32
 close (FRED) < 0.95, no Friday decisions (the weekend loses); plus long 0.5 VIXY overnight when
 the ratio >= 0.95 and SPY's intraday signal 0.5*z30 - z60 < -1.  Core variants without the long
 leg: `vixon_r95`, `uvxon_r95` (0.25 UVXY, 5% borrow), and 15:45-bar entries.  Fold-OOS 1.15,
-correlation ~0 with the stock books.
+correlation ~0 with the stock books.  VIXY's half-spread is 2-4 bps, so the 09:31-bar exit at 1.5
+bps/side is kept; exiting at the official open loses a third of the overnight decay (1.06).
 
 ### mom: vol-scaled momentum, long-only (`strategy.py`, grid `mom_grid.py`)
 Universe at each rebalance: CS/ADRC, close >= $5, 20-day average dollar volume >= $50M, >= 1 year
@@ -157,7 +163,8 @@ features over names with 20-day ADV >= $50M, retrained every 126 days; long top 
 * Candidate series are causal on their own (expanding-window retrains, lagged features); the
   script removes the choice-of-variant and choice-of-weight look-ahead by selecting on prior
   dates only (`--sel all`, 5-day gap).
-* `final_eval.sh` fixes the candidate grid: `--omit` drops variants that are superseded, use
+* `final_eval6.sh` is the headline run (phase-6 lanes only, `--lanes`, old minute-bar families
+  dropped); `final_eval.sh` is the old-convention reference.  Both fix the candidate grid: `--omit` drops variants that are superseded, use
   close-only information (`cBx`, `onml_f28cal_q_k20`), or are redundant 15:45 entries; `--drop
   intraday,rule_e1,rule_late` removes the old 09:32-fill intraday family and the two old rule
   families superseded by xsrule.
@@ -171,9 +178,11 @@ were chosen on the dev span (never on the holdout); the 1500/2000-name universe 
 overnight books trade a 15:59 signal at the official close, which needs a market-on-close order
 entered by 15:50 (NYSE) / 15:55 (Nasdaq), i.e. the last 5-10 minutes of z60 and z15l are not
 available in practice; both learned books have weaker second halves (overnight 4.8 -> 3.3,
-intraday 4.2 -> 1.4).
+intraday 4.2 -> 1.4); the auction-impact coefficient and the spread model are calibrations, not
+out-of-sample quantities, and the cost-aware selection's calibration map is causal but its lambda = 3
+was chosen on the dev span.
 
-## Realistic fills: NBBO check (`quotes_check.py`)
+## NBBO data: the fill check, the quote panel and the spread model
 
 **At the NBBO, the three minute-bar books do not survive.**  `quotes_check.py` takes the actual
 positions of the three new books on every 10th trading day 2017-01-03..2026-10-16 (245 days, 10,806
@@ -209,12 +218,38 @@ Reading:
   1-300 +24 bps/trade at MOC entry + NBBO exit (+19 crossing both), intraday ranks 1-300 +17 bps
   with a bar entry and NBBO exit (+6 crossing both); everything beyond rank 600 is negative.
 
-Consequence: the portfolio numbers above assume fills at 1-2.5 bps per side and are not achievable
-by crossing the spread at 09:31.  What is open: passive exits (limit orders at or inside the mid at
-09:31, or later when spreads narrow; the overnight edge was measured to decay by 10:31), restricting
-the books to ranks 1-300/600 where the spread is 4-8 bps (fewer names, lower Sharpe before costs),
-and re-running the fold evaluation with a per-name, per-time spread model from these quotes instead
-of the flat tiers.
+**Unbiased quote panel (`quotes_panel.py`, `out/quotes_panel.csv.gz`).**  Every 40th trading day
+2017-01-03..2026-10-16 (62 days), every name of the 2000-name universe plus the ETFs, the last NBBO at
+or before 09:31:00, 09:35:00, 10:01:00 and 15:59:30: 497k lookups, 467k valid quotes.  Median
+half-spread in bps:
+
+| rank tier | 09:31 | 09:35 | 10:01 | 15:59 | 09:31 in 2017 / 2024 / 2026 |
+|-----------|-------|-------|-------|-------|-----------------------------|
+| 1-300     | 9.7   | 6.0   | 3.2   | 1.1   | 7.7 / 10.5 / 19.5           |
+| 301-600   | 19.3  | 11.8  | 5.7   | 1.7   | 15.1 / 21.9 / 37.9          |
+| 601-1500  | 38.0  | 23.8  | 10.8  | 2.9   | 30.2 / 39.7 / 62.0          |
+| 1501-2000 | 52.4  | 36.9  | 17.3  | 4.7   | 55.9 / 46.3 / 65.5          |
+| ETFs      | 2.7   | 2.4   | 2.5   | 2.2   |                             |
+
+The closing-auction entry is cheap everywhere; the 09:31 exit is the problem, and it has roughly
+doubled in the liquid tiers since 2024 while the 15:59 spread is unchanged.
+
+**Spread model (`liq.fit_spread_model`, `data/spread_model.pkl`).**  LightGBM on log half-spread per
+time of day from lagged minute-bar proxies (log dollar volume, price, 20-day means of the 09:31-bar
+and last-10-minute ranges, a Roll estimate on the first 30 one-minute returns, trades per minute at
+the open and close, opening/closing-bar dollar volume) plus same-day bins 0-1 (09:31/10:01) or bins
+380-389 (15:59); trained on the panel and the fill-check trades (120k rows per time), with a
+retransformation factor so the mean in bps is unbiased.  Ticker-grouped 5-fold CV R² of the log
+spread 0.78 / 0.77 / 0.78 at 09:31 / 10:01 / 15:59, MAE 17 / 5.6 / 1.3 bps; it under-predicts the
+2025-26 widening by about 20% (the proxies do not see it).  It is a cost calibration fitted on the
+whole span, so the predicted spreads are in-sample as costs; they are used both as features and as
+the per-name, per-day cost of continuous-market fills.
+
+**Auction impact** is not observable from quotes.  The sqrt model with c = 0.3 is an assumption in
+the range of published closing-auction estimates; the paper that would anchor it (Goyal, Jegadeesh,
+Wu, JFQA 2025, "Price Impact in Closing Auctions, Opening Auctions, and Continuous Markets") is on a
+host outside this environment's network policy.  Measuring the actual auction prints against the
+pre-auction mid for the books' names is the most valuable next step.
 
 ## Data pipeline (Polygon / Massive, key in `POLYGON_API_KEY`; `data/` is gitignored)
 
@@ -229,7 +264,9 @@ of the flat tiers.
 5. `rlib.ticker_frame` caches per-ticker close-time features and split-adjusted targets in
    `data/cache/{tk}.v2.parquet`; `agents/onml/final2000.py` adds `data/cache_x` (ex-auction
    volume features); `agents/dayml/dlib.py` keeps its 09:31 features in `data/cache_dayml2*`.
-6. VIX / VIX3M daily closes from FRED (`agents/vol/fred_vix.csv`); the Polygon index feed is not
+6. `liq.py build` -> `data/cache_liq/{tk}.parquet` (liquidity proxies), `liq.py fit` ->
+   `data/spread_model.pkl`; `quotes_panel.py` -> `out/quotes_panel.csv(.gz)`.
+7. VIX / VIX3M daily closes from FRED (`agents/vol/fred_vix.csv`); the Polygon index feed is not
    in the subscription.
 
 ## Regenerating the candidate series
@@ -244,7 +281,12 @@ python3 agents/dayml/final2000.py && python3 agents/dayml/u2000_e30.py
 python3 agents/dayml2/final.py --from-saved
 python3 agents/xsrule/final.py && python3 agents/xsrule/k10.py
 python3 agents/etfmacro/final.py
-bash final_eval.sh --show_holdout > out/final_eval_phase4.txt
+python3 liq.py build && python3 liq.py fit            # liquidity cache (data/cache_liq) and spread model
+python3 agents/onml3/step4.py                          # cost-aware overnight books (needs the onml predictions; ~2 h)
+python3 agents/xsrule3/s4_save.py                      # auction-executed rule books
+python3 agents/dayml3/final.py                         # spread-costed intraday books
+bash final_eval6.sh --show_holdout > out/final_eval_phase6.txt
+bash final_eval.sh --show_holdout > out/final_eval_phase4.txt   # old-convention reference
 ```
 Candidate series live in `agents/<lane>/cands/*.csv` (date, daily net return at the spread cost)
 with a `NOTES.txt` per lane; each lane has a `REPORT.md` with the full exploration record and the
@@ -253,7 +295,10 @@ LightGBM, `book()`, `fold_oos()`); `agents/BRIEF.md` is the protocol the agents 
 
 ## Layout
 
-* `rlib.py`, `folds.py`, `final_eval.sh`: library, fold validation, final evaluation.
+* `rlib.py`, `liq.py`, `folds.py`, `final_eval6.sh` / `final_eval.sh`: library, liquidity and
+  execution-cost module, fold validation, final evaluation (realistic / old convention).
+* `agents/onml3`, `agents/xsrule3`, `agents/dayml3`: the realistic-execution lanes (code, reports,
+  candidates); `agents/BRIEF6.md` their brief.
 * `agents/onml`, `agents/onml2`, `agents/dayml`, `agents/dayml2`, `agents/xsrule`,
   `agents/etfmacro`: the active lanes (code, reports, candidates).
 * `agents/intraday` (`ilib.py`, `logs/`): the previous minute-bar framework; its `onml_a1200q_*`
@@ -261,7 +306,8 @@ LightGBM, `book()`, `fold_oos()`); `agents/BRIEF.md` is the protocol the agents 
   the vol, daily-ML and momentum families.
 * `strategy.py`, `bt.py`, `feats.py`, `portfolio.py`, `sleeves/`: momentum engine and the older
   fixed-weight portfolio (reference only; its in-sample picks score 3.68 on the dev span).
-* `quotes_check.py`, `out/quotes_trades.csv`: NBBO fill check.
+* `quotes_check.py`, `out/quotes_trades.csv`, `quotes_panel.py`, `out/quotes_panel.csv.gz`: NBBO fill
+  check and quote panel.
 * Dead lanes kept for the record: `agents/pairs`, `etf_mr.py`, `zoo.py`, `on_ml_pm.py`,
   `regime_var.py` (pairs / residual reversal, ETF spreads, factor zoo, last-hour books, regime
   filters: all net <= 0.5 or negative).
