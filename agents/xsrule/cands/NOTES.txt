@@ -7,3 +7,6 @@ xsr_cBx_ls20_u1500	Sh=2.08	overnight L/S top/bottom 20 by cBx on universe(1500) 
 xsr_cAx_lo10_s15_u150	Sh=2.26	overnight LO top10 cAx>1.5 on 150 names, exit 09:31; all inputs pre-close
 xsr_cAx_lo10_s2_u150	Sh=2.23	overnight LO top10 cAx>2.0 on 150 names, exit 09:31; all inputs pre-close
 xsr_cAx_ls10_u150	Sh=1.80	overnight L/S top10 cAx on 150 names, exit 09:31; all inputs pre-close
+xsr_cAx_lo10_s15_u150	Sh=2.33	overnight LO top10 cAx>1.5 on 150 names, exit 09:31; all inputs pre-close
+xsr_cAx_lo10_s2_u150	Sh=2.29	overnight LO top10 cAx>2.0 on 150 names, exit 09:31; all inputs pre-close
+xsr_cAx_ls10_u150	Sh=1.83	overnight L/S top10 cAx on 150 names, exit 09:31; all inputs pre-close
