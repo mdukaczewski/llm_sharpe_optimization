@@ -2,7 +2,8 @@
 filter 'pc10': train AND predict only on rows whose predicted mean per-side auction cost at c=0.3, k=10 is <= 10 bps
 (~800 names/day, known at 15:59 of day t); the rank target is recomputed within that sub-universe."""
 from lib3 import F26X, LIQF
-RUNS = {"R1": ("f26x_oo", F26X, "yr_oo"), "R2": ("f40_oo", F26X + LIQF, "yr_oo"), "R3": ("f40_oon", F26X + LIQF, "yr_oon"),
+RUNS = {"R0": ("f26calx_q3", F26X, "yr"),      # the saved agents/onml predictions (quarterly 3-seed), no refit
+        "R1": ("f26x_oo", F26X, "yr_oo"), "R2": ("f40_oo", F26X + LIQF, "yr_oo"), "R3": ("f40_oon", F26X + LIQF, "yr_oon"),
         "R4": ("f40_on", F26X + LIQF, "yr"), "R5": ("f26x_on", F26X, "yr"),
         "R6": ("f40_oo_liq", F26X + LIQF, "yr_oo", "pc10"), "R7": ("f26x_oo_liq", F26X, "yr_oo", "pc10")}
 def apply_filter(D, filt):
