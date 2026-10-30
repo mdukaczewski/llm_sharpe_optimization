@@ -1,0 +1,3 @@
+xsr3h_cAx_u50_moo_lo10	Sh=0.84	xsr3_cAx_u50_moo_lo10 hedged with SPY MOC->MOO at trailing 250d beta (lagged, clipped 0-1.5); hedge cost 1.5bps/side + borrow + 2 SPY orders x $3 on $0.4M inside the series
+xsr3h_cAx_u150_fhs10_moo_lo10	Sh=0.86	xsr3_cAx_u150_fhs10_moo_lo10 hedged with SPY MOC->MOO at trailing 250d beta (lagged, clipped 0-1.5); hedge cost 1.5bps/side + borrow + 2 SPY orders x $3 on $0.4M inside the series
+xsr3h_cAx_u150_moo_lo10	Sh=0.49	xsr3_cAx_u150_moo_lo10 hedged with SPY MOC->MOO at trailing 250d beta (lagged, clipped 0-1.5); hedge cost 1.5bps/side + borrow + 2 SPY orders x $3 on $0.4M inside the series

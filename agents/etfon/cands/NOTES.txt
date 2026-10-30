@@ -1,0 +1,2 @@
+etfon_ts_s1_moo	Sh=0.90	COMMISSION INSIDE ($3/order at $0.4M, 2 orders per position per day; do NOT charge again); 1.5 bps/side MOC+MOO, borrow 1%; decision-dated; 16 equity/sector ETFs, long o/n if s=0.5z30-z60>1, w=0.05/rv20(t-1) cap .5; ~2.9 pos/day; corr xsr3 0.77; NOT recommended (marginal contribution negative)
+etfon_ts_s15_both_moo	Sh=0.69	COMMISSION INSIDE ($3/order at $0.4M, 2 orders per position per day; do NOT charge again); 1.5 bps/side MOC+MOO, borrow 1%; decision-dated; same, long s>1.5 / short s<-1.5; ~3.0 pos/day; corr xsr3 0.48; NOT recommended

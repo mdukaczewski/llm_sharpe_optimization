@@ -31,6 +31,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 START, END = "2016-10-28", os.environ.get("FOLDS_END", "2026-10-28")
 NEW_LANES = {"onml": ["onml", "onml2"], "dayml": ["dayml", "dayml2"], "xsrule": ["xsrule"], "etfmacro": ["etfmacro"]}   # family -> agent lanes (agents/<lane>/cands/*.csv); phase-4 lanes merge into their family
 L = f"{HERE}/agents/intraday/logs"
+DECISION_DATED = ["onml", "lgb_on", "rule_e1", "rule_late", "xsrule"]   # overnight stock books dated at the decision day t (PnL realised at t+1 morning)
 
 def sh(r): return r.mean() / (r.std() + 1e-12) * np.sqrt(252)
 def load(p):
@@ -72,6 +73,7 @@ def main():
     ap.add_argument("--drop", default="", help="comma list of families to exclude")
     ap.add_argument("--keep", default="", help="regex: keep only candidate names matching it (coarser grid = less selection noise)")
     ap.add_argument("--omit", default="", help="regex: drop candidate names matching it")
+    ap.add_argument("--no_align", action="store_true", help="do NOT re-date the decision-dated overnight stock books (rlib.book convention) to their exit day; default re-dates them so every sleeve is booked on the day its PnL is realised (mom / vol / ml / etfmacro are already exit-dated)")
     ap.add_argument("--lanes", default="", help="override NEW_LANES: family=lane+lane,family=lane (e.g. onml=onml3,dayml=dayml3,xsrule=xsrule3,etfmacro=etfmacro)")
     ap.add_argument("--voltarget", type=float, default=0.0, help="if >0: scale the portfolio to this annual vol using trailing-20d realized vol of its own past returns (capped at 2x)")
     ap.add_argument("--minhist", type=int, default=200, help="min non-zero days a variant needs in the selection window")
@@ -85,7 +87,7 @@ def main():
     if a.capital_usd > 0:
         import re as _re
         def npos(f, n):
-            if f in ("mom", "vol", "ml", "etfmacro"): return 0                 # monthly / multi-day / 1-2 ETF orders: negligible
+            if f in ("mom", "vol", "ml", "etfmacro", "etfon"): return 0   # etfon series already include their commission                 # monthly / multi-day / 1-2 ETF orders: negligible
             m = _re.search(r"(?:top|_k|lo|ls|XSLO|LO|LS)(\d+)", n); k = int(m.group(1)) if m else 20
             sides = 1 if ("_LO_" in n or "_lo" in n or "XSLO" in n or n.endswith("_LO") or "LO_top" in n) else 2
             return k * sides
@@ -100,6 +102,11 @@ def main():
         fam = {f: {n: s - 2 * gross_of(f, n) * a.commission_bps / 1e4 for n, s in d.items()} for f, d in fam.items()}
         print(f"commission: {a.commission_bps} bps per side on minute-bar books")
     for f_ in [x for x in a.drop.split(",") if x]: fam.pop(f_, None)
+    if not a.no_align:
+        cal = pd.DatetimeIndex(sorted(set().union(*[s.index for d in fam.values() for s in d.values()])))
+        nxt = pd.Series(cal[1:].append(pd.DatetimeIndex([cal[-1] + pd.Timedelta(days=1)])), index=cal)
+        for f_ in DECISION_DATED:
+            if f_ in fam: fam[f_] = {n: pd.Series(s.values, index=pd.DatetimeIndex(nxt.reindex(s.index).values)) for n, s in fam[f_].items()}
     import re
     if a.keep: fam = {f: {n: s for n, s in d.items() if re.search(a.keep, n)} for f, d in fam.items()}
     if a.omit: fam = {f: {n: s for n, s in d.items() if not re.search(a.omit, n)} for f, d in fam.items()}
