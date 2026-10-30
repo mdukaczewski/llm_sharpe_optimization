@@ -1,0 +1,4 @@
+dayml2_ens_e30_k8	Sh=3.02	avg rank of the quarterly y_60d+y_120d 09:31 LightGBMs, L/S top/bottom 8 eq, fill 09:33 bar (bin 3), exit 10:01 bar (bin 31) | $0.4M commission: Sh 2.72 fold-OOS 2.40
+dayml2_ens_e30_k6	Sh=2.84	same ensemble, k=6, exit bin 31 | $0.4M commission: Sh 2.64 fold-OOS 2.36
+dayml2_x120q_e30_k6	Sh=2.72	quarterly y_120d model (dayml_x120dq) traded to the bin-31 exit, L/S 6 eq | $0.4M commission: Sh 2.54 fold-OOS 2.31
+dayml2_ens_e60_k8	Sh=2.80	same ensemble, k=8, exit 10:31 bar (bin 61) | $0.4M commission: Sh 2.54 fold-OOS 2.28

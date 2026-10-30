@@ -85,7 +85,31 @@ The open question it would answer: does the bin-31 exit / ensemble gain carry ov
 as a feature (whose post-2021 half is better)?
 
 ## 4. Candidates (`rlib.save_cand("dayml2", ...)`), all built from the two quarterly models of the dayml lane
-FINAL_BLOCK
+Built by `final.py --from-saved` (00:44 UTC, from agents/dayml/out/pred_y_{60d,120d}_Q.parquet cut at DEV_END; a full
+refit with `final.py` fits the same two quarterly walk-forwards, ~2 x 20-25 min with DAYML2_NJOBS=2).  Saved series are
+spread-only net returns; the $0.4M numbers subtract P x $6 / $400k per day.
+
+| candidate | spread Sh / fold-OOS | $0.4M Sh / fold-OOS | ret ($0.4M) | halves ($0.4M) | mdd ($0.4M) | corr onlgb1200q / SPY / dayml_x60dq_k6 |
+|---|---|---|---|---|---|---|
+| dayml2_ens_e30_k8 (ensemble, exit 10:01, L/S 8) | 3.02 / 2.68 | 2.72 / **2.40** | 54 % | 4.18 / 1.37 | -16.0 % | -0.02 / -0.01 / +0.67 |
+| dayml2_ens_e30_k6 (ensemble, exit 10:01, L/S 6) | 2.84 / 2.55 | 2.64 / **2.36** | 60 % | 3.83 / 1.55 | -22.1 % | -0.02 / -0.03 / +0.68 |
+| dayml2_x120q_e30_k6 (y_120d model, exit 10:01, L/S 6) | 2.72 / 2.49 | 2.54 / **2.31** | 63 % | 3.57 / 1.67 | -28.4 % | -0.02 / -0.03 / +0.56 |
+| dayml2_ens_e60_k8 (ensemble, exit 10:31, L/S 8) | 2.80 / 2.52 | 2.54 / **2.28** | 61 % | 3.82 / 1.40 | -25.5 % | -0.06 / -0.01 / +0.83 |
+| baseline dayml_x60dq_k6 (for reference) | 2.27 / 2.18 | 2.11 / 2.02 | 59 % | 2.88 / 1.39 | | |
+
+Family fold-OOS (`rlib.fold_oos` over the 4 candidates): **2.40 at $0.4M** (2.68 spread-only), every fold picks
+dayml2_ens_e30_k8 (prior Sharpe 2.8-5.8), fold mean 2.44, min 0.22 (2024 H2), 0/16 negative folds.  Yearly net Sharpe
+of the primary: 17:+4.7 18:+6.5 19:+4.1 20:+4.5 21:+2.1 22:+0.9 23:+1.0 24:+1.1 25:+1.6 26:+1.3 (same decay profile as
+the baseline, ~1 higher before 2021 and ~0.2-0.4 higher after).  Correlation with the overnight LightGBM sleeve and
+with SPY is zero; with the baseline intraday book 0.56-0.83 (same models), so these replace rather than add to it.
+
+Per-candidate ev lines (log.txt):
+```
+dayml2_ens_e30_k8                            spread Sh  3.02 fo  2.68 | $0.4M Sh  2.72 fo  2.40 ret  54.2% halves 4.18/1.37 | 17:+5.4 18:+6.3 19:+4.0 20:+4.9 21:+2.6 22:+1.1 23:+1.3 24:+1.1 25:+1.3 26:+0.2
+dayml2_ens_e30_k6                            spread Sh  2.84 fo  2.55 | $0.4M Sh  2.64 fo  2.36 ret  60.2% halves 3.83/1.55 | 17:+4.6 18:+5.6 19:+4.2 20:+4.8 21:+1.8 22:+1.1 23:+1.3 24:+0.9 25:+2.0 26:+1.4
+dayml2_x120q_e30_k6                          spread Sh  2.72 fo  2.49 | $0.4M Sh  2.54 fo  2.31 ret  63.0% halves 3.57/1.67 | 17:+3.9 18:+5.4 19:+3.5 20:+4.8 21:+1.7 22:+1.6 23:+2.0 24:+0.6 25:+1.4 26:+2.3
+dayml2_ens_e60_k8                            spread Sh  2.80 fo  2.52 | $0.4M Sh  2.54 fo  2.28 ret  61.2% halves 3.82/1.40 | 17:+4.7 18:+6.5 19:+4.1 20:+4.5 21:+2.1 22:+0.9 23:+1.0 24:+1.1 25:+1.6 26:+1.3
+```
 
 ## What I would keep
 `dayml2_ens_e30_k8` (ensemble of the y_60d and y_120d quarterly models, L/S 8 equal weight, exit at the 10:01 bar) as
