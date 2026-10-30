@@ -323,3 +323,51 @@ complete.  The overnight book's second half (3.1-3.4) is below its first half
 Regenerate: `STRAT_END=2026-10-28 python3 agents/<lane>/final.py` for onml (~50 min),
 dayml (~50 min), xsrule (~1 min warm / 45 min cold), etfmacro (1 min); then
 `bash final_eval.sh --show_holdout`.
+
+# Phase 4 (2026-10-30): Sharpe 4 at $3 per order on $0.4M equity per book
+
+Target set by the user: fold-OOS Sharpe >= 4 (then 4.5) with a fixed commission of $3 per
+filled order and $0.4M of equity per book, i.e. a 20-name long/short book (40 positions
+of $20k, 100% long / 100% short) pays 6 bps of equity per day, a 10-name one 3 bps.
+`folds.py --capital_usd 400000 --order_usd 3` charges every fully-turned-over minute-bar
+book by its own position count (parsed from the candidate name) on top of the spread
+cost already in the series.  Starting point at that cost: 3.14 (phase-3 portfolio).
+
+What moved it (dev folds 2018-07-01..2026-04-27, picks from prior dates, no holdout reads):
+
+| step                                                                              | iv   | shiv |
+|-----------------------------------------------------------------------------------|------|------|
+| phase-3 portfolio re-costed                                                       | 3.14 | 3.26 |
+| drop the two old 09:31-exit rule families (superseded by the xsrule composite)    | 3.63 | 3.68 |
+| + 6/8/10-name intraday books, 10-name rule book                                   | 3.81 | 3.84 |
+| + 10/15-name overnight books (same 3-seed predictions)                            | 3.98 | 4.06 |
+| + overnight book on 2000 names, yearly, implementable features (agent onml2)      | 4.04 | 4.16 |
+| + intraday ensemble of the two exits, 8 names, exit 10:01 (agent dayml2)          | 4.16 | 4.36 |
+| + overnight 2000 names, quarterly, 3 seeds, strict features (`onml/final2000.py`) | **4.32** | **4.66** |
+
+Mechanics, from the agents' reports (`agents/onml2/REPORT.md`, `agents/dayml2/REPORT.md`):
+* With a fixed commission the 11th-20th names on the short side of the overnight book
+  earn less than the 8.5 bps round trip they cost, so 10 per side is the optimum
+  (flat plateau k8-k12); |pred| weighting, variable book size, dispersion gating,
+  long-only and asymmetric L/S all lose.  Only 4-7% of names stay in the top/bottom
+  bucket on consecutive days, so nothing can be held through.
+* Universe 1500 -> 2000 names (ranks 1501-2000 by median dollar volume 2016-26, plus
+  liquid names with shorter histories such as BKNG/PDD/NIO; spread 2.5 bps/side):
+  +0.8 on the overnight book.  Bigger trees, more regularisation, rolling windows: no
+  gain (rolling windows clearly worse).
+* Implementability: the overnight feature set used the closing print (zmoc) and the
+  closing-auction volume share (vmoc_share), neither of which a market-on-close order
+  can know; dropping them costs ~0.25.  The strict set also replaces the last-hour /
+  day volume shares with ex-auction versions (`vlast_x`, `vday_rel_x`, `ldv_x`,
+  another ~0.35 on a single yearly seed); the quarterly 3-seed strict book still reaches
+  4.23 alone at $0.4M.  The yearly `onml2_f26cal_*` candidates keep the auction volume
+  share (defensible via the exchange imbalance feeds from 15:50/15:55) and stay in the
+  chooser as the less strict alternative.
+* Intraday: exiting at 10:01 (bin 31) instead of 10:31 adds +0.3-0.4; averaging the
+  per-day ranks of the 10:31- and 11:31-target models adds +0.1-0.3; extra 09:31
+  features and a 2000-name universe do not help; the decay after 2021 is across the
+  whole cross-section, not the thin names.
+* Dead this phase: variable book size, dispersion gating, long-only books, rolling
+  training windows, recency weights (unfinished), 2000-name rule books.
+
+HOLDOUT2_PLACEHOLDER
