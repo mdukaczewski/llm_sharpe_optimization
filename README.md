@@ -261,7 +261,7 @@ and last-10-minute ranges, a Roll estimate on the first 30 one-minute returns, t
 the open and close, opening/closing-bar dollar volume) plus same-day bins 0-1 (09:31/10:01) or bins
 380-389 (15:59); trained on the panel and the fill-check trades (120k rows per time), with a
 retransformation factor so the mean in bps is unbiased.  Ticker-grouped 5-fold CV R² of the log
-spread 0.78 / 0.78 / 0.77 / 0.78 at 09:31 / 09:35 / 10:01 / 15:59 (the 09:35 model, added later, via `liq.py add0935`), MAE 17 / 5.6 / 1.3 bps; it under-predicts the
+spread 0.78 / 0.78 / 0.77 / 0.78 at 09:31 / 09:35 / 10:01 / 15:59 (the 09:35 model, added later, via `liq.py add0935`), MAE 17 / 12.9 / 5.6 / 1.3 bps; it under-predicts the
 2025-26 widening by about 20% (the proxies do not see it).  It is a cost calibration fitted on the
 whole span, so the predicted spreads are in-sample as costs; they are used both as features and as
 the per-name, per-day cost of continuous-market fills.
