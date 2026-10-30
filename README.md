@@ -384,10 +384,10 @@ phase-4 choice was made on dev folds only, but a second look is a second look.
 | reference: phase-3 portfolio at $0.4M (first look)                 | 3.14                       | 3.45                           |
 
 Dev fold Sharpes at $0.4M (iv): mean 4.50, median 4.74, min 0.37 (2026 Q1), none
-negative.  Per-family stitched fold-OOS at $0.4M: overnight LightGBM 4.16 (2000 names,
-10 per side), intraday LightGBM 2.38 (8 per side, exit 10:01), previous overnight
-LightGBM 2.05, rule composite 1.68, VIX ETP overnight 1.22, momentum 1.13, vol spread
-1.06, daily ML 0.71.
+negative.  Per-family stitched fold-OOS at $0.4M (iv): overnight LightGBM 3.98 (2000
+names, 10 per side), intraday LightGBM 2.35 (8 per side, exit 10:01), previous overnight
+LightGBM 1.95, rule composite 1.78, VIX ETP overnight 1.15, momentum 1.06, vol spread
+1.03, daily ML 0.98.
 
 Reading: the dev target (4 / 4.5) is met at the user's cost assumption; the holdout
 (126 days, standard error ~1.4) comes in at 3.5, below dev as expected from shrinkage
