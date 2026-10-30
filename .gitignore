@@ -32,3 +32,4 @@ logs/fetch_minute2_local.log
 agents/*/booklab.log
 agents/*/breadth2000.log
 agents/*/breadth2b.log
+agents/*/final2000.log
