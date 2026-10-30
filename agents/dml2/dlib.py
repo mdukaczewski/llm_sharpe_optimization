@@ -218,7 +218,7 @@ class Sim:
         self.spy = P.col("SPY")
         self.i0 = int(np.searchsorted(P.dates, pd.Timestamp(START)))
 
-    def targets(self, S, k=25, mode="tranche", hold=5, reb=1, buf=0, timing="A"):
+    def targets(self, S, k=25, mode="tranche", hold=5, reb=1, buf=0, timing="A", wmode="eq"):
         """yield (t, target weight row) for trade days.  S: T x N score (NaN outside universe).
         mode 'tranche': daily top-k/bottom-k target, averaged over the last `hold` days (agents/ml).
         mode 'band'   : every `reb` days, keep holdings whose rank is within top k+buf (bottom k+buf), fill to k."""
@@ -244,11 +244,16 @@ class Sim:
                 sl |= set(L)
                 Sx = keepS + [c for c in o[::-1] if c not in sl][: max(0, k - len(keepS))]
                 prevL, prevS = np.array(L, int), np.array(Sx, int)
-                w = np.zeros(N); w[L] = 1.0 / k; w[Sx] = -1.0 / k
+                w = np.zeros(N)
+                if wmode == "iv":
+                    iv = 1.0 / np.clip(np.nan_to_num(self.F["vol60"][t - lag], nan=0.03), 0.008, 0.10)
+                    w[L] = iv[L] / iv[L].sum(); w[Sx] = -iv[Sx] / iv[Sx].sum()
+                else:
+                    w[L] = 1.0 / k; w[Sx] = -1.0 / k
                 yield t, w
 
-    def run(self, S, k=25, mode="tranche", hold=5, reb=1, buf=0, mt=0.0, drift=0.3, hedge=True, hedge_band=0.02, timing="A",
-            c=0.3, cap=CAP, order_usd=ORDER_USD, borrow=0.01, tg=None):
+    def run(self, S, k=25, mode="tranche", hold=5, reb=1, buf=0, mt=0.0, drift=0.3, hedge=True, hedge_band=0.02, hedge_cap=0.5, timing="A",
+            c=0.3, cap=CAP, order_usd=ORDER_USD, borrow=0.01, tg=None, wmode="eq"):
         """trade name i at close t if (its target changed and |target - holding| > mt) or it enters / exits, or its
         holding drifted more than `drift` x target away.  SPY hedge to -beta x book (beta known at t-1), re-set when off by
         more than hedge_band (fraction of equity)."""
@@ -257,7 +262,7 @@ class Sim:
         h = np.zeros(N); wp = np.zeros(N)
         gross = np.zeros(T); imp = np.zeros(T); com = np.zeros(T); bor = np.zeros(T); nord = np.zeros(T); turn = np.zeros(T)
         bet = np.zeros(T); betn = np.zeros(T); nl = np.zeros(T)
-        if tg is None: tg = dict(self.targets(S, k, mode, hold, reb, buf, timing))
+        if tg is None: tg = dict(self.targets(S, k, mode, hold, reb, buf, timing, wmode))
         notspy = np.ones(N, bool); notspy[spy] = False
         for t in range(self.i0 - hold - 15, T):
             if t > 0:
@@ -269,7 +274,7 @@ class Sim:
                 tr &= notspy
                 newh = np.where(tr, w, h); wp = w
                 if hedge:
-                    tgt = -np.clip(float(newh @ bk[t]), -0.5, 0.5)
+                    tgt = -np.clip(float(newh @ bk[t]), -hedge_cap, hedge_cap)
                     if abs(newh[spy] - tgt) > hedge_band: newh[spy] = tgt
                 else: newh[spy] = 0.0
                 dd = np.abs(newh - h); trd = dd > 1e-12

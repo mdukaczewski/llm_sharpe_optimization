@@ -32,6 +32,7 @@ if __name__ == "__main__":
     grid = sys.argv[1]
     P, F, m = setup(); aud = liq_mats(P); sim = Sim(P, F, m, aud)
     res = []
+    log(f"liq coverage: share of universe (mask) cells with closing-auction data {np.isfinite(aud[m]).mean():.3f}")
     def go(name, S, **kw):
         t0 = time.time(); df = sim.run(S, **kw); r = summ(df, name); r["s"] = round(time.time() - t0); res.append(r)
         log(" ".join(f"{k}={v}" for k, v in r.items())); return df
@@ -49,5 +50,18 @@ if __name__ == "__main__":
             if tm == "A": df.to_csv(f"{OUT}/sim_orig_A.csv")
         for c in [0.1, 1.0]: go(f"orig_ens_tranche_k25h5_sm5_H_A_c{c}", S, k=25, mode="tranche", hold=5, hedge=True, timing="A", c=c)
         go("orig_ens_tranche_k25h5_sm5_H_A_nocom", S, k=25, mode="tranche", hold=5, hedge=True, timing="A", order_usd=0)
-    pd.DataFrame(res).to_csv(f"{OUT}/res_{grid}.csv", index=False)
+    if grid in ("sweep", "sweep_s"):
+        tags = sys.argv[2].split(","); sm = int(sys.argv[3]) if len(sys.argv) > 3 else 5
+        S = score(P, m, tags, sm); tagn = "+".join(tags) + f"_sm{sm}"
+        for k in [15, 20, 25]:
+            for hold in [5, 10]:
+                go(f"{tagn} tranche k{k} h{hold}", S, k=k, mode="tranche", hold=hold)
+            for reb in [5, 10]:
+                go(f"{tagn} full k{k} reb{reb}", S, k=k, mode="band", reb=reb, buf=0)
+            for reb in [1, 5, 10]:
+                for buf in ([15, 30, 60] if reb == 1 else [15, 30]):
+                    go(f"{tagn} band k{k} reb{reb} buf{buf}", S, k=k, mode="band", reb=reb, buf=buf)
+        for mtu in [2000, 5000]:
+            go(f"{tagn} tranche k25 h5 mt{mtu}", S, k=25, mode="tranche", hold=5, mt=mtu / CAP)
+    pd.DataFrame(res).to_csv(f"{OUT}/res_{grid}_{len(sys.argv) > 2 and sys.argv[2].replace(',', '+')}.csv", index=False)
     print(pd.DataFrame(res).to_string())

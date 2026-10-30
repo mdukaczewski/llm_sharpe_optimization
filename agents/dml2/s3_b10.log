@@ -1,0 +1,31 @@
+load_sub: 3921 tickers, 2994 days (2014-06-02..2026-04-27), 7s
+mask avg names/day 948.5
+minute_mats: 1790 names
+onml coverage on mask rows 0.669
+   fit 2016-10-28..2016-12-30 train rows 252687 9s
+   fit 2017-01-03..2017-12-29 train rows 287633 13s
+   fit 2018-01-02..2018-12-31 train rows 482993 17s
+   fit 2019-01-02..2019-12-31 train rows 693700 22s
+   fit 2020-01-02..2020-12-31 train rows 899252 28s
+   fit 2021-01-04..2021-12-31 train rows 1123277 35s
+   fit 2022-01-03..2022-12-30 train rows 1382361 44s
+   fit 2023-01-03..2023-12-29 train rows 1633394 50s
+   fit 2024-01-02..2024-12-31 train rows 1875666 59s
+   fit 2025-01-02..2025-12-31 train rows 2140710 67s
+   fit 2026-01-02..2026-04-27 train rows 2452973 77s
+S3 b10 base: K=59 OOS rank IC 0.0155 IR 0.150 | 426s | by year 16:-0.023 17:0.001 18:0.002 19:0.008 20:-0.004 21:0.039 22:0.015 23:0.003 24:0.050 25:0.033 26:0.011
+   top feats beta:6.6%, lpx:5.7%, hl21:3.9%, lo52:3.5%, ivol60:3.5%, r63:3.2%, hi52:3.2%, ladv:3.2%, co21:3.1%, r252:3.1%, volr20_120:3.0%, amihud:3.0%
+   fit 2016-10-28..2016-12-30 train rows 252687 11s
+   fit 2017-01-03..2017-12-29 train rows 287633 15s
+   fit 2018-01-02..2018-12-31 train rows 482993 26s
+   fit 2019-01-02..2019-12-31 train rows 693700 32s
+   fit 2020-01-02..2020-12-31 train rows 899252 38s
+   fit 2021-01-04..2021-12-31 train rows 1123277 46s
+   fit 2022-01-03..2022-12-30 train rows 1382361 57s
+   fit 2023-01-03..2023-12-29 train rows 1633394 63s
+   fit 2024-01-02..2024-12-31 train rows 1875666 71s
+   fit 2025-01-02..2025-12-31 train rows 2140710 84s
+   fit 2026-01-02..2026-04-27 train rows 2452973 90s
+S3 b10 minon: K=84 OOS rank IC 0.0172 IR 0.160 | 537s | by year 16:0.047 17:0.007 18:-0.004 19:0.002 20:0.007 21:0.035 22:0.018 23:0.002 24:0.047 25:0.034 26:0.024
+   top feats beta:6.8%, lpx:5.0%, hl21:3.2%, lo52:3.1%, ivol60:3.0%, r252:2.9%, r63:2.8%, co21:2.8%, volr20_120:2.7%, vol60:2.7%, ladv:2.7%, amihud:2.6%
+   extra feats total gain share 12.7%: x_vmoc_share:2.2%, on5:1.5%, x5_vlast_share:1.5%, x5_zgap:0.7%, x_rv5_20:0.7%, x5_zvwap:0.7%, x5_z60:0.7%, x5_z30l:0.5%
