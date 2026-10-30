@@ -1,1 +1,5 @@
 s0_frame start DEV_END=2026-04-27
+frame built on universe(1500) -> cut to 600: rows 1297124 names 600 445s
+reproduction check old convention lo10_s15_u150: Sh new 2.265 ref 2.265  corr 1.0000  mean |diff| 0.000 bps  rows 2286 / 2286
+y_oo vs y_on in the frame: corr 0.938  mean bps 4.23 / 4.88  NaN share 0.0001 / 0.0057
+hs0931 median by rank tier: 1-50: 4.8 51-100: 8.5 101-150: 12.6 151-300: 14.3 301-600: 19.4

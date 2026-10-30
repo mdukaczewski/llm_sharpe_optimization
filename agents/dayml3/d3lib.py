@@ -54,7 +54,7 @@ def positions(D, pred, k=8, y="y_30d", mask=None, long_score=None, short_score=N
     """L/S top-k / bottom-k positions.  Either one ranking `pred` (top k long, bottom k short), or separate
     long_score / short_score (top k of each; used by the net-score selection).  mask: eligible rows."""
     cols = ["date", "tk", y, "hs0931", "hs1001", "hs_rt", "cost_old", "rank"]
-    ok = D[y].notna().to_numpy()
+    ok = D[y].notna().to_numpy().copy()
     if mask is not None: ok &= np.asarray(mask, bool)
     if long_score is None:
         p = np.asarray(pred, float); ok &= np.isfinite(p)

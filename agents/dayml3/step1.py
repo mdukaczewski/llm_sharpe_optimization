@@ -4,11 +4,12 @@ full universe and restricted to ranks <= 300 / <= 600."""
 import sys; sys.path.insert(0, "/home/user/llm_sharpe_optimization/agents/dayml3")
 from d3lib import *
 log("==== step1: saved predictions costed at the predicted half-spreads ====")
-D = build(1500)
-cov = D.groupby(D.date.dt.year).apply(lambda x: x.hs0931.notna().mean())
-slim = D[["date", "tk", "rank", "y_30d", "y_60d", "y_120d", "hs0931", "hs1001", "hs_rt", "cost_old"]].copy()
-slim["p60"] = load_saved(D, "y_60d"); slim["p120"] = load_saved(D, "y_120d"); slim["ens"] = ens_saved(D)
-slim.to_parquet(f"{OUT}/slim.parquet"); del D
+if os.path.exists(f"{OUT}/slim.parquet"): slim = pd.read_parquet(f"{OUT}/slim.parquet")
+else:
+    D = build(1500)
+    slim = D[["date", "tk", "rank", "y_30d", "y_60d", "y_120d", "hs0931", "hs1001", "hs_rt", "cost_old"]].copy()
+    slim["p60"] = load_saved(D, "y_60d"); slim["p120"] = load_saved(D, "y_120d"); slim["ens"] = ens_saved(D)
+    slim.to_parquet(f"{OUT}/slim.parquet"); del D
 S = slim; log(f"slim rows {len(S)} ens coverage {np.isfinite(S.ens).mean():.3f}")
 hs = S[np.isfinite(S.ens)]; log("median hs0931 / hs1001 by tier (all rows): " + str(hs.groupby(tier(hs['rank']))[["hs0931", "hs1001"]].median().round(1).to_dict()))
 rows = []; tiers = []
