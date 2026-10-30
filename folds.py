@@ -29,7 +29,7 @@ usage: python3 folds.py [--sel all|val] [--first 2018-07-01] [--gap 5]
 import argparse, glob, os, numpy as np, pandas as pd
 HERE = os.path.dirname(os.path.abspath(__file__))
 START, END = "2016-10-28", os.environ.get("FOLDS_END", "2026-10-28")
-NEW_LANES = ["onml", "dayml", "xsrule", "etfmacro"]      # 2026-10-29 agent lanes: agents/<lane>/cands/*.csv
+NEW_LANES = {"onml": ["onml", "onml2"], "dayml": ["dayml", "dayml2"], "xsrule": ["xsrule"], "etfmacro": ["etfmacro"]}   # family -> agent lanes (agents/<lane>/cands/*.csv); phase-4 lanes merge into their family
 L = f"{HERE}/agents/intraday/logs"
 
 def sh(r): return r.mean() / (r.std() + 1e-12) * np.sqrt(252)
@@ -51,9 +51,9 @@ def families():
     fam["rule_late"] = {name(p): load(p) for p in sorted(glob.glob(f"{L}/onml_x15_pred_rule_*.csv") + glob.glob(f"{L}/onml_x30_pred_rule_*.csv") + glob.glob(f"{L}/onml_x60_pred_rule_*.csv") + glob.glob(f"{L}/onml_a300x60_pred_rule_*.csv"))}
     fam["lgb_on"] = {name(p): load(p) for p in sorted(glob.glob(f"{L}/onml_*_pred_lgb_*.csv") + glob.glob(f"{L}/onml_*_pred_ridge_*.csv") + glob.glob(f"{L}/onml2_*_pred_*.csv"))}
     fam["intraday"] = {name(p): load(p) for p in sorted(glob.glob(f"{L}/dayml_*_pred_*.csv"))}
-    for lane in NEW_LANES:
-        d = {name(p): load(p) for p in sorted(glob.glob(f"{HERE}/agents/{lane}/cands/*.csv"))}
-        if d: fam[lane] = d
+    for f_, lanes in NEW_LANES.items():
+        d = {name(p): load(p) for lane in lanes for p in sorted(glob.glob(f"{HERE}/agents/{lane}/cands/*.csv"))}
+        if d: fam[f_] = d
     return fam
 
 def stats(r, label):
