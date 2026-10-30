@@ -17,3 +17,6 @@ dayml_x60dq_k6	Sh=2.20	09:31 LightGBM quarterly, fill 09:33 bar, exit 10:31 bar,
 dayml_x60dq_k8	Sh=2.29	09:31 LightGBM quarterly, fill 09:33 bar, exit 10:31 bar, L/S top8 eq-weight (commission regime)
 dayml_x120dq_k6	Sh=2.32	09:31 LightGBM quarterly, fill 09:33 bar, exit 11:31 bar, L/S top6 eq-weight (commission regime)
 dayml_x120dq_k8	Sh=2.32	09:31 LightGBM quarterly, fill 09:33 bar, exit 11:31 bar, L/S top8 eq-weight (commission regime)
+dayml_x60dq_u2000_k6	Sh=2.16	09:31 LightGBM quarterly on universe(2000), fill 09:33 bar, exit 10:31 bar, L/S top6 eq-weight
+dayml_x60dq_u2000_k8	Sh=2.33	09:31 LightGBM quarterly on universe(2000), fill 09:33 bar, exit 10:31 bar, L/S top8 eq-weight
+dayml_x60dq_u2000_k10	Sh=2.57	09:31 LightGBM quarterly on universe(2000), fill 09:33 bar, exit 10:31 bar, L/S top10 eq-weight
