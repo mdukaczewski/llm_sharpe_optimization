@@ -1,0 +1,62 @@
+load_sub: 4095 tickers, 3122 days (2014-06-02..2026-10-28), 55s
+mask avg names/day 971.0
+00:55:41 dev keep set 3921 tickers; 174 new tickers; dev mask cells removed 11
+00:55:42 setup done T=3122 N=4095 last 2026-10-28 71s
+00:57:54 features (2769824, 59) 204s
+   fit 2016-10-28..2017-05-01 train rows 256584 10s
+   fit 2017-05-02..2017-10-27 train rows 354962 11s
+   fit 2017-10-30..2018-05-01 train rows 453112 13s
+   fit 2018-05-02..2018-10-29 train rows 557511 15s
+   fit 2018-10-30..2019-05-02 train rows 662000 19s
+   fit 2019-05-03..2019-10-30 train rows 767409 21s
+   fit 2019-10-31..2020-05-01 train rows 870322 23s
+   fit 2020-05-04..2020-10-29 train rows 979784 28s
+   fit 2020-10-30..2021-05-03 train rows 1089888 31s
+   fit 2021-05-04..2021-10-29 train rows 1218914 34s
+   fit 2021-11-01..2022-05-02 train rows 1345582 37s
+   fit 2022-05-03..2022-10-31 train rows 1476739 40s
+   fit 2022-11-01..2023-05-03 train rows 1599533 44s
+   fit 2023-05-04..2023-11-01 train rows 1721767 48s
+   fit 2023-11-02..2024-05-03 train rows 1844056 50s
+   fit 2024-05-06..2024-11-01 train rows 1971866 55s
+   fit 2024-11-04..2025-05-07 train rows 2103572 57s
+   fit 2025-05-08..2025-11-05 train rows 2251304 74s
+   fit 2025-11-06..2026-05-08 train rows 2411137 67s
+   fit 2026-05-11..2026-10-28 train rows 2584093 85s
+01:10:42 b5 saved
+   fit 2016-10-28..2017-05-01 train rows 252687 9s
+   fit 2017-05-02..2017-10-27 train rows 350907 11s
+   fit 2017-10-30..2018-05-01 train rows 448997 14s
+   fit 2018-05-02..2018-10-29 train rows 552941 16s
+   fit 2018-10-30..2019-05-02 train rows 657081 19s
+   fit 2019-05-03..2019-10-30 train rows 762604 21s
+   fit 2019-10-31..2020-05-01 train rows 865627 24s
+   fit 2020-05-04..2020-10-29 train rows 974470 25s
+   fit 2020-10-30..2021-05-03 train rows 1084677 30s
+   fit 2021-05-04..2021-10-29 train rows 1212674 34s
+   fit 2021-11-01..2022-05-02 train rows 1339495 36s
+   fit 2022-05-03..2022-10-31 train rows 1470141 37s
+   fit 2022-11-01..2023-05-03 train rows 1593234 40s
+   fit 2023-05-04..2023-11-01 train rows 1715516 46s
+   fit 2023-11-02..2024-05-03 train rows 1837577 53s
+   fit 2024-05-06..2024-11-01 train rows 1964903 55s
+   fit 2024-11-04..2025-05-07 train rows 2096400 68s
+   fit 2025-05-08..2025-11-05 train rows 2242964 63s
+   fit 2025-11-06..2026-05-08 train rows 2402309 69s
+   fit 2026-05-11..2026-10-28 train rows 2574759 80s
+01:23:20 b10 saved
+01:23:28 saved dml2_b5b10_band_n15_r10_b20_H 2513 rows 2016-10-28..2026-10-28
+01:23:34 saved dml2_b5b10_band_n15_r5_b20_H 2513 rows 2016-10-28..2026-10-28
+01:23:40 saved dml2_b5b10_band_n20_r10_b45_H 2513 rows 2016-10-28..2026-10-28
+01:23:46 saved dml2_b5b10_band_n12_r1_b10_H 2513 rows 2016-10-28..2026-10-28
+01:23:46 DML2 REGEN DONE 1756s
+=== sim rerun with float32 b10
+load_sub: 4095 tickers, 3122 days (2014-06-02..2026-10-28), 54s
+mask avg names/day 971.0
+01:47:29 dev keep set 3921 tickers; 174 new tickers; dev mask cells removed 11
+01:47:29 setup done T=3122 N=4095 last 2026-10-28 70s
+01:47:38 saved dml2_b5b10_band_n15_r10_b20_H 2513 rows 2016-10-28..2026-10-28
+01:47:44 saved dml2_b5b10_band_n15_r5_b20_H 2513 rows 2016-10-28..2026-10-28
+01:47:49 saved dml2_b5b10_band_n20_r10_b45_H 2513 rows 2016-10-28..2026-10-28
+01:47:56 saved dml2_b5b10_band_n12_r1_b10_H 2513 rows 2016-10-28..2026-10-28
+01:47:56 DML2 REGEN DONE 96s

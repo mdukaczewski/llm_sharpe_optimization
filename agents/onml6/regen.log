@@ -1,0 +1,35 @@
+00:21:32 load: 2000 names rows 3120320 142s
+00:21:58 load done 3120320 rows, 168s, mem 0.87GB
+01:00:23 frame built 3120320 rows 1991 names 2473s mem 1.29GB
+new frame 3120320 2016-09-19 00:00:00 2026-10-28 00:00:00
+onml3 f40_on_q_s0 (170s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml3 f40_on_q_s1 (187s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml3 f40_on_q_s2 (189s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml3 pred_f40_on (3-seed mean): dev rows old 2886460 matched 2886460 maxabs 0.000e+00
+onml3 pred_f26calx_q3 (merge of agents/onml pred_f26calx_u2000_q3, max date 2026-10-28): old rows 2886460 matched 2886460 maxabs 0.000e+00
+onml6 f40_c378_Q_s0 (321s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml6 f40_c378_Q_s1 (337s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml6 f26_c378_Q_s0 (248s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml6 f40_c378_Q_s2 (328s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml6 f26_c378_Q_s2 (241s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml6 f26_c378_Q_s1 (257s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml6 f26_c388_Q_s0 (252s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+onml6 f40_c388_Q_s0 (336s): overlap 2026-04-01..2026-04-27 rows old 20632 new 20632 both 20632 maxabs 0.000e+00 corr 1.00000000; old rows 2886460 old rows matched in D 2886460
+ALL TRAIN6 DONE
+=== final6 candidates
+02:08:50 o40 <- ['pred_f40_on.parquet']
+02:08:51 o26 <- ['pred_f26calx_q3.parquet']
+02:08:52 o40s0 <- ['pred_f40_on_q_s0.parquet']
+02:08:57 p40_378 <- ['pred_f40_c378_Q_s0.parquet', 'pred_f40_c378_Q_s1.parquet', 'pred_f40_c378_Q_s2.parquet']
+02:09:01 p26_378 <- ['pred_f26_c378_Q_s0.parquet', 'pred_f26_c378_Q_s1.parquet', 'pred_f26_c378_Q_s2.parquet']
+02:09:03 p40s0_378 <- ['pred_f40_c378_Q_s0.parquet']
+02:09:04 p40_388 <- ['pred_f40_c388_Q_s0.parquet']
+02:09:05 p26_388 <- ['pred_f26_c388_Q_s0.parquet']
+02:09:06 p40s0_388 <- ['pred_f40_c388_Q_s0.parquet']
+02:09:09 H0 3036699 rows 2017-01-03..2026-10-28 pcols ['p40', 'p26', 'o40', 'o26', 'o40s0', 'p40_378', 'p26_378', 'p40s0_378', 'p40_388', 'p26_388', 'p40s0_388', 'pR_o', 'pR_378', 'pR_388']
+02:09:35 saved onml6_pR49_lam3_moc_moo_k6 2448 rows 2017-01-03..2026-10-27 NaN 0
+02:09:35 saved onml6_pR49x59_lam3_two_moo_k6 2448 rows 2017-01-03..2026-10-27 NaN 0
+02:09:35 saved onml6_p40c49_lam3_moc_moo_k6 2448 rows 2017-01-03..2026-10-27 NaN 0
+02:09:35 saved onml6_pRcut_lamThree_locbid_moo_kSix 2448 rows 2017-01-03..2026-10-27 NaN 0
+02:09:35 saved onml6_pForty_lamThree_locbid_moo_kSix 2448 rows 2017-01-03..2026-10-27 NaN 0
+02:09:35 FINAL6 REGEN DONE

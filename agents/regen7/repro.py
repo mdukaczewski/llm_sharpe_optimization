@@ -1,0 +1,17 @@
+import sys; sys.path.insert(0,'/home/user/llm_sharpe_optimization/agents/onml4')
+from lib4 import *
+G=load_G(); H=prep(G,'p40',ratios=())
+F=pd.read_parquet(f"{HERE}/agents/onml3/out/frame_u2000.parquet",columns=['date','tk','dvc','ldv20','dv0','rv20','y_oo'])
+J=H[['date','tk','dvc','ldv20','dv0','rv20','y_oo','ey']].merge(F,on=['date','tk'],suffixes=('','_f'))
+for c in ['dvc','ldv20','dv0','y_oo']: print(c, (J[c]-J[c+'_f']).abs().max(), J[c].isna().sum(), J[c+'_f'].isna().sum())
+r,L=route_book(H,6,3.0,'moc','moo',0.3,1.0,ret_pos=True)
+ref=load_ref('agents/onml3/cands/onml3_f40_on_lam3_moo_k6.csv')
+print('corr', corr_with(r,ref), sh(r), sh(ref), len(r), len(ref))
+d=(r-ref.reindex(r.index)); print(d.abs().groupby(d.index.year).mean())
+sys.path.insert(0, f"{HERE}/agents/onml3"); import lib3
+ey3 = lib3.causal_cal(H.assign(p=H.p), first_year_insample=True)
+print('ey diff', (ey3-H.ey).abs().groupby(H.date.dt.year).max())
+H2 = H.copy(); lib3.cost_cols(H2, k=6, c=0.3); lib3.net_scores(H2, H2.ey, 3.0)
+r3, L3 = lib3.book3(H2, k=6, y="y_oo", ce="ce", cx="cx", score="sL", score_s="sS", ret_pos=True)
+print('lib3 on my H', sh(r3), corr_with(r3, ref), corr_with(r3, r))
+d=(r3-ref.reindex(r3.index)); print(d.abs().groupby(d.index.year).mean())
