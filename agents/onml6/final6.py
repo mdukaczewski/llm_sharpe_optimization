@@ -84,6 +84,7 @@ P = POS.get(("a_pR378_moc", 0.3, 1.0))
 if P is not None:
     tt = P.groupby("tier").apply(lambda x: pd.Series(lmt_stats(x))); log("--- lmt (a_pR378 positions, s=1) by tier\n" + tt.to_string())
     pd.to_pickle(P, f"{OUT}/lmt_pos_{V}.pkl")
+if ("a_p40_378_moc", 0.3, 1.0) in POS: pd.to_pickle(POS[("a_p40_378_moc", 0.3, 1.0)], f"{OUT}/lmt_pos40_{V}.pkl")
 pd.to_pickle({k: v for k, v in BOOKS.items() if k[1] == 0.3}, f"{OUT}/final6_{V}_books.pkl")
 pd.to_pickle(S, f"{OUT}/final6_{V}_series.pkl")
 if SAVE:
@@ -100,7 +101,12 @@ if SAVE:
     P = POS.get(("a_pR378_moc", 0.3, 1.0))
     if P is not None:
         r = lmt_daily(P, BOOKS[("a_pR378_moc", 0.3)][0].index)
-        rlib.save_cand("onml6", "onml6_pR49_lam3_locbid_moo_kSix", r, "positions of onml6_pR49_lam3_moc_moo_k6 (selection at 15:49:00); ENTRY = limit-on-close sent at 15:49:00 at the estimated 15:49 bid (short: ask) = c378 x (1 -+ hs49), hs49 = hs1559 booster on inputs to 15:49 "
+        rlib.save_cand("onml6", "onml6_pRcut_lamThree_locbid_moo_kSix", r, "positions of onml6_pR49_lam3_moc_moo_k6 (selection at 15:49:00); ENTRY = limit-on-close sent at 15:49:00 at the estimated 15:49 bid (short: ask) = c378 x (1 -+ hs49), hs49 = hs1559 booster on inputs to 15:49 "
                        "(real 15:49:00 NBBO check: proxy-vs-exact fill agreement 95-96%), filled iff the official close is strictly through it, fill at the official close + MOC impact c=0.3, unfilled = no trade; EXIT MOO c=0.3; "
                        "NET of impact, borrow 1% AND $3 per FILLED order on $0.4M (commission inside: do not charge again), decision-dated")
+    P = POS.get(("a_p40_378_moc", 0.3, 1.0))
+    if P is not None:
+        r = lmt_daily(P, BOOKS[("a_p40_378_moc", 0.3)][0].index)
+        rlib.save_cand("onml6", "onml6_pForty_lamThree_locbid_moo_kSix", r, "positions of onml6_p40n49_lam3_moc_moo_k6 (f40 cut-378 prediction alone, selection at 15:49:00); ENTRY = limit-on-close sent at 15:49:00 at the estimated 15:49 bid (short: ask) = c378 x (1 -+ hs49), "
+                       "filled iff the official close is strictly through it, fill at the official close + MOC impact c=0.3, unfilled = no trade; EXIT MOO c=0.3; NET of impact, borrow 1% AND $3 per FILLED order on $0.4M (commission inside: do not charge again), decision-dated")
 log(f"final6 {V} DONE")
